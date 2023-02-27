@@ -1,1 +1,1 @@
-#include "/opt/homebrew/Cellar/ffmpeg/5.1.2_4/include/libavcodec/avcodec.h"
+#include "/usr/local/include/libavcodec/avcodec.h"

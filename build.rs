@@ -1,12 +1,16 @@
-use cmake;
 use std::path::PathBuf;
+use std::fs::File;
+use std::io::Write;
 
 fn main() {
-    let dst = cmake::build("./libdecode");       
+    let out = &PathBuf::from("/usr/local/lib");
+    File::create(out.join("memory.x"))
+        .unwrap()
+        .write_all(include_bytes!("memory.x"))
+        .unwrap();
+    println!("cargo:rustc-link-search={}", out.display());
+    println!("cargo:rustc-link-lib=static=avcodec");
 
-    println!("cargo:rustc-link-search=native={}", dst.display());
-    println!("cargo:rustc-link-lib=static=decode");   
-    
     let bindings = bindgen::Builder::default()
         // The input header we would like to generate
         // bindings for.
