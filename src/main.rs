@@ -3,19 +3,47 @@
 #![allow(non_snake_case)]
 include!("../bindings.rs");
 
+use std::ffi::c_int;
 use std::net::{UdpSocket};
 use std::sync::{mpsc};
 use std::thread;
+use std::ptr;
 
-unsafe fn decode_buffer_arr(message: [u8; 600]) -> () {
+use cty::{uint8_t, c_void};
+
+const packetSize: u32 = 600 + AV_INPUT_BUFFER_PADDING_SIZE;
+
+unsafe fn decode_buffer_arr(bufferArr: [u8; 600]) -> () {
     let videoCodec: * const AVCodec = avcodec_find_decoder(AVCodecID_AV_CODEC_ID_HEVC);
 
     let codecContext: * mut AVCodecContext = avcodec_alloc_context3(videoCodec);
 
-    avcodec_open2(codecContext, videoCodec, None);
+    let mut emptyDictionary: * mut AVDictionary = ptr::null_mut();
+    let emptyDictPointer: * mut * mut AVDictionary = &mut emptyDictionary;
 
-    println!("{:?}", videoCodec);
-    println!("{:?}", message)
+    avcodec_open2(codecContext, videoCodec, emptyDictPointer);
+
+    let frame: * mut AVFrame = av_frame_alloc();
+
+    let packet: * mut AVPacket = av_packet_alloc();
+
+    let bufPtr: *mut c_void = av_malloc(packetSize.into());
+
+    let buf: &mut [u8] = std::slice::from_raw_parts_mut(bufPtr as * mut uint8_t, packetSize.try_into().unwrap());
+
+    for i in 1..600 {
+        buf[i] = bufferArr[i]
+    }
+
+    let _packetFromData: c_int = av_packet_from_data(packet, bufPtr as * mut uint8_t, packetSize.try_into().unwrap());
+
+    let _sendPacketResponse: c_int = avcodec_send_packet(codecContext, packet);
+
+    let recFrameResponse: c_int = avcodec_receive_frame(codecContext, frame);
+
+    av_free(bufPtr);
+
+    println!("{:?}", (recFrameResponse));
 }
 
 fn main() -> std::io::Result<()> {
@@ -29,16 +57,13 @@ fn main() -> std::io::Result<()> {
             for message in rx {
                 //send the message to a new udp connection
                 thread_socket.send_to(&message, "127.0.0.1:4242").unwrap();
-                unsafe { decode_buffer_arr(message); }
-                
-                // let decoded_buffer_arr = unsafe { decode_buffer_arr(&message) };
-                // println!("{:?}", decoded_buffer_arr)
             }
         });
 
         loop {
             socket.recv_from(&mut buf)?;
             tx.send(buf).unwrap();
+            unsafe { decode_buffer_arr(buf); }
         }
     }
 }
