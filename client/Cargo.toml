@@ -10,4 +10,3 @@ cty = "0.2.2"
 
 [build-dependencies]
 bindgen = "0.53.1"
-cmake = "0.1.49"

@@ -81,16 +81,21 @@ where
         }
     }
 }
-pub const __WORDSIZE: u32 = 64;
-pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 0;
+pub const AV_HAVE_BIGENDIAN: u32 = 0;
+pub const AV_HAVE_FAST_UNALIGNED: u32 = 1;
+pub const FF_LAMBDA_SHIFT: u32 = 7;
+pub const FF_LAMBDA_SCALE: u32 = 128;
+pub const FF_QP2LAMBDA: u32 = 118;
+pub const FF_LAMBDA_MAX: u32 = 32767;
+pub const FF_QUALITY_SCALE: u32 = 128;
+pub const AV_TIME_BASE: u32 = 1000000;
+pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 1;
 pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
-pub const __DARWIN_ONLY_VERS_1050: u32 = 0;
+pub const __DARWIN_ONLY_VERS_1050: u32 = 1;
 pub const __DARWIN_UNIX03: u32 = 1;
 pub const __DARWIN_64_BIT_INO_T: u32 = 1;
 pub const __DARWIN_VERS_1050: u32 = 1;
 pub const __DARWIN_NON_CANCELABLE: u32 = 0;
-pub const __DARWIN_SUF_64_BIT_INO_T: &'static [u8; 9usize] = b"$INODE64\0";
-pub const __DARWIN_SUF_1050: &'static [u8; 6usize] = b"$1050\0";
 pub const __DARWIN_SUF_EXTSN: &'static [u8; 14usize] = b"$DARWIN_EXTSN\0";
 pub const __DARWIN_C_ANSI: u32 = 4096;
 pub const __DARWIN_C_FULL: u32 = 900000;
@@ -98,69 +103,11 @@ pub const __DARWIN_C_LEVEL: u32 = 900000;
 pub const __STDC_WANT_LIB_EXT1__: u32 = 1;
 pub const __DARWIN_NO_LONG_LONG: u32 = 0;
 pub const _DARWIN_FEATURE_64_BIT_INODE: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_64_BIT_INODE: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_VERS_1050: u32 = 1;
 pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
 pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
 pub const __has_ptrcheck: u32 = 0;
-pub const __PTHREAD_SIZE__: u32 = 8176;
-pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
-pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
-pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_COND_SIZE__: u32 = 40;
-pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
-pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
-pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
-pub const INT8_MAX: u32 = 127;
-pub const INT16_MAX: u32 = 32767;
-pub const INT32_MAX: u32 = 2147483647;
-pub const INT64_MAX: u64 = 9223372036854775807;
-pub const INT8_MIN: i32 = -128;
-pub const INT16_MIN: i32 = -32768;
-pub const INT32_MIN: i32 = -2147483648;
-pub const INT64_MIN: i64 = -9223372036854775808;
-pub const UINT8_MAX: u32 = 255;
-pub const UINT16_MAX: u32 = 65535;
-pub const UINT32_MAX: u32 = 4294967295;
-pub const UINT64_MAX: i32 = -1;
-pub const INT_LEAST8_MIN: i32 = -128;
-pub const INT_LEAST16_MIN: i32 = -32768;
-pub const INT_LEAST32_MIN: i32 = -2147483648;
-pub const INT_LEAST64_MIN: i64 = -9223372036854775808;
-pub const INT_LEAST8_MAX: u32 = 127;
-pub const INT_LEAST16_MAX: u32 = 32767;
-pub const INT_LEAST32_MAX: u32 = 2147483647;
-pub const INT_LEAST64_MAX: u64 = 9223372036854775807;
-pub const UINT_LEAST8_MAX: u32 = 255;
-pub const UINT_LEAST16_MAX: u32 = 65535;
-pub const UINT_LEAST32_MAX: u32 = 4294967295;
-pub const UINT_LEAST64_MAX: i32 = -1;
-pub const INT_FAST8_MIN: i32 = -128;
-pub const INT_FAST16_MIN: i32 = -32768;
-pub const INT_FAST32_MIN: i32 = -2147483648;
-pub const INT_FAST64_MIN: i64 = -9223372036854775808;
-pub const INT_FAST8_MAX: u32 = 127;
-pub const INT_FAST16_MAX: u32 = 32767;
-pub const INT_FAST32_MAX: u32 = 2147483647;
-pub const INT_FAST64_MAX: u64 = 9223372036854775807;
-pub const UINT_FAST8_MAX: u32 = 255;
-pub const UINT_FAST16_MAX: u32 = 65535;
-pub const UINT_FAST32_MAX: u32 = 4294967295;
-pub const UINT_FAST64_MAX: i32 = -1;
-pub const INTPTR_MAX: u64 = 9223372036854775807;
-pub const INTPTR_MIN: i64 = -9223372036854775808;
-pub const UINTPTR_MAX: i32 = -1;
-pub const SIZE_MAX: i32 = -1;
-pub const RSIZE_MAX: i32 = -1;
-pub const WINT_MIN: i32 = -2147483648;
-pub const WINT_MAX: u32 = 2147483647;
-pub const SIG_ATOMIC_MIN: i32 = -2147483648;
-pub const SIG_ATOMIC_MAX: u32 = 2147483647;
-pub const FF_LAMBDA_SHIFT: u32 = 7;
-pub const FF_LAMBDA_SCALE: u32 = 128;
-pub const FF_QP2LAMBDA: u32 = 118;
-pub const FF_LAMBDA_MAX: u32 = 32767;
-pub const FF_QUALITY_SCALE: u32 = 128;
-pub const AV_TIME_BASE: u32 = 1000000;
 pub const EPERM: u32 = 1;
 pub const ENOENT: u32 = 2;
 pub const ESRCH: u32 = 3;
@@ -653,8 +600,63 @@ pub const __DRIVERKIT_20_0: u32 = 200000;
 pub const __DRIVERKIT_21_0: u32 = 210000;
 pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 130100;
 pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
+pub const __PTHREAD_SIZE__: u32 = 8176;
+pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
+pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
+pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_COND_SIZE__: u32 = 40;
+pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
+pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
+pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
 pub const __DARWIN_WCHAR_MIN: i32 = -2147483648;
 pub const _FORTIFY_SOURCE: u32 = 2;
+pub const __WORDSIZE: u32 = 64;
+pub const INT8_MAX: u32 = 127;
+pub const INT16_MAX: u32 = 32767;
+pub const INT32_MAX: u32 = 2147483647;
+pub const INT64_MAX: u64 = 9223372036854775807;
+pub const INT8_MIN: i32 = -128;
+pub const INT16_MIN: i32 = -32768;
+pub const INT32_MIN: i32 = -2147483648;
+pub const INT64_MIN: i64 = -9223372036854775808;
+pub const UINT8_MAX: u32 = 255;
+pub const UINT16_MAX: u32 = 65535;
+pub const UINT32_MAX: u32 = 4294967295;
+pub const UINT64_MAX: i32 = -1;
+pub const INT_LEAST8_MIN: i32 = -128;
+pub const INT_LEAST16_MIN: i32 = -32768;
+pub const INT_LEAST32_MIN: i32 = -2147483648;
+pub const INT_LEAST64_MIN: i64 = -9223372036854775808;
+pub const INT_LEAST8_MAX: u32 = 127;
+pub const INT_LEAST16_MAX: u32 = 32767;
+pub const INT_LEAST32_MAX: u32 = 2147483647;
+pub const INT_LEAST64_MAX: u64 = 9223372036854775807;
+pub const UINT_LEAST8_MAX: u32 = 255;
+pub const UINT_LEAST16_MAX: u32 = 65535;
+pub const UINT_LEAST32_MAX: u32 = 4294967295;
+pub const UINT_LEAST64_MAX: i32 = -1;
+pub const INT_FAST8_MIN: i32 = -128;
+pub const INT_FAST16_MIN: i32 = -32768;
+pub const INT_FAST32_MIN: i32 = -2147483648;
+pub const INT_FAST64_MIN: i64 = -9223372036854775808;
+pub const INT_FAST8_MAX: u32 = 127;
+pub const INT_FAST16_MAX: u32 = 32767;
+pub const INT_FAST32_MAX: u32 = 2147483647;
+pub const INT_FAST64_MAX: u64 = 9223372036854775807;
+pub const UINT_FAST8_MAX: u32 = 255;
+pub const UINT_FAST16_MAX: u32 = 65535;
+pub const UINT_FAST32_MAX: u32 = 4294967295;
+pub const UINT_FAST64_MAX: i32 = -1;
+pub const INTPTR_MAX: u64 = 9223372036854775807;
+pub const INTPTR_MIN: i64 = -9223372036854775808;
+pub const UINTPTR_MAX: i32 = -1;
+pub const SIZE_MAX: i32 = -1;
+pub const RSIZE_MAX: i32 = -1;
+pub const WINT_MIN: i32 = -2147483648;
+pub const WINT_MAX: u32 = 2147483647;
+pub const SIG_ATOMIC_MIN: i32 = -2147483648;
+pub const SIG_ATOMIC_MAX: u32 = 2147483647;
 pub const __DARWIN_CLK_TCK: u32 = 100;
 pub const CHAR_BIT: u32 = 8;
 pub const MB_LEN_MAX: u32 = 6;
@@ -743,7 +745,7 @@ pub const _POSIX_THREAD_KEYS_MAX: u32 = 128;
 pub const _POSIX_THREAD_THREADS_MAX: u32 = 64;
 pub const PTHREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
 pub const PTHREAD_KEYS_MAX: u32 = 512;
-pub const PTHREAD_STACK_MIN: u32 = 8192;
+pub const PTHREAD_STACK_MIN: u32 = 16384;
 pub const _POSIX_HOST_NAME_MAX: u32 = 255;
 pub const _POSIX_LOGIN_NAME_MAX: u32 = 9;
 pub const _POSIX_SS_REPL_MAX: u32 = 4;
@@ -776,6 +778,9 @@ pub const FP_ZERO: u32 = 3;
 pub const FP_NORMAL: u32 = 4;
 pub const FP_SUBNORMAL: u32 = 5;
 pub const FP_SUPERNORMAL: u32 = 6;
+pub const FP_FAST_FMA: u32 = 1;
+pub const FP_FAST_FMAF: u32 = 1;
+pub const FP_FAST_FMAL: u32 = 1;
 pub const FP_ILOGB0: i32 = -2147483648;
 pub const FP_ILOGBNAN: i32 = -2147483648;
 pub const MATH_ERRNO: u32 = 1;
@@ -839,7 +844,7 @@ pub const L_ctermid: u32 = 1024;
 pub const _USE_FORTIFY_LEVEL: u32 = 2;
 pub const __DARWIN_NSIG: u32 = 32;
 pub const NSIG: u32 = 32;
-pub const _I386_SIGNAL_H_: u32 = 1;
+pub const _ARM_SIGNAL_: u32 = 1;
 pub const SIGHUP: u32 = 1;
 pub const SIGINT: u32 = 2;
 pub const SIGQUIT: u32 = 3;
@@ -872,17 +877,7 @@ pub const SIGWINCH: u32 = 28;
 pub const SIGINFO: u32 = 29;
 pub const SIGUSR1: u32 = 30;
 pub const SIGUSR2: u32 = 31;
-pub const FP_PREC_24B: u32 = 0;
-pub const FP_PREC_53B: u32 = 2;
-pub const FP_PREC_64B: u32 = 3;
-pub const FP_RND_NEAR: u32 = 0;
-pub const FP_RND_DOWN: u32 = 1;
-pub const FP_RND_UP: u32 = 2;
-pub const FP_CHOP: u32 = 3;
-pub const FP_STATE_BYTES: u32 = 512;
-pub const _X86_INSTRUCTION_STATE_MAX_INSN_BYTES: u32 = 2380;
-pub const _X86_INSTRUCTION_STATE_CACHELINE_SIZE: u32 = 64;
-pub const __LASTBRANCH_MAX: u32 = 32;
+pub const __DARWIN_OPAQUE_ARM_THREAD_STATE64: u32 = 0;
 pub const SIGEV_NONE: u32 = 0;
 pub const SIGEV_SIGNAL: u32 = 1;
 pub const SIGEV_THREAD: u32 = 3;
@@ -1061,10 +1056,8 @@ pub const EXIT_FAILURE: u32 = 1;
 pub const EXIT_SUCCESS: u32 = 0;
 pub const RAND_MAX: u32 = 2147483647;
 pub const __HAS_FIXED_CHK_PROTOTYPES: u32 = 1;
-pub const AV_HAVE_BIGENDIAN: u32 = 0;
-pub const AV_HAVE_FAST_UNALIGNED: u32 = 1;
-pub const LIBAVUTIL_VERSION_MAJOR: u32 = 57;
-pub const LIBAVUTIL_VERSION_MINOR: u32 = 28;
+pub const LIBAVUTIL_VERSION_MAJOR: u32 = 58;
+pub const LIBAVUTIL_VERSION_MINOR: u32 = 2;
 pub const LIBAVUTIL_VERSION_MICRO: u32 = 100;
 pub const AVERROR_EXPERIMENTAL: i32 = -733130664;
 pub const AVERROR_INPUT_CHANGED: i32 = -1668179713;
@@ -1104,10 +1097,9 @@ pub const FF_DECODE_ERROR_INVALID_BITSTREAM: u32 = 1;
 pub const FF_DECODE_ERROR_MISSING_REFERENCE: u32 = 2;
 pub const FF_DECODE_ERROR_CONCEALMENT_ACTIVE: u32 = 4;
 pub const FF_DECODE_ERROR_DECODE_SLICES: u32 = 8;
-pub const LIBAVCODEC_VERSION_MAJOR: u32 = 59;
+pub const LIBAVCODEC_VERSION_MAJOR: u32 = 60;
 pub const AV_CODEC_CAP_DRAW_HORIZ_BAND: u32 = 1;
 pub const AV_CODEC_CAP_DR1: u32 = 2;
-pub const AV_CODEC_CAP_TRUNCATED: u32 = 8;
 pub const AV_CODEC_CAP_DELAY: u32 = 32;
 pub const AV_CODEC_CAP_SMALL_LAST_FRAME: u32 = 64;
 pub const AV_CODEC_CAP_SUBFRAMES: u32 = 256;
@@ -1117,15 +1109,13 @@ pub const AV_CODEC_CAP_FRAME_THREADS: u32 = 4096;
 pub const AV_CODEC_CAP_SLICE_THREADS: u32 = 8192;
 pub const AV_CODEC_CAP_PARAM_CHANGE: u32 = 16384;
 pub const AV_CODEC_CAP_OTHER_THREADS: u32 = 32768;
-pub const AV_CODEC_CAP_AUTO_THREADS: u32 = 32768;
 pub const AV_CODEC_CAP_VARIABLE_FRAME_SIZE: u32 = 65536;
 pub const AV_CODEC_CAP_AVOID_PROBING: u32 = 131072;
-pub const AV_CODEC_CAP_INTRA_ONLY: u32 = 1073741824;
-pub const AV_CODEC_CAP_LOSSLESS: u32 = 2147483648;
 pub const AV_CODEC_CAP_HARDWARE: u32 = 262144;
 pub const AV_CODEC_CAP_HYBRID: u32 = 524288;
 pub const AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE: u32 = 1048576;
 pub const AV_CODEC_CAP_ENCODER_FLUSH: u32 = 2097152;
+pub const AV_CODEC_CAP_ENCODER_RECON_FRAME: u32 = 4194304;
 pub const AV_CODEC_PROP_INTRA_ONLY: u32 = 1;
 pub const AV_CODEC_PROP_LOSSY: u32 = 2;
 pub const AV_CODEC_PROP_LOSSLESS: u32 = 4;
@@ -1133,12 +1123,25 @@ pub const AV_CODEC_PROP_REORDER: u32 = 8;
 pub const AV_CODEC_PROP_BITMAP_SUB: u32 = 65536;
 pub const AV_CODEC_PROP_TEXT_SUB: u32 = 131072;
 pub const AV_INPUT_BUFFER_PADDING_SIZE: u32 = 64;
+pub const AV_EF_CRCCHECK: u32 = 1;
+pub const AV_EF_BITSTREAM: u32 = 2;
+pub const AV_EF_BUFFER: u32 = 4;
+pub const AV_EF_EXPLODE: u32 = 8;
+pub const AV_EF_IGNORE_ERR: u32 = 32768;
+pub const AV_EF_CAREFUL: u32 = 65536;
+pub const AV_EF_COMPLIANT: u32 = 131072;
+pub const AV_EF_AGGRESSIVE: u32 = 262144;
+pub const FF_COMPLIANCE_VERY_STRICT: u32 = 2;
+pub const FF_COMPLIANCE_STRICT: u32 = 1;
+pub const FF_COMPLIANCE_NORMAL: u32 = 0;
+pub const FF_COMPLIANCE_UNOFFICIAL: i32 = -1;
+pub const FF_COMPLIANCE_EXPERIMENTAL: i32 = -2;
 pub const AV_PKT_FLAG_KEY: u32 = 1;
 pub const AV_PKT_FLAG_CORRUPT: u32 = 2;
 pub const AV_PKT_FLAG_DISCARD: u32 = 4;
 pub const AV_PKT_FLAG_TRUSTED: u32 = 8;
 pub const AV_PKT_FLAG_DISPOSABLE: u32 = 16;
-pub const LIBAVCODEC_VERSION_MINOR: u32 = 37;
+pub const LIBAVCODEC_VERSION_MINOR: u32 = 3;
 pub const LIBAVCODEC_VERSION_MICRO: u32 = 100;
 pub const AV_INPUT_BUFFER_MIN_SIZE: u32 = 16384;
 pub const AV_CODEC_FLAG_UNALIGNED: u32 = 1;
@@ -1147,12 +1150,14 @@ pub const AV_CODEC_FLAG_4MV: u32 = 4;
 pub const AV_CODEC_FLAG_OUTPUT_CORRUPT: u32 = 8;
 pub const AV_CODEC_FLAG_QPEL: u32 = 16;
 pub const AV_CODEC_FLAG_DROPCHANGED: u32 = 32;
+pub const AV_CODEC_FLAG_RECON_FRAME: u32 = 64;
+pub const AV_CODEC_FLAG_COPY_OPAQUE: u32 = 128;
+pub const AV_CODEC_FLAG_FRAME_DURATION: u32 = 256;
 pub const AV_CODEC_FLAG_PASS1: u32 = 512;
 pub const AV_CODEC_FLAG_PASS2: u32 = 1024;
 pub const AV_CODEC_FLAG_LOOP_FILTER: u32 = 2048;
 pub const AV_CODEC_FLAG_GRAY: u32 = 8192;
 pub const AV_CODEC_FLAG_PSNR: u32 = 32768;
-pub const AV_CODEC_FLAG_TRUNCATED: u32 = 65536;
 pub const AV_CODEC_FLAG_INTERLACED_DCT: u32 = 262144;
 pub const AV_CODEC_FLAG_LOW_DELAY: u32 = 524288;
 pub const AV_CODEC_FLAG_GLOBAL_HEADER: u32 = 4194304;
@@ -1163,13 +1168,13 @@ pub const AV_CODEC_FLAG_CLOSED_GOP: u32 = 2147483648;
 pub const AV_CODEC_FLAG2_FAST: u32 = 1;
 pub const AV_CODEC_FLAG2_NO_OUTPUT: u32 = 4;
 pub const AV_CODEC_FLAG2_LOCAL_HEADER: u32 = 8;
-pub const AV_CODEC_FLAG2_DROP_FRAME_TIMECODE: u32 = 8192;
 pub const AV_CODEC_FLAG2_CHUNKS: u32 = 32768;
 pub const AV_CODEC_FLAG2_IGNORE_CROP: u32 = 65536;
 pub const AV_CODEC_FLAG2_SHOW_ALL: u32 = 4194304;
 pub const AV_CODEC_FLAG2_EXPORT_MVS: u32 = 268435456;
 pub const AV_CODEC_FLAG2_SKIP_MANUAL: u32 = 536870912;
 pub const AV_CODEC_FLAG2_RO_FLUSH_NOOP: u32 = 1073741824;
+pub const AV_CODEC_FLAG2_ICC_PROFILES: u32 = 2147483648;
 pub const AV_CODEC_EXPORT_DATA_MVS: u32 = 1;
 pub const AV_CODEC_EXPORT_DATA_PRFT: u32 = 2;
 pub const AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS: u32 = 4;
@@ -1215,11 +1220,6 @@ pub const FF_BUG_DC_CLIP: u32 = 4096;
 pub const FF_BUG_MS: u32 = 8192;
 pub const FF_BUG_TRUNCATED: u32 = 16384;
 pub const FF_BUG_IEDGE: u32 = 32768;
-pub const FF_COMPLIANCE_VERY_STRICT: u32 = 2;
-pub const FF_COMPLIANCE_STRICT: u32 = 1;
-pub const FF_COMPLIANCE_NORMAL: u32 = 0;
-pub const FF_COMPLIANCE_UNOFFICIAL: i32 = -1;
-pub const FF_COMPLIANCE_EXPERIMENTAL: i32 = -2;
 pub const FF_EC_GUESS_MVS: u32 = 1;
 pub const FF_EC_DEBLOCK: u32 = 2;
 pub const FF_EC_FAVOR_INTER: u32 = 256;
@@ -1238,14 +1238,6 @@ pub const FF_DEBUG_BUFFERS: u32 = 32768;
 pub const FF_DEBUG_THREADS: u32 = 65536;
 pub const FF_DEBUG_GREEN_MD: u32 = 8388608;
 pub const FF_DEBUG_NOMC: u32 = 16777216;
-pub const AV_EF_CRCCHECK: u32 = 1;
-pub const AV_EF_BITSTREAM: u32 = 2;
-pub const AV_EF_BUFFER: u32 = 4;
-pub const AV_EF_EXPLODE: u32 = 8;
-pub const AV_EF_IGNORE_ERR: u32 = 32768;
-pub const AV_EF_CAREFUL: u32 = 65536;
-pub const AV_EF_COMPLIANT: u32 = 131072;
-pub const AV_EF_AGGRESSIVE: u32 = 262144;
 pub const FF_DCT_AUTO: u32 = 0;
 pub const FF_DCT_FASTINT: u32 = 1;
 pub const FF_DCT_INT: u32 = 2;
@@ -1374,17 +1366,14 @@ pub const FF_SUB_CHARENC_MODE_DO_NOTHING: i32 = -1;
 pub const FF_SUB_CHARENC_MODE_AUTOMATIC: u32 = 0;
 pub const FF_SUB_CHARENC_MODE_PRE_DECODER: u32 = 1;
 pub const FF_SUB_CHARENC_MODE_IGNORE: u32 = 2;
-pub const FF_DEBUG_VIS_MV_P_FOR: u32 = 1;
-pub const FF_DEBUG_VIS_MV_B_FOR: u32 = 2;
-pub const FF_DEBUG_VIS_MV_B_BACK: u32 = 4;
 pub const FF_CODEC_PROPERTY_LOSSLESS: u32 = 1;
 pub const FF_CODEC_PROPERTY_CLOSED_CAPTIONS: u32 = 2;
 pub const FF_CODEC_PROPERTY_FILM_GRAIN: u32 = 4;
-pub const FF_SUB_TEXT_FMT_ASS: u32 = 0;
 pub const AV_HWACCEL_CODEC_CAP_EXPERIMENTAL: u32 = 512;
 pub const AV_HWACCEL_FLAG_IGNORE_LEVEL: u32 = 1;
 pub const AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH: u32 = 2;
 pub const AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH: u32 = 4;
+pub const AV_HWACCEL_FLAG_UNSAFE_OUTPUT: u32 = 8;
 pub const AV_SUBTITLE_FLAG_FORCED: u32 = 1;
 pub const AV_PARSER_PTS_NB: u32 = 4;
 pub const PARSER_FLAG_COMPLETE_FRAMES: u32 = 1;
@@ -1392,7 +1381,7 @@ pub const PARSER_FLAG_ONCE: u32 = 2;
 pub const PARSER_FLAG_FETCHED_OFFSET: u32 = 4;
 pub const PARSER_FLAG_USE_CODEC_TS: u32 = 4096;
 pub const TIME_UTC: u32 = 1;
-pub const LIBAVFORMAT_VERSION_MAJOR: u32 = 59;
+pub const LIBAVFORMAT_VERSION_MAJOR: u32 = 60;
 pub const FF_API_R_FRAME_RATE: u32 = 1;
 pub const AVIO_SEEKABLE_NORMAL: u32 = 1;
 pub const AVIO_SEEKABLE_TIME: u32 = 2;
@@ -1403,7 +1392,7 @@ pub const AVIO_FLAG_WRITE: u32 = 2;
 pub const AVIO_FLAG_READ_WRITE: u32 = 3;
 pub const AVIO_FLAG_NONBLOCK: u32 = 8;
 pub const AVIO_FLAG_DIRECT: u32 = 32768;
-pub const LIBAVFORMAT_VERSION_MINOR: u32 = 27;
+pub const LIBAVFORMAT_VERSION_MINOR: u32 = 3;
 pub const LIBAVFORMAT_VERSION_MICRO: u32 = 100;
 pub const AVPROBE_SCORE_EXTENSION: u32 = 50;
 pub const AVPROBE_SCORE_MIME: u32 = 75;
@@ -1467,7 +1456,6 @@ pub const AVFMT_FLAG_DISCARD_CORRUPT: u32 = 256;
 pub const AVFMT_FLAG_FLUSH_PACKETS: u32 = 512;
 pub const AVFMT_FLAG_BITEXACT: u32 = 1024;
 pub const AVFMT_FLAG_SORT_DTS: u32 = 65536;
-pub const AVFMT_FLAG_PRIV_OPT: u32 = 131072;
 pub const AVFMT_FLAG_FAST_SEEK: u32 = 524288;
 pub const AVFMT_FLAG_SHORTEST: u32 = 1048576;
 pub const AVFMT_FLAG_AUTO_BSF: u32 = 2097152;
@@ -1484,22 +1472,78 @@ pub const AVSEEK_FLAG_FRAME: u32 = 8;
 pub const AVSTREAM_INIT_IN_WRITE_HEADER: u32 = 0;
 pub const AVSTREAM_INIT_IN_INIT_OUTPUT: u32 = 1;
 pub const AV_FRAME_FILENAME_FLAGS_MULTIPLE: u32 = 1;
-pub type int_least8_t = i8;
-pub type int_least16_t = i16;
-pub type int_least32_t = i32;
-pub type int_least64_t = i64;
-pub type uint_least8_t = u8;
-pub type uint_least16_t = u16;
-pub type uint_least32_t = u32;
-pub type uint_least64_t = u64;
-pub type int_fast8_t = i8;
-pub type int_fast16_t = i16;
-pub type int_fast32_t = i32;
-pub type int_fast64_t = i64;
-pub type uint_fast8_t = u8;
-pub type uint_fast16_t = u16;
-pub type uint_fast32_t = u32;
-pub type uint_fast64_t = u64;
+extern "C" {
+    #[doc = " Return the LIBAVUTIL_VERSION_INT constant."]
+    pub fn avutil_version() -> cty::c_uint;
+}
+extern "C" {
+    #[doc = " Return an informative version string. This usually is the actual release"]
+    #[doc = " version number or a git commit description. This string has no fixed format"]
+    #[doc = " and can change any time. It should never be parsed by code."]
+    pub fn av_version_info() -> *const cty::c_char;
+}
+extern "C" {
+    #[doc = " Return the libavutil build-time configuration."]
+    pub fn avutil_configuration() -> *const cty::c_char;
+}
+extern "C" {
+    #[doc = " Return the libavutil license."]
+    pub fn avutil_license() -> *const cty::c_char;
+}
+#[doc = "< Usually treated as AVMEDIA_TYPE_DATA"]
+pub const AVMediaType_AVMEDIA_TYPE_UNKNOWN: AVMediaType = -1;
+pub const AVMediaType_AVMEDIA_TYPE_VIDEO: AVMediaType = 0;
+pub const AVMediaType_AVMEDIA_TYPE_AUDIO: AVMediaType = 1;
+#[doc = "< Opaque data information usually continuous"]
+pub const AVMediaType_AVMEDIA_TYPE_DATA: AVMediaType = 2;
+pub const AVMediaType_AVMEDIA_TYPE_SUBTITLE: AVMediaType = 3;
+#[doc = "< Opaque data information usually sparse"]
+pub const AVMediaType_AVMEDIA_TYPE_ATTACHMENT: AVMediaType = 4;
+pub const AVMediaType_AVMEDIA_TYPE_NB: AVMediaType = 5;
+#[doc = " @addtogroup lavu_media Media Type"]
+#[doc = " @brief Media Type"]
+pub type AVMediaType = i32;
+extern "C" {
+    #[doc = " Return a string describing the media_type enum, NULL if media_type"]
+    #[doc = " is unknown."]
+    pub fn av_get_media_type_string(media_type: AVMediaType) -> *const cty::c_char;
+}
+#[doc = "< Undefined"]
+pub const AVPictureType_AV_PICTURE_TYPE_NONE: AVPictureType = 0;
+#[doc = "< Intra"]
+pub const AVPictureType_AV_PICTURE_TYPE_I: AVPictureType = 1;
+#[doc = "< Predicted"]
+pub const AVPictureType_AV_PICTURE_TYPE_P: AVPictureType = 2;
+#[doc = "< Bi-dir predicted"]
+pub const AVPictureType_AV_PICTURE_TYPE_B: AVPictureType = 3;
+#[doc = "< S(GMC)-VOP MPEG-4"]
+pub const AVPictureType_AV_PICTURE_TYPE_S: AVPictureType = 4;
+#[doc = "< Switching Intra"]
+pub const AVPictureType_AV_PICTURE_TYPE_SI: AVPictureType = 5;
+#[doc = "< Switching Predicted"]
+pub const AVPictureType_AV_PICTURE_TYPE_SP: AVPictureType = 6;
+#[doc = "< BI type"]
+pub const AVPictureType_AV_PICTURE_TYPE_BI: AVPictureType = 7;
+#[doc = " @}"]
+#[doc = " @}"]
+#[doc = " @defgroup lavu_picture Image related"]
+#[doc = ""]
+#[doc = " AVPicture types, pixel formats and basic image planes manipulation."]
+#[doc = ""]
+#[doc = " @{"]
+pub type AVPictureType = u32;
+extern "C" {
+    #[doc = " Return a single letter to describe the given picture type"]
+    #[doc = " pict_type."]
+    #[doc = ""]
+    #[doc = " @param[in] pict_type the picture type @return a single character"]
+    #[doc = " representing the picture type, '?' if pict_type is unknown"]
+    pub fn av_get_picture_type_char(pict_type: AVPictureType) -> cty::c_char;
+}
+pub type errno_t = cty::c_int;
+extern "C" {
+    pub fn __error() -> *mut cty::c_int;
+}
 pub type __int8_t = cty::c_schar;
 pub type __uint8_t = cty::c_uchar;
 pub type __int16_t = cty::c_short;
@@ -2034,6 +2078,26 @@ pub type __darwin_pthread_once_t = _opaque_pthread_once_t;
 pub type __darwin_pthread_rwlock_t = _opaque_pthread_rwlock_t;
 pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
 pub type __darwin_pthread_t = *mut _opaque_pthread_t;
+pub type __darwin_nl_item = cty::c_int;
+pub type __darwin_wctrans_t = cty::c_int;
+pub type __darwin_wctype_t = __uint32_t;
+pub type wchar_t = __darwin_wchar_t;
+pub type int_least8_t = i8;
+pub type int_least16_t = i16;
+pub type int_least32_t = i32;
+pub type int_least64_t = i64;
+pub type uint_least8_t = u8;
+pub type uint_least16_t = u16;
+pub type uint_least32_t = u32;
+pub type uint_least64_t = u64;
+pub type int_fast8_t = i8;
+pub type int_fast16_t = i16;
+pub type int_fast32_t = i32;
+pub type int_fast64_t = i64;
+pub type uint_fast8_t = u8;
+pub type uint_fast16_t = u16;
+pub type uint_fast32_t = u32;
+pub type uint_fast64_t = u64;
 pub type u_int8_t = cty::c_uchar;
 pub type u_int16_t = cty::c_ushort;
 pub type u_int32_t = cty::c_uint;
@@ -2049,152 +2113,6 @@ pub type user_off_t = i64;
 pub type syscall_arg_t = u_int64_t;
 pub type intmax_t = cty::c_long;
 pub type uintmax_t = cty::c_ulong;
-pub const AVSampleFormat_AV_SAMPLE_FMT_NONE: AVSampleFormat = -1;
-pub const AVSampleFormat_AV_SAMPLE_FMT_U8: AVSampleFormat = 0;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S16: AVSampleFormat = 1;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S32: AVSampleFormat = 2;
-pub const AVSampleFormat_AV_SAMPLE_FMT_FLT: AVSampleFormat = 3;
-pub const AVSampleFormat_AV_SAMPLE_FMT_DBL: AVSampleFormat = 4;
-pub const AVSampleFormat_AV_SAMPLE_FMT_U8P: AVSampleFormat = 5;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S16P: AVSampleFormat = 6;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S32P: AVSampleFormat = 7;
-pub const AVSampleFormat_AV_SAMPLE_FMT_FLTP: AVSampleFormat = 8;
-pub const AVSampleFormat_AV_SAMPLE_FMT_DBLP: AVSampleFormat = 9;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S64: AVSampleFormat = 10;
-pub const AVSampleFormat_AV_SAMPLE_FMT_S64P: AVSampleFormat = 11;
-pub const AVSampleFormat_AV_SAMPLE_FMT_NB: AVSampleFormat = 12;
-pub type AVSampleFormat = i32;
-extern "C" {
-    pub fn av_get_sample_fmt_name(sample_fmt: AVSampleFormat) -> *const cty::c_char;
-}
-extern "C" {
-    pub fn av_get_sample_fmt(name: *const cty::c_char) -> AVSampleFormat;
-}
-extern "C" {
-    pub fn av_get_alt_sample_fmt(sample_fmt: AVSampleFormat, planar: cty::c_int) -> AVSampleFormat;
-}
-extern "C" {
-    pub fn av_get_packed_sample_fmt(sample_fmt: AVSampleFormat) -> AVSampleFormat;
-}
-extern "C" {
-    pub fn av_get_planar_sample_fmt(sample_fmt: AVSampleFormat) -> AVSampleFormat;
-}
-extern "C" {
-    pub fn av_get_sample_fmt_string(
-        buf: *mut cty::c_char,
-        buf_size: cty::c_int,
-        sample_fmt: AVSampleFormat,
-    ) -> *mut cty::c_char;
-}
-extern "C" {
-    pub fn av_get_bytes_per_sample(sample_fmt: AVSampleFormat) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_sample_fmt_is_planar(sample_fmt: AVSampleFormat) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_get_buffer_size(
-        linesize: *mut cty::c_int,
-        nb_channels: cty::c_int,
-        nb_samples: cty::c_int,
-        sample_fmt: AVSampleFormat,
-        align: cty::c_int,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_fill_arrays(
-        audio_data: *mut *mut u8,
-        linesize: *mut cty::c_int,
-        buf: *const u8,
-        nb_channels: cty::c_int,
-        nb_samples: cty::c_int,
-        sample_fmt: AVSampleFormat,
-        align: cty::c_int,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_alloc(
-        audio_data: *mut *mut u8,
-        linesize: *mut cty::c_int,
-        nb_channels: cty::c_int,
-        nb_samples: cty::c_int,
-        sample_fmt: AVSampleFormat,
-        align: cty::c_int,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_alloc_array_and_samples(
-        audio_data: *mut *mut *mut u8,
-        linesize: *mut cty::c_int,
-        nb_channels: cty::c_int,
-        nb_samples: cty::c_int,
-        sample_fmt: AVSampleFormat,
-        align: cty::c_int,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_copy(
-        dst: *mut *mut u8,
-        src: *const *mut u8,
-        dst_offset: cty::c_int,
-        src_offset: cty::c_int,
-        nb_samples: cty::c_int,
-        nb_channels: cty::c_int,
-        sample_fmt: AVSampleFormat,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn av_samples_set_silence(
-        audio_data: *mut *mut u8,
-        offset: cty::c_int,
-        nb_samples: cty::c_int,
-        nb_channels: cty::c_int,
-        sample_fmt: AVSampleFormat,
-    ) -> cty::c_int;
-}
-extern "C" {
-    pub fn avutil_version() -> cty::c_uint;
-}
-extern "C" {
-    pub fn av_version_info() -> *const cty::c_char;
-}
-extern "C" {
-    pub fn avutil_configuration() -> *const cty::c_char;
-}
-extern "C" {
-    pub fn avutil_license() -> *const cty::c_char;
-}
-pub const AVMediaType_AVMEDIA_TYPE_UNKNOWN: AVMediaType = -1;
-pub const AVMediaType_AVMEDIA_TYPE_VIDEO: AVMediaType = 0;
-pub const AVMediaType_AVMEDIA_TYPE_AUDIO: AVMediaType = 1;
-pub const AVMediaType_AVMEDIA_TYPE_DATA: AVMediaType = 2;
-pub const AVMediaType_AVMEDIA_TYPE_SUBTITLE: AVMediaType = 3;
-pub const AVMediaType_AVMEDIA_TYPE_ATTACHMENT: AVMediaType = 4;
-pub const AVMediaType_AVMEDIA_TYPE_NB: AVMediaType = 5;
-pub type AVMediaType = i32;
-extern "C" {
-    pub fn av_get_media_type_string(media_type: AVMediaType) -> *const cty::c_char;
-}
-pub const AVPictureType_AV_PICTURE_TYPE_NONE: AVPictureType = 0;
-pub const AVPictureType_AV_PICTURE_TYPE_I: AVPictureType = 1;
-pub const AVPictureType_AV_PICTURE_TYPE_P: AVPictureType = 2;
-pub const AVPictureType_AV_PICTURE_TYPE_B: AVPictureType = 3;
-pub const AVPictureType_AV_PICTURE_TYPE_S: AVPictureType = 4;
-pub const AVPictureType_AV_PICTURE_TYPE_SI: AVPictureType = 5;
-pub const AVPictureType_AV_PICTURE_TYPE_SP: AVPictureType = 6;
-pub const AVPictureType_AV_PICTURE_TYPE_BI: AVPictureType = 7;
-pub type AVPictureType = u32;
-extern "C" {
-    pub fn av_get_picture_type_char(pict_type: AVPictureType) -> cty::c_char;
-}
-pub type errno_t = cty::c_int;
-extern "C" {
-    pub fn __error() -> *mut cty::c_int;
-}
-pub type __darwin_nl_item = cty::c_int;
-pub type __darwin_wctrans_t = cty::c_int;
-pub type __darwin_wctype_t = __uint32_t;
-pub type wchar_t = __darwin_wchar_t;
 extern "C" {
     pub fn imaxabs(j: intmax_t) -> intmax_t;
 }
@@ -2280,7 +2198,7 @@ extern "C" {
     pub fn __fpclassifyd(arg1: f64) -> cty::c_int;
 }
 extern "C" {
-    pub fn __fpclassifyl(arg1: u128) -> cty::c_int;
+    pub fn __fpclassifyl(arg1: f64) -> cty::c_int;
 }
 extern "C" {
     pub fn acosf(arg1: f32) -> f32;
@@ -2289,7 +2207,7 @@ extern "C" {
     pub fn acos(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn acosl(arg1: u128) -> u128;
+    pub fn acosl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn asinf(arg1: f32) -> f32;
@@ -2298,7 +2216,7 @@ extern "C" {
     pub fn asin(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn asinl(arg1: u128) -> u128;
+    pub fn asinl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn atanf(arg1: f32) -> f32;
@@ -2307,7 +2225,7 @@ extern "C" {
     pub fn atan(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn atanl(arg1: u128) -> u128;
+    pub fn atanl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn atan2f(arg1: f32, arg2: f32) -> f32;
@@ -2316,7 +2234,7 @@ extern "C" {
     pub fn atan2(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn atan2l(arg1: u128, arg2: u128) -> u128;
+    pub fn atan2l(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn cosf(arg1: f32) -> f32;
@@ -2325,7 +2243,7 @@ extern "C" {
     pub fn cos(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn cosl(arg1: u128) -> u128;
+    pub fn cosl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn sinf(arg1: f32) -> f32;
@@ -2334,7 +2252,7 @@ extern "C" {
     pub fn sin(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn sinl(arg1: u128) -> u128;
+    pub fn sinl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn tanf(arg1: f32) -> f32;
@@ -2343,7 +2261,7 @@ extern "C" {
     pub fn tan(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn tanl(arg1: u128) -> u128;
+    pub fn tanl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn acoshf(arg1: f32) -> f32;
@@ -2352,7 +2270,7 @@ extern "C" {
     pub fn acosh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn acoshl(arg1: u128) -> u128;
+    pub fn acoshl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn asinhf(arg1: f32) -> f32;
@@ -2361,7 +2279,7 @@ extern "C" {
     pub fn asinh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn asinhl(arg1: u128) -> u128;
+    pub fn asinhl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn atanhf(arg1: f32) -> f32;
@@ -2370,7 +2288,7 @@ extern "C" {
     pub fn atanh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn atanhl(arg1: u128) -> u128;
+    pub fn atanhl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn coshf(arg1: f32) -> f32;
@@ -2379,7 +2297,7 @@ extern "C" {
     pub fn cosh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn coshl(arg1: u128) -> u128;
+    pub fn coshl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn sinhf(arg1: f32) -> f32;
@@ -2388,7 +2306,7 @@ extern "C" {
     pub fn sinh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn sinhl(arg1: u128) -> u128;
+    pub fn sinhl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn tanhf(arg1: f32) -> f32;
@@ -2397,7 +2315,7 @@ extern "C" {
     pub fn tanh(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn tanhl(arg1: u128) -> u128;
+    pub fn tanhl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn expf(arg1: f32) -> f32;
@@ -2406,7 +2324,7 @@ extern "C" {
     pub fn exp(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn expl(arg1: u128) -> u128;
+    pub fn expl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn exp2f(arg1: f32) -> f32;
@@ -2415,7 +2333,7 @@ extern "C" {
     pub fn exp2(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn exp2l(arg1: u128) -> u128;
+    pub fn exp2l(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn expm1f(arg1: f32) -> f32;
@@ -2424,7 +2342,7 @@ extern "C" {
     pub fn expm1(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn expm1l(arg1: u128) -> u128;
+    pub fn expm1l(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn logf(arg1: f32) -> f32;
@@ -2433,7 +2351,7 @@ extern "C" {
     pub fn log(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn logl(arg1: u128) -> u128;
+    pub fn logl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn log10f(arg1: f32) -> f32;
@@ -2442,7 +2360,7 @@ extern "C" {
     pub fn log10(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn log10l(arg1: u128) -> u128;
+    pub fn log10l(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn log2f(arg1: f32) -> f32;
@@ -2451,7 +2369,7 @@ extern "C" {
     pub fn log2(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn log2l(arg1: u128) -> u128;
+    pub fn log2l(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn log1pf(arg1: f32) -> f32;
@@ -2460,7 +2378,7 @@ extern "C" {
     pub fn log1p(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn log1pl(arg1: u128) -> u128;
+    pub fn log1pl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn logbf(arg1: f32) -> f32;
@@ -2469,7 +2387,7 @@ extern "C" {
     pub fn logb(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn logbl(arg1: u128) -> u128;
+    pub fn logbl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn modff(arg1: f32, arg2: *mut f32) -> f32;
@@ -2478,7 +2396,7 @@ extern "C" {
     pub fn modf(arg1: f64, arg2: *mut f64) -> f64;
 }
 extern "C" {
-    pub fn modfl(arg1: u128, arg2: *mut u128) -> u128;
+    pub fn modfl(arg1: f64, arg2: *mut f64) -> f64;
 }
 extern "C" {
     pub fn ldexpf(arg1: f32, arg2: cty::c_int) -> f32;
@@ -2487,7 +2405,7 @@ extern "C" {
     pub fn ldexp(arg1: f64, arg2: cty::c_int) -> f64;
 }
 extern "C" {
-    pub fn ldexpl(arg1: u128, arg2: cty::c_int) -> u128;
+    pub fn ldexpl(arg1: f64, arg2: cty::c_int) -> f64;
 }
 extern "C" {
     pub fn frexpf(arg1: f32, arg2: *mut cty::c_int) -> f32;
@@ -2496,7 +2414,7 @@ extern "C" {
     pub fn frexp(arg1: f64, arg2: *mut cty::c_int) -> f64;
 }
 extern "C" {
-    pub fn frexpl(arg1: u128, arg2: *mut cty::c_int) -> u128;
+    pub fn frexpl(arg1: f64, arg2: *mut cty::c_int) -> f64;
 }
 extern "C" {
     pub fn ilogbf(arg1: f32) -> cty::c_int;
@@ -2505,7 +2423,7 @@ extern "C" {
     pub fn ilogb(arg1: f64) -> cty::c_int;
 }
 extern "C" {
-    pub fn ilogbl(arg1: u128) -> cty::c_int;
+    pub fn ilogbl(arg1: f64) -> cty::c_int;
 }
 extern "C" {
     pub fn scalbnf(arg1: f32, arg2: cty::c_int) -> f32;
@@ -2514,7 +2432,7 @@ extern "C" {
     pub fn scalbn(arg1: f64, arg2: cty::c_int) -> f64;
 }
 extern "C" {
-    pub fn scalbnl(arg1: u128, arg2: cty::c_int) -> u128;
+    pub fn scalbnl(arg1: f64, arg2: cty::c_int) -> f64;
 }
 extern "C" {
     pub fn scalblnf(arg1: f32, arg2: cty::c_long) -> f32;
@@ -2523,7 +2441,7 @@ extern "C" {
     pub fn scalbln(arg1: f64, arg2: cty::c_long) -> f64;
 }
 extern "C" {
-    pub fn scalblnl(arg1: u128, arg2: cty::c_long) -> u128;
+    pub fn scalblnl(arg1: f64, arg2: cty::c_long) -> f64;
 }
 extern "C" {
     pub fn fabsf(arg1: f32) -> f32;
@@ -2532,7 +2450,7 @@ extern "C" {
     pub fn fabs(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn fabsl(arg1: u128) -> u128;
+    pub fn fabsl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn cbrtf(arg1: f32) -> f32;
@@ -2541,7 +2459,7 @@ extern "C" {
     pub fn cbrt(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn cbrtl(arg1: u128) -> u128;
+    pub fn cbrtl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn hypotf(arg1: f32, arg2: f32) -> f32;
@@ -2550,7 +2468,7 @@ extern "C" {
     pub fn hypot(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn hypotl(arg1: u128, arg2: u128) -> u128;
+    pub fn hypotl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn powf(arg1: f32, arg2: f32) -> f32;
@@ -2559,7 +2477,7 @@ extern "C" {
     pub fn pow(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn powl(arg1: u128, arg2: u128) -> u128;
+    pub fn powl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn sqrtf(arg1: f32) -> f32;
@@ -2568,7 +2486,7 @@ extern "C" {
     pub fn sqrt(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn sqrtl(arg1: u128) -> u128;
+    pub fn sqrtl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn erff(arg1: f32) -> f32;
@@ -2577,7 +2495,7 @@ extern "C" {
     pub fn erf(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn erfl(arg1: u128) -> u128;
+    pub fn erfl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn erfcf(arg1: f32) -> f32;
@@ -2586,7 +2504,7 @@ extern "C" {
     pub fn erfc(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn erfcl(arg1: u128) -> u128;
+    pub fn erfcl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn lgammaf(arg1: f32) -> f32;
@@ -2595,7 +2513,7 @@ extern "C" {
     pub fn lgamma(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn lgammal(arg1: u128) -> u128;
+    pub fn lgammal(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn tgammaf(arg1: f32) -> f32;
@@ -2604,7 +2522,7 @@ extern "C" {
     pub fn tgamma(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn tgammal(arg1: u128) -> u128;
+    pub fn tgammal(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn ceilf(arg1: f32) -> f32;
@@ -2613,7 +2531,7 @@ extern "C" {
     pub fn ceil(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn ceill(arg1: u128) -> u128;
+    pub fn ceill(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn floorf(arg1: f32) -> f32;
@@ -2622,7 +2540,7 @@ extern "C" {
     pub fn floor(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn floorl(arg1: u128) -> u128;
+    pub fn floorl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn nearbyintf(arg1: f32) -> f32;
@@ -2631,7 +2549,7 @@ extern "C" {
     pub fn nearbyint(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn nearbyintl(arg1: u128) -> u128;
+    pub fn nearbyintl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn rintf(arg1: f32) -> f32;
@@ -2640,7 +2558,7 @@ extern "C" {
     pub fn rint(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn rintl(arg1: u128) -> u128;
+    pub fn rintl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn lrintf(arg1: f32) -> cty::c_long;
@@ -2649,7 +2567,7 @@ extern "C" {
     pub fn lrint(arg1: f64) -> cty::c_long;
 }
 extern "C" {
-    pub fn lrintl(arg1: u128) -> cty::c_long;
+    pub fn lrintl(arg1: f64) -> cty::c_long;
 }
 extern "C" {
     pub fn roundf(arg1: f32) -> f32;
@@ -2658,7 +2576,7 @@ extern "C" {
     pub fn round(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn roundl(arg1: u128) -> u128;
+    pub fn roundl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn lroundf(arg1: f32) -> cty::c_long;
@@ -2667,7 +2585,7 @@ extern "C" {
     pub fn lround(arg1: f64) -> cty::c_long;
 }
 extern "C" {
-    pub fn lroundl(arg1: u128) -> cty::c_long;
+    pub fn lroundl(arg1: f64) -> cty::c_long;
 }
 extern "C" {
     pub fn llrintf(arg1: f32) -> cty::c_longlong;
@@ -2676,7 +2594,7 @@ extern "C" {
     pub fn llrint(arg1: f64) -> cty::c_longlong;
 }
 extern "C" {
-    pub fn llrintl(arg1: u128) -> cty::c_longlong;
+    pub fn llrintl(arg1: f64) -> cty::c_longlong;
 }
 extern "C" {
     pub fn llroundf(arg1: f32) -> cty::c_longlong;
@@ -2685,7 +2603,7 @@ extern "C" {
     pub fn llround(arg1: f64) -> cty::c_longlong;
 }
 extern "C" {
-    pub fn llroundl(arg1: u128) -> cty::c_longlong;
+    pub fn llroundl(arg1: f64) -> cty::c_longlong;
 }
 extern "C" {
     pub fn truncf(arg1: f32) -> f32;
@@ -2694,7 +2612,7 @@ extern "C" {
     pub fn trunc(arg1: f64) -> f64;
 }
 extern "C" {
-    pub fn truncl(arg1: u128) -> u128;
+    pub fn truncl(arg1: f64) -> f64;
 }
 extern "C" {
     pub fn fmodf(arg1: f32, arg2: f32) -> f32;
@@ -2703,7 +2621,7 @@ extern "C" {
     pub fn fmod(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn fmodl(arg1: u128, arg2: u128) -> u128;
+    pub fn fmodl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn remainderf(arg1: f32, arg2: f32) -> f32;
@@ -2712,7 +2630,7 @@ extern "C" {
     pub fn remainder(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn remainderl(arg1: u128, arg2: u128) -> u128;
+    pub fn remainderl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn remquof(arg1: f32, arg2: f32, arg3: *mut cty::c_int) -> f32;
@@ -2721,7 +2639,7 @@ extern "C" {
     pub fn remquo(arg1: f64, arg2: f64, arg3: *mut cty::c_int) -> f64;
 }
 extern "C" {
-    pub fn remquol(arg1: u128, arg2: u128, arg3: *mut cty::c_int) -> u128;
+    pub fn remquol(arg1: f64, arg2: f64, arg3: *mut cty::c_int) -> f64;
 }
 extern "C" {
     pub fn copysignf(arg1: f32, arg2: f32) -> f32;
@@ -2730,7 +2648,7 @@ extern "C" {
     pub fn copysign(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn copysignl(arg1: u128, arg2: u128) -> u128;
+    pub fn copysignl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn nanf(arg1: *const cty::c_char) -> f32;
@@ -2739,7 +2657,7 @@ extern "C" {
     pub fn nan(arg1: *const cty::c_char) -> f64;
 }
 extern "C" {
-    pub fn nanl(arg1: *const cty::c_char) -> u128;
+    pub fn nanl(arg1: *const cty::c_char) -> f64;
 }
 extern "C" {
     pub fn nextafterf(arg1: f32, arg2: f32) -> f32;
@@ -2748,16 +2666,16 @@ extern "C" {
     pub fn nextafter(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn nextafterl(arg1: u128, arg2: u128) -> u128;
+    pub fn nextafterl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn nexttoward(arg1: f64, arg2: u128) -> f64;
+    pub fn nexttoward(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn nexttowardf(arg1: f32, arg2: u128) -> f32;
+    pub fn nexttowardf(arg1: f32, arg2: f64) -> f32;
 }
 extern "C" {
-    pub fn nexttowardl(arg1: u128, arg2: u128) -> u128;
+    pub fn nexttowardl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn fdimf(arg1: f32, arg2: f32) -> f32;
@@ -2766,7 +2684,7 @@ extern "C" {
     pub fn fdim(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn fdiml(arg1: u128, arg2: u128) -> u128;
+    pub fn fdiml(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn fmaxf(arg1: f32, arg2: f32) -> f32;
@@ -2775,7 +2693,7 @@ extern "C" {
     pub fn fmax(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn fmaxl(arg1: u128, arg2: u128) -> u128;
+    pub fn fmaxl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn fminf(arg1: f32, arg2: f32) -> f32;
@@ -2784,7 +2702,7 @@ extern "C" {
     pub fn fmin(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
-    pub fn fminl(arg1: u128, arg2: u128) -> u128;
+    pub fn fminl(arg1: f64, arg2: f64) -> f64;
 }
 extern "C" {
     pub fn fmaf(arg1: f32, arg2: f32, arg3: f32) -> f32;
@@ -2793,19 +2711,7 @@ extern "C" {
     pub fn fma(arg1: f64, arg2: f64, arg3: f64) -> f64;
 }
 extern "C" {
-    pub fn fmal(arg1: u128, arg2: u128, arg3: u128) -> u128;
-}
-extern "C" {
-    pub fn __inff() -> f32;
-}
-extern "C" {
-    pub fn __inf() -> f64;
-}
-extern "C" {
-    pub fn __infl() -> u128;
-}
-extern "C" {
-    pub fn __nan() -> f32;
+    pub fn fmal(arg1: f64, arg2: f64, arg3: f64) -> f64;
 }
 extern "C" {
     pub fn __exp10f(arg1: f32) -> f32;
@@ -2944,24 +2850,6 @@ extern "C" {
 }
 extern "C" {
     pub static mut signgam: cty::c_int;
-}
-extern "C" {
-    pub fn rinttol(arg1: f64) -> cty::c_long;
-}
-extern "C" {
-    pub fn roundtol(arg1: f64) -> cty::c_long;
-}
-extern "C" {
-    pub fn drem(arg1: f64, arg2: f64) -> f64;
-}
-extern "C" {
-    pub fn finite(arg1: f64) -> cty::c_int;
-}
-extern "C" {
-    pub fn gamma(arg1: f64) -> f64;
-}
-extern "C" {
-    pub fn significand(arg1: f64) -> f64;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -3504,17 +3392,17 @@ extern "C" {
     pub fn vfprintf(
         arg1: *mut FILE,
         arg2: *const cty::c_char,
-        arg3: *mut __va_list_tag,
+        arg3: __builtin_va_list,
     ) -> cty::c_int;
 }
 extern "C" {
-    pub fn vprintf(arg1: *const cty::c_char, arg2: *mut __va_list_tag) -> cty::c_int;
+    pub fn vprintf(arg1: *const cty::c_char, arg2: __builtin_va_list) -> cty::c_int;
 }
 extern "C" {
     pub fn vsprintf(
         arg1: *mut cty::c_char,
         arg2: *const cty::c_char,
-        arg3: *mut __va_list_tag,
+        arg3: __builtin_va_list,
     ) -> cty::c_int;
 }
 extern "C" {
@@ -3536,11 +3424,7 @@ extern "C" {
     pub fn __srget(arg1: *mut FILE) -> cty::c_int;
 }
 extern "C" {
-    pub fn __svfscanf(
-        arg1: *mut FILE,
-        arg2: *const cty::c_char,
-        arg3: *mut __va_list_tag,
-    ) -> cty::c_int;
+    pub fn __svfscanf(arg1: *mut FILE, arg2: *const cty::c_char, arg3: va_list) -> cty::c_int;
 }
 extern "C" {
     pub fn __swbuf(arg1: cty::c_int, arg2: *mut FILE) -> cty::c_int;
@@ -3594,25 +3478,25 @@ extern "C" {
     pub fn vfscanf(
         __stream: *mut FILE,
         __format: *const cty::c_char,
-        arg1: *mut __va_list_tag,
+        arg1: __builtin_va_list,
     ) -> cty::c_int;
 }
 extern "C" {
-    pub fn vscanf(__format: *const cty::c_char, arg1: *mut __va_list_tag) -> cty::c_int;
+    pub fn vscanf(__format: *const cty::c_char, arg1: __builtin_va_list) -> cty::c_int;
 }
 extern "C" {
     pub fn vsnprintf(
         __str: *mut cty::c_char,
         __size: cty::c_ulong,
         __format: *const cty::c_char,
-        arg1: *mut __va_list_tag,
+        arg1: __builtin_va_list,
     ) -> cty::c_int;
 }
 extern "C" {
     pub fn vsscanf(
         __str: *const cty::c_char,
         __format: *const cty::c_char,
-        arg1: *mut __va_list_tag,
+        arg1: __builtin_va_list,
     ) -> cty::c_int;
 }
 pub type ssize_t = __darwin_ssize_t;
@@ -3620,11 +3504,7 @@ extern "C" {
     pub fn dprintf(arg1: cty::c_int, arg2: *const cty::c_char, ...) -> cty::c_int;
 }
 extern "C" {
-    pub fn vdprintf(
-        arg1: cty::c_int,
-        arg2: *const cty::c_char,
-        arg3: *mut __va_list_tag,
-    ) -> cty::c_int;
+    pub fn vdprintf(arg1: cty::c_int, arg2: *const cty::c_char, arg3: va_list) -> cty::c_int;
 }
 extern "C" {
     pub fn getdelim(
@@ -3682,7 +3562,7 @@ extern "C" {
     pub fn vasprintf(
         arg1: *mut *mut cty::c_char,
         arg2: *const cty::c_char,
-        arg3: *mut __va_list_tag,
+        arg3: va_list,
     ) -> cty::c_int;
 }
 extern "C" {
@@ -3733,7 +3613,7 @@ extern "C" {
         arg2: cty::c_int,
         arg3: size_t,
         arg4: *const cty::c_char,
-        arg5: *mut __va_list_tag,
+        arg5: va_list,
     ) -> cty::c_int;
 }
 extern "C" {
@@ -3743,7 +3623,7 @@ extern "C" {
         arg3: cty::c_int,
         arg4: size_t,
         arg5: *const cty::c_char,
-        arg6: *mut __va_list_tag,
+        arg6: va_list,
     ) -> cty::c_int;
 }
 pub const idtype_t_P_ALL: idtype_t = 0;
@@ -3755,3073 +3635,470 @@ pub type id_t = __darwin_id_t;
 pub type sig_atomic_t = cty::c_int;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_i386_thread_state {
-    pub __eax: cty::c_uint,
-    pub __ebx: cty::c_uint,
-    pub __ecx: cty::c_uint,
-    pub __edx: cty::c_uint,
-    pub __edi: cty::c_uint,
-    pub __esi: cty::c_uint,
-    pub __ebp: cty::c_uint,
-    pub __esp: cty::c_uint,
-    pub __ss: cty::c_uint,
-    pub __eflags: cty::c_uint,
-    pub __eip: cty::c_uint,
-    pub __cs: cty::c_uint,
-    pub __ds: cty::c_uint,
-    pub __es: cty::c_uint,
-    pub __fs: cty::c_uint,
-    pub __gs: cty::c_uint,
+pub struct __darwin_arm_exception_state {
+    pub __exception: __uint32_t,
+    pub __fsr: __uint32_t,
+    pub __far: __uint32_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_i386_thread_state() {
+fn bindgen_test_layout___darwin_arm_exception_state() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_i386_thread_state>(),
-        64usize,
-        concat!("Size of: ", stringify!(__darwin_i386_thread_state))
+        ::core::mem::size_of::<__darwin_arm_exception_state>(),
+        12usize,
+        concat!("Size of: ", stringify!(__darwin_arm_exception_state))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_i386_thread_state>(),
+        ::core::mem::align_of::<__darwin_arm_exception_state>(),
         4usize,
-        concat!("Alignment of ", stringify!(__darwin_i386_thread_state))
+        concat!("Alignment of ", stringify!(__darwin_arm_exception_state))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__eax as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_exception_state>())).__exception as *const _
+                as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_exception_state),
             "::",
-            stringify!(__eax)
+            stringify!(__exception)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__ebx as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_exception_state>())).__fsr as *const _ as usize
         },
         4usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_exception_state),
             "::",
-            stringify!(__ebx)
+            stringify!(__fsr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__ecx as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_exception_state>())).__far as *const _ as usize
         },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_exception_state),
             "::",
-            stringify!(__ecx)
+            stringify!(__far)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_arm_exception_state64 {
+    pub __far: __uint64_t,
+    pub __esr: __uint32_t,
+    pub __exception: __uint32_t,
+}
+#[test]
+fn bindgen_test_layout___darwin_arm_exception_state64() {
+    assert_eq!(
+        ::core::mem::size_of::<__darwin_arm_exception_state64>(),
+        16usize,
+        concat!("Size of: ", stringify!(__darwin_arm_exception_state64))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<__darwin_arm_exception_state64>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__darwin_arm_exception_state64))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_exception_state64>())).__far as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__darwin_arm_exception_state64),
+            "::",
+            stringify!(__far)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__edx as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_exception_state64>())).__esr as *const _ as usize
+        },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__darwin_arm_exception_state64),
+            "::",
+            stringify!(__esr)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_exception_state64>())).__exception as *const _
+                as usize
         },
         12usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_exception_state64),
             "::",
-            stringify!(__edx)
+            stringify!(__exception)
         )
     );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_arm_thread_state {
+    pub __r: [__uint32_t; 13usize],
+    pub __sp: __uint32_t,
+    pub __lr: __uint32_t,
+    pub __pc: __uint32_t,
+    pub __cpsr: __uint32_t,
+}
+#[test]
+fn bindgen_test_layout___darwin_arm_thread_state() {
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__edi as *const _ as usize
-        },
-        16usize,
+        ::core::mem::size_of::<__darwin_arm_thread_state>(),
+        68usize,
+        concat!("Size of: ", stringify!(__darwin_arm_thread_state))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<__darwin_arm_thread_state>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__darwin_arm_thread_state))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_thread_state>())).__r as *const _ as usize },
+        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_thread_state),
             "::",
-            stringify!(__edi)
+            stringify!(__r)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__esi as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__esi)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__ebp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__ebp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__esp as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__esp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__ss as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__eflags as *const _ as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__eflags)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__eip as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__eip)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__cs as *const _ as usize
-        },
-        44usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__ds as *const _ as usize
-        },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
-            "::",
-            stringify!(__ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__es as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_thread_state>())).__sp as *const _ as usize },
         52usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_thread_state),
             "::",
-            stringify!(__es)
+            stringify!(__sp)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__fs as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_thread_state>())).__lr as *const _ as usize },
         56usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_thread_state),
             "::",
-            stringify!(__fs)
+            stringify!(__lr)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_thread_state>())).__gs as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_thread_state>())).__pc as *const _ as usize },
         60usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_thread_state),
+            stringify!(__darwin_arm_thread_state),
             "::",
-            stringify!(__gs)
-        )
-    );
-}
-#[repr(C)]
-#[repr(align(2))]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_fp_control {
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 2usize], u8>,
-}
-#[test]
-fn bindgen_test_layout___darwin_fp_control() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_fp_control>(),
-        2usize,
-        concat!("Size of: ", stringify!(__darwin_fp_control))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_fp_control>(),
-        2usize,
-        concat!("Alignment of ", stringify!(__darwin_fp_control))
-    );
-}
-impl __darwin_fp_control {
-    #[inline]
-    pub fn __invalid(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___invalid(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __denorm(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___denorm(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __zdiv(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___zdiv(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __ovrfl(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___ovrfl(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __undfl(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___undfl(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(4usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __precis(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___precis(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(5usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __pc(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 2u8) as u16) }
-    }
-    #[inline]
-    pub fn set___pc(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(8usize, 2u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __rc(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 2u8) as u16) }
-    }
-    #[inline]
-    pub fn set___rc(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(10usize, 2u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        __invalid: cty::c_ushort,
-        __denorm: cty::c_ushort,
-        __zdiv: cty::c_ushort,
-        __ovrfl: cty::c_ushort,
-        __undfl: cty::c_ushort,
-        __precis: cty::c_ushort,
-        __pc: cty::c_ushort,
-        __rc: cty::c_ushort,
-    ) -> __BindgenBitfieldUnit<[u8; 2usize], u8> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 2usize], u8> =
-            Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let __invalid: u16 = unsafe { ::core::mem::transmute(__invalid) };
-            __invalid as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let __denorm: u16 = unsafe { ::core::mem::transmute(__denorm) };
-            __denorm as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let __zdiv: u16 = unsafe { ::core::mem::transmute(__zdiv) };
-            __zdiv as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let __ovrfl: u16 = unsafe { ::core::mem::transmute(__ovrfl) };
-            __ovrfl as u64
-        });
-        __bindgen_bitfield_unit.set(4usize, 1u8, {
-            let __undfl: u16 = unsafe { ::core::mem::transmute(__undfl) };
-            __undfl as u64
-        });
-        __bindgen_bitfield_unit.set(5usize, 1u8, {
-            let __precis: u16 = unsafe { ::core::mem::transmute(__precis) };
-            __precis as u64
-        });
-        __bindgen_bitfield_unit.set(8usize, 2u8, {
-            let __pc: u16 = unsafe { ::core::mem::transmute(__pc) };
-            __pc as u64
-        });
-        __bindgen_bitfield_unit.set(10usize, 2u8, {
-            let __rc: u16 = unsafe { ::core::mem::transmute(__rc) };
-            __rc as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-pub type __darwin_fp_control_t = __darwin_fp_control;
-#[repr(C)]
-#[repr(align(2))]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_fp_status {
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 2usize], u8>,
-}
-#[test]
-fn bindgen_test_layout___darwin_fp_status() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_fp_status>(),
-        2usize,
-        concat!("Size of: ", stringify!(__darwin_fp_status))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_fp_status>(),
-        2usize,
-        concat!("Alignment of ", stringify!(__darwin_fp_status))
-    );
-}
-impl __darwin_fp_status {
-    #[inline]
-    pub fn __invalid(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___invalid(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __denorm(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___denorm(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __zdiv(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___zdiv(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __ovrfl(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___ovrfl(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(3usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __undfl(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(4usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___undfl(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(4usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __precis(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(5usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___precis(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(5usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __stkflt(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(6usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___stkflt(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(6usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __errsumm(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___errsumm(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(7usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __c0(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(8usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___c0(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(8usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __c1(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(9usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___c1(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(9usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __c2(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(10usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___c2(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(10usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __tos(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(11usize, 3u8) as u16) }
-    }
-    #[inline]
-    pub fn set___tos(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(11usize, 3u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __c3(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(14usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___c3(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(14usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __busy(&self) -> cty::c_ushort {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(15usize, 1u8) as u16) }
-    }
-    #[inline]
-    pub fn set___busy(&mut self, val: cty::c_ushort) {
-        unsafe {
-            let val: u16 = ::core::mem::transmute(val);
-            self._bitfield_1.set(15usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        __invalid: cty::c_ushort,
-        __denorm: cty::c_ushort,
-        __zdiv: cty::c_ushort,
-        __ovrfl: cty::c_ushort,
-        __undfl: cty::c_ushort,
-        __precis: cty::c_ushort,
-        __stkflt: cty::c_ushort,
-        __errsumm: cty::c_ushort,
-        __c0: cty::c_ushort,
-        __c1: cty::c_ushort,
-        __c2: cty::c_ushort,
-        __tos: cty::c_ushort,
-        __c3: cty::c_ushort,
-        __busy: cty::c_ushort,
-    ) -> __BindgenBitfieldUnit<[u8; 2usize], u8> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 2usize], u8> =
-            Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let __invalid: u16 = unsafe { ::core::mem::transmute(__invalid) };
-            __invalid as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let __denorm: u16 = unsafe { ::core::mem::transmute(__denorm) };
-            __denorm as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let __zdiv: u16 = unsafe { ::core::mem::transmute(__zdiv) };
-            __zdiv as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 1u8, {
-            let __ovrfl: u16 = unsafe { ::core::mem::transmute(__ovrfl) };
-            __ovrfl as u64
-        });
-        __bindgen_bitfield_unit.set(4usize, 1u8, {
-            let __undfl: u16 = unsafe { ::core::mem::transmute(__undfl) };
-            __undfl as u64
-        });
-        __bindgen_bitfield_unit.set(5usize, 1u8, {
-            let __precis: u16 = unsafe { ::core::mem::transmute(__precis) };
-            __precis as u64
-        });
-        __bindgen_bitfield_unit.set(6usize, 1u8, {
-            let __stkflt: u16 = unsafe { ::core::mem::transmute(__stkflt) };
-            __stkflt as u64
-        });
-        __bindgen_bitfield_unit.set(7usize, 1u8, {
-            let __errsumm: u16 = unsafe { ::core::mem::transmute(__errsumm) };
-            __errsumm as u64
-        });
-        __bindgen_bitfield_unit.set(8usize, 1u8, {
-            let __c0: u16 = unsafe { ::core::mem::transmute(__c0) };
-            __c0 as u64
-        });
-        __bindgen_bitfield_unit.set(9usize, 1u8, {
-            let __c1: u16 = unsafe { ::core::mem::transmute(__c1) };
-            __c1 as u64
-        });
-        __bindgen_bitfield_unit.set(10usize, 1u8, {
-            let __c2: u16 = unsafe { ::core::mem::transmute(__c2) };
-            __c2 as u64
-        });
-        __bindgen_bitfield_unit.set(11usize, 3u8, {
-            let __tos: u16 = unsafe { ::core::mem::transmute(__tos) };
-            __tos as u64
-        });
-        __bindgen_bitfield_unit.set(14usize, 1u8, {
-            let __c3: u16 = unsafe { ::core::mem::transmute(__c3) };
-            __c3 as u64
-        });
-        __bindgen_bitfield_unit.set(15usize, 1u8, {
-            let __busy: u16 = unsafe { ::core::mem::transmute(__busy) };
-            __busy as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-pub type __darwin_fp_status_t = __darwin_fp_status;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_mmst_reg {
-    pub __mmst_reg: [cty::c_char; 10usize],
-    pub __mmst_rsrv: [cty::c_char; 6usize],
-}
-#[test]
-fn bindgen_test_layout___darwin_mmst_reg() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mmst_reg>(),
-        16usize,
-        concat!("Size of: ", stringify!(__darwin_mmst_reg))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mmst_reg>(),
-        1usize,
-        concat!("Alignment of ", stringify!(__darwin_mmst_reg))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mmst_reg>())).__mmst_reg as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mmst_reg),
-            "::",
-            stringify!(__mmst_reg)
+            stringify!(__pc)
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mmst_reg>())).__mmst_rsrv as *const _ as usize },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mmst_reg),
-            "::",
-            stringify!(__mmst_rsrv)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_xmm_reg {
-    pub __xmm_reg: [cty::c_char; 16usize],
-}
-#[test]
-fn bindgen_test_layout___darwin_xmm_reg() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_xmm_reg>(),
-        16usize,
-        concat!("Size of: ", stringify!(__darwin_xmm_reg))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_xmm_reg>(),
-        1usize,
-        concat!("Alignment of ", stringify!(__darwin_xmm_reg))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_xmm_reg>())).__xmm_reg as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_xmm_reg),
-            "::",
-            stringify!(__xmm_reg)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_ymm_reg {
-    pub __ymm_reg: [cty::c_char; 32usize],
-}
-#[test]
-fn bindgen_test_layout___darwin_ymm_reg() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_ymm_reg>(),
-        32usize,
-        concat!("Size of: ", stringify!(__darwin_ymm_reg))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_ymm_reg>(),
-        1usize,
-        concat!("Alignment of ", stringify!(__darwin_ymm_reg))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_ymm_reg>())).__ymm_reg as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_ymm_reg),
-            "::",
-            stringify!(__ymm_reg)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_zmm_reg {
-    pub __zmm_reg: [cty::c_char; 64usize],
-}
-#[test]
-fn bindgen_test_layout___darwin_zmm_reg() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_zmm_reg>(),
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_thread_state>())).__cpsr as *const _ as usize
+        },
         64usize,
-        concat!("Size of: ", stringify!(__darwin_zmm_reg))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_zmm_reg>(),
-        1usize,
-        concat!("Alignment of ", stringify!(__darwin_zmm_reg))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_zmm_reg>())).__zmm_reg as *const _ as usize },
-        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_zmm_reg),
+            stringify!(__darwin_arm_thread_state),
             "::",
-            stringify!(__zmm_reg)
+            stringify!(__cpsr)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_opmask_reg {
-    pub __opmask_reg: [cty::c_char; 8usize],
+pub struct __darwin_arm_thread_state64 {
+    pub __x: [__uint64_t; 29usize],
+    pub __fp: __uint64_t,
+    pub __lr: __uint64_t,
+    pub __sp: __uint64_t,
+    pub __pc: __uint64_t,
+    pub __cpsr: __uint32_t,
+    pub __pad: __uint32_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_opmask_reg() {
+fn bindgen_test_layout___darwin_arm_thread_state64() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_opmask_reg>(),
-        8usize,
-        concat!("Size of: ", stringify!(__darwin_opmask_reg))
+        ::core::mem::size_of::<__darwin_arm_thread_state64>(),
+        272usize,
+        concat!("Size of: ", stringify!(__darwin_arm_thread_state64))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_opmask_reg>(),
-        1usize,
-        concat!("Alignment of ", stringify!(__darwin_opmask_reg))
+        ::core::mem::align_of::<__darwin_arm_thread_state64>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__darwin_arm_thread_state64))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_opmask_reg>())).__opmask_reg as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__x as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_opmask_reg),
+            stringify!(__darwin_arm_thread_state64),
             "::",
-            stringify!(__opmask_reg)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_i386_float_state {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 224usize],
-    pub __fpu_reserved1: cty::c_int,
-}
-#[test]
-fn bindgen_test_layout___darwin_i386_float_state() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_i386_float_state>(),
-        524usize,
-        concat!("Size of: ", stringify!(__darwin_i386_float_state))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_i386_float_state>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_i386_float_state))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_reserved as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_reserved)
+            stringify!(__x)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_fcw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_fsw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_rsrv1 as *const _ as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_ip as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_ip)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_cs as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_rsrv2 as *const _ as usize
-        },
-        22usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_rsrv3 as *const _ as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_mxcsr as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm0 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm1 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm2 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm3 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm4 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm5 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm6 as *const _ as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_stmm7 as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm4 as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__fp as *const _ as usize
         },
         232usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
+            stringify!(__darwin_arm_thread_state64),
             "::",
-            stringify!(__fpu_xmm4)
+            stringify!(__fp)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm5 as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__lr as *const _ as usize
+        },
+        240usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__darwin_arm_thread_state64),
+            "::",
+            stringify!(__lr)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__sp as *const _ as usize
         },
         248usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
+            stringify!(__darwin_arm_thread_state64),
             "::",
-            stringify!(__fpu_xmm5)
+            stringify!(__sp)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm6 as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__pc as *const _ as usize
+        },
+        256usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__darwin_arm_thread_state64),
+            "::",
+            stringify!(__pc)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__cpsr as *const _ as usize
         },
         264usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
+            stringify!(__darwin_arm_thread_state64),
             "::",
-            stringify!(__fpu_xmm6)
+            stringify!(__cpsr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_xmm7 as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_thread_state64>())).__pad as *const _ as usize
         },
-        280usize,
+        268usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
+            stringify!(__darwin_arm_thread_state64),
             "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_rsrv4 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_float_state>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_float_state),
-            "::",
-            stringify!(__fpu_reserved1)
+            stringify!(__pad)
         )
     );
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
-pub struct __darwin_i386_avx_state {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 224usize],
-    pub __fpu_reserved1: cty::c_int,
-    pub __avx_reserved1: [cty::c_char; 64usize],
-    pub __fpu_ymmh0: __darwin_xmm_reg,
-    pub __fpu_ymmh1: __darwin_xmm_reg,
-    pub __fpu_ymmh2: __darwin_xmm_reg,
-    pub __fpu_ymmh3: __darwin_xmm_reg,
-    pub __fpu_ymmh4: __darwin_xmm_reg,
-    pub __fpu_ymmh5: __darwin_xmm_reg,
-    pub __fpu_ymmh6: __darwin_xmm_reg,
-    pub __fpu_ymmh7: __darwin_xmm_reg,
+pub struct __darwin_arm_vfp_state {
+    pub __r: [__uint32_t; 64usize],
+    pub __fpscr: __uint32_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_i386_avx_state() {
+fn bindgen_test_layout___darwin_arm_vfp_state() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_i386_avx_state>(),
-        716usize,
-        concat!("Size of: ", stringify!(__darwin_i386_avx_state))
+        ::core::mem::size_of::<__darwin_arm_vfp_state>(),
+        260usize,
+        concat!("Size of: ", stringify!(__darwin_arm_vfp_state))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_i386_avx_state>(),
+        ::core::mem::align_of::<__darwin_arm_vfp_state>(),
         4usize,
-        concat!("Alignment of ", stringify!(__darwin_i386_avx_state))
+        concat!("Alignment of ", stringify!(__darwin_arm_vfp_state))
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_reserved as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_vfp_state>())).__r as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
+            stringify!(__darwin_arm_vfp_state),
             "::",
-            stringify!(__fpu_reserved)
+            stringify!(__r)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_vfp_state>())).__fpscr as *const _ as usize },
+        256usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
+            stringify!(__darwin_arm_vfp_state),
             "::",
-            stringify!(__fpu_fcw)
+            stringify!(__fpscr)
         )
     );
+}
+#[repr(C)]
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_arm_neon_state64 {
+    pub __v: [__uint128_t; 32usize],
+    pub __fpsr: __uint32_t,
+    pub __fpcr: __uint32_t,
+}
+#[test]
+fn bindgen_test_layout___darwin_arm_neon_state64() {
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_fsw)
-        )
+        ::core::mem::size_of::<__darwin_arm_neon_state64>(),
+        528usize,
+        concat!("Size of: ", stringify!(__darwin_arm_neon_state64))
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_rsrv1 as *const _ as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ip as *const _ as usize
-        },
+        ::core::mem::align_of::<__darwin_arm_neon_state64>(),
         16usize,
+        concat!("Alignment of ", stringify!(__darwin_arm_neon_state64))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_neon_state64>())).__v as *const _ as usize },
+        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
+            stringify!(__darwin_arm_neon_state64),
             "::",
-            stringify!(__fpu_ip)
+            stringify!(__v)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_cs as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_neon_state64>())).__fpsr as *const _ as usize
         },
-        20usize,
+        512usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
+            stringify!(__darwin_arm_neon_state64),
             "::",
-            stringify!(__fpu_cs)
+            stringify!(__fpsr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_rsrv2 as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_neon_state64>())).__fpcr as *const _ as usize
         },
-        22usize,
+        516usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
+            stringify!(__darwin_arm_neon_state64),
             "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_rsrv3 as *const _ as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_mxcsr as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm0 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm1 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm2 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm3 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm4 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm5 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm6 as *const _ as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_stmm7 as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm4 as *const _ as usize
-        },
-        232usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm5 as *const _ as usize
-        },
-        248usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm6 as *const _ as usize
-        },
-        264usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_xmm7 as *const _ as usize
-        },
-        280usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_rsrv4 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__avx_reserved1 as *const _
-                as usize
-        },
-        524usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__avx_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh0 as *const _ as usize
-        },
-        588usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh1 as *const _ as usize
-        },
-        604usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh2 as *const _ as usize
-        },
-        620usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh3 as *const _ as usize
-        },
-        636usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh4 as *const _ as usize
-        },
-        652usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh5 as *const _ as usize
-        },
-        668usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh6 as *const _ as usize
-        },
-        684usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx_state>())).__fpu_ymmh7 as *const _ as usize
-        },
-        700usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx_state),
-            "::",
-            stringify!(__fpu_ymmh7)
+            stringify!(__fpcr)
         )
     );
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_i386_avx512_state {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 224usize],
-    pub __fpu_reserved1: cty::c_int,
-    pub __avx_reserved1: [cty::c_char; 64usize],
-    pub __fpu_ymmh0: __darwin_xmm_reg,
-    pub __fpu_ymmh1: __darwin_xmm_reg,
-    pub __fpu_ymmh2: __darwin_xmm_reg,
-    pub __fpu_ymmh3: __darwin_xmm_reg,
-    pub __fpu_ymmh4: __darwin_xmm_reg,
-    pub __fpu_ymmh5: __darwin_xmm_reg,
-    pub __fpu_ymmh6: __darwin_xmm_reg,
-    pub __fpu_ymmh7: __darwin_xmm_reg,
-    pub __fpu_k0: __darwin_opmask_reg,
-    pub __fpu_k1: __darwin_opmask_reg,
-    pub __fpu_k2: __darwin_opmask_reg,
-    pub __fpu_k3: __darwin_opmask_reg,
-    pub __fpu_k4: __darwin_opmask_reg,
-    pub __fpu_k5: __darwin_opmask_reg,
-    pub __fpu_k6: __darwin_opmask_reg,
-    pub __fpu_k7: __darwin_opmask_reg,
-    pub __fpu_zmmh0: __darwin_ymm_reg,
-    pub __fpu_zmmh1: __darwin_ymm_reg,
-    pub __fpu_zmmh2: __darwin_ymm_reg,
-    pub __fpu_zmmh3: __darwin_ymm_reg,
-    pub __fpu_zmmh4: __darwin_ymm_reg,
-    pub __fpu_zmmh5: __darwin_ymm_reg,
-    pub __fpu_zmmh6: __darwin_ymm_reg,
-    pub __fpu_zmmh7: __darwin_ymm_reg,
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_arm_neon_state {
+    pub __v: [__uint128_t; 16usize],
+    pub __fpsr: __uint32_t,
+    pub __fpcr: __uint32_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_i386_avx512_state() {
+fn bindgen_test_layout___darwin_arm_neon_state() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_i386_avx512_state>(),
-        1036usize,
-        concat!("Size of: ", stringify!(__darwin_i386_avx512_state))
+        ::core::mem::size_of::<__darwin_arm_neon_state>(),
+        272usize,
+        concat!("Size of: ", stringify!(__darwin_arm_neon_state))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_i386_avx512_state>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_i386_avx512_state))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_reserved as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_reserved)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_fcw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_fsw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_rsrv1 as *const _ as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ip as *const _ as usize
-        },
+        ::core::mem::align_of::<__darwin_arm_neon_state>(),
         16usize,
+        concat!("Alignment of ", stringify!(__darwin_arm_neon_state))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_neon_state>())).__v as *const _ as usize },
+        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
+            stringify!(__darwin_arm_neon_state),
             "::",
-            stringify!(__fpu_ip)
+            stringify!(__v)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_cs as *const _ as usize
-        },
-        20usize,
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_neon_state>())).__fpsr as *const _ as usize },
+        256usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
+            stringify!(__darwin_arm_neon_state),
             "::",
-            stringify!(__fpu_cs)
+            stringify!(__fpsr)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_rsrv2 as *const _ as usize
-        },
-        22usize,
+        unsafe { &(*(::core::ptr::null::<__darwin_arm_neon_state>())).__fpcr as *const _ as usize },
+        260usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
+            stringify!(__darwin_arm_neon_state),
             "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_rsrv3 as *const _ as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_mxcsr as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm0 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm1 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm2 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm3 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm4 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm5 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm6 as *const _ as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_stmm7 as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm4 as *const _ as usize
-        },
-        232usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm5 as *const _ as usize
-        },
-        248usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm6 as *const _ as usize
-        },
-        264usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_xmm7 as *const _ as usize
-        },
-        280usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_rsrv4 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__avx_reserved1 as *const _
-                as usize
-        },
-        524usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__avx_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh0 as *const _ as usize
-        },
-        588usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh1 as *const _ as usize
-        },
-        604usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh2 as *const _ as usize
-        },
-        620usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh3 as *const _ as usize
-        },
-        636usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh4 as *const _ as usize
-        },
-        652usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh5 as *const _ as usize
-        },
-        668usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh6 as *const _ as usize
-        },
-        684usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_ymmh7 as *const _ as usize
-        },
-        700usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_ymmh7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k0 as *const _ as usize
-        },
-        716usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k1 as *const _ as usize
-        },
-        724usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k2 as *const _ as usize
-        },
-        732usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k3 as *const _ as usize
-        },
-        740usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k4 as *const _ as usize
-        },
-        748usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k5 as *const _ as usize
-        },
-        756usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k6 as *const _ as usize
-        },
-        764usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_k7 as *const _ as usize
-        },
-        772usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_k7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh0 as *const _ as usize
-        },
-        780usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh1 as *const _ as usize
-        },
-        812usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh2 as *const _ as usize
-        },
-        844usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh3 as *const _ as usize
-        },
-        876usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh4 as *const _ as usize
-        },
-        908usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh5 as *const _ as usize
-        },
-        940usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh6 as *const _ as usize
-        },
-        972usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_avx512_state>())).__fpu_zmmh7 as *const _ as usize
-        },
-        1004usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_avx512_state),
-            "::",
-            stringify!(__fpu_zmmh7)
+            stringify!(__fpcr)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_i386_exception_state {
-    pub __trapno: __uint16_t,
-    pub __cpu: __uint16_t,
-    pub __err: __uint32_t,
-    pub __faultvaddr: __uint32_t,
-}
-#[test]
-fn bindgen_test_layout___darwin_i386_exception_state() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_i386_exception_state>(),
-        12usize,
-        concat!("Size of: ", stringify!(__darwin_i386_exception_state))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_i386_exception_state>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_i386_exception_state))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_exception_state>())).__trapno as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_exception_state),
-            "::",
-            stringify!(__trapno)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_exception_state>())).__cpu as *const _ as usize
-        },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_exception_state),
-            "::",
-            stringify!(__cpu)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_exception_state>())).__err as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_exception_state),
-            "::",
-            stringify!(__err)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_i386_exception_state>())).__faultvaddr as *const _
-                as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_i386_exception_state),
-            "::",
-            stringify!(__faultvaddr)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_debug_state32 {
-    pub __dr0: cty::c_uint,
-    pub __dr1: cty::c_uint,
-    pub __dr2: cty::c_uint,
-    pub __dr3: cty::c_uint,
-    pub __dr4: cty::c_uint,
-    pub __dr5: cty::c_uint,
-    pub __dr6: cty::c_uint,
-    pub __dr7: cty::c_uint,
-}
-#[test]
-fn bindgen_test_layout___darwin_x86_debug_state32() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_debug_state32>(),
-        32usize,
-        concat!("Size of: ", stringify!(__darwin_x86_debug_state32))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_debug_state32>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_debug_state32))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr0 as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr1 as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr2 as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr3 as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr4 as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr5 as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr6 as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state32>())).__dr7 as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state32),
-            "::",
-            stringify!(__dr7)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __x86_instruction_state {
-    pub __insn_stream_valid_bytes: cty::c_int,
-    pub __insn_offset: cty::c_int,
-    pub __out_of_synch: cty::c_int,
-    pub __insn_bytes: [__uint8_t; 2380usize],
-    pub __insn_cacheline: [__uint8_t; 64usize],
-}
-#[test]
-fn bindgen_test_layout___x86_instruction_state() {
-    assert_eq!(
-        ::core::mem::size_of::<__x86_instruction_state>(),
-        2456usize,
-        concat!("Size of: ", stringify!(__x86_instruction_state))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__x86_instruction_state>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__x86_instruction_state))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__x86_instruction_state>())).__insn_stream_valid_bytes
-                as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__x86_instruction_state),
-            "::",
-            stringify!(__insn_stream_valid_bytes)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__x86_instruction_state>())).__insn_offset as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__x86_instruction_state),
-            "::",
-            stringify!(__insn_offset)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__x86_instruction_state>())).__out_of_synch as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__x86_instruction_state),
-            "::",
-            stringify!(__out_of_synch)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__x86_instruction_state>())).__insn_bytes as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__x86_instruction_state),
-            "::",
-            stringify!(__insn_bytes)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__x86_instruction_state>())).__insn_cacheline as *const _
-                as usize
-        },
-        2392usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__x86_instruction_state),
-            "::",
-            stringify!(__insn_cacheline)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __last_branch_record {
-    pub __from_ip: __uint64_t,
-    pub __to_ip: __uint64_t,
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u16>,
-    pub __bindgen_padding_0: u32,
-}
-#[test]
-fn bindgen_test_layout___last_branch_record() {
-    assert_eq!(
-        ::core::mem::size_of::<__last_branch_record>(),
-        24usize,
-        concat!("Size of: ", stringify!(__last_branch_record))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__last_branch_record>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__last_branch_record))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__last_branch_record>())).__from_ip as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__last_branch_record),
-            "::",
-            stringify!(__from_ip)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__last_branch_record>())).__to_ip as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__last_branch_record),
-            "::",
-            stringify!(__to_ip)
-        )
-    );
-}
-impl __last_branch_record {
-    #[inline]
-    pub fn __mispredict(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set___mispredict(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __tsx_abort(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set___tsx_abort(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __in_tsx(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set___in_tsx(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(2usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __cycle_count(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(3usize, 16u8) as u32) }
-    }
-    #[inline]
-    pub fn set___cycle_count(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(3usize, 16u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __reserved(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(19usize, 13u8) as u32) }
-    }
-    #[inline]
-    pub fn set___reserved(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(19usize, 13u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        __mispredict: __uint32_t,
-        __tsx_abort: __uint32_t,
-        __in_tsx: __uint32_t,
-        __cycle_count: __uint32_t,
-        __reserved: __uint32_t,
-    ) -> __BindgenBitfieldUnit<[u8; 4usize], u16> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u16> =
-            Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let __mispredict: u32 = unsafe { ::core::mem::transmute(__mispredict) };
-            __mispredict as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let __tsx_abort: u32 = unsafe { ::core::mem::transmute(__tsx_abort) };
-            __tsx_abort as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 1u8, {
-            let __in_tsx: u32 = unsafe { ::core::mem::transmute(__in_tsx) };
-            __in_tsx as u64
-        });
-        __bindgen_bitfield_unit.set(3usize, 16u8, {
-            let __cycle_count: u32 = unsafe { ::core::mem::transmute(__cycle_count) };
-            __cycle_count as u64
-        });
-        __bindgen_bitfield_unit.set(19usize, 13u8, {
-            let __reserved: u32 = unsafe { ::core::mem::transmute(__reserved) };
-            __reserved as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __last_branch_state {
-    pub __lbr_count: cty::c_int,
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize], u32>,
-    pub __lbrs: [__last_branch_record; 32usize],
-}
-#[test]
-fn bindgen_test_layout___last_branch_state() {
-    assert_eq!(
-        ::core::mem::size_of::<__last_branch_state>(),
-        776usize,
-        concat!("Size of: ", stringify!(__last_branch_state))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__last_branch_state>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__last_branch_state))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__last_branch_state>())).__lbr_count as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__last_branch_state),
-            "::",
-            stringify!(__lbr_count)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__last_branch_state>())).__lbrs as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__last_branch_state),
-            "::",
-            stringify!(__lbrs)
-        )
-    );
-}
-impl __last_branch_state {
-    #[inline]
-    pub fn __lbr_supported_tsx(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(0usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set___lbr_supported_tsx(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(0usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __lbr_supported_cycle_count(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(1usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set___lbr_supported_cycle_count(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(1usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn __reserved(&self) -> __uint32_t {
-        unsafe { ::core::mem::transmute(self._bitfield_1.get(2usize, 30u8) as u32) }
-    }
-    #[inline]
-    pub fn set___reserved(&mut self, val: __uint32_t) {
-        unsafe {
-            let val: u32 = ::core::mem::transmute(val);
-            self._bitfield_1.set(2usize, 30u8, val as u64)
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        __lbr_supported_tsx: __uint32_t,
-        __lbr_supported_cycle_count: __uint32_t,
-        __reserved: __uint32_t,
-    ) -> __BindgenBitfieldUnit<[u8; 4usize], u32> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize], u32> =
-            Default::default();
-        __bindgen_bitfield_unit.set(0usize, 1u8, {
-            let __lbr_supported_tsx: u32 = unsafe { ::core::mem::transmute(__lbr_supported_tsx) };
-            __lbr_supported_tsx as u64
-        });
-        __bindgen_bitfield_unit.set(1usize, 1u8, {
-            let __lbr_supported_cycle_count: u32 =
-                unsafe { ::core::mem::transmute(__lbr_supported_cycle_count) };
-            __lbr_supported_cycle_count as u64
-        });
-        __bindgen_bitfield_unit.set(2usize, 30u8, {
-            let __reserved: u32 = unsafe { ::core::mem::transmute(__reserved) };
-            __reserved as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __x86_pagein_state {
+pub struct __arm_pagein_state {
     pub __pagein_error: cty::c_int,
 }
 #[test]
-fn bindgen_test_layout___x86_pagein_state() {
+fn bindgen_test_layout___arm_pagein_state() {
     assert_eq!(
-        ::core::mem::size_of::<__x86_pagein_state>(),
+        ::core::mem::size_of::<__arm_pagein_state>(),
         4usize,
-        concat!("Size of: ", stringify!(__x86_pagein_state))
+        concat!("Size of: ", stringify!(__arm_pagein_state))
     );
     assert_eq!(
-        ::core::mem::align_of::<__x86_pagein_state>(),
+        ::core::mem::align_of::<__arm_pagein_state>(),
         4usize,
-        concat!("Alignment of ", stringify!(__x86_pagein_state))
+        concat!("Alignment of ", stringify!(__arm_pagein_state))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__x86_pagein_state>())).__pagein_error as *const _ as usize
+            &(*(::core::ptr::null::<__arm_pagein_state>())).__pagein_error as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__x86_pagein_state),
+            stringify!(__arm_pagein_state),
             "::",
             stringify!(__pagein_error)
         )
@@ -6829,3249 +4106,254 @@ fn bindgen_test_layout___x86_pagein_state() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_thread_state64 {
-    pub __rax: __uint64_t,
-    pub __rbx: __uint64_t,
-    pub __rcx: __uint64_t,
-    pub __rdx: __uint64_t,
-    pub __rdi: __uint64_t,
-    pub __rsi: __uint64_t,
-    pub __rbp: __uint64_t,
-    pub __rsp: __uint64_t,
-    pub __r8: __uint64_t,
-    pub __r9: __uint64_t,
-    pub __r10: __uint64_t,
-    pub __r11: __uint64_t,
-    pub __r12: __uint64_t,
-    pub __r13: __uint64_t,
-    pub __r14: __uint64_t,
-    pub __r15: __uint64_t,
-    pub __rip: __uint64_t,
-    pub __rflags: __uint64_t,
-    pub __cs: __uint64_t,
-    pub __fs: __uint64_t,
-    pub __gs: __uint64_t,
+pub struct __arm_legacy_debug_state {
+    pub __bvr: [__uint32_t; 16usize],
+    pub __bcr: [__uint32_t; 16usize],
+    pub __wvr: [__uint32_t; 16usize],
+    pub __wcr: [__uint32_t; 16usize],
 }
 #[test]
-fn bindgen_test_layout___darwin_x86_thread_state64() {
+fn bindgen_test_layout___arm_legacy_debug_state() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_thread_state64>(),
-        168usize,
-        concat!("Size of: ", stringify!(__darwin_x86_thread_state64))
+        ::core::mem::size_of::<__arm_legacy_debug_state>(),
+        256usize,
+        concat!("Size of: ", stringify!(__arm_legacy_debug_state))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_thread_state64>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_thread_state64))
+        ::core::mem::align_of::<__arm_legacy_debug_state>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__arm_legacy_debug_state))
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rax as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__arm_legacy_debug_state>())).__bvr as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
+            stringify!(__arm_legacy_debug_state),
             "::",
-            stringify!(__rax)
+            stringify!(__bvr)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rbx as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rbx)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rcx as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rcx)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rdx as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rdx)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rdi as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rdi)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rsi as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rsi)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rbp as *const _ as usize
-        },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rbp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rsp as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__rsp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r8 as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__arm_legacy_debug_state>())).__bcr as *const _ as usize },
         64usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
+            stringify!(__arm_legacy_debug_state),
             "::",
-            stringify!(__r8)
+            stringify!(__bcr)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r9 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r10 as *const _ as usize
-        },
-        80usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r11 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r12 as *const _ as usize
-        },
-        96usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r13 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r14 as *const _ as usize
-        },
-        112usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__r15 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__r15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rip as *const _ as usize
-        },
+        unsafe { &(*(::core::ptr::null::<__arm_legacy_debug_state>())).__wvr as *const _ as usize },
         128usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
+            stringify!(__arm_legacy_debug_state),
             "::",
-            stringify!(__rip)
+            stringify!(__wvr)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__rflags as *const _ as usize
-        },
-        136usize,
+        unsafe { &(*(::core::ptr::null::<__arm_legacy_debug_state>())).__wcr as *const _ as usize },
+        192usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
+            stringify!(__arm_legacy_debug_state),
             "::",
-            stringify!(__rflags)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__cs as *const _ as usize
-        },
-        144usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__fs as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__fs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_state64>())).__gs as *const _ as usize
-        },
-        160usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_state64),
-            "::",
-            stringify!(__gs)
+            stringify!(__wcr)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_thread_full_state64 {
-    pub __ss64: __darwin_x86_thread_state64,
-    pub __ds: __uint64_t,
-    pub __es: __uint64_t,
-    pub __ss: __uint64_t,
-    pub __gsbase: __uint64_t,
+pub struct __darwin_arm_debug_state32 {
+    pub __bvr: [__uint32_t; 16usize],
+    pub __bcr: [__uint32_t; 16usize],
+    pub __wvr: [__uint32_t; 16usize],
+    pub __wcr: [__uint32_t; 16usize],
+    pub __mdscr_el1: __uint64_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_x86_thread_full_state64() {
+fn bindgen_test_layout___darwin_arm_debug_state32() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_thread_full_state64>(),
-        200usize,
-        concat!("Size of: ", stringify!(__darwin_x86_thread_full_state64))
+        ::core::mem::size_of::<__darwin_arm_debug_state32>(),
+        264usize,
+        concat!("Size of: ", stringify!(__darwin_arm_debug_state32))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_thread_full_state64>(),
+        ::core::mem::align_of::<__darwin_arm_debug_state32>(),
         8usize,
-        concat!(
-            "Alignment of ",
-            stringify!(__darwin_x86_thread_full_state64)
-        )
+        concat!("Alignment of ", stringify!(__darwin_arm_debug_state32))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_full_state64>())).__ss64 as *const _
-                as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state32>())).__bvr as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_full_state64),
+            stringify!(__darwin_arm_debug_state32),
             "::",
-            stringify!(__ss64)
+            stringify!(__bvr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_full_state64>())).__ds as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state32>())).__bcr as *const _ as usize
         },
-        168usize,
+        64usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_full_state64),
+            stringify!(__darwin_arm_debug_state32),
             "::",
-            stringify!(__ds)
+            stringify!(__bcr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_full_state64>())).__es as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state32>())).__wvr as *const _ as usize
         },
-        176usize,
+        128usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_full_state64),
+            stringify!(__darwin_arm_debug_state32),
             "::",
-            stringify!(__es)
+            stringify!(__wvr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_full_state64>())).__ss as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_thread_full_state64),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_thread_full_state64>())).__gsbase as *const _
-                as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state32>())).__wcr as *const _ as usize
         },
         192usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_thread_full_state64),
+            stringify!(__darwin_arm_debug_state32),
             "::",
-            stringify!(__gsbase)
+            stringify!(__wcr)
         )
     );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_x86_float_state64 {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_xmm8: __darwin_xmm_reg,
-    pub __fpu_xmm9: __darwin_xmm_reg,
-    pub __fpu_xmm10: __darwin_xmm_reg,
-    pub __fpu_xmm11: __darwin_xmm_reg,
-    pub __fpu_xmm12: __darwin_xmm_reg,
-    pub __fpu_xmm13: __darwin_xmm_reg,
-    pub __fpu_xmm14: __darwin_xmm_reg,
-    pub __fpu_xmm15: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 96usize],
-    pub __fpu_reserved1: cty::c_int,
-}
-#[test]
-fn bindgen_test_layout___darwin_x86_float_state64() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_float_state64>(),
-        524usize,
-        concat!("Size of: ", stringify!(__darwin_x86_float_state64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_float_state64>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_float_state64))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_reserved as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_reserved)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_fcw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_fsw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_rsrv1 as *const _ as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_ip as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_ip)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_cs as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_rsrv2 as *const _ as usize
-        },
-        22usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_rsrv3 as *const _ as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_mxcsr as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm0 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm1 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm2 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm3 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm4 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm5 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm6 as *const _ as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_stmm7 as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm4 as *const _ as usize
-        },
-        232usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm5 as *const _ as usize
-        },
-        248usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm6 as *const _ as usize
-        },
-        264usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm7 as *const _ as usize
-        },
-        280usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm8 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm9 as *const _ as usize
-        },
-        312usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm10 as *const _ as usize
-        },
-        328usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm11 as *const _ as usize
-        },
-        344usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm12 as *const _ as usize
-        },
-        360usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm13 as *const _ as usize
-        },
-        376usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm14 as *const _ as usize
-        },
-        392usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_xmm15 as *const _ as usize
-        },
-        408usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_xmm15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_rsrv4 as *const _ as usize
-        },
-        424usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_float_state64>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_float_state64),
-            "::",
-            stringify!(__fpu_reserved1)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_x86_avx_state64 {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_xmm8: __darwin_xmm_reg,
-    pub __fpu_xmm9: __darwin_xmm_reg,
-    pub __fpu_xmm10: __darwin_xmm_reg,
-    pub __fpu_xmm11: __darwin_xmm_reg,
-    pub __fpu_xmm12: __darwin_xmm_reg,
-    pub __fpu_xmm13: __darwin_xmm_reg,
-    pub __fpu_xmm14: __darwin_xmm_reg,
-    pub __fpu_xmm15: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 96usize],
-    pub __fpu_reserved1: cty::c_int,
-    pub __avx_reserved1: [cty::c_char; 64usize],
-    pub __fpu_ymmh0: __darwin_xmm_reg,
-    pub __fpu_ymmh1: __darwin_xmm_reg,
-    pub __fpu_ymmh2: __darwin_xmm_reg,
-    pub __fpu_ymmh3: __darwin_xmm_reg,
-    pub __fpu_ymmh4: __darwin_xmm_reg,
-    pub __fpu_ymmh5: __darwin_xmm_reg,
-    pub __fpu_ymmh6: __darwin_xmm_reg,
-    pub __fpu_ymmh7: __darwin_xmm_reg,
-    pub __fpu_ymmh8: __darwin_xmm_reg,
-    pub __fpu_ymmh9: __darwin_xmm_reg,
-    pub __fpu_ymmh10: __darwin_xmm_reg,
-    pub __fpu_ymmh11: __darwin_xmm_reg,
-    pub __fpu_ymmh12: __darwin_xmm_reg,
-    pub __fpu_ymmh13: __darwin_xmm_reg,
-    pub __fpu_ymmh14: __darwin_xmm_reg,
-    pub __fpu_ymmh15: __darwin_xmm_reg,
-}
-#[test]
-fn bindgen_test_layout___darwin_x86_avx_state64() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_avx_state64>(),
-        844usize,
-        concat!("Size of: ", stringify!(__darwin_x86_avx_state64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_avx_state64>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_avx_state64))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_reserved as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_reserved)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_fcw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_fsw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_rsrv1 as *const _ as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ip as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ip)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_cs as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_rsrv2 as *const _ as usize
-        },
-        22usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_rsrv3 as *const _ as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_mxcsr as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm0 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm1 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm2 as *const _ as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm3 as *const _ as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm4 as *const _ as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm5 as *const _ as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm6 as *const _ as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_stmm7 as *const _ as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm4 as *const _ as usize
-        },
-        232usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm5 as *const _ as usize
-        },
-        248usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm6 as *const _ as usize
-        },
-        264usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm7 as *const _ as usize
-        },
-        280usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm8 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm9 as *const _ as usize
-        },
-        312usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm10 as *const _ as usize
-        },
-        328usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm11 as *const _ as usize
-        },
-        344usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm12 as *const _ as usize
-        },
-        360usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm13 as *const _ as usize
-        },
-        376usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm14 as *const _ as usize
-        },
-        392usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_xmm15 as *const _ as usize
-        },
-        408usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_xmm15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_rsrv4 as *const _ as usize
-        },
-        424usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__avx_reserved1 as *const _
-                as usize
-        },
-        524usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__avx_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh0 as *const _ as usize
-        },
-        588usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh1 as *const _ as usize
-        },
-        604usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh2 as *const _ as usize
-        },
-        620usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh3 as *const _ as usize
-        },
-        636usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh4 as *const _ as usize
-        },
-        652usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh5 as *const _ as usize
-        },
-        668usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh6 as *const _ as usize
-        },
-        684usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh7 as *const _ as usize
-        },
-        700usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh8 as *const _ as usize
-        },
-        716usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh9 as *const _ as usize
-        },
-        732usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh10 as *const _ as usize
-        },
-        748usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh11 as *const _ as usize
-        },
-        764usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh12 as *const _ as usize
-        },
-        780usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh13 as *const _ as usize
-        },
-        796usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh14 as *const _ as usize
-        },
-        812usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx_state64>())).__fpu_ymmh15 as *const _ as usize
-        },
-        828usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx_state64),
-            "::",
-            stringify!(__fpu_ymmh15)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_x86_avx512_state64 {
-    pub __fpu_reserved: [cty::c_int; 2usize],
-    pub __fpu_fcw: __darwin_fp_control,
-    pub __fpu_fsw: __darwin_fp_status,
-    pub __fpu_ftw: __uint8_t,
-    pub __fpu_rsrv1: __uint8_t,
-    pub __fpu_fop: __uint16_t,
-    pub __fpu_ip: __uint32_t,
-    pub __fpu_cs: __uint16_t,
-    pub __fpu_rsrv2: __uint16_t,
-    pub __fpu_dp: __uint32_t,
-    pub __fpu_ds: __uint16_t,
-    pub __fpu_rsrv3: __uint16_t,
-    pub __fpu_mxcsr: __uint32_t,
-    pub __fpu_mxcsrmask: __uint32_t,
-    pub __fpu_stmm0: __darwin_mmst_reg,
-    pub __fpu_stmm1: __darwin_mmst_reg,
-    pub __fpu_stmm2: __darwin_mmst_reg,
-    pub __fpu_stmm3: __darwin_mmst_reg,
-    pub __fpu_stmm4: __darwin_mmst_reg,
-    pub __fpu_stmm5: __darwin_mmst_reg,
-    pub __fpu_stmm6: __darwin_mmst_reg,
-    pub __fpu_stmm7: __darwin_mmst_reg,
-    pub __fpu_xmm0: __darwin_xmm_reg,
-    pub __fpu_xmm1: __darwin_xmm_reg,
-    pub __fpu_xmm2: __darwin_xmm_reg,
-    pub __fpu_xmm3: __darwin_xmm_reg,
-    pub __fpu_xmm4: __darwin_xmm_reg,
-    pub __fpu_xmm5: __darwin_xmm_reg,
-    pub __fpu_xmm6: __darwin_xmm_reg,
-    pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_xmm8: __darwin_xmm_reg,
-    pub __fpu_xmm9: __darwin_xmm_reg,
-    pub __fpu_xmm10: __darwin_xmm_reg,
-    pub __fpu_xmm11: __darwin_xmm_reg,
-    pub __fpu_xmm12: __darwin_xmm_reg,
-    pub __fpu_xmm13: __darwin_xmm_reg,
-    pub __fpu_xmm14: __darwin_xmm_reg,
-    pub __fpu_xmm15: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [cty::c_char; 96usize],
-    pub __fpu_reserved1: cty::c_int,
-    pub __avx_reserved1: [cty::c_char; 64usize],
-    pub __fpu_ymmh0: __darwin_xmm_reg,
-    pub __fpu_ymmh1: __darwin_xmm_reg,
-    pub __fpu_ymmh2: __darwin_xmm_reg,
-    pub __fpu_ymmh3: __darwin_xmm_reg,
-    pub __fpu_ymmh4: __darwin_xmm_reg,
-    pub __fpu_ymmh5: __darwin_xmm_reg,
-    pub __fpu_ymmh6: __darwin_xmm_reg,
-    pub __fpu_ymmh7: __darwin_xmm_reg,
-    pub __fpu_ymmh8: __darwin_xmm_reg,
-    pub __fpu_ymmh9: __darwin_xmm_reg,
-    pub __fpu_ymmh10: __darwin_xmm_reg,
-    pub __fpu_ymmh11: __darwin_xmm_reg,
-    pub __fpu_ymmh12: __darwin_xmm_reg,
-    pub __fpu_ymmh13: __darwin_xmm_reg,
-    pub __fpu_ymmh14: __darwin_xmm_reg,
-    pub __fpu_ymmh15: __darwin_xmm_reg,
-    pub __fpu_k0: __darwin_opmask_reg,
-    pub __fpu_k1: __darwin_opmask_reg,
-    pub __fpu_k2: __darwin_opmask_reg,
-    pub __fpu_k3: __darwin_opmask_reg,
-    pub __fpu_k4: __darwin_opmask_reg,
-    pub __fpu_k5: __darwin_opmask_reg,
-    pub __fpu_k6: __darwin_opmask_reg,
-    pub __fpu_k7: __darwin_opmask_reg,
-    pub __fpu_zmmh0: __darwin_ymm_reg,
-    pub __fpu_zmmh1: __darwin_ymm_reg,
-    pub __fpu_zmmh2: __darwin_ymm_reg,
-    pub __fpu_zmmh3: __darwin_ymm_reg,
-    pub __fpu_zmmh4: __darwin_ymm_reg,
-    pub __fpu_zmmh5: __darwin_ymm_reg,
-    pub __fpu_zmmh6: __darwin_ymm_reg,
-    pub __fpu_zmmh7: __darwin_ymm_reg,
-    pub __fpu_zmmh8: __darwin_ymm_reg,
-    pub __fpu_zmmh9: __darwin_ymm_reg,
-    pub __fpu_zmmh10: __darwin_ymm_reg,
-    pub __fpu_zmmh11: __darwin_ymm_reg,
-    pub __fpu_zmmh12: __darwin_ymm_reg,
-    pub __fpu_zmmh13: __darwin_ymm_reg,
-    pub __fpu_zmmh14: __darwin_ymm_reg,
-    pub __fpu_zmmh15: __darwin_ymm_reg,
-    pub __fpu_zmm16: __darwin_zmm_reg,
-    pub __fpu_zmm17: __darwin_zmm_reg,
-    pub __fpu_zmm18: __darwin_zmm_reg,
-    pub __fpu_zmm19: __darwin_zmm_reg,
-    pub __fpu_zmm20: __darwin_zmm_reg,
-    pub __fpu_zmm21: __darwin_zmm_reg,
-    pub __fpu_zmm22: __darwin_zmm_reg,
-    pub __fpu_zmm23: __darwin_zmm_reg,
-    pub __fpu_zmm24: __darwin_zmm_reg,
-    pub __fpu_zmm25: __darwin_zmm_reg,
-    pub __fpu_zmm26: __darwin_zmm_reg,
-    pub __fpu_zmm27: __darwin_zmm_reg,
-    pub __fpu_zmm28: __darwin_zmm_reg,
-    pub __fpu_zmm29: __darwin_zmm_reg,
-    pub __fpu_zmm30: __darwin_zmm_reg,
-    pub __fpu_zmm31: __darwin_zmm_reg,
-}
-#[test]
-fn bindgen_test_layout___darwin_x86_avx512_state64() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_avx512_state64>(),
-        2444usize,
-        concat!("Size of: ", stringify!(__darwin_x86_avx512_state64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_avx512_state64>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_avx512_state64))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_reserved as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_reserved)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_fcw as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_fcw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_fsw as *const _ as usize
-        },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_fsw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ftw as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ftw)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_rsrv1 as *const _
-                as usize
-        },
-        13usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_rsrv1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_fop as *const _ as usize
-        },
-        14usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_fop)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ip as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ip)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_cs as *const _ as usize
-        },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_cs)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_rsrv2 as *const _
-                as usize
-        },
-        22usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_rsrv2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_dp as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_dp)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ds as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ds)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_rsrv3 as *const _
-                as usize
-        },
-        30usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_rsrv3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_mxcsr as *const _
-                as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_mxcsr)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_mxcsrmask as *const _
-                as usize
-        },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_mxcsrmask)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm0 as *const _
-                as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm1 as *const _
-                as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm2 as *const _
-                as usize
-        },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm3 as *const _
-                as usize
-        },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm4 as *const _
-                as usize
-        },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm5 as *const _
-                as usize
-        },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm6 as *const _
-                as usize
-        },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_stmm7 as *const _
-                as usize
-        },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_stmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm0 as *const _ as usize
-        },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm1 as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm2 as *const _ as usize
-        },
-        200usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm3 as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm4 as *const _ as usize
-        },
-        232usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm5 as *const _ as usize
-        },
-        248usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm6 as *const _ as usize
-        },
-        264usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm7 as *const _ as usize
-        },
-        280usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm8 as *const _ as usize
-        },
-        296usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm9 as *const _ as usize
-        },
-        312usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm10 as *const _
-                as usize
-        },
-        328usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm11 as *const _
-                as usize
-        },
-        344usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm12 as *const _
-                as usize
-        },
-        360usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm13 as *const _
-                as usize
-        },
-        376usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm14 as *const _
-                as usize
-        },
-        392usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_xmm15 as *const _
-                as usize
-        },
-        408usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_xmm15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_rsrv4 as *const _
-                as usize
-        },
-        424usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_rsrv4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_reserved1 as *const _
-                as usize
-        },
-        520usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__avx_reserved1 as *const _
-                as usize
-        },
-        524usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__avx_reserved1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh0 as *const _
-                as usize
-        },
-        588usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh1 as *const _
-                as usize
-        },
-        604usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh2 as *const _
-                as usize
-        },
-        620usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh3 as *const _
-                as usize
-        },
-        636usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh4 as *const _
-                as usize
-        },
-        652usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh5 as *const _
-                as usize
-        },
-        668usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh6 as *const _
-                as usize
-        },
-        684usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh7 as *const _
-                as usize
-        },
-        700usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh8 as *const _
-                as usize
-        },
-        716usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh9 as *const _
-                as usize
-        },
-        732usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh10 as *const _
-                as usize
-        },
-        748usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh11 as *const _
-                as usize
-        },
-        764usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh12 as *const _
-                as usize
-        },
-        780usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh13 as *const _
-                as usize
-        },
-        796usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh14 as *const _
-                as usize
-        },
-        812usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_ymmh15 as *const _
-                as usize
-        },
-        828usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_ymmh15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k0 as *const _ as usize
-        },
-        844usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k1 as *const _ as usize
-        },
-        852usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k2 as *const _ as usize
-        },
-        860usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k3 as *const _ as usize
-        },
-        868usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k4 as *const _ as usize
-        },
-        876usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k5 as *const _ as usize
-        },
-        884usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k6 as *const _ as usize
-        },
-        892usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_k7 as *const _ as usize
-        },
-        900usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_k7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh0 as *const _
-                as usize
-        },
-        908usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh1 as *const _
-                as usize
-        },
-        940usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh2 as *const _
-                as usize
-        },
-        972usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh3 as *const _
-                as usize
-        },
-        1004usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh4 as *const _
-                as usize
-        },
-        1036usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh5 as *const _
-                as usize
-        },
-        1068usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh6 as *const _
-                as usize
-        },
-        1100usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh7 as *const _
-                as usize
-        },
-        1132usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh7)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh8 as *const _
-                as usize
-        },
-        1164usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh8)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh9 as *const _
-                as usize
-        },
-        1196usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh9)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh10 as *const _
-                as usize
-        },
-        1228usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh10)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh11 as *const _
-                as usize
-        },
-        1260usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh11)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh12 as *const _
-                as usize
-        },
-        1292usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh12)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh13 as *const _
-                as usize
-        },
-        1324usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh13)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh14 as *const _
-                as usize
-        },
-        1356usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh14)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmmh15 as *const _
-                as usize
-        },
-        1388usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmmh15)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm16 as *const _
-                as usize
-        },
-        1420usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm16)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm17 as *const _
-                as usize
-        },
-        1484usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm17)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm18 as *const _
-                as usize
-        },
-        1548usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm18)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm19 as *const _
-                as usize
-        },
-        1612usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm19)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm20 as *const _
-                as usize
-        },
-        1676usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm20)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm21 as *const _
-                as usize
-        },
-        1740usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm21)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm22 as *const _
-                as usize
-        },
-        1804usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm22)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm23 as *const _
-                as usize
-        },
-        1868usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm23)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm24 as *const _
-                as usize
-        },
-        1932usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm24)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm25 as *const _
-                as usize
-        },
-        1996usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm25)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm26 as *const _
-                as usize
-        },
-        2060usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm26)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm27 as *const _
-                as usize
-        },
-        2124usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm27)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm28 as *const _
-                as usize
-        },
-        2188usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm28)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm29 as *const _
-                as usize
-        },
-        2252usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm29)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm30 as *const _
-                as usize
-        },
-        2316usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
-            "::",
-            stringify!(__fpu_zmm30)
-        )
-    );
-    assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_avx512_state64>())).__fpu_zmm31 as *const _
-                as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state32>())).__mdscr_el1 as *const _ as usize
         },
-        2380usize,
+        256usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_avx512_state64),
+            stringify!(__darwin_arm_debug_state32),
             "::",
-            stringify!(__fpu_zmm31)
+            stringify!(__mdscr_el1)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_exception_state64 {
-    pub __trapno: __uint16_t,
-    pub __cpu: __uint16_t,
-    pub __err: __uint32_t,
-    pub __faultvaddr: __uint64_t,
+pub struct __darwin_arm_debug_state64 {
+    pub __bvr: [__uint64_t; 16usize],
+    pub __bcr: [__uint64_t; 16usize],
+    pub __wvr: [__uint64_t; 16usize],
+    pub __wcr: [__uint64_t; 16usize],
+    pub __mdscr_el1: __uint64_t,
 }
 #[test]
-fn bindgen_test_layout___darwin_x86_exception_state64() {
+fn bindgen_test_layout___darwin_arm_debug_state64() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_exception_state64>(),
-        16usize,
-        concat!("Size of: ", stringify!(__darwin_x86_exception_state64))
+        ::core::mem::size_of::<__darwin_arm_debug_state64>(),
+        520usize,
+        concat!("Size of: ", stringify!(__darwin_arm_debug_state64))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_exception_state64>(),
+        ::core::mem::align_of::<__darwin_arm_debug_state64>(),
         8usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_exception_state64))
+        concat!("Alignment of ", stringify!(__darwin_arm_debug_state64))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_exception_state64>())).__trapno as *const _
-                as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state64>())).__bvr as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_exception_state64),
+            stringify!(__darwin_arm_debug_state64),
             "::",
-            stringify!(__trapno)
+            stringify!(__bvr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_exception_state64>())).__cpu as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state64>())).__bcr as *const _ as usize
         },
-        2usize,
+        128usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_exception_state64),
+            stringify!(__darwin_arm_debug_state64),
             "::",
-            stringify!(__cpu)
+            stringify!(__bcr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_exception_state64>())).__err as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state64>())).__wvr as *const _ as usize
         },
-        4usize,
+        256usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_exception_state64),
+            stringify!(__darwin_arm_debug_state64),
             "::",
-            stringify!(__err)
+            stringify!(__wvr)
         )
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_exception_state64>())).__faultvaddr as *const _
-                as usize
+            &(*(::core::ptr::null::<__darwin_arm_debug_state64>())).__wcr as *const _ as usize
         },
-        8usize,
+        384usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_exception_state64),
+            stringify!(__darwin_arm_debug_state64),
             "::",
-            stringify!(__faultvaddr)
+            stringify!(__wcr)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<__darwin_arm_debug_state64>())).__mdscr_el1 as *const _ as usize
+        },
+        512usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__darwin_arm_debug_state64),
+            "::",
+            stringify!(__mdscr_el1)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_debug_state64 {
-    pub __dr0: __uint64_t,
-    pub __dr1: __uint64_t,
-    pub __dr2: __uint64_t,
-    pub __dr3: __uint64_t,
-    pub __dr4: __uint64_t,
-    pub __dr5: __uint64_t,
-    pub __dr6: __uint64_t,
-    pub __dr7: __uint64_t,
-}
-#[test]
-fn bindgen_test_layout___darwin_x86_debug_state64() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_debug_state64>(),
-        64usize,
-        concat!("Size of: ", stringify!(__darwin_x86_debug_state64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_debug_state64>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_debug_state64))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr0 as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr0)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr1 as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr2 as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr2)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr3 as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr3)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr4 as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr5 as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr5)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr6 as *const _ as usize
-        },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr6)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_debug_state64>())).__dr7 as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_x86_debug_state64),
-            "::",
-            stringify!(__dr7)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_x86_cpmu_state64 {
+pub struct __darwin_arm_cpmu_state64 {
     pub __ctrs: [__uint64_t; 16usize],
 }
 #[test]
-fn bindgen_test_layout___darwin_x86_cpmu_state64() {
+fn bindgen_test_layout___darwin_arm_cpmu_state64() {
     assert_eq!(
-        ::core::mem::size_of::<__darwin_x86_cpmu_state64>(),
+        ::core::mem::size_of::<__darwin_arm_cpmu_state64>(),
         128usize,
-        concat!("Size of: ", stringify!(__darwin_x86_cpmu_state64))
+        concat!("Size of: ", stringify!(__darwin_arm_cpmu_state64))
     );
     assert_eq!(
-        ::core::mem::align_of::<__darwin_x86_cpmu_state64>(),
+        ::core::mem::align_of::<__darwin_arm_cpmu_state64>(),
         8usize,
-        concat!("Alignment of ", stringify!(__darwin_x86_cpmu_state64))
+        concat!("Alignment of ", stringify!(__darwin_arm_cpmu_state64))
     );
     assert_eq!(
         unsafe {
-            &(*(::core::ptr::null::<__darwin_x86_cpmu_state64>())).__ctrs as *const _ as usize
+            &(*(::core::ptr::null::<__darwin_arm_cpmu_state64>())).__ctrs as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(__darwin_x86_cpmu_state64),
+            stringify!(__darwin_arm_cpmu_state64),
             "::",
             stringify!(__ctrs)
         )
@@ -10080,15 +4362,15 @@ fn bindgen_test_layout___darwin_x86_cpmu_state64() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __darwin_mcontext32 {
-    pub __es: __darwin_i386_exception_state,
-    pub __ss: __darwin_i386_thread_state,
-    pub __fs: __darwin_i386_float_state,
+    pub __es: __darwin_arm_exception_state,
+    pub __ss: __darwin_arm_thread_state,
+    pub __fs: __darwin_arm_vfp_state,
 }
 #[test]
 fn bindgen_test_layout___darwin_mcontext32() {
     assert_eq!(
         ::core::mem::size_of::<__darwin_mcontext32>(),
-        600usize,
+        340usize,
         concat!("Size of: ", stringify!(__darwin_mcontext32))
     );
     assert_eq!(
@@ -10118,7 +4400,7 @@ fn bindgen_test_layout___darwin_mcontext32() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<__darwin_mcontext32>())).__fs as *const _ as usize },
-        76usize,
+        80usize,
         concat!(
             "Offset of field: ",
             stringify!(__darwin_mcontext32),
@@ -10128,128 +4410,23 @@ fn bindgen_test_layout___darwin_mcontext32() {
     );
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx32 {
-    pub __es: __darwin_i386_exception_state,
-    pub __ss: __darwin_i386_thread_state,
-    pub __fs: __darwin_i386_avx_state,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx32() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx32>(),
-        792usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx32))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx32>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext_avx32))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx32>())).__es as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx32),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx32>())).__ss as *const _ as usize },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx32),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx32>())).__fs as *const _ as usize },
-        76usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx32),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx512_32 {
-    pub __es: __darwin_i386_exception_state,
-    pub __ss: __darwin_i386_thread_state,
-    pub __fs: __darwin_i386_avx512_state,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx512_32() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx512_32>(),
-        1112usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx512_32))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx512_32>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext_avx512_32))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_32>())).__es as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_32),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_32>())).__ss as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_32),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_32>())).__fs as *const _ as usize
-        },
-        76usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_32),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
 pub struct __darwin_mcontext64 {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_state64,
-    pub __fs: __darwin_x86_float_state64,
+    pub __es: __darwin_arm_exception_state64,
+    pub __ss: __darwin_arm_thread_state64,
+    pub __ns: __darwin_arm_neon_state64,
 }
 #[test]
 fn bindgen_test_layout___darwin_mcontext64() {
     assert_eq!(
         ::core::mem::size_of::<__darwin_mcontext64>(),
-        712usize,
+        816usize,
         concat!("Size of: ", stringify!(__darwin_mcontext64))
     );
     assert_eq!(
         ::core::mem::align_of::<__darwin_mcontext64>(),
-        8usize,
+        16usize,
         concat!("Alignment of ", stringify!(__darwin_mcontext64))
     );
     assert_eq!(
@@ -10273,284 +4450,13 @@ fn bindgen_test_layout___darwin_mcontext64() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext64>())).__fs as *const _ as usize },
-        184usize,
+        unsafe { &(*(::core::ptr::null::<__darwin_mcontext64>())).__ns as *const _ as usize },
+        288usize,
         concat!(
             "Offset of field: ",
             stringify!(__darwin_mcontext64),
             "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext64_full {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_full_state64,
-    pub __fs: __darwin_x86_float_state64,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext64_full() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext64_full>(),
-        744usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext64_full))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext64_full>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext64_full))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext64_full>())).__es as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext64_full),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext64_full>())).__ss as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext64_full),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext64_full>())).__fs as *const _ as usize },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext64_full),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx64 {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_state64,
-    pub __fs: __darwin_x86_avx_state64,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx64() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx64>(),
-        1032usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx64>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext_avx64))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx64>())).__es as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx64>())).__ss as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__darwin_mcontext_avx64>())).__fs as *const _ as usize },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx64_full {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_full_state64,
-    pub __fs: __darwin_x86_avx_state64,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx64_full() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx64_full>(),
-        1064usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx64_full))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx64_full>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext_avx64_full))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx64_full>())).__es as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64_full),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx64_full>())).__ss as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64_full),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx64_full>())).__fs as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx64_full),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx512_64 {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_state64,
-    pub __fs: __darwin_x86_avx512_state64,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx512_64() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx512_64>(),
-        2632usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx512_64))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx512_64>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__darwin_mcontext_avx512_64))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64>())).__es as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64>())).__ss as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64>())).__fs as *const _ as usize
-        },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64),
-            "::",
-            stringify!(__fs)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __darwin_mcontext_avx512_64_full {
-    pub __es: __darwin_x86_exception_state64,
-    pub __ss: __darwin_x86_thread_full_state64,
-    pub __fs: __darwin_x86_avx512_state64,
-}
-#[test]
-fn bindgen_test_layout___darwin_mcontext_avx512_64_full() {
-    assert_eq!(
-        ::core::mem::size_of::<__darwin_mcontext_avx512_64_full>(),
-        2664usize,
-        concat!("Size of: ", stringify!(__darwin_mcontext_avx512_64_full))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__darwin_mcontext_avx512_64_full>(),
-        8usize,
-        concat!(
-            "Alignment of ",
-            stringify!(__darwin_mcontext_avx512_64_full)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64_full>())).__es as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64_full),
-            "::",
-            stringify!(__es)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64_full>())).__ss as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64_full),
-            "::",
-            stringify!(__ss)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__darwin_mcontext_avx512_64_full>())).__fs as *const _ as usize
-        },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__darwin_mcontext_avx512_64_full),
-            "::",
-            stringify!(__fs)
+            stringify!(__ns)
         )
     );
 }
@@ -14086,6 +7992,90 @@ extern "C" {
 extern "C" {
     pub fn setrlimit(arg1: cty::c_int, arg2: *const rlimit) -> cty::c_int;
 }
+#[repr(C, packed)]
+#[derive(Debug, Copy, Clone)]
+pub struct _OSUnalignedU16 {
+    pub __val: u16,
+}
+#[test]
+fn bindgen_test_layout__OSUnalignedU16() {
+    assert_eq!(
+        ::core::mem::size_of::<_OSUnalignedU16>(),
+        2usize,
+        concat!("Size of: ", stringify!(_OSUnalignedU16))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<_OSUnalignedU16>(),
+        1usize,
+        concat!("Alignment of ", stringify!(_OSUnalignedU16))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<_OSUnalignedU16>())).__val as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_OSUnalignedU16),
+            "::",
+            stringify!(__val)
+        )
+    );
+}
+#[repr(C, packed)]
+#[derive(Debug, Copy, Clone)]
+pub struct _OSUnalignedU32 {
+    pub __val: u32,
+}
+#[test]
+fn bindgen_test_layout__OSUnalignedU32() {
+    assert_eq!(
+        ::core::mem::size_of::<_OSUnalignedU32>(),
+        4usize,
+        concat!("Size of: ", stringify!(_OSUnalignedU32))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<_OSUnalignedU32>(),
+        1usize,
+        concat!("Alignment of ", stringify!(_OSUnalignedU32))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<_OSUnalignedU32>())).__val as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_OSUnalignedU32),
+            "::",
+            stringify!(__val)
+        )
+    );
+}
+#[repr(C, packed)]
+#[derive(Debug, Copy, Clone)]
+pub struct _OSUnalignedU64 {
+    pub __val: u64,
+}
+#[test]
+fn bindgen_test_layout__OSUnalignedU64() {
+    assert_eq!(
+        ::core::mem::size_of::<_OSUnalignedU64>(),
+        8usize,
+        concat!("Size of: ", stringify!(_OSUnalignedU64))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<_OSUnalignedU64>(),
+        1usize,
+        concat!("Alignment of ", stringify!(_OSUnalignedU64))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<_OSUnalignedU64>())).__val as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_OSUnalignedU64),
+            "::",
+            stringify!(__val)
+        )
+    );
+}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union wait {
@@ -14553,7 +8543,7 @@ extern "C" {
     ) -> cty::c_long;
 }
 extern "C" {
-    pub fn strtold(arg1: *const cty::c_char, arg2: *mut *mut cty::c_char) -> u128;
+    pub fn strtold(arg1: *const cty::c_char, arg2: *mut *mut cty::c_char) -> f64;
 }
 extern "C" {
     pub fn strtoll(
@@ -14783,7 +8773,6 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
-    #[link_name = "\u{1}_daemon$1050"]
     pub fn daemon(arg1: cty::c_int, arg2: cty::c_int) -> cty::c_int;
 }
 extern "C" {
@@ -15222,37 +9211,176 @@ extern "C" {
     pub fn av_log2_16bit(v: cty::c_uint) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Allocate a memory block with alignment suitable for all memory accesses"]
+    #[doc = " (including vectors if available on the CPU)."]
+    #[doc = ""]
+    #[doc = " @param size Size in bytes for the memory block to be allocated"]
+    #[doc = " @return Pointer to the allocated block, or `NULL` if the block cannot"]
+    #[doc = "         be allocated"]
+    #[doc = " @see av_mallocz()"]
     pub fn av_malloc(size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate a memory block with alignment suitable for all memory accesses"]
+    #[doc = " (including vectors if available on the CPU) and zero all the bytes of the"]
+    #[doc = " block."]
+    #[doc = ""]
+    #[doc = " @param size Size in bytes for the memory block to be allocated"]
+    #[doc = " @return Pointer to the allocated block, or `NULL` if it cannot be allocated"]
+    #[doc = " @see av_malloc()"]
     pub fn av_mallocz(size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate a memory block for an array with av_malloc()."]
+    #[doc = ""]
+    #[doc = " The allocated memory will have size `size * nmemb` bytes."]
+    #[doc = ""]
+    #[doc = " @param nmemb Number of element"]
+    #[doc = " @param size  Size of a single element"]
+    #[doc = " @return Pointer to the allocated block, or `NULL` if the block cannot"]
+    #[doc = "         be allocated"]
+    #[doc = " @see av_malloc()"]
     pub fn av_malloc_array(nmemb: size_t, size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate a memory block for an array with av_mallocz()."]
+    #[doc = ""]
+    #[doc = " The allocated memory will have size `size * nmemb` bytes."]
+    #[doc = ""]
+    #[doc = " @param nmemb Number of elements"]
+    #[doc = " @param size  Size of the single element"]
+    #[doc = " @return Pointer to the allocated block, or `NULL` if the block cannot"]
+    #[doc = "         be allocated"]
+    #[doc = ""]
+    #[doc = " @see av_mallocz()"]
+    #[doc = " @see av_malloc_array()"]
     pub fn av_calloc(nmemb: size_t, size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
-    pub fn av_mallocz_array(nmemb: size_t, size: size_t) -> *mut cty::c_void;
-}
-extern "C" {
+    #[doc = " Allocate, reallocate, or free a block of memory."]
+    #[doc = ""]
+    #[doc = " If `ptr` is `NULL` and `size` > 0, allocate a new block. Otherwise, expand or"]
+    #[doc = " shrink that block of memory according to `size`."]
+    #[doc = ""]
+    #[doc = " @param ptr  Pointer to a memory block already allocated with"]
+    #[doc = "             av_realloc() or `NULL`"]
+    #[doc = " @param size Size in bytes of the memory block to be allocated or"]
+    #[doc = "             reallocated"]
+    #[doc = ""]
+    #[doc = " @return Pointer to a newly-reallocated block or `NULL` if the block"]
+    #[doc = "         cannot be reallocated"]
+    #[doc = ""]
+    #[doc = " @warning Unlike av_malloc(), the returned pointer is not guaranteed to be"]
+    #[doc = "          correctly aligned. The returned pointer must be freed after even"]
+    #[doc = "          if size is zero."]
+    #[doc = " @see av_fast_realloc()"]
+    #[doc = " @see av_reallocp()"]
     pub fn av_realloc(ptr: *mut cty::c_void, size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate, reallocate, or free a block of memory through a pointer to a"]
+    #[doc = " pointer."]
+    #[doc = ""]
+    #[doc = " If `*ptr` is `NULL` and `size` > 0, allocate a new block. If `size` is"]
+    #[doc = " zero, free the memory block pointed to by `*ptr`. Otherwise, expand or"]
+    #[doc = " shrink that block of memory according to `size`."]
+    #[doc = ""]
+    #[doc = " @param[in,out] ptr  Pointer to a pointer to a memory block already allocated"]
+    #[doc = "                     with av_realloc(), or a pointer to `NULL`. The pointer"]
+    #[doc = "                     is updated on success, or freed on failure."]
+    #[doc = " @param[in]     size Size in bytes for the memory block to be allocated or"]
+    #[doc = "                     reallocated"]
+    #[doc = ""]
+    #[doc = " @return Zero on success, an AVERROR error code on failure"]
+    #[doc = ""]
+    #[doc = " @warning Unlike av_malloc(), the allocated memory is not guaranteed to be"]
+    #[doc = "          correctly aligned."]
     pub fn av_reallocp(ptr: *mut cty::c_void, size: size_t) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Allocate, reallocate, or free a block of memory."]
+    #[doc = ""]
+    #[doc = " This function does the same thing as av_realloc(), except:"]
+    #[doc = " - It takes two size arguments and allocates `nelem * elsize` bytes,"]
+    #[doc = "   after checking the result of the multiplication for integer overflow."]
+    #[doc = " - It frees the input block in case of failure, thus avoiding the memory"]
+    #[doc = "   leak with the classic"]
+    #[doc = "   @code{.c}"]
+    #[doc = "   buf = realloc(buf);"]
+    #[doc = "   if (!buf)"]
+    #[doc = "       return -1;"]
+    #[doc = "   @endcode"]
+    #[doc = "   pattern."]
     pub fn av_realloc_f(ptr: *mut cty::c_void, nelem: size_t, elsize: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate, reallocate, or free an array."]
+    #[doc = ""]
+    #[doc = " If `ptr` is `NULL` and `nmemb` > 0, allocate a new block."]
+    #[doc = ""]
+    #[doc = " @param ptr   Pointer to a memory block already allocated with"]
+    #[doc = "              av_realloc() or `NULL`"]
+    #[doc = " @param nmemb Number of elements in the array"]
+    #[doc = " @param size  Size of the single element of the array"]
+    #[doc = ""]
+    #[doc = " @return Pointer to a newly-reallocated block or NULL if the block"]
+    #[doc = "         cannot be reallocated"]
+    #[doc = ""]
+    #[doc = " @warning Unlike av_malloc(), the allocated memory is not guaranteed to be"]
+    #[doc = "          correctly aligned. The returned pointer must be freed after even if"]
+    #[doc = "          nmemb is zero."]
+    #[doc = " @see av_reallocp_array()"]
     pub fn av_realloc_array(ptr: *mut cty::c_void, nmemb: size_t, size: size_t)
         -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate, reallocate an array through a pointer to a pointer."]
+    #[doc = ""]
+    #[doc = " If `*ptr` is `NULL` and `nmemb` > 0, allocate a new block."]
+    #[doc = ""]
+    #[doc = " @param[in,out] ptr   Pointer to a pointer to a memory block already"]
+    #[doc = "                      allocated with av_realloc(), or a pointer to `NULL`."]
+    #[doc = "                      The pointer is updated on success, or freed on failure."]
+    #[doc = " @param[in]     nmemb Number of elements"]
+    #[doc = " @param[in]     size  Size of the single element"]
+    #[doc = ""]
+    #[doc = " @return Zero on success, an AVERROR error code on failure"]
+    #[doc = ""]
+    #[doc = " @warning Unlike av_malloc(), the allocated memory is not guaranteed to be"]
+    #[doc = "          correctly aligned. *ptr must be freed after even if nmemb is zero."]
     pub fn av_reallocp_array(ptr: *mut cty::c_void, nmemb: size_t, size: size_t) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Reallocate the given buffer if it is not large enough, otherwise do nothing."]
+    #[doc = ""]
+    #[doc = " If the given buffer is `NULL`, then a new uninitialized buffer is allocated."]
+    #[doc = ""]
+    #[doc = " If the given buffer is not large enough, and reallocation fails, `NULL` is"]
+    #[doc = " returned and `*size` is set to 0, but the original buffer is not changed or"]
+    #[doc = " freed."]
+    #[doc = ""]
+    #[doc = " A typical use pattern follows:"]
+    #[doc = ""]
+    #[doc = " @code{.c}"]
+    #[doc = " uint8_t *buf = ...;"]
+    #[doc = " uint8_t *new_buf = av_fast_realloc(buf, &current_size, size_needed);"]
+    #[doc = " if (!new_buf) {"]
+    #[doc = "     // Allocation failed; clean up original buffer"]
+    #[doc = "     av_freep(&buf);"]
+    #[doc = "     return AVERROR(ENOMEM);"]
+    #[doc = " }"]
+    #[doc = " @endcode"]
+    #[doc = ""]
+    #[doc = " @param[in,out] ptr      Already allocated buffer, or `NULL`"]
+    #[doc = " @param[in,out] size     Pointer to the size of buffer `ptr`. `*size` is"]
+    #[doc = "                         updated to the new allocated size, in particular 0"]
+    #[doc = "                         in case of failure."]
+    #[doc = " @param[in]     min_size Desired minimal size of buffer `ptr`"]
+    #[doc = " @return `ptr` if the buffer is large enough, a pointer to newly reallocated"]
+    #[doc = "         buffer if the buffer was not large enough, or `NULL` in case of"]
+    #[doc = "         error"]
+    #[doc = " @see av_realloc()"]
+    #[doc = " @see av_fast_malloc()"]
     pub fn av_fast_realloc(
         ptr: *mut cty::c_void,
         size: *mut cty::c_uint,
@@ -15260,30 +9388,148 @@ extern "C" {
     ) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Allocate a buffer, reusing the given one if large enough."]
+    #[doc = ""]
+    #[doc = " Contrary to av_fast_realloc(), the current buffer contents might not be"]
+    #[doc = " preserved and on error the old buffer is freed, thus no special handling to"]
+    #[doc = " avoid memleaks is necessary."]
+    #[doc = ""]
+    #[doc = " `*ptr` is allowed to be `NULL`, in which case allocation always happens if"]
+    #[doc = " `size_needed` is greater than 0."]
+    #[doc = ""]
+    #[doc = " @code{.c}"]
+    #[doc = " uint8_t *buf = ...;"]
+    #[doc = " av_fast_malloc(&buf, &current_size, size_needed);"]
+    #[doc = " if (!buf) {"]
+    #[doc = "     // Allocation failed; buf already freed"]
+    #[doc = "     return AVERROR(ENOMEM);"]
+    #[doc = " }"]
+    #[doc = " @endcode"]
+    #[doc = ""]
+    #[doc = " @param[in,out] ptr      Pointer to pointer to an already allocated buffer."]
+    #[doc = "                         `*ptr` will be overwritten with pointer to new"]
+    #[doc = "                         buffer on success or `NULL` on failure"]
+    #[doc = " @param[in,out] size     Pointer to the size of buffer `*ptr`. `*size` is"]
+    #[doc = "                         updated to the new allocated size, in particular 0"]
+    #[doc = "                         in case of failure."]
+    #[doc = " @param[in]     min_size Desired minimal size of buffer `*ptr`"]
+    #[doc = " @see av_realloc()"]
+    #[doc = " @see av_fast_mallocz()"]
     pub fn av_fast_malloc(ptr: *mut cty::c_void, size: *mut cty::c_uint, min_size: size_t);
 }
 extern "C" {
+    #[doc = " Allocate and clear a buffer, reusing the given one if large enough."]
+    #[doc = ""]
+    #[doc = " Like av_fast_malloc(), but all newly allocated space is initially cleared."]
+    #[doc = " Reused buffer is not cleared."]
+    #[doc = ""]
+    #[doc = " `*ptr` is allowed to be `NULL`, in which case allocation always happens if"]
+    #[doc = " `size_needed` is greater than 0."]
+    #[doc = ""]
+    #[doc = " @param[in,out] ptr      Pointer to pointer to an already allocated buffer."]
+    #[doc = "                         `*ptr` will be overwritten with pointer to new"]
+    #[doc = "                         buffer on success or `NULL` on failure"]
+    #[doc = " @param[in,out] size     Pointer to the size of buffer `*ptr`. `*size` is"]
+    #[doc = "                         updated to the new allocated size, in particular 0"]
+    #[doc = "                         in case of failure."]
+    #[doc = " @param[in]     min_size Desired minimal size of buffer `*ptr`"]
+    #[doc = " @see av_fast_malloc()"]
     pub fn av_fast_mallocz(ptr: *mut cty::c_void, size: *mut cty::c_uint, min_size: size_t);
 }
 extern "C" {
+    #[doc = " Free a memory block which has been allocated with a function of av_malloc()"]
+    #[doc = " or av_realloc() family."]
+    #[doc = ""]
+    #[doc = " @param ptr Pointer to the memory block which should be freed."]
+    #[doc = ""]
+    #[doc = " @note `ptr = NULL` is explicitly allowed."]
+    #[doc = " @note It is recommended that you use av_freep() instead, to prevent leaving"]
+    #[doc = "       behind dangling pointers."]
+    #[doc = " @see av_freep()"]
     pub fn av_free(ptr: *mut cty::c_void);
 }
 extern "C" {
+    #[doc = " Free a memory block which has been allocated with a function of av_malloc()"]
+    #[doc = " or av_realloc() family, and set the pointer pointing to it to `NULL`."]
+    #[doc = ""]
+    #[doc = " @code{.c}"]
+    #[doc = " uint8_t *buf = av_malloc(16);"]
+    #[doc = " av_free(buf);"]
+    #[doc = " // buf now contains a dangling pointer to freed memory, and accidental"]
+    #[doc = " // dereference of buf will result in a use-after-free, which may be a"]
+    #[doc = " // security risk."]
+    #[doc = ""]
+    #[doc = " uint8_t *buf = av_malloc(16);"]
+    #[doc = " av_freep(&buf);"]
+    #[doc = " // buf is now NULL, and accidental dereference will only result in a"]
+    #[doc = " // NULL-pointer dereference."]
+    #[doc = " @endcode"]
+    #[doc = ""]
+    #[doc = " @param ptr Pointer to the pointer to the memory block which should be freed"]
+    #[doc = " @note `*ptr = NULL` is safe and leads to no action."]
+    #[doc = " @see av_free()"]
     pub fn av_freep(ptr: *mut cty::c_void);
 }
 extern "C" {
+    #[doc = " Duplicate a string."]
+    #[doc = ""]
+    #[doc = " @param s String to be duplicated"]
+    #[doc = " @return Pointer to a newly-allocated string containing a"]
+    #[doc = "         copy of `s` or `NULL` if the string cannot be allocated"]
+    #[doc = " @see av_strndup()"]
     pub fn av_strdup(s: *const cty::c_char) -> *mut cty::c_char;
 }
 extern "C" {
+    #[doc = " Duplicate a substring of a string."]
+    #[doc = ""]
+    #[doc = " @param s   String to be duplicated"]
+    #[doc = " @param len Maximum length of the resulting string (not counting the"]
+    #[doc = "            terminating byte)"]
+    #[doc = " @return Pointer to a newly-allocated string containing a"]
+    #[doc = "         substring of `s` or `NULL` if the string cannot be allocated"]
     pub fn av_strndup(s: *const cty::c_char, len: size_t) -> *mut cty::c_char;
 }
 extern "C" {
+    #[doc = " Duplicate a buffer with av_malloc()."]
+    #[doc = ""]
+    #[doc = " @param p    Buffer to be duplicated"]
+    #[doc = " @param size Size in bytes of the buffer copied"]
+    #[doc = " @return Pointer to a newly allocated buffer containing a"]
+    #[doc = "         copy of `p` or `NULL` if the buffer cannot be allocated"]
     pub fn av_memdup(p: *const cty::c_void, size: size_t) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Overlapping memcpy() implementation."]
+    #[doc = ""]
+    #[doc = " @param dst  Destination buffer"]
+    #[doc = " @param back Number of bytes back to start copying (i.e. the initial size of"]
+    #[doc = "             the overlapping window); must be > 0"]
+    #[doc = " @param cnt  Number of bytes to copy; must be >= 0"]
+    #[doc = ""]
+    #[doc = " @note `cnt > back` is valid, this will copy the bytes we just copied,"]
+    #[doc = "       thus creating a repeating pattern with a period length of `back`."]
     pub fn av_memcpy_backptr(dst: *mut u8, back: cty::c_int, cnt: cty::c_int);
 }
 extern "C" {
+    #[doc = " Add the pointer to an element to a dynamic array."]
+    #[doc = ""]
+    #[doc = " The array to grow is supposed to be an array of pointers to"]
+    #[doc = " structures, and the element to add must be a pointer to an already"]
+    #[doc = " allocated structure."]
+    #[doc = ""]
+    #[doc = " The array is reallocated when its size reaches powers of 2."]
+    #[doc = " Therefore, the amortized cost of adding an element is constant."]
+    #[doc = ""]
+    #[doc = " In case of success, the pointer to the array is updated in order to"]
+    #[doc = " point to the new grown array, and the number pointed to by `nb_ptr`"]
+    #[doc = " is incremented."]
+    #[doc = " In case of failure, the array is freed, `*tab_ptr` is set to `NULL` and"]
+    #[doc = " `*nb_ptr` is set to 0."]
+    #[doc = ""]
+    #[doc = " @param[in,out] tab_ptr Pointer to the array to grow"]
+    #[doc = " @param[in,out] nb_ptr  Pointer to the number of elements in the array"]
+    #[doc = " @param[in]     elem    Element to add"]
+    #[doc = " @see av_dynarray_add_nofree(), av_dynarray2_add()"]
     pub fn av_dynarray_add(
         tab_ptr: *mut cty::c_void,
         nb_ptr: *mut cty::c_int,
@@ -15291,6 +9537,14 @@ extern "C" {
     );
 }
 extern "C" {
+    #[doc = " Add an element to a dynamic array."]
+    #[doc = ""]
+    #[doc = " Function has the same functionality as av_dynarray_add(),"]
+    #[doc = " but it doesn't free memory on fails. It returns error code"]
+    #[doc = " instead and leave current buffer untouched."]
+    #[doc = ""]
+    #[doc = " @return >=0 on success, negative otherwise"]
+    #[doc = " @see av_dynarray_add(), av_dynarray2_add()"]
     pub fn av_dynarray_add_nofree(
         tab_ptr: *mut cty::c_void,
         nb_ptr: *mut cty::c_int,
@@ -15298,6 +9552,27 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Add an element of size `elem_size` to a dynamic array."]
+    #[doc = ""]
+    #[doc = " The array is reallocated when its number of elements reaches powers of 2."]
+    #[doc = " Therefore, the amortized cost of adding an element is constant."]
+    #[doc = ""]
+    #[doc = " In case of success, the pointer to the array is updated in order to"]
+    #[doc = " point to the new grown array, and the number pointed to by `nb_ptr`"]
+    #[doc = " is incremented."]
+    #[doc = " In case of failure, the array is freed, `*tab_ptr` is set to `NULL` and"]
+    #[doc = " `*nb_ptr` is set to 0."]
+    #[doc = ""]
+    #[doc = " @param[in,out] tab_ptr   Pointer to the array to grow"]
+    #[doc = " @param[in,out] nb_ptr    Pointer to the number of elements in the array"]
+    #[doc = " @param[in]     elem_size Size in bytes of an element in the array"]
+    #[doc = " @param[in]     elem_data Pointer to the data of the element to add. If"]
+    #[doc = "                          `NULL`, the space of the newly added element is"]
+    #[doc = "                          allocated but left uninitialized."]
+    #[doc = ""]
+    #[doc = " @return Pointer to the data of the element to copy in the newly allocated"]
+    #[doc = "         space"]
+    #[doc = " @see av_dynarray_add(), av_dynarray_add_nofree()"]
     pub fn av_dynarray2_add(
         tab_ptr: *mut *mut cty::c_void,
         nb_ptr: *mut cty::c_int,
@@ -15306,23 +9581,53 @@ extern "C" {
     ) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Multiply two `size_t` values checking for overflow."]
+    #[doc = ""]
+    #[doc = " @param[in]  a   Operand of multiplication"]
+    #[doc = " @param[in]  b   Operand of multiplication"]
+    #[doc = " @param[out] r   Pointer to the result of the operation"]
+    #[doc = " @return 0 on success, AVERROR(EINVAL) on overflow"]
     pub fn av_size_mult(a: size_t, b: size_t, r: *mut size_t) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Set the maximum size that may be allocated in one block."]
+    #[doc = ""]
+    #[doc = " The value specified with this function is effective for all libavutil's @ref"]
+    #[doc = " lavu_mem_funcs \"heap management functions.\""]
+    #[doc = ""]
+    #[doc = " By default, the max value is defined as `INT_MAX`."]
+    #[doc = ""]
+    #[doc = " @param max Value to be set as the new maximum size"]
+    #[doc = ""]
+    #[doc = " @warning Exercise extreme caution when using this function. Don't touch"]
+    #[doc = "          this if you do not understand the full consequence of doing so."]
     pub fn av_max_alloc(max: size_t);
 }
-pub type max_align_t = u128;
+pub type max_align_t = f64;
 extern "C" {
+    #[doc = " Put a description of the AVERROR code errnum in errbuf."]
+    #[doc = " In case of failure the global variable errno is set to indicate the"]
+    #[doc = " error. Even in case of failure av_strerror() will print a generic"]
+    #[doc = " error message indicating the errnum provided to errbuf."]
+    #[doc = ""]
+    #[doc = " @param errnum      error code to describe"]
+    #[doc = " @param errbuf      buffer to which description is written"]
+    #[doc = " @param errbuf_size the size in bytes of errbuf"]
+    #[doc = " @return 0 on success, a negative value if a description for errnum"]
+    #[doc = " cannot be found"]
     pub fn av_strerror(
         errnum: cty::c_int,
         errbuf: *mut cty::c_char,
         errbuf_size: size_t,
     ) -> cty::c_int;
 }
+#[doc = " Rational number (pair of numerator and denominator)."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVRational {
+    #[doc = "< Numerator"]
     pub num: cty::c_int,
+    #[doc = "< Denominator"]
     pub den: cty::c_int,
 }
 #[test]
@@ -15359,6 +9664,16 @@ fn bindgen_test_layout_AVRational() {
     );
 }
 extern "C" {
+    #[doc = " Reduce a fraction."]
+    #[doc = ""]
+    #[doc = " This is useful for framerate calculations."]
+    #[doc = ""]
+    #[doc = " @param[out] dst_num Destination numerator"]
+    #[doc = " @param[out] dst_den Destination denominator"]
+    #[doc = " @param[in]      num Source numerator"]
+    #[doc = " @param[in]      den Source denominator"]
+    #[doc = " @param[in]      max Maximum allowed values for `dst_num` & `dst_den`"]
+    #[doc = " @return 1 if the operation is exact, 0 otherwise"]
     pub fn av_reduce(
         dst_num: *mut cty::c_int,
         dst_den: *mut cty::c_int,
@@ -15368,30 +9683,78 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Multiply two rationals."]
+    #[doc = " @param b First rational"]
+    #[doc = " @param c Second rational"]
+    #[doc = " @return b*c"]
     pub fn av_mul_q(b: AVRational, c: AVRational) -> AVRational;
 }
 extern "C" {
+    #[doc = " Divide one rational by another."]
+    #[doc = " @param b First rational"]
+    #[doc = " @param c Second rational"]
+    #[doc = " @return b/c"]
     pub fn av_div_q(b: AVRational, c: AVRational) -> AVRational;
 }
 extern "C" {
+    #[doc = " Add two rationals."]
+    #[doc = " @param b First rational"]
+    #[doc = " @param c Second rational"]
+    #[doc = " @return b+c"]
     pub fn av_add_q(b: AVRational, c: AVRational) -> AVRational;
 }
 extern "C" {
+    #[doc = " Subtract one rational from another."]
+    #[doc = " @param b First rational"]
+    #[doc = " @param c Second rational"]
+    #[doc = " @return b-c"]
     pub fn av_sub_q(b: AVRational, c: AVRational) -> AVRational;
 }
 extern "C" {
+    #[doc = " Convert a double precision floating point number to a rational."]
+    #[doc = ""]
+    #[doc = " In case of infinity, the returned value is expressed as `{1, 0}` or"]
+    #[doc = " `{-1, 0}` depending on the sign."]
+    #[doc = ""]
+    #[doc = " @param d   `double` to convert"]
+    #[doc = " @param max Maximum allowed numerator and denominator"]
+    #[doc = " @return `d` in AVRational form"]
+    #[doc = " @see av_q2d()"]
     pub fn av_d2q(d: f64, max: cty::c_int) -> AVRational;
 }
 extern "C" {
+    #[doc = " Find which of the two rationals is closer to another rational."]
+    #[doc = ""]
+    #[doc = " @param q     Rational to be compared against"]
+    #[doc = " @param q1    Rational to be tested"]
+    #[doc = " @param q2    Rational to be tested"]
+    #[doc = " @return One of the following values:"]
+    #[doc = "         - 1 if `q1` is nearer to `q` than `q2`"]
+    #[doc = "         - -1 if `q2` is nearer to `q` than `q1`"]
+    #[doc = "         - 0 if they have the same distance"]
     pub fn av_nearer_q(q: AVRational, q1: AVRational, q2: AVRational) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Find the value in a list of rationals nearest a given reference rational."]
+    #[doc = ""]
+    #[doc = " @param q      Reference rational"]
+    #[doc = " @param q_list Array of rationals terminated by `{0, 0}`"]
+    #[doc = " @return Index of the nearest value found in the array"]
     pub fn av_find_nearest_q_idx(q: AVRational, q_list: *const AVRational) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Convert an AVRational to a IEEE 32-bit `float` expressed in fixed-point"]
+    #[doc = " format."]
+    #[doc = ""]
+    #[doc = " @param q Rational to be converted"]
+    #[doc = " @return Equivalent floating-point value, expressed as an unsigned 32-bit"]
+    #[doc = "         integer."]
+    #[doc = " @note The returned value is platform-indepedant."]
     pub fn av_q2intfloat(q: AVRational) -> u32;
 }
 extern "C" {
+    #[doc = " Return the best rational so that a and b are multiple of it."]
+    #[doc = " If the resulting denominator is larger than max_den, return def."]
     pub fn av_gcd_q(
         a: AVRational,
         b: AVRational,
@@ -15479,35 +9842,145 @@ fn bindgen_test_layout_av_intfloat64() {
         )
     );
 }
+#[doc = "< Round toward zero."]
 pub const AVRounding_AV_ROUND_ZERO: AVRounding = 0;
+#[doc = "< Round away from zero."]
 pub const AVRounding_AV_ROUND_INF: AVRounding = 1;
+#[doc = "< Round toward -infinity."]
 pub const AVRounding_AV_ROUND_DOWN: AVRounding = 2;
+#[doc = "< Round toward +infinity."]
 pub const AVRounding_AV_ROUND_UP: AVRounding = 3;
+#[doc = "< Round to nearest and halfway cases away from zero."]
 pub const AVRounding_AV_ROUND_NEAR_INF: AVRounding = 5;
+#[doc = " Flag telling rescaling functions to pass `INT64_MIN`/`MAX` through"]
+#[doc = " unchanged, avoiding special cases for #AV_NOPTS_VALUE."]
+#[doc = ""]
+#[doc = " Unlike other values of the enumeration AVRounding, this value is a"]
+#[doc = " bitmask that must be used in conjunction with another value of the"]
+#[doc = " enumeration through a bitwise OR, in order to set behavior for normal"]
+#[doc = " cases."]
+#[doc = ""]
+#[doc = " @code{.c}"]
+#[doc = " av_rescale_rnd(3, 1, 2, AV_ROUND_UP | AV_ROUND_PASS_MINMAX);"]
+#[doc = " // Rescaling 3:"]
+#[doc = " //     Calculating 3 * 1 / 2"]
+#[doc = " //     3 / 2 is rounded up to 2"]
+#[doc = " //     => 2"]
+#[doc = ""]
+#[doc = " av_rescale_rnd(AV_NOPTS_VALUE, 1, 2, AV_ROUND_UP | AV_ROUND_PASS_MINMAX);"]
+#[doc = " // Rescaling AV_NOPTS_VALUE:"]
+#[doc = " //     AV_NOPTS_VALUE == INT64_MIN"]
+#[doc = " //     AV_NOPTS_VALUE is passed through"]
+#[doc = " //     => AV_NOPTS_VALUE"]
+#[doc = " @endcode"]
 pub const AVRounding_AV_ROUND_PASS_MINMAX: AVRounding = 8192;
+#[doc = " Rounding methods."]
 pub type AVRounding = u32;
 extern "C" {
+    #[doc = " Compute the greatest common divisor of two integer operands."]
+    #[doc = ""]
+    #[doc = " @param a Operand"]
+    #[doc = " @param b Operand"]
+    #[doc = " @return GCD of a and b up to sign; if a >= 0 and b >= 0, return value is >= 0;"]
+    #[doc = " if a == 0 and b == 0, returns 0."]
     pub fn av_gcd(a: i64, b: i64) -> i64;
 }
 extern "C" {
+    #[doc = " Rescale a 64-bit integer with rounding to nearest."]
+    #[doc = ""]
+    #[doc = " The operation is mathematically equivalent to `a * b / c`, but writing that"]
+    #[doc = " directly can overflow."]
+    #[doc = ""]
+    #[doc = " This function is equivalent to av_rescale_rnd() with #AV_ROUND_NEAR_INF."]
+    #[doc = ""]
+    #[doc = " @see av_rescale_rnd(), av_rescale_q(), av_rescale_q_rnd()"]
     pub fn av_rescale(a: i64, b: i64, c: i64) -> i64;
 }
 extern "C" {
+    #[doc = " Rescale a 64-bit integer with specified rounding."]
+    #[doc = ""]
+    #[doc = " The operation is mathematically equivalent to `a * b / c`, but writing that"]
+    #[doc = " directly can overflow, and does not support different rounding methods."]
+    #[doc = " If the result is not representable then INT64_MIN is returned."]
+    #[doc = ""]
+    #[doc = " @see av_rescale(), av_rescale_q(), av_rescale_q_rnd()"]
     pub fn av_rescale_rnd(a: i64, b: i64, c: i64, rnd: AVRounding) -> i64;
 }
 extern "C" {
+    #[doc = " Rescale a 64-bit integer by 2 rational numbers."]
+    #[doc = ""]
+    #[doc = " The operation is mathematically equivalent to `a * bq / cq`."]
+    #[doc = ""]
+    #[doc = " This function is equivalent to av_rescale_q_rnd() with #AV_ROUND_NEAR_INF."]
+    #[doc = ""]
+    #[doc = " @see av_rescale(), av_rescale_rnd(), av_rescale_q_rnd()"]
     pub fn av_rescale_q(a: i64, bq: AVRational, cq: AVRational) -> i64;
 }
 extern "C" {
+    #[doc = " Rescale a 64-bit integer by 2 rational numbers with specified rounding."]
+    #[doc = ""]
+    #[doc = " The operation is mathematically equivalent to `a * bq / cq`."]
+    #[doc = ""]
+    #[doc = " @see av_rescale(), av_rescale_rnd(), av_rescale_q()"]
     pub fn av_rescale_q_rnd(a: i64, bq: AVRational, cq: AVRational, rnd: AVRounding) -> i64;
 }
 extern "C" {
+    #[doc = " Compare two timestamps each in its own time base."]
+    #[doc = ""]
+    #[doc = " @return One of the following values:"]
+    #[doc = "         - -1 if `ts_a` is before `ts_b`"]
+    #[doc = "         - 1 if `ts_a` is after `ts_b`"]
+    #[doc = "         - 0 if they represent the same position"]
+    #[doc = ""]
+    #[doc = " @warning"]
+    #[doc = " The result of the function is undefined if one of the timestamps is outside"]
+    #[doc = " the `int64_t` range when represented in the other's timebase."]
     pub fn av_compare_ts(ts_a: i64, tb_a: AVRational, ts_b: i64, tb_b: AVRational) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Compare the remainders of two integer operands divided by a common divisor."]
+    #[doc = ""]
+    #[doc = " In other words, compare the least significant `log2(mod)` bits of integers"]
+    #[doc = " `a` and `b`."]
+    #[doc = ""]
+    #[doc = " @code{.c}"]
+    #[doc = " av_compare_mod(0x11, 0x02, 0x10) < 0 // since 0x11 % 0x10  (0x1) < 0x02 % 0x10  (0x2)"]
+    #[doc = " av_compare_mod(0x11, 0x02, 0x20) > 0 // since 0x11 % 0x20 (0x11) > 0x02 % 0x20 (0x02)"]
+    #[doc = " @endcode"]
+    #[doc = ""]
+    #[doc = " @param a Operand"]
+    #[doc = " @param b Operand"]
+    #[doc = " @param mod Divisor; must be a power of 2"]
+    #[doc = " @return"]
+    #[doc = "         - a negative value if `a % mod < b % mod`"]
+    #[doc = "         - a positive value if `a % mod > b % mod`"]
+    #[doc = "         - zero             if `a % mod == b % mod`"]
     pub fn av_compare_mod(a: u64, b: u64, mod_: u64) -> i64;
 }
 extern "C" {
+    #[doc = " Rescale a timestamp while preserving known durations."]
+    #[doc = ""]
+    #[doc = " This function is designed to be called per audio packet to scale the input"]
+    #[doc = " timestamp to a different time base. Compared to a simple av_rescale_q()"]
+    #[doc = " call, this function is robust against possible inconsistent frame durations."]
+    #[doc = ""]
+    #[doc = " The `last` parameter is a state variable that must be preserved for all"]
+    #[doc = " subsequent calls for the same stream. For the first call, `*last` should be"]
+    #[doc = " initialized to #AV_NOPTS_VALUE."]
+    #[doc = ""]
+    #[doc = " @param[in]     in_tb    Input time base"]
+    #[doc = " @param[in]     in_ts    Input timestamp"]
+    #[doc = " @param[in]     fs_tb    Duration time base; typically this is finer-grained"]
+    #[doc = "                         (greater) than `in_tb` and `out_tb`"]
+    #[doc = " @param[in]     duration Duration till the next call to this function (i.e."]
+    #[doc = "                         duration of the current packet/frame)"]
+    #[doc = " @param[in,out] last     Pointer to a timestamp expressed in terms of"]
+    #[doc = "                         `fs_tb`, acting as a state variable"]
+    #[doc = " @param[in]     out_tb   Output timebase"]
+    #[doc = " @return        Timestamp expressed in terms of `out_tb`"]
+    #[doc = ""]
+    #[doc = " @note In the context of this function, \"duration\" is in term of samples, not"]
+    #[doc = "       seconds."]
     pub fn av_rescale_delta(
         in_tb: AVRational,
         in_ts: i64,
@@ -15518,6 +9991,15 @@ extern "C" {
     ) -> i64;
 }
 extern "C" {
+    #[doc = " Add a value to a timestamp."]
+    #[doc = ""]
+    #[doc = " This function guarantees that when the same value is repeatly added that"]
+    #[doc = " no accumulation of rounding errors occurs."]
+    #[doc = ""]
+    #[doc = " @param[in] ts     Input timestamp"]
+    #[doc = " @param[in] ts_tb  Input timestamp time base"]
+    #[doc = " @param[in] inc    Value to be added"]
+    #[doc = " @param[in] inc_tb Time base of `inc`"]
     pub fn av_add_stable(ts_tb: AVRational, ts: i64, inc_tb: AVRational, inc: i64) -> i64;
 }
 pub type __gnuc_va_list = __builtin_va_list;
@@ -15538,6 +10020,7 @@ pub const AVClassCategory_AV_CLASS_CATEGORY_DEVICE_AUDIO_OUTPUT: AVClassCategory
 pub const AVClassCategory_AV_CLASS_CATEGORY_DEVICE_AUDIO_INPUT: AVClassCategory = 43;
 pub const AVClassCategory_AV_CLASS_CATEGORY_DEVICE_OUTPUT: AVClassCategory = 44;
 pub const AVClassCategory_AV_CLASS_CATEGORY_DEVICE_INPUT: AVClassCategory = 45;
+#[doc = "< not part of ABI/API"]
 pub const AVClassCategory_AV_CLASS_CATEGORY_NB: AVClassCategory = 46;
 pub type AVClassCategory = u32;
 #[repr(C)]
@@ -15545,19 +10028,46 @@ pub type AVClassCategory = u32;
 pub struct AVOptionRanges {
     _unused: [u8; 0],
 }
+#[doc = " Describe the class of an AVClass context structure. That is an"]
+#[doc = " arbitrary struct of which the first field is a pointer to an"]
+#[doc = " AVClass struct (e.g. AVCodecContext, AVFormatContext etc.)."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVClass {
+    #[doc = " The name of the class; usually it is the same name as the"]
+    #[doc = " context structure type to which the AVClass is associated."]
     pub class_name: *const cty::c_char,
+    #[doc = " A pointer to a function which returns the name of a context"]
+    #[doc = " instance ctx associated with the class."]
     pub item_name:
         ::core::option::Option<unsafe extern "C" fn(ctx: *mut cty::c_void) -> *const cty::c_char>,
+    #[doc = " a pointer to the first option specified in the class if any or NULL"]
+    #[doc = ""]
+    #[doc = " @see av_set_default_options()"]
     pub option: *mut AVOption,
+    #[doc = " LIBAVUTIL_VERSION with which this structure was created."]
+    #[doc = " This is used to allow fields to be added without requiring major"]
+    #[doc = " version bumps everywhere."]
     pub version: cty::c_int,
+    #[doc = " Offset in the structure where log_level_offset is stored."]
+    #[doc = " 0 means there is no such variable"]
     pub log_level_offset_offset: cty::c_int,
+    #[doc = " Offset in the structure where a pointer to the parent context for"]
+    #[doc = " logging is stored. For example a decoder could pass its AVCodecContext"]
+    #[doc = " to eval as such a parent context, which an av_log() implementation"]
+    #[doc = " could then leverage to display the parent context."]
+    #[doc = " The offset can be NULL."]
     pub parent_log_context_offset: cty::c_int,
+    #[doc = " Category used for visualization (like color)"]
+    #[doc = " This is only set if the category is equal for all objects using this class."]
+    #[doc = " available since version (51 << 16 | 56 << 8 | 100)"]
     pub category: AVClassCategory,
+    #[doc = " Callback to return the category."]
+    #[doc = " available since version (51 << 16 | 59 << 8 | 100)"]
     pub get_category:
         ::core::option::Option<unsafe extern "C" fn(ctx: *mut cty::c_void) -> AVClassCategory>,
+    #[doc = " Callback to return the supported/allowed ranges."]
+    #[doc = " available since version (52.12)"]
     pub query_ranges: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut *mut AVOptionRanges,
@@ -15566,9 +10076,21 @@ pub struct AVClass {
             flags: cty::c_int,
         ) -> cty::c_int,
     >,
+    #[doc = " Return next AVOptions-enabled child or NULL"]
     pub child_next: ::core::option::Option<
         unsafe extern "C" fn(obj: *mut cty::c_void, prev: *mut cty::c_void) -> *mut cty::c_void,
     >,
+    #[doc = " Iterate over the AVClasses corresponding to potential AVOptions-enabled"]
+    #[doc = " children."]
+    #[doc = ""]
+    #[doc = " @param iter pointer to opaque iteration state. The caller must initialize"]
+    #[doc = "             *iter to NULL before the first call."]
+    #[doc = " @return AVClass for the next AVOptions-enabled child or NULL if there are"]
+    #[doc = "         no more such children."]
+    #[doc = ""]
+    #[doc = " @note The difference between child_next and this is that child_next"]
+    #[doc = "       iterates over _already existing_ objects, while child_class_iterate"]
+    #[doc = "       iterates over _all possible_ children."]
     pub child_class_iterate:
         ::core::option::Option<unsafe extern "C" fn(iter: *mut *mut cty::c_void) -> *const AVClass>,
 }
@@ -15700,9 +10222,38 @@ fn bindgen_test_layout_AVClass() {
     );
 }
 extern "C" {
+    #[doc = " Send the specified message to the log if the level is less than or equal"]
+    #[doc = " to the current av_log_level. By default, all logging messages are sent to"]
+    #[doc = " stderr. This behavior can be altered by setting a different logging callback"]
+    #[doc = " function."]
+    #[doc = " @see av_log_set_callback"]
+    #[doc = ""]
+    #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+    #[doc = "        pointer to an AVClass struct or NULL if general log."]
+    #[doc = " @param level The importance level of the message expressed using a @ref"]
+    #[doc = "        lavu_log_constants \"Logging Constant\"."]
+    #[doc = " @param fmt The format string (printf-compatible) that specifies how"]
+    #[doc = "        subsequent arguments are converted to output."]
     pub fn av_log(avcl: *mut cty::c_void, level: cty::c_int, fmt: *const cty::c_char, ...);
 }
 extern "C" {
+    #[doc = " Send the specified message to the log once with the initial_level and then with"]
+    #[doc = " the subsequent_level. By default, all logging messages are sent to"]
+    #[doc = " stderr. This behavior can be altered by setting a different logging callback"]
+    #[doc = " function."]
+    #[doc = " @see av_log"]
+    #[doc = ""]
+    #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+    #[doc = "        pointer to an AVClass struct or NULL if general log."]
+    #[doc = " @param initial_level importance level of the message expressed using a @ref"]
+    #[doc = "        lavu_log_constants \"Logging Constant\" for the first occurance."]
+    #[doc = " @param subsequent_level importance level of the message expressed using a @ref"]
+    #[doc = "        lavu_log_constants \"Logging Constant\" after the first occurance."]
+    #[doc = " @param fmt The format string (printf-compatible) that specifies how"]
+    #[doc = "        subsequent arguments are converted to output."]
+    #[doc = " @param state a variable to keep trak of if a message has already been printed"]
+    #[doc = "        this must be initialized to 0 before the first use. The same state"]
+    #[doc = "        must not be accessed by 2 Threads simultaneously."]
     pub fn av_log_once(
         avcl: *mut cty::c_void,
         initial_level: cty::c_int,
@@ -15713,62 +10264,121 @@ extern "C" {
     );
 }
 extern "C" {
-    pub fn av_vlog(
-        avcl: *mut cty::c_void,
-        level: cty::c_int,
-        fmt: *const cty::c_char,
-        vl: *mut __va_list_tag,
-    );
+    #[doc = " Send the specified message to the log if the level is less than or equal"]
+    #[doc = " to the current av_log_level. By default, all logging messages are sent to"]
+    #[doc = " stderr. This behavior can be altered by setting a different logging callback"]
+    #[doc = " function."]
+    #[doc = " @see av_log_set_callback"]
+    #[doc = ""]
+    #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+    #[doc = "        pointer to an AVClass struct."]
+    #[doc = " @param level The importance level of the message expressed using a @ref"]
+    #[doc = "        lavu_log_constants \"Logging Constant\"."]
+    #[doc = " @param fmt The format string (printf-compatible) that specifies how"]
+    #[doc = "        subsequent arguments are converted to output."]
+    #[doc = " @param vl The arguments referenced by the format string."]
+    pub fn av_vlog(avcl: *mut cty::c_void, level: cty::c_int, fmt: *const cty::c_char, vl: va_list);
 }
 extern "C" {
+    #[doc = " Get the current log level"]
+    #[doc = ""]
+    #[doc = " @see lavu_log_constants"]
+    #[doc = ""]
+    #[doc = " @return Current log level"]
     pub fn av_log_get_level() -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Set the log level"]
+    #[doc = ""]
+    #[doc = " @see lavu_log_constants"]
+    #[doc = ""]
+    #[doc = " @param level Logging level"]
     pub fn av_log_set_level(level: cty::c_int);
 }
 extern "C" {
+    #[doc = " Set the logging callback"]
+    #[doc = ""]
+    #[doc = " @note The callback must be thread safe, even if the application does not use"]
+    #[doc = "       threads itself as some codecs are multithreaded."]
+    #[doc = ""]
+    #[doc = " @see av_log_default_callback"]
+    #[doc = ""]
+    #[doc = " @param callback A logging function with a compatible signature."]
     pub fn av_log_set_callback(
         callback: ::core::option::Option<
             unsafe extern "C" fn(
                 arg1: *mut cty::c_void,
                 arg2: cty::c_int,
                 arg3: *const cty::c_char,
-                arg4: *mut __va_list_tag,
+                arg4: va_list,
             ),
         >,
     );
 }
 extern "C" {
+    #[doc = " Default logging callback"]
+    #[doc = ""]
+    #[doc = " It prints the message to stderr, optionally colorizing it."]
+    #[doc = ""]
+    #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+    #[doc = "        pointer to an AVClass struct."]
+    #[doc = " @param level The importance level of the message expressed using a @ref"]
+    #[doc = "        lavu_log_constants \"Logging Constant\"."]
+    #[doc = " @param fmt The format string (printf-compatible) that specifies how"]
+    #[doc = "        subsequent arguments are converted to output."]
+    #[doc = " @param vl The arguments referenced by the format string."]
     pub fn av_log_default_callback(
         avcl: *mut cty::c_void,
         level: cty::c_int,
         fmt: *const cty::c_char,
-        vl: *mut __va_list_tag,
+        vl: va_list,
     );
 }
 extern "C" {
+    #[doc = " Return the context name"]
+    #[doc = ""]
+    #[doc = " @param  ctx The AVClass context"]
+    #[doc = ""]
+    #[doc = " @return The AVClass class_name"]
     pub fn av_default_item_name(ctx: *mut cty::c_void) -> *const cty::c_char;
 }
 extern "C" {
     pub fn av_default_get_category(ptr: *mut cty::c_void) -> AVClassCategory;
 }
 extern "C" {
+    #[doc = " Format a line of log the same way as the default callback."]
+    #[doc = " @param line          buffer to receive the formatted line"]
+    #[doc = " @param line_size     size of the buffer"]
+    #[doc = " @param print_prefix  used to store whether the prefix must be printed;"]
+    #[doc = "                      must point to a persistent integer initially set to 1"]
     pub fn av_log_format_line(
         ptr: *mut cty::c_void,
         level: cty::c_int,
         fmt: *const cty::c_char,
-        vl: *mut __va_list_tag,
+        vl: va_list,
         line: *mut cty::c_char,
         line_size: cty::c_int,
         print_prefix: *mut cty::c_int,
     );
 }
 extern "C" {
+    #[doc = " Format a line of log the same way as the default callback."]
+    #[doc = " @param line          buffer to receive the formatted line;"]
+    #[doc = "                      may be NULL if line_size is 0"]
+    #[doc = " @param line_size     size of the buffer; at most line_size-1 characters will"]
+    #[doc = "                      be written to the buffer, plus one null terminator"]
+    #[doc = " @param print_prefix  used to store whether the prefix must be printed;"]
+    #[doc = "                      must point to a persistent integer initially set to 1"]
+    #[doc = " @return Returns a negative value if an error occurred, otherwise returns"]
+    #[doc = "         the number of characters that would have been written for a"]
+    #[doc = "         sufficiently large buffer, not including the terminating null"]
+    #[doc = "         character. If the return value is not less than line_size, it means"]
+    #[doc = "         that the log message was truncated to fit the buffer."]
     pub fn av_log_format_line2(
         ptr: *mut cty::c_void,
         level: cty::c_int,
         fmt: *const cty::c_char,
-        vl: *mut __va_list_tag,
+        vl: va_list,
         line: *mut cty::c_char,
         line_size: cty::c_int,
         print_prefix: *mut cty::c_int,
@@ -15781,291 +10391,721 @@ extern "C" {
     pub fn av_log_get_flags() -> cty::c_int;
 }
 pub const AVPixelFormat_AV_PIX_FMT_NONE: AVPixelFormat = -1;
+#[doc = "< planar YUV 4:2:0, 12bpp, (1 Cr & Cb sample per 2x2 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P: AVPixelFormat = 0;
+#[doc = "< packed YUV 4:2:2, 16bpp, Y0 Cb Y1 Cr"]
 pub const AVPixelFormat_AV_PIX_FMT_YUYV422: AVPixelFormat = 1;
+#[doc = "< packed RGB 8:8:8, 24bpp, RGBRGB..."]
 pub const AVPixelFormat_AV_PIX_FMT_RGB24: AVPixelFormat = 2;
+#[doc = "< packed RGB 8:8:8, 24bpp, BGRBGR..."]
 pub const AVPixelFormat_AV_PIX_FMT_BGR24: AVPixelFormat = 3;
+#[doc = "< planar YUV 4:2:2, 16bpp, (1 Cr & Cb sample per 2x1 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P: AVPixelFormat = 4;
+#[doc = "< planar YUV 4:4:4, 24bpp, (1 Cr & Cb sample per 1x1 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P: AVPixelFormat = 5;
+#[doc = "< planar YUV 4:1:0,  9bpp, (1 Cr & Cb sample per 4x4 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV410P: AVPixelFormat = 6;
+#[doc = "< planar YUV 4:1:1, 12bpp, (1 Cr & Cb sample per 4x1 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV411P: AVPixelFormat = 7;
+#[doc = "<        Y        ,  8bpp"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY8: AVPixelFormat = 8;
+#[doc = "<        Y        ,  1bpp, 0 is white, 1 is black, in each byte pixels are ordered from the msb to the lsb"]
 pub const AVPixelFormat_AV_PIX_FMT_MONOWHITE: AVPixelFormat = 9;
+#[doc = "<        Y        ,  1bpp, 0 is black, 1 is white, in each byte pixels are ordered from the msb to the lsb"]
 pub const AVPixelFormat_AV_PIX_FMT_MONOBLACK: AVPixelFormat = 10;
+#[doc = "< 8 bits with AV_PIX_FMT_RGB32 palette"]
 pub const AVPixelFormat_AV_PIX_FMT_PAL8: AVPixelFormat = 11;
+#[doc = "< planar YUV 4:2:0, 12bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV420P and setting color_range"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVJ420P: AVPixelFormat = 12;
+#[doc = "< planar YUV 4:2:2, 16bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV422P and setting color_range"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVJ422P: AVPixelFormat = 13;
+#[doc = "< planar YUV 4:4:4, 24bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV444P and setting color_range"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVJ444P: AVPixelFormat = 14;
+#[doc = "< packed YUV 4:2:2, 16bpp, Cb Y0 Cr Y1"]
 pub const AVPixelFormat_AV_PIX_FMT_UYVY422: AVPixelFormat = 15;
+#[doc = "< packed YUV 4:1:1, 12bpp, Cb Y0 Y1 Cr Y2 Y3"]
 pub const AVPixelFormat_AV_PIX_FMT_UYYVYY411: AVPixelFormat = 16;
+#[doc = "< packed RGB 3:3:2,  8bpp, (msb)2B 3G 3R(lsb)"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR8: AVPixelFormat = 17;
+#[doc = "< packed RGB 1:2:1 bitstream,  4bpp, (msb)1B 2G 1R(lsb), a byte contains two pixels, the first pixel in the byte is the one composed by the 4 msb bits"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR4: AVPixelFormat = 18;
+#[doc = "< packed RGB 1:2:1,  8bpp, (msb)1B 2G 1R(lsb)"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR4_BYTE: AVPixelFormat = 19;
+#[doc = "< packed RGB 3:3:2,  8bpp, (msb)2R 3G 3B(lsb)"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB8: AVPixelFormat = 20;
+#[doc = "< packed RGB 1:2:1 bitstream,  4bpp, (msb)1R 2G 1B(lsb), a byte contains two pixels, the first pixel in the byte is the one composed by the 4 msb bits"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB4: AVPixelFormat = 21;
+#[doc = "< packed RGB 1:2:1,  8bpp, (msb)1R 2G 1B(lsb)"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB4_BYTE: AVPixelFormat = 22;
+#[doc = "< planar YUV 4:2:0, 12bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved (first byte U and the following byte V)"]
 pub const AVPixelFormat_AV_PIX_FMT_NV12: AVPixelFormat = 23;
+#[doc = "< as above, but U and V bytes are swapped"]
 pub const AVPixelFormat_AV_PIX_FMT_NV21: AVPixelFormat = 24;
+#[doc = "< packed ARGB 8:8:8:8, 32bpp, ARGBARGB..."]
 pub const AVPixelFormat_AV_PIX_FMT_ARGB: AVPixelFormat = 25;
+#[doc = "< packed RGBA 8:8:8:8, 32bpp, RGBARGBA..."]
 pub const AVPixelFormat_AV_PIX_FMT_RGBA: AVPixelFormat = 26;
+#[doc = "< packed ABGR 8:8:8:8, 32bpp, ABGRABGR..."]
 pub const AVPixelFormat_AV_PIX_FMT_ABGR: AVPixelFormat = 27;
+#[doc = "< packed BGRA 8:8:8:8, 32bpp, BGRABGRA..."]
 pub const AVPixelFormat_AV_PIX_FMT_BGRA: AVPixelFormat = 28;
+#[doc = "<        Y        , 16bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY16BE: AVPixelFormat = 29;
+#[doc = "<        Y        , 16bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY16LE: AVPixelFormat = 30;
+#[doc = "< planar YUV 4:4:0 (1 Cr & Cb sample per 1x2 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV440P: AVPixelFormat = 31;
+#[doc = "< planar YUV 4:4:0 full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV440P and setting color_range"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVJ440P: AVPixelFormat = 32;
+#[doc = "< planar YUV 4:2:0, 20bpp, (1 Cr & Cb sample per 2x2 Y & A samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P: AVPixelFormat = 33;
+#[doc = "< packed RGB 16:16:16, 48bpp, 16R, 16G, 16B, the 2-byte value for each R/G/B component is stored as big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB48BE: AVPixelFormat = 34;
+#[doc = "< packed RGB 16:16:16, 48bpp, 16R, 16G, 16B, the 2-byte value for each R/G/B component is stored as little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB48LE: AVPixelFormat = 35;
+#[doc = "< packed RGB 5:6:5, 16bpp, (msb)   5R 6G 5B(lsb), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB565BE: AVPixelFormat = 36;
+#[doc = "< packed RGB 5:6:5, 16bpp, (msb)   5R 6G 5B(lsb), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB565LE: AVPixelFormat = 37;
+#[doc = "< packed RGB 5:5:5, 16bpp, (msb)1X 5R 5G 5B(lsb), big-endian   , X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB555BE: AVPixelFormat = 38;
+#[doc = "< packed RGB 5:5:5, 16bpp, (msb)1X 5R 5G 5B(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB555LE: AVPixelFormat = 39;
+#[doc = "< packed BGR 5:6:5, 16bpp, (msb)   5B 6G 5R(lsb), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR565BE: AVPixelFormat = 40;
+#[doc = "< packed BGR 5:6:5, 16bpp, (msb)   5B 6G 5R(lsb), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR565LE: AVPixelFormat = 41;
+#[doc = "< packed BGR 5:5:5, 16bpp, (msb)1X 5B 5G 5R(lsb), big-endian   , X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR555BE: AVPixelFormat = 42;
+#[doc = "< packed BGR 5:5:5, 16bpp, (msb)1X 5B 5G 5R(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR555LE: AVPixelFormat = 43;
+#[doc = "  Hardware acceleration through VA-API, data[3] contains a"]
+#[doc = "  VASurfaceID."]
 pub const AVPixelFormat_AV_PIX_FMT_VAAPI: AVPixelFormat = 44;
+#[doc = "< planar YUV 4:2:0, 24bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P16LE: AVPixelFormat = 45;
+#[doc = "< planar YUV 4:2:0, 24bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P16BE: AVPixelFormat = 46;
+#[doc = "< planar YUV 4:2:2, 32bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P16LE: AVPixelFormat = 47;
+#[doc = "< planar YUV 4:2:2, 32bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P16BE: AVPixelFormat = 48;
+#[doc = "< planar YUV 4:4:4, 48bpp, (1 Cr & Cb sample per 1x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P16LE: AVPixelFormat = 49;
+#[doc = "< planar YUV 4:4:4, 48bpp, (1 Cr & Cb sample per 1x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P16BE: AVPixelFormat = 50;
+#[doc = "< HW decoding through DXVA2, Picture.data[3] contains a LPDIRECT3DSURFACE9 pointer"]
 pub const AVPixelFormat_AV_PIX_FMT_DXVA2_VLD: AVPixelFormat = 51;
+#[doc = "< packed RGB 4:4:4, 16bpp, (msb)4X 4R 4G 4B(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB444LE: AVPixelFormat = 52;
+#[doc = "< packed RGB 4:4:4, 16bpp, (msb)4X 4R 4G 4B(lsb), big-endian,    X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB444BE: AVPixelFormat = 53;
+#[doc = "< packed BGR 4:4:4, 16bpp, (msb)4X 4B 4G 4R(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR444LE: AVPixelFormat = 54;
+#[doc = "< packed BGR 4:4:4, 16bpp, (msb)4X 4B 4G 4R(lsb), big-endian,    X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR444BE: AVPixelFormat = 55;
+#[doc = "< 8 bits gray, 8 bits alpha"]
 pub const AVPixelFormat_AV_PIX_FMT_YA8: AVPixelFormat = 56;
+#[doc = "< alias for AV_PIX_FMT_YA8"]
 pub const AVPixelFormat_AV_PIX_FMT_Y400A: AVPixelFormat = 56;
+#[doc = "< alias for AV_PIX_FMT_YA8"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY8A: AVPixelFormat = 56;
+#[doc = "< packed RGB 16:16:16, 48bpp, 16B, 16G, 16R, the 2-byte value for each R/G/B component is stored as big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR48BE: AVPixelFormat = 57;
+#[doc = "< packed RGB 16:16:16, 48bpp, 16B, 16G, 16R, the 2-byte value for each R/G/B component is stored as little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR48LE: AVPixelFormat = 58;
+#[doc = "< planar YUV 4:2:0, 13.5bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P9BE: AVPixelFormat = 59;
+#[doc = "< planar YUV 4:2:0, 13.5bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P9LE: AVPixelFormat = 60;
+#[doc = "< planar YUV 4:2:0, 15bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P10BE: AVPixelFormat = 61;
+#[doc = "< planar YUV 4:2:0, 15bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P10LE: AVPixelFormat = 62;
+#[doc = "< planar YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P10BE: AVPixelFormat = 63;
+#[doc = "< planar YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P10LE: AVPixelFormat = 64;
+#[doc = "< planar YUV 4:4:4, 27bpp, (1 Cr & Cb sample per 1x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P9BE: AVPixelFormat = 65;
+#[doc = "< planar YUV 4:4:4, 27bpp, (1 Cr & Cb sample per 1x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P9LE: AVPixelFormat = 66;
+#[doc = "< planar YUV 4:4:4, 30bpp, (1 Cr & Cb sample per 1x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P10BE: AVPixelFormat = 67;
+#[doc = "< planar YUV 4:4:4, 30bpp, (1 Cr & Cb sample per 1x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P10LE: AVPixelFormat = 68;
+#[doc = "< planar YUV 4:2:2, 18bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P9BE: AVPixelFormat = 69;
+#[doc = "< planar YUV 4:2:2, 18bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P9LE: AVPixelFormat = 70;
+#[doc = "< planar GBR 4:4:4 24bpp"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP: AVPixelFormat = 71;
 pub const AVPixelFormat_AV_PIX_FMT_GBR24P: AVPixelFormat = 71;
+#[doc = "< planar GBR 4:4:4 27bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP9BE: AVPixelFormat = 72;
+#[doc = "< planar GBR 4:4:4 27bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP9LE: AVPixelFormat = 73;
+#[doc = "< planar GBR 4:4:4 30bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP10BE: AVPixelFormat = 74;
+#[doc = "< planar GBR 4:4:4 30bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP10LE: AVPixelFormat = 75;
+#[doc = "< planar GBR 4:4:4 48bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP16BE: AVPixelFormat = 76;
+#[doc = "< planar GBR 4:4:4 48bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP16LE: AVPixelFormat = 77;
+#[doc = "< planar YUV 4:2:2 24bpp, (1 Cr & Cb sample per 2x1 Y & A samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P: AVPixelFormat = 78;
+#[doc = "< planar YUV 4:4:4 32bpp, (1 Cr & Cb sample per 1x1 Y & A samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P: AVPixelFormat = 79;
+#[doc = "< planar YUV 4:2:0 22.5bpp, (1 Cr & Cb sample per 2x2 Y & A samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P9BE: AVPixelFormat = 80;
+#[doc = "< planar YUV 4:2:0 22.5bpp, (1 Cr & Cb sample per 2x2 Y & A samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P9LE: AVPixelFormat = 81;
+#[doc = "< planar YUV 4:2:2 27bpp, (1 Cr & Cb sample per 2x1 Y & A samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P9BE: AVPixelFormat = 82;
+#[doc = "< planar YUV 4:2:2 27bpp, (1 Cr & Cb sample per 2x1 Y & A samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P9LE: AVPixelFormat = 83;
+#[doc = "< planar YUV 4:4:4 36bpp, (1 Cr & Cb sample per 1x1 Y & A samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P9BE: AVPixelFormat = 84;
+#[doc = "< planar YUV 4:4:4 36bpp, (1 Cr & Cb sample per 1x1 Y & A samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P9LE: AVPixelFormat = 85;
+#[doc = "< planar YUV 4:2:0 25bpp, (1 Cr & Cb sample per 2x2 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P10BE: AVPixelFormat = 86;
+#[doc = "< planar YUV 4:2:0 25bpp, (1 Cr & Cb sample per 2x2 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P10LE: AVPixelFormat = 87;
+#[doc = "< planar YUV 4:2:2 30bpp, (1 Cr & Cb sample per 2x1 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P10BE: AVPixelFormat = 88;
+#[doc = "< planar YUV 4:2:2 30bpp, (1 Cr & Cb sample per 2x1 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P10LE: AVPixelFormat = 89;
+#[doc = "< planar YUV 4:4:4 40bpp, (1 Cr & Cb sample per 1x1 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P10BE: AVPixelFormat = 90;
+#[doc = "< planar YUV 4:4:4 40bpp, (1 Cr & Cb sample per 1x1 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P10LE: AVPixelFormat = 91;
+#[doc = "< planar YUV 4:2:0 40bpp, (1 Cr & Cb sample per 2x2 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P16BE: AVPixelFormat = 92;
+#[doc = "< planar YUV 4:2:0 40bpp, (1 Cr & Cb sample per 2x2 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA420P16LE: AVPixelFormat = 93;
+#[doc = "< planar YUV 4:2:2 48bpp, (1 Cr & Cb sample per 2x1 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P16BE: AVPixelFormat = 94;
+#[doc = "< planar YUV 4:2:2 48bpp, (1 Cr & Cb sample per 2x1 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P16LE: AVPixelFormat = 95;
+#[doc = "< planar YUV 4:4:4 64bpp, (1 Cr & Cb sample per 1x1 Y & A samples, big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P16BE: AVPixelFormat = 96;
+#[doc = "< planar YUV 4:4:4 64bpp, (1 Cr & Cb sample per 1x1 Y & A samples, little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P16LE: AVPixelFormat = 97;
+#[doc = "< HW acceleration through VDPAU, Picture.data[3] contains a VdpVideoSurface"]
 pub const AVPixelFormat_AV_PIX_FMT_VDPAU: AVPixelFormat = 98;
+#[doc = "< packed XYZ 4:4:4, 36 bpp, (msb) 12X, 12Y, 12Z (lsb), the 2-byte value for each X/Y/Z is stored as little-endian, the 4 lower bits are set to 0"]
 pub const AVPixelFormat_AV_PIX_FMT_XYZ12LE: AVPixelFormat = 99;
+#[doc = "< packed XYZ 4:4:4, 36 bpp, (msb) 12X, 12Y, 12Z (lsb), the 2-byte value for each X/Y/Z is stored as big-endian, the 4 lower bits are set to 0"]
 pub const AVPixelFormat_AV_PIX_FMT_XYZ12BE: AVPixelFormat = 100;
+#[doc = "< interleaved chroma YUV 4:2:2, 16bpp, (1 Cr & Cb sample per 2x1 Y samples)"]
 pub const AVPixelFormat_AV_PIX_FMT_NV16: AVPixelFormat = 101;
+#[doc = "< interleaved chroma YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_NV20LE: AVPixelFormat = 102;
+#[doc = "< interleaved chroma YUV 4:2:2, 20bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_NV20BE: AVPixelFormat = 103;
+#[doc = "< packed RGBA 16:16:16:16, 64bpp, 16R, 16G, 16B, 16A, the 2-byte value for each R/G/B/A component is stored as big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGBA64BE: AVPixelFormat = 104;
+#[doc = "< packed RGBA 16:16:16:16, 64bpp, 16R, 16G, 16B, 16A, the 2-byte value for each R/G/B/A component is stored as little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_RGBA64LE: AVPixelFormat = 105;
+#[doc = "< packed RGBA 16:16:16:16, 64bpp, 16B, 16G, 16R, 16A, the 2-byte value for each R/G/B/A component is stored as big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGRA64BE: AVPixelFormat = 106;
+#[doc = "< packed RGBA 16:16:16:16, 64bpp, 16B, 16G, 16R, 16A, the 2-byte value for each R/G/B/A component is stored as little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BGRA64LE: AVPixelFormat = 107;
+#[doc = "< packed YUV 4:2:2, 16bpp, Y0 Cr Y1 Cb"]
 pub const AVPixelFormat_AV_PIX_FMT_YVYU422: AVPixelFormat = 108;
+#[doc = "< 16 bits gray, 16 bits alpha (big-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YA16BE: AVPixelFormat = 109;
+#[doc = "< 16 bits gray, 16 bits alpha (little-endian)"]
 pub const AVPixelFormat_AV_PIX_FMT_YA16LE: AVPixelFormat = 110;
+#[doc = "< planar GBRA 4:4:4:4 32bpp"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP: AVPixelFormat = 111;
+#[doc = "< planar GBRA 4:4:4:4 64bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP16BE: AVPixelFormat = 112;
+#[doc = "< planar GBRA 4:4:4:4 64bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP16LE: AVPixelFormat = 113;
+#[doc = " HW acceleration through QSV, data[3] contains a pointer to the"]
+#[doc = " mfxFrameSurface1 structure."]
+#[doc = ""]
+#[doc = " Before FFmpeg 5.0:"]
+#[doc = " mfxFrameSurface1.Data.MemId contains a pointer when importing"]
+#[doc = " the following frames as QSV frames:"]
+#[doc = ""]
+#[doc = " VAAPI:"]
+#[doc = " mfxFrameSurface1.Data.MemId contains a pointer to VASurfaceID"]
+#[doc = ""]
+#[doc = " DXVA2:"]
+#[doc = " mfxFrameSurface1.Data.MemId contains a pointer to IDirect3DSurface9"]
+#[doc = ""]
+#[doc = " FFmpeg 5.0 and above:"]
+#[doc = " mfxFrameSurface1.Data.MemId contains a pointer to the mfxHDLPair"]
+#[doc = " structure when importing the following frames as QSV frames:"]
+#[doc = ""]
+#[doc = " VAAPI:"]
+#[doc = " mfxHDLPair.first contains a VASurfaceID pointer."]
+#[doc = " mfxHDLPair.second is always MFX_INFINITE."]
+#[doc = ""]
+#[doc = " DXVA2:"]
+#[doc = " mfxHDLPair.first contains IDirect3DSurface9 pointer."]
+#[doc = " mfxHDLPair.second is always MFX_INFINITE."]
+#[doc = ""]
+#[doc = " D3D11:"]
+#[doc = " mfxHDLPair.first contains a ID3D11Texture2D pointer."]
+#[doc = " mfxHDLPair.second contains the texture array index of the frame if the"]
+#[doc = " ID3D11Texture2D is an array texture, or always MFX_INFINITE if it is a"]
+#[doc = " normal texture."]
 pub const AVPixelFormat_AV_PIX_FMT_QSV: AVPixelFormat = 114;
+#[doc = " HW acceleration though MMAL, data[3] contains a pointer to the"]
+#[doc = " MMAL_BUFFER_HEADER_T structure."]
 pub const AVPixelFormat_AV_PIX_FMT_MMAL: AVPixelFormat = 115;
+#[doc = "< HW decoding through Direct3D11 via old API, Picture.data[3] contains a ID3D11VideoDecoderOutputView pointer"]
 pub const AVPixelFormat_AV_PIX_FMT_D3D11VA_VLD: AVPixelFormat = 116;
+#[doc = " HW acceleration through CUDA. data[i] contain CUdeviceptr pointers"]
+#[doc = " exactly as for system memory frames."]
 pub const AVPixelFormat_AV_PIX_FMT_CUDA: AVPixelFormat = 117;
+#[doc = "< packed RGB 8:8:8, 32bpp, XRGBXRGB...   X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_0RGB: AVPixelFormat = 118;
+#[doc = "< packed RGB 8:8:8, 32bpp, RGBXRGBX...   X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_RGB0: AVPixelFormat = 119;
+#[doc = "< packed BGR 8:8:8, 32bpp, XBGRXBGR...   X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_0BGR: AVPixelFormat = 120;
+#[doc = "< packed BGR 8:8:8, 32bpp, BGRXBGRX...   X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_BGR0: AVPixelFormat = 121;
+#[doc = "< planar YUV 4:2:0,18bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P12BE: AVPixelFormat = 122;
+#[doc = "< planar YUV 4:2:0,18bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P12LE: AVPixelFormat = 123;
+#[doc = "< planar YUV 4:2:0,21bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P14BE: AVPixelFormat = 124;
+#[doc = "< planar YUV 4:2:0,21bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV420P14LE: AVPixelFormat = 125;
+#[doc = "< planar YUV 4:2:2,24bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P12BE: AVPixelFormat = 126;
+#[doc = "< planar YUV 4:2:2,24bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P12LE: AVPixelFormat = 127;
+#[doc = "< planar YUV 4:2:2,28bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P14BE: AVPixelFormat = 128;
+#[doc = "< planar YUV 4:2:2,28bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV422P14LE: AVPixelFormat = 129;
+#[doc = "< planar YUV 4:4:4,36bpp, (1 Cr & Cb sample per 1x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P12BE: AVPixelFormat = 130;
+#[doc = "< planar YUV 4:4:4,36bpp, (1 Cr & Cb sample per 1x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P12LE: AVPixelFormat = 131;
+#[doc = "< planar YUV 4:4:4,42bpp, (1 Cr & Cb sample per 1x1 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P14BE: AVPixelFormat = 132;
+#[doc = "< planar YUV 4:4:4,42bpp, (1 Cr & Cb sample per 1x1 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV444P14LE: AVPixelFormat = 133;
+#[doc = "< planar GBR 4:4:4 36bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP12BE: AVPixelFormat = 134;
+#[doc = "< planar GBR 4:4:4 36bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP12LE: AVPixelFormat = 135;
+#[doc = "< planar GBR 4:4:4 42bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP14BE: AVPixelFormat = 136;
+#[doc = "< planar GBR 4:4:4 42bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRP14LE: AVPixelFormat = 137;
+#[doc = "< planar YUV 4:1:1, 12bpp, (1 Cr & Cb sample per 4x1 Y samples) full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV411P and setting color_range"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVJ411P: AVPixelFormat = 138;
+#[doc = "< bayer, BGBG..(odd line), GRGR..(even line), 8-bit samples"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_BGGR8: AVPixelFormat = 139;
+#[doc = "< bayer, RGRG..(odd line), GBGB..(even line), 8-bit samples"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_RGGB8: AVPixelFormat = 140;
+#[doc = "< bayer, GBGB..(odd line), RGRG..(even line), 8-bit samples"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GBRG8: AVPixelFormat = 141;
+#[doc = "< bayer, GRGR..(odd line), BGBG..(even line), 8-bit samples"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GRBG8: AVPixelFormat = 142;
+#[doc = "< bayer, BGBG..(odd line), GRGR..(even line), 16-bit samples, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_BGGR16LE: AVPixelFormat = 143;
+#[doc = "< bayer, BGBG..(odd line), GRGR..(even line), 16-bit samples, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_BGGR16BE: AVPixelFormat = 144;
+#[doc = "< bayer, RGRG..(odd line), GBGB..(even line), 16-bit samples, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_RGGB16LE: AVPixelFormat = 145;
+#[doc = "< bayer, RGRG..(odd line), GBGB..(even line), 16-bit samples, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_RGGB16BE: AVPixelFormat = 146;
+#[doc = "< bayer, GBGB..(odd line), RGRG..(even line), 16-bit samples, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GBRG16LE: AVPixelFormat = 147;
+#[doc = "< bayer, GBGB..(odd line), RGRG..(even line), 16-bit samples, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GBRG16BE: AVPixelFormat = 148;
+#[doc = "< bayer, GRGR..(odd line), BGBG..(even line), 16-bit samples, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GRBG16LE: AVPixelFormat = 149;
+#[doc = "< bayer, GRGR..(odd line), BGBG..(even line), 16-bit samples, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_BAYER_GRBG16BE: AVPixelFormat = 150;
+#[doc = "< XVideo Motion Acceleration via common packet passing"]
 pub const AVPixelFormat_AV_PIX_FMT_XVMC: AVPixelFormat = 151;
+#[doc = "< planar YUV 4:4:0,20bpp, (1 Cr & Cb sample per 1x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV440P10LE: AVPixelFormat = 152;
+#[doc = "< planar YUV 4:4:0,20bpp, (1 Cr & Cb sample per 1x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV440P10BE: AVPixelFormat = 153;
+#[doc = "< planar YUV 4:4:0,24bpp, (1 Cr & Cb sample per 1x2 Y samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV440P12LE: AVPixelFormat = 154;
+#[doc = "< planar YUV 4:4:0,24bpp, (1 Cr & Cb sample per 1x2 Y samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUV440P12BE: AVPixelFormat = 155;
+#[doc = "< packed AYUV 4:4:4,64bpp (1 Cr & Cb sample per 1x1 Y & A samples), little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_AYUV64LE: AVPixelFormat = 156;
+#[doc = "< packed AYUV 4:4:4,64bpp (1 Cr & Cb sample per 1x1 Y & A samples), big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_AYUV64BE: AVPixelFormat = 157;
+#[doc = "< hardware decoding through Videotoolbox"]
 pub const AVPixelFormat_AV_PIX_FMT_VIDEOTOOLBOX: AVPixelFormat = 158;
+#[doc = "< like NV12, with 10bpp per component, data in the high bits, zeros in the low bits, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P010LE: AVPixelFormat = 159;
+#[doc = "< like NV12, with 10bpp per component, data in the high bits, zeros in the low bits, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P010BE: AVPixelFormat = 160;
+#[doc = "< planar GBR 4:4:4:4 48bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP12BE: AVPixelFormat = 161;
+#[doc = "< planar GBR 4:4:4:4 48bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP12LE: AVPixelFormat = 162;
+#[doc = "< planar GBR 4:4:4:4 40bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP10BE: AVPixelFormat = 163;
+#[doc = "< planar GBR 4:4:4:4 40bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAP10LE: AVPixelFormat = 164;
+#[doc = "< hardware decoding through MediaCodec"]
 pub const AVPixelFormat_AV_PIX_FMT_MEDIACODEC: AVPixelFormat = 165;
+#[doc = "<        Y        , 12bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY12BE: AVPixelFormat = 166;
+#[doc = "<        Y        , 12bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY12LE: AVPixelFormat = 167;
+#[doc = "<        Y        , 10bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY10BE: AVPixelFormat = 168;
+#[doc = "<        Y        , 10bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY10LE: AVPixelFormat = 169;
+#[doc = "< like NV12, with 16bpp per component, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P016LE: AVPixelFormat = 170;
+#[doc = "< like NV12, with 16bpp per component, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P016BE: AVPixelFormat = 171;
+#[doc = " Hardware surfaces for Direct3D11."]
+#[doc = ""]
+#[doc = " This is preferred over the legacy AV_PIX_FMT_D3D11VA_VLD. The new D3D11"]
+#[doc = " hwaccel API and filtering support AV_PIX_FMT_D3D11 only."]
+#[doc = ""]
+#[doc = " data[0] contains a ID3D11Texture2D pointer, and data[1] contains the"]
+#[doc = " texture array index of the frame as intptr_t if the ID3D11Texture2D is"]
+#[doc = " an array texture (or always 0 if it's a normal texture)."]
 pub const AVPixelFormat_AV_PIX_FMT_D3D11: AVPixelFormat = 172;
+#[doc = "<        Y        , 9bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY9BE: AVPixelFormat = 173;
+#[doc = "<        Y        , 9bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY9LE: AVPixelFormat = 174;
+#[doc = "< IEEE-754 single precision planar GBR 4:4:4,     96bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRPF32BE: AVPixelFormat = 175;
+#[doc = "< IEEE-754 single precision planar GBR 4:4:4,     96bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRPF32LE: AVPixelFormat = 176;
+#[doc = "< IEEE-754 single precision planar GBRA 4:4:4:4, 128bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAPF32BE: AVPixelFormat = 177;
+#[doc = "< IEEE-754 single precision planar GBRA 4:4:4:4, 128bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GBRAPF32LE: AVPixelFormat = 178;
+#[doc = " DRM-managed buffers exposed through PRIME buffer sharing."]
+#[doc = ""]
+#[doc = " data[0] points to an AVDRMFrameDescriptor."]
 pub const AVPixelFormat_AV_PIX_FMT_DRM_PRIME: AVPixelFormat = 179;
+#[doc = " Hardware surfaces for OpenCL."]
+#[doc = ""]
+#[doc = " data[i] contain 2D image objects (typed in C as cl_mem, used"]
+#[doc = " in OpenCL as image2d_t) for each plane of the surface."]
 pub const AVPixelFormat_AV_PIX_FMT_OPENCL: AVPixelFormat = 180;
+#[doc = "<        Y        , 14bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY14BE: AVPixelFormat = 181;
+#[doc = "<        Y        , 14bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAY14LE: AVPixelFormat = 182;
+#[doc = "< IEEE-754 single precision Y, 32bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAYF32BE: AVPixelFormat = 183;
+#[doc = "< IEEE-754 single precision Y, 32bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_GRAYF32LE: AVPixelFormat = 184;
+#[doc = "< planar YUV 4:2:2,24bpp, (1 Cr & Cb sample per 2x1 Y samples), 12b alpha, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P12BE: AVPixelFormat = 185;
+#[doc = "< planar YUV 4:2:2,24bpp, (1 Cr & Cb sample per 2x1 Y samples), 12b alpha, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA422P12LE: AVPixelFormat = 186;
+#[doc = "< planar YUV 4:4:4,36bpp, (1 Cr & Cb sample per 1x1 Y samples), 12b alpha, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P12BE: AVPixelFormat = 187;
+#[doc = "< planar YUV 4:4:4,36bpp, (1 Cr & Cb sample per 1x1 Y samples), 12b alpha, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_YUVA444P12LE: AVPixelFormat = 188;
+#[doc = "< planar YUV 4:4:4, 24bpp, 1 plane for Y and 1 plane for the UV components, which are interleaved (first byte U and the following byte V)"]
 pub const AVPixelFormat_AV_PIX_FMT_NV24: AVPixelFormat = 189;
+#[doc = "< as above, but U and V bytes are swapped"]
 pub const AVPixelFormat_AV_PIX_FMT_NV42: AVPixelFormat = 190;
+#[doc = " Vulkan hardware images."]
+#[doc = ""]
+#[doc = " data[0] points to an AVVkFrame"]
 pub const AVPixelFormat_AV_PIX_FMT_VULKAN: AVPixelFormat = 191;
+#[doc = "< packed YUV 4:2:2 like YUYV422, 20bpp, data in the high bits, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_Y210BE: AVPixelFormat = 192;
+#[doc = "< packed YUV 4:2:2 like YUYV422, 20bpp, data in the high bits, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_Y210LE: AVPixelFormat = 193;
+#[doc = "< packed RGB 10:10:10, 30bpp, (msb)2X 10R 10G 10B(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_X2RGB10LE: AVPixelFormat = 194;
+#[doc = "< packed RGB 10:10:10, 30bpp, (msb)2X 10R 10G 10B(lsb), big-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_X2RGB10BE: AVPixelFormat = 195;
+#[doc = "< packed BGR 10:10:10, 30bpp, (msb)2X 10B 10G 10R(lsb), little-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_X2BGR10LE: AVPixelFormat = 196;
+#[doc = "< packed BGR 10:10:10, 30bpp, (msb)2X 10B 10G 10R(lsb), big-endian, X=unused/undefined"]
 pub const AVPixelFormat_AV_PIX_FMT_X2BGR10BE: AVPixelFormat = 197;
+#[doc = "< interleaved chroma YUV 4:2:2, 20bpp, data in the high bits, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P210BE: AVPixelFormat = 198;
+#[doc = "< interleaved chroma YUV 4:2:2, 20bpp, data in the high bits, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P210LE: AVPixelFormat = 199;
+#[doc = "< interleaved chroma YUV 4:4:4, 30bpp, data in the high bits, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P410BE: AVPixelFormat = 200;
+#[doc = "< interleaved chroma YUV 4:4:4, 30bpp, data in the high bits, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P410LE: AVPixelFormat = 201;
+#[doc = "< interleaved chroma YUV 4:2:2, 32bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P216BE: AVPixelFormat = 202;
+#[doc = "< interleaved chroma YUV 4:2:2, 32bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P216LE: AVPixelFormat = 203;
+#[doc = "< interleaved chroma YUV 4:4:4, 48bpp, big-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P416BE: AVPixelFormat = 204;
+#[doc = "< interleaved chroma YUV 4:4:4, 48bpp, little-endian"]
 pub const AVPixelFormat_AV_PIX_FMT_P416LE: AVPixelFormat = 205;
-pub const AVPixelFormat_AV_PIX_FMT_NB: AVPixelFormat = 206;
+#[doc = "< packed VUYA 4:4:4, 32bpp, VUYAVUYA..."]
+pub const AVPixelFormat_AV_PIX_FMT_VUYA: AVPixelFormat = 206;
+#[doc = "< IEEE-754 half precision packed RGBA 16:16:16:16, 64bpp, RGBARGBA..., big-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBAF16BE: AVPixelFormat = 207;
+#[doc = "< IEEE-754 half precision packed RGBA 16:16:16:16, 64bpp, RGBARGBA..., little-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBAF16LE: AVPixelFormat = 208;
+#[doc = "< packed VUYX 4:4:4, 32bpp, Variant of VUYA where alpha channel is left undefined"]
+pub const AVPixelFormat_AV_PIX_FMT_VUYX: AVPixelFormat = 209;
+#[doc = "< like NV12, with 12bpp per component, data in the high bits, zeros in the low bits, little-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_P012LE: AVPixelFormat = 210;
+#[doc = "< like NV12, with 12bpp per component, data in the high bits, zeros in the low bits, big-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_P012BE: AVPixelFormat = 211;
+#[doc = "< packed YUV 4:2:2 like YUYV422, 24bpp, data in the high bits, zeros in the low bits, big-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_Y212BE: AVPixelFormat = 212;
+#[doc = "< packed YUV 4:2:2 like YUYV422, 24bpp, data in the high bits, zeros in the low bits, little-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_Y212LE: AVPixelFormat = 213;
+#[doc = "< packed XVYU 4:4:4, 32bpp, (msb)2X 10V 10Y 10U(lsb), big-endian, variant of Y410 where alpha channel is left undefined"]
+pub const AVPixelFormat_AV_PIX_FMT_XV30BE: AVPixelFormat = 214;
+#[doc = "< packed XVYU 4:4:4, 32bpp, (msb)2X 10V 10Y 10U(lsb), little-endian, variant of Y410 where alpha channel is left undefined"]
+pub const AVPixelFormat_AV_PIX_FMT_XV30LE: AVPixelFormat = 215;
+#[doc = "< packed XVYU 4:4:4, 48bpp, data in the high bits, zeros in the low bits, big-endian, variant of Y412 where alpha channel is left undefined"]
+pub const AVPixelFormat_AV_PIX_FMT_XV36BE: AVPixelFormat = 216;
+#[doc = "< packed XVYU 4:4:4, 48bpp, data in the high bits, zeros in the low bits, little-endian, variant of Y412 where alpha channel is left undefined"]
+pub const AVPixelFormat_AV_PIX_FMT_XV36LE: AVPixelFormat = 217;
+#[doc = "< IEEE-754 single precision packed RGB 32:32:32, 96bpp, RGBRGB..., big-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBF32BE: AVPixelFormat = 218;
+#[doc = "< IEEE-754 single precision packed RGB 32:32:32, 96bpp, RGBRGB..., little-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBF32LE: AVPixelFormat = 219;
+#[doc = "< IEEE-754 single precision packed RGBA 32:32:32:32, 128bpp, RGBARGBA..., big-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBAF32BE: AVPixelFormat = 220;
+#[doc = "< IEEE-754 single precision packed RGBA 32:32:32:32, 128bpp, RGBARGBA..., little-endian"]
+pub const AVPixelFormat_AV_PIX_FMT_RGBAF32LE: AVPixelFormat = 221;
+#[doc = "< number of pixel formats, DO NOT USE THIS if you want to link with shared libav* because the number of formats might differ between versions"]
+pub const AVPixelFormat_AV_PIX_FMT_NB: AVPixelFormat = 222;
+#[doc = " Pixel format."]
+#[doc = ""]
+#[doc = " @note"]
+#[doc = " AV_PIX_FMT_RGB32 is handled in an endian-specific manner. An RGBA"]
+#[doc = " color is put together as:"]
+#[doc = "  (A << 24) | (R << 16) | (G << 8) | B"]
+#[doc = " This is stored as BGRA on little-endian CPU architectures and ARGB on"]
+#[doc = " big-endian CPUs."]
+#[doc = ""]
+#[doc = " @note"]
+#[doc = " If the resolution is not a multiple of the chroma subsampling factor"]
+#[doc = " then the chroma plane resolution must be rounded up."]
+#[doc = ""]
+#[doc = " @par"]
+#[doc = " When the pixel format is palettized RGB32 (AV_PIX_FMT_PAL8), the palettized"]
+#[doc = " image data is stored in AVFrame.data[0]. The palette is transported in"]
+#[doc = " AVFrame.data[1], is 1024 bytes long (256 4-byte entries) and is"]
+#[doc = " formatted the same as in AV_PIX_FMT_RGB32 described above (i.e., it is"]
+#[doc = " also endian-specific). Note also that the individual RGB32 palette"]
+#[doc = " components stored in AVFrame.data[1] should be in the range 0..255."]
+#[doc = " This is important as many custom PAL8 video codecs that were designed"]
+#[doc = " to run on the IBM VGA graphics adapter use 6-bit palette components."]
+#[doc = ""]
+#[doc = " @par"]
+#[doc = " For all the 8 bits per pixel formats, an RGB32 palette is in data[1] like"]
+#[doc = " for pal8. This palette is filled in automatically by the function"]
+#[doc = " allocating the picture."]
 pub type AVPixelFormat = i32;
 pub const AVColorPrimaries_AVCOL_PRI_RESERVED0: AVColorPrimaries = 0;
+#[doc = "< also ITU-R BT1361 / IEC 61966-2-4 / SMPTE RP 177 Annex B"]
 pub const AVColorPrimaries_AVCOL_PRI_BT709: AVColorPrimaries = 1;
 pub const AVColorPrimaries_AVCOL_PRI_UNSPECIFIED: AVColorPrimaries = 2;
 pub const AVColorPrimaries_AVCOL_PRI_RESERVED: AVColorPrimaries = 3;
+#[doc = "< also FCC Title 47 Code of Federal Regulations 73.682 (a)(20)"]
 pub const AVColorPrimaries_AVCOL_PRI_BT470M: AVColorPrimaries = 4;
+#[doc = "< also ITU-R BT601-6 625 / ITU-R BT1358 625 / ITU-R BT1700 625 PAL & SECAM"]
 pub const AVColorPrimaries_AVCOL_PRI_BT470BG: AVColorPrimaries = 5;
+#[doc = "< also ITU-R BT601-6 525 / ITU-R BT1358 525 / ITU-R BT1700 NTSC"]
 pub const AVColorPrimaries_AVCOL_PRI_SMPTE170M: AVColorPrimaries = 6;
+#[doc = "< identical to above, also called \"SMPTE C\" even though it uses D65"]
 pub const AVColorPrimaries_AVCOL_PRI_SMPTE240M: AVColorPrimaries = 7;
+#[doc = "< colour filters using Illuminant C"]
 pub const AVColorPrimaries_AVCOL_PRI_FILM: AVColorPrimaries = 8;
+#[doc = "< ITU-R BT2020"]
 pub const AVColorPrimaries_AVCOL_PRI_BT2020: AVColorPrimaries = 9;
+#[doc = "< SMPTE ST 428-1 (CIE 1931 XYZ)"]
 pub const AVColorPrimaries_AVCOL_PRI_SMPTE428: AVColorPrimaries = 10;
 pub const AVColorPrimaries_AVCOL_PRI_SMPTEST428_1: AVColorPrimaries = 10;
+#[doc = "< SMPTE ST 431-2 (2011) / DCI P3"]
 pub const AVColorPrimaries_AVCOL_PRI_SMPTE431: AVColorPrimaries = 11;
+#[doc = "< SMPTE ST 432-1 (2010) / P3 D65 / Display P3"]
 pub const AVColorPrimaries_AVCOL_PRI_SMPTE432: AVColorPrimaries = 12;
+#[doc = "< EBU Tech. 3213-E (nothing there) / one of JEDEC P22 group phosphors"]
 pub const AVColorPrimaries_AVCOL_PRI_EBU3213: AVColorPrimaries = 22;
 pub const AVColorPrimaries_AVCOL_PRI_JEDEC_P22: AVColorPrimaries = 22;
+#[doc = "< Not part of ABI"]
 pub const AVColorPrimaries_AVCOL_PRI_NB: AVColorPrimaries = 23;
+#[doc = " Chromaticity coordinates of the source primaries."]
+#[doc = " These values match the ones defined by ISO/IEC 23091-2_2019 subclause 8.1 and ITU-T H.273."]
 pub type AVColorPrimaries = u32;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_RESERVED0: AVColorTransferCharacteristic = 0;
+#[doc = "< also ITU-R BT1361"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_BT709: AVColorTransferCharacteristic = 1;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_UNSPECIFIED: AVColorTransferCharacteristic = 2;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_RESERVED: AVColorTransferCharacteristic = 3;
+#[doc = "< also ITU-R BT470M / ITU-R BT1700 625 PAL & SECAM"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_GAMMA22: AVColorTransferCharacteristic = 4;
+#[doc = "< also ITU-R BT470BG"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_GAMMA28: AVColorTransferCharacteristic = 5;
+#[doc = "< also ITU-R BT601-6 525 or 625 / ITU-R BT1358 525 or 625 / ITU-R BT1700 NTSC"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTE170M: AVColorTransferCharacteristic = 6;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTE240M: AVColorTransferCharacteristic = 7;
+#[doc = "< \"Linear transfer characteristics\""]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_LINEAR: AVColorTransferCharacteristic = 8;
+#[doc = "< \"Logarithmic transfer characteristic (100:1 range)\""]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_LOG: AVColorTransferCharacteristic = 9;
+#[doc = "< \"Logarithmic transfer characteristic (100 * Sqrt(10) : 1 range)\""]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_LOG_SQRT: AVColorTransferCharacteristic = 10;
+#[doc = "< IEC 61966-2-4"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_IEC61966_2_4: AVColorTransferCharacteristic = 11;
+#[doc = "< ITU-R BT1361 Extended Colour Gamut"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_BT1361_ECG: AVColorTransferCharacteristic = 12;
+#[doc = "< IEC 61966-2-1 (sRGB or sYCC)"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_IEC61966_2_1: AVColorTransferCharacteristic = 13;
+#[doc = "< ITU-R BT2020 for 10-bit system"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_BT2020_10: AVColorTransferCharacteristic = 14;
+#[doc = "< ITU-R BT2020 for 12-bit system"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_BT2020_12: AVColorTransferCharacteristic = 15;
+#[doc = "< SMPTE ST 2084 for 10-, 12-, 14- and 16-bit systems"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTE2084: AVColorTransferCharacteristic = 16;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTEST2084: AVColorTransferCharacteristic = 16;
+#[doc = "< SMPTE ST 428-1"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTE428: AVColorTransferCharacteristic = 17;
 pub const AVColorTransferCharacteristic_AVCOL_TRC_SMPTEST428_1: AVColorTransferCharacteristic = 17;
+#[doc = "< ARIB STD-B67, known as \"Hybrid log-gamma\""]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_ARIB_STD_B67: AVColorTransferCharacteristic = 18;
+#[doc = "< Not part of ABI"]
 pub const AVColorTransferCharacteristic_AVCOL_TRC_NB: AVColorTransferCharacteristic = 19;
+#[doc = " Color Transfer Characteristic."]
+#[doc = " These values match the ones defined by ISO/IEC 23091-2_2019 subclause 8.2."]
 pub type AVColorTransferCharacteristic = u32;
+#[doc = "< order of coefficients is actually GBR, also IEC 61966-2-1 (sRGB), YZX and ST 428-1"]
 pub const AVColorSpace_AVCOL_SPC_RGB: AVColorSpace = 0;
+#[doc = "< also ITU-R BT1361 / IEC 61966-2-4 xvYCC709 / derived in SMPTE RP 177 Annex B"]
 pub const AVColorSpace_AVCOL_SPC_BT709: AVColorSpace = 1;
 pub const AVColorSpace_AVCOL_SPC_UNSPECIFIED: AVColorSpace = 2;
+#[doc = "< reserved for future use by ITU-T and ISO/IEC just like 15-255 are"]
 pub const AVColorSpace_AVCOL_SPC_RESERVED: AVColorSpace = 3;
+#[doc = "< FCC Title 47 Code of Federal Regulations 73.682 (a)(20)"]
 pub const AVColorSpace_AVCOL_SPC_FCC: AVColorSpace = 4;
+#[doc = "< also ITU-R BT601-6 625 / ITU-R BT1358 625 / ITU-R BT1700 625 PAL & SECAM / IEC 61966-2-4 xvYCC601"]
 pub const AVColorSpace_AVCOL_SPC_BT470BG: AVColorSpace = 5;
+#[doc = "< also ITU-R BT601-6 525 / ITU-R BT1358 525 / ITU-R BT1700 NTSC / functionally identical to above"]
 pub const AVColorSpace_AVCOL_SPC_SMPTE170M: AVColorSpace = 6;
+#[doc = "< derived from 170M primaries and D65 white point, 170M is derived from BT470 System M's primaries"]
 pub const AVColorSpace_AVCOL_SPC_SMPTE240M: AVColorSpace = 7;
+#[doc = "< used by Dirac / VC-2 and H.264 FRext, see ITU-T SG16"]
 pub const AVColorSpace_AVCOL_SPC_YCGCO: AVColorSpace = 8;
 pub const AVColorSpace_AVCOL_SPC_YCOCG: AVColorSpace = 8;
+#[doc = "< ITU-R BT2020 non-constant luminance system"]
 pub const AVColorSpace_AVCOL_SPC_BT2020_NCL: AVColorSpace = 9;
+#[doc = "< ITU-R BT2020 constant luminance system"]
 pub const AVColorSpace_AVCOL_SPC_BT2020_CL: AVColorSpace = 10;
+#[doc = "< SMPTE 2085, Y'D'zD'x"]
 pub const AVColorSpace_AVCOL_SPC_SMPTE2085: AVColorSpace = 11;
+#[doc = "< Chromaticity-derived non-constant luminance system"]
 pub const AVColorSpace_AVCOL_SPC_CHROMA_DERIVED_NCL: AVColorSpace = 12;
+#[doc = "< Chromaticity-derived constant luminance system"]
 pub const AVColorSpace_AVCOL_SPC_CHROMA_DERIVED_CL: AVColorSpace = 13;
+#[doc = "< ITU-R BT.2100-0, ICtCp"]
 pub const AVColorSpace_AVCOL_SPC_ICTCP: AVColorSpace = 14;
+#[doc = "< Not part of ABI"]
 pub const AVColorSpace_AVCOL_SPC_NB: AVColorSpace = 15;
+#[doc = " YUV colorspace type."]
+#[doc = " These values match the ones defined by ISO/IEC 23091-2_2019 subclause 8.3."]
 pub type AVColorSpace = u32;
 pub const AVColorRange_AVCOL_RANGE_UNSPECIFIED: AVColorRange = 0;
+#[doc = " Narrow or limited range content."]
+#[doc = ""]
+#[doc = " - For luma planes:"]
+#[doc = ""]
+#[doc = "       (219 * E + 16) * 2^(n-8)"]
+#[doc = ""]
+#[doc = "   F.ex. the range of 16-235 for 8 bits"]
+#[doc = ""]
+#[doc = " - For chroma planes:"]
+#[doc = ""]
+#[doc = "       (224 * E + 128) * 2^(n-8)"]
+#[doc = ""]
+#[doc = "   F.ex. the range of 16-240 for 8 bits"]
 pub const AVColorRange_AVCOL_RANGE_MPEG: AVColorRange = 1;
+#[doc = " Full range content."]
+#[doc = ""]
+#[doc = " - For RGB and luma planes:"]
+#[doc = ""]
+#[doc = "       (2^n - 1) * E"]
+#[doc = ""]
+#[doc = "   F.ex. the range of 0-255 for 8 bits"]
+#[doc = ""]
+#[doc = " - For chroma planes:"]
+#[doc = ""]
+#[doc = "       (2^n - 1) * E + 2^(n - 1)"]
+#[doc = ""]
+#[doc = "   F.ex. the range of 1-255 for 8 bits"]
 pub const AVColorRange_AVCOL_RANGE_JPEG: AVColorRange = 2;
+#[doc = "< Not part of ABI"]
 pub const AVColorRange_AVCOL_RANGE_NB: AVColorRange = 3;
+#[doc = " Visual content value range."]
+#[doc = ""]
+#[doc = " These values are based on definitions that can be found in multiple"]
+#[doc = " specifications, such as ITU-T BT.709 (3.4 - Quantization of RGB, luminance"]
+#[doc = " and colour-difference signals), ITU-T BT.2020 (Table 5 - Digital"]
+#[doc = " Representation) as well as ITU-T BT.2100 (Table 9 - Digital 10- and 12-bit"]
+#[doc = " integer representation). At the time of writing, the BT.2100 one is"]
+#[doc = " recommended, as it also defines the full range representation."]
+#[doc = ""]
+#[doc = " Common definitions:"]
+#[doc = "   - For RGB and luma planes such as Y in YCbCr and I in ICtCp,"]
+#[doc = "     'E' is the original value in range of 0.0 to 1.0."]
+#[doc = "   - For chroma planes such as Cb,Cr and Ct,Cp, 'E' is the original"]
+#[doc = "     value in range of -0.5 to 0.5."]
+#[doc = "   - 'n' is the output bit depth."]
+#[doc = "   - For additional definitions such as rounding and clipping to valid n"]
+#[doc = "     bit unsigned integer range, please refer to BT.2100 (Table 9)."]
 pub type AVColorRange = u32;
 pub const AVChromaLocation_AVCHROMA_LOC_UNSPECIFIED: AVChromaLocation = 0;
+#[doc = "< MPEG-2/4 4:2:0, H.264 default for 4:2:0"]
 pub const AVChromaLocation_AVCHROMA_LOC_LEFT: AVChromaLocation = 1;
+#[doc = "< MPEG-1 4:2:0, JPEG 4:2:0, H.263 4:2:0"]
 pub const AVChromaLocation_AVCHROMA_LOC_CENTER: AVChromaLocation = 2;
+#[doc = "< ITU-R 601, SMPTE 274M 296M S314M(DV 4:1:1), mpeg2 4:2:2"]
 pub const AVChromaLocation_AVCHROMA_LOC_TOPLEFT: AVChromaLocation = 3;
 pub const AVChromaLocation_AVCHROMA_LOC_TOP: AVChromaLocation = 4;
 pub const AVChromaLocation_AVCHROMA_LOC_BOTTOMLEFT: AVChromaLocation = 5;
 pub const AVChromaLocation_AVCHROMA_LOC_BOTTOM: AVChromaLocation = 6;
+#[doc = "< Not part of ABI"]
 pub const AVChromaLocation_AVCHROMA_LOC_NB: AVChromaLocation = 7;
+#[doc = " Location of chroma samples."]
+#[doc = ""]
+#[doc = " Illustration showing the location of the first (top left) chroma sample of the"]
+#[doc = " image, the left shows only luma, the right"]
+#[doc = " shows the location of the chroma sample, the 2 could be imagined to overlay"]
+#[doc = " each other but are drawn separately due to limitations of ASCII"]
+#[doc = ""]
+#[doc = "                1st 2nd       1st 2nd horizontal luma sample positions"]
+#[doc = "                 v   v         v   v"]
+#[doc = "                 ______        ______"]
+#[doc = "1st luma line > |X   X ...    |3 4 X ...     X are luma samples,"]
+#[doc = "                |             |1 2           1-6 are possible chroma positions"]
+#[doc = "2nd luma line > |X   X ...    |5 6 X ...     0 is undefined/unknown position"]
 pub type AVChromaLocation = u32;
 extern "C" {
+    #[doc = " Compute the length of an integer list."]
+    #[doc = ""]
+    #[doc = " @param elsize  size in bytes of each list element (only 1, 2, 4 or 8)"]
+    #[doc = " @param term    list terminator (usually 0 or -1)"]
+    #[doc = " @param list    pointer to the list"]
+    #[doc = " @return  length of the list, in elements, not counting the terminator"]
     pub fn av_int_list_length_for_size(
         elsize: cty::c_uint,
         list: *const cty::c_void,
@@ -16073,24 +11113,297 @@ extern "C" {
     ) -> cty::c_uint;
 }
 extern "C" {
+    #[doc = " Open a file using a UTF-8 filename."]
+    #[doc = " The API of this function matches POSIX fopen(), errors are returned through"]
+    #[doc = " errno."]
+    #[doc = " @deprecated Avoid using it, as on Windows, the FILE* allocated by this"]
+    #[doc = "             function may be allocated with a different CRT than the caller"]
+    #[doc = "             who uses the FILE*. No replacement provided in public API."]
     pub fn av_fopen_utf8(path: *const cty::c_char, mode: *const cty::c_char) -> *mut FILE;
 }
 extern "C" {
+    #[doc = " Return the fractional representation of the internal time base."]
     pub fn av_get_time_base_q() -> AVRational;
 }
 extern "C" {
+    #[doc = " Fill the provided buffer with a string containing a FourCC (four-character"]
+    #[doc = " code) representation."]
+    #[doc = ""]
+    #[doc = " @param buf    a buffer with size in bytes of at least AV_FOURCC_MAX_STRING_SIZE"]
+    #[doc = " @param fourcc the fourcc to represent"]
+    #[doc = " @return the buffer in input"]
     pub fn av_fourcc_make_string(buf: *mut cty::c_char, fourcc: u32) -> *mut cty::c_char;
+}
+pub const AVSampleFormat_AV_SAMPLE_FMT_NONE: AVSampleFormat = -1;
+#[doc = "< unsigned 8 bits"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_U8: AVSampleFormat = 0;
+#[doc = "< signed 16 bits"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S16: AVSampleFormat = 1;
+#[doc = "< signed 32 bits"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S32: AVSampleFormat = 2;
+#[doc = "< float"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_FLT: AVSampleFormat = 3;
+#[doc = "< double"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_DBL: AVSampleFormat = 4;
+#[doc = "< unsigned 8 bits, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_U8P: AVSampleFormat = 5;
+#[doc = "< signed 16 bits, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S16P: AVSampleFormat = 6;
+#[doc = "< signed 32 bits, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S32P: AVSampleFormat = 7;
+#[doc = "< float, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_FLTP: AVSampleFormat = 8;
+#[doc = "< double, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_DBLP: AVSampleFormat = 9;
+#[doc = "< signed 64 bits"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S64: AVSampleFormat = 10;
+#[doc = "< signed 64 bits, planar"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_S64P: AVSampleFormat = 11;
+#[doc = "< Number of sample formats. DO NOT USE if linking dynamically"]
+pub const AVSampleFormat_AV_SAMPLE_FMT_NB: AVSampleFormat = 12;
+#[doc = " Audio sample formats"]
+#[doc = ""]
+#[doc = " - The data described by the sample format is always in native-endian order."]
+#[doc = "   Sample values can be expressed by native C types, hence the lack of a signed"]
+#[doc = "   24-bit sample format even though it is a common raw audio data format."]
+#[doc = ""]
+#[doc = " - The floating-point formats are based on full volume being in the range"]
+#[doc = "   [-1.0, 1.0]. Any values outside this range are beyond full volume level."]
+#[doc = ""]
+#[doc = " - The data layout as used in av_samples_fill_arrays() and elsewhere in FFmpeg"]
+#[doc = "   (such as AVFrame in libavcodec) is as follows:"]
+#[doc = ""]
+#[doc = " @par"]
+#[doc = " For planar sample formats, each audio channel is in a separate data plane,"]
+#[doc = " and linesize is the buffer size, in bytes, for a single plane. All data"]
+#[doc = " planes must be the same size. For packed sample formats, only the first data"]
+#[doc = " plane is used, and samples for each channel are interleaved. In this case,"]
+#[doc = " linesize is the buffer size, in bytes, for the 1 plane."]
+#[doc = ""]
+pub type AVSampleFormat = i32;
+extern "C" {
+    #[doc = " Return the name of sample_fmt, or NULL if sample_fmt is not"]
+    #[doc = " recognized."]
+    pub fn av_get_sample_fmt_name(sample_fmt: AVSampleFormat) -> *const cty::c_char;
+}
+extern "C" {
+    #[doc = " Return a sample format corresponding to name, or AV_SAMPLE_FMT_NONE"]
+    #[doc = " on error."]
+    pub fn av_get_sample_fmt(name: *const cty::c_char) -> AVSampleFormat;
+}
+extern "C" {
+    #[doc = " Return the planar<->packed alternative form of the given sample format, or"]
+    #[doc = " AV_SAMPLE_FMT_NONE on error. If the passed sample_fmt is already in the"]
+    #[doc = " requested planar/packed format, the format returned is the same as the"]
+    #[doc = " input."]
+    pub fn av_get_alt_sample_fmt(sample_fmt: AVSampleFormat, planar: cty::c_int) -> AVSampleFormat;
+}
+extern "C" {
+    #[doc = " Get the packed alternative form of the given sample format."]
+    #[doc = ""]
+    #[doc = " If the passed sample_fmt is already in packed format, the format returned is"]
+    #[doc = " the same as the input."]
+    #[doc = ""]
+    #[doc = " @return  the packed alternative form of the given sample format or"]
+    #[doc = "AV_SAMPLE_FMT_NONE on error."]
+    pub fn av_get_packed_sample_fmt(sample_fmt: AVSampleFormat) -> AVSampleFormat;
+}
+extern "C" {
+    #[doc = " Get the planar alternative form of the given sample format."]
+    #[doc = ""]
+    #[doc = " If the passed sample_fmt is already in planar format, the format returned is"]
+    #[doc = " the same as the input."]
+    #[doc = ""]
+    #[doc = " @return  the planar alternative form of the given sample format or"]
+    #[doc = "AV_SAMPLE_FMT_NONE on error."]
+    pub fn av_get_planar_sample_fmt(sample_fmt: AVSampleFormat) -> AVSampleFormat;
+}
+extern "C" {
+    #[doc = " Generate a string corresponding to the sample format with"]
+    #[doc = " sample_fmt, or a header if sample_fmt is negative."]
+    #[doc = ""]
+    #[doc = " @param buf the buffer where to write the string"]
+    #[doc = " @param buf_size the size of buf"]
+    #[doc = " @param sample_fmt the number of the sample format to print the"]
+    #[doc = " corresponding info string, or a negative value to print the"]
+    #[doc = " corresponding header."]
+    #[doc = " @return the pointer to the filled buffer or NULL if sample_fmt is"]
+    #[doc = " unknown or in case of other errors"]
+    pub fn av_get_sample_fmt_string(
+        buf: *mut cty::c_char,
+        buf_size: cty::c_int,
+        sample_fmt: AVSampleFormat,
+    ) -> *mut cty::c_char;
+}
+extern "C" {
+    #[doc = " Return number of bytes per sample."]
+    #[doc = ""]
+    #[doc = " @param sample_fmt the sample format"]
+    #[doc = " @return number of bytes per sample or zero if unknown for the given"]
+    #[doc = " sample format"]
+    pub fn av_get_bytes_per_sample(sample_fmt: AVSampleFormat) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Check if the sample format is planar."]
+    #[doc = ""]
+    #[doc = " @param sample_fmt the sample format to inspect"]
+    #[doc = " @return 1 if the sample format is planar, 0 if it is interleaved"]
+    pub fn av_sample_fmt_is_planar(sample_fmt: AVSampleFormat) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Get the required buffer size for the given audio parameters."]
+    #[doc = ""]
+    #[doc = " @param[out] linesize calculated linesize, may be NULL"]
+    #[doc = " @param nb_channels   the number of channels"]
+    #[doc = " @param nb_samples    the number of samples in a single channel"]
+    #[doc = " @param sample_fmt    the sample format"]
+    #[doc = " @param align         buffer size alignment (0 = default, 1 = no alignment)"]
+    #[doc = " @return              required buffer size, or negative error code on failure"]
+    pub fn av_samples_get_buffer_size(
+        linesize: *mut cty::c_int,
+        nb_channels: cty::c_int,
+        nb_samples: cty::c_int,
+        sample_fmt: AVSampleFormat,
+        align: cty::c_int,
+    ) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Fill plane data pointers and linesize for samples with sample"]
+    #[doc = " format sample_fmt."]
+    #[doc = ""]
+    #[doc = " The audio_data array is filled with the pointers to the samples data planes:"]
+    #[doc = " for planar, set the start point of each channel's data within the buffer,"]
+    #[doc = " for packed, set the start point of the entire buffer only."]
+    #[doc = ""]
+    #[doc = " The value pointed to by linesize is set to the aligned size of each"]
+    #[doc = " channel's data buffer for planar layout, or to the aligned size of the"]
+    #[doc = " buffer for all channels for packed layout."]
+    #[doc = ""]
+    #[doc = " The buffer in buf must be big enough to contain all the samples"]
+    #[doc = " (use av_samples_get_buffer_size() to compute its minimum size),"]
+    #[doc = " otherwise the audio_data pointers will point to invalid data."]
+    #[doc = ""]
+    #[doc = " @see enum AVSampleFormat"]
+    #[doc = " The documentation for AVSampleFormat describes the data layout."]
+    #[doc = ""]
+    #[doc = " @param[out] audio_data  array to be filled with the pointer for each channel"]
+    #[doc = " @param[out] linesize    calculated linesize, may be NULL"]
+    #[doc = " @param buf              the pointer to a buffer containing the samples"]
+    #[doc = " @param nb_channels      the number of channels"]
+    #[doc = " @param nb_samples       the number of samples in a single channel"]
+    #[doc = " @param sample_fmt       the sample format"]
+    #[doc = " @param align            buffer size alignment (0 = default, 1 = no alignment)"]
+    #[doc = " @return                 minimum size in bytes required for the buffer on success,"]
+    #[doc = "                         or a negative error code on failure"]
+    pub fn av_samples_fill_arrays(
+        audio_data: *mut *mut u8,
+        linesize: *mut cty::c_int,
+        buf: *const u8,
+        nb_channels: cty::c_int,
+        nb_samples: cty::c_int,
+        sample_fmt: AVSampleFormat,
+        align: cty::c_int,
+    ) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Allocate a samples buffer for nb_samples samples, and fill data pointers and"]
+    #[doc = " linesize accordingly."]
+    #[doc = " The allocated samples buffer can be freed by using av_freep(&audio_data[0])"]
+    #[doc = " Allocated data will be initialized to silence."]
+    #[doc = ""]
+    #[doc = " @see enum AVSampleFormat"]
+    #[doc = " The documentation for AVSampleFormat describes the data layout."]
+    #[doc = ""]
+    #[doc = " @param[out] audio_data  array to be filled with the pointer for each channel"]
+    #[doc = " @param[out] linesize    aligned size for audio buffer(s), may be NULL"]
+    #[doc = " @param nb_channels      number of audio channels"]
+    #[doc = " @param nb_samples       number of samples per channel"]
+    #[doc = " @param sample_fmt       the sample format"]
+    #[doc = " @param align            buffer size alignment (0 = default, 1 = no alignment)"]
+    #[doc = " @return                 >=0 on success or a negative error code on failure"]
+    #[doc = " @todo return the size of the allocated buffer in case of success at the next bump"]
+    #[doc = " @see av_samples_fill_arrays()"]
+    #[doc = " @see av_samples_alloc_array_and_samples()"]
+    pub fn av_samples_alloc(
+        audio_data: *mut *mut u8,
+        linesize: *mut cty::c_int,
+        nb_channels: cty::c_int,
+        nb_samples: cty::c_int,
+        sample_fmt: AVSampleFormat,
+        align: cty::c_int,
+    ) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Allocate a data pointers array, samples buffer for nb_samples"]
+    #[doc = " samples, and fill data pointers and linesize accordingly."]
+    #[doc = ""]
+    #[doc = " This is the same as av_samples_alloc(), but also allocates the data"]
+    #[doc = " pointers array."]
+    #[doc = ""]
+    #[doc = " @see av_samples_alloc()"]
+    pub fn av_samples_alloc_array_and_samples(
+        audio_data: *mut *mut *mut u8,
+        linesize: *mut cty::c_int,
+        nb_channels: cty::c_int,
+        nb_samples: cty::c_int,
+        sample_fmt: AVSampleFormat,
+        align: cty::c_int,
+    ) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Copy samples from src to dst."]
+    #[doc = ""]
+    #[doc = " @param dst destination array of pointers to data planes"]
+    #[doc = " @param src source array of pointers to data planes"]
+    #[doc = " @param dst_offset offset in samples at which the data will be written to dst"]
+    #[doc = " @param src_offset offset in samples at which the data will be read from src"]
+    #[doc = " @param nb_samples number of samples to be copied"]
+    #[doc = " @param nb_channels number of audio channels"]
+    #[doc = " @param sample_fmt audio sample format"]
+    pub fn av_samples_copy(
+        dst: *mut *mut u8,
+        src: *const *mut u8,
+        dst_offset: cty::c_int,
+        src_offset: cty::c_int,
+        nb_samples: cty::c_int,
+        nb_channels: cty::c_int,
+        sample_fmt: AVSampleFormat,
+    ) -> cty::c_int;
+}
+extern "C" {
+    #[doc = " Fill an audio buffer with silence."]
+    #[doc = ""]
+    #[doc = " @param audio_data  array of pointers to data planes"]
+    #[doc = " @param offset      offset in samples at which to start filling"]
+    #[doc = " @param nb_samples  number of samples to fill"]
+    #[doc = " @param nb_channels number of audio channels"]
+    #[doc = " @param sample_fmt  audio sample format"]
+    pub fn av_samples_set_silence(
+        audio_data: *mut *mut u8,
+        offset: cty::c_int,
+        nb_samples: cty::c_int,
+        nb_channels: cty::c_int,
+        sample_fmt: AVSampleFormat,
+    ) -> cty::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVBuffer {
     _unused: [u8; 0],
 }
+#[doc = " A reference to a data buffer."]
+#[doc = ""]
+#[doc = " The size of this struct is not a part of the public ABI and it is not meant"]
+#[doc = " to be allocated directly."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVBufferRef {
     pub buffer: *mut AVBuffer,
+    #[doc = " The data buffer. It is considered writable if and only if"]
+    #[doc = " this is the only reference to the buffer, in which case"]
+    #[doc = " av_buffer_is_writable() returns 1."]
     pub data: *mut u8,
+    #[doc = " Size of data in bytes."]
     pub size: size_t,
 }
 #[test]
@@ -16137,12 +11450,30 @@ fn bindgen_test_layout_AVBufferRef() {
     );
 }
 extern "C" {
+    #[doc = " Allocate an AVBuffer of the given size using av_malloc()."]
+    #[doc = ""]
+    #[doc = " @return an AVBufferRef of given size or NULL when out of memory"]
     pub fn av_buffer_alloc(size: size_t) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Same as av_buffer_alloc(), except the returned buffer will be initialized"]
+    #[doc = " to zero."]
     pub fn av_buffer_allocz(size: size_t) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Create an AVBuffer from an existing array."]
+    #[doc = ""]
+    #[doc = " If this function is successful, data is owned by the AVBuffer. The caller may"]
+    #[doc = " only access data through the returned AVBufferRef and references derived from"]
+    #[doc = " it."]
+    #[doc = " If this function fails, data is left untouched."]
+    #[doc = " @param data   data array"]
+    #[doc = " @param size   size of data in bytes"]
+    #[doc = " @param free   a callback for freeing this buffer's data"]
+    #[doc = " @param opaque parameter to be got for processing or passed to free"]
+    #[doc = " @param flags  a combination of AV_BUFFER_FLAG_*"]
+    #[doc = ""]
+    #[doc = " @return an AVBufferRef referring to data on success, NULL on failure."]
     pub fn av_buffer_create(
         data: *mut u8,
         size: size_t,
@@ -16152,30 +11483,78 @@ extern "C" {
     ) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Default free callback, which calls av_free() on the buffer data."]
+    #[doc = " This function is meant to be passed to av_buffer_create(), not called"]
+    #[doc = " directly."]
     pub fn av_buffer_default_free(opaque: *mut cty::c_void, data: *mut u8);
 }
 extern "C" {
+    #[doc = " Create a new reference to an AVBuffer."]
+    #[doc = ""]
+    #[doc = " @return a new AVBufferRef referring to the same AVBuffer as buf or NULL on"]
+    #[doc = " failure."]
     pub fn av_buffer_ref(buf: *const AVBufferRef) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Free a given reference and automatically free the buffer if there are no more"]
+    #[doc = " references to it."]
+    #[doc = ""]
+    #[doc = " @param buf the reference to be freed. The pointer is set to NULL on return."]
     pub fn av_buffer_unref(buf: *mut *mut AVBufferRef);
 }
 extern "C" {
+    #[doc = " @return 1 if the caller may write to the data referred to by buf (which is"]
+    #[doc = " true if and only if buf is the only reference to the underlying AVBuffer)."]
+    #[doc = " Return 0 otherwise."]
+    #[doc = " A positive answer is valid until av_buffer_ref() is called on buf."]
     pub fn av_buffer_is_writable(buf: *const AVBufferRef) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " @return the opaque parameter set by av_buffer_create."]
     pub fn av_buffer_get_opaque(buf: *const AVBufferRef) -> *mut cty::c_void;
 }
 extern "C" {
     pub fn av_buffer_get_ref_count(buf: *const AVBufferRef) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Create a writable reference from a given buffer reference, avoiding data copy"]
+    #[doc = " if possible."]
+    #[doc = ""]
+    #[doc = " @param buf buffer reference to make writable. On success, buf is either left"]
+    #[doc = "            untouched, or it is unreferenced and a new writable AVBufferRef is"]
+    #[doc = "            written in its place. On failure, buf is left untouched."]
+    #[doc = " @return 0 on success, a negative AVERROR on failure."]
     pub fn av_buffer_make_writable(buf: *mut *mut AVBufferRef) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Reallocate a given buffer."]
+    #[doc = ""]
+    #[doc = " @param buf  a buffer reference to reallocate. On success, buf will be"]
+    #[doc = "             unreferenced and a new reference with the required size will be"]
+    #[doc = "             written in its place. On failure buf will be left untouched. *buf"]
+    #[doc = "             may be NULL, then a new buffer is allocated."]
+    #[doc = " @param size required new buffer size."]
+    #[doc = " @return 0 on success, a negative AVERROR on failure."]
+    #[doc = ""]
+    #[doc = " @note the buffer is actually reallocated with av_realloc() only if it was"]
+    #[doc = " initially allocated through av_buffer_realloc(NULL) and there is only one"]
+    #[doc = " reference to it (i.e. the one passed to this function). In all other cases"]
+    #[doc = " a new buffer is allocated and the data is copied."]
     pub fn av_buffer_realloc(buf: *mut *mut AVBufferRef, size: size_t) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Ensure dst refers to the same data as src."]
+    #[doc = ""]
+    #[doc = " When *dst is already equivalent to src, do nothing. Otherwise unreference dst"]
+    #[doc = " and replace it with a new reference to src."]
+    #[doc = ""]
+    #[doc = " @param dst Pointer to either a valid buffer reference or NULL. On success,"]
+    #[doc = "            this will point to a buffer reference equivalent to src. On"]
+    #[doc = "            failure, dst will be left untouched."]
+    #[doc = " @param src A buffer reference to replace dst with. May be NULL, then this"]
+    #[doc = "            function is equivalent to av_buffer_unref(dst)."]
+    #[doc = " @return 0 on success"]
+    #[doc = "         AVERROR(ENOMEM) on memory allocation failure."]
     pub fn av_buffer_replace(dst: *mut *mut AVBufferRef, src: *const AVBufferRef) -> cty::c_int;
 }
 #[repr(C)]
@@ -16184,12 +11563,32 @@ pub struct AVBufferPool {
     _unused: [u8; 0],
 }
 extern "C" {
+    #[doc = " Allocate and initialize a buffer pool."]
+    #[doc = ""]
+    #[doc = " @param size size of each buffer in this pool"]
+    #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
+    #[doc = " pool is empty. May be NULL, then the default allocator will be used"]
+    #[doc = " (av_buffer_alloc())."]
+    #[doc = " @return newly created buffer pool on success, NULL on error."]
     pub fn av_buffer_pool_init(
         size: size_t,
         alloc: ::core::option::Option<unsafe extern "C" fn(size: size_t) -> *mut AVBufferRef>,
     ) -> *mut AVBufferPool;
 }
 extern "C" {
+    #[doc = " Allocate and initialize a buffer pool with a more complex allocator."]
+    #[doc = ""]
+    #[doc = " @param size size of each buffer in this pool"]
+    #[doc = " @param opaque arbitrary user data used by the allocator"]
+    #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
+    #[doc = "              pool is empty. May be NULL, then the default allocator will be"]
+    #[doc = "              used (av_buffer_alloc())."]
+    #[doc = " @param pool_free a function that will be called immediately before the pool"]
+    #[doc = "                  is freed. I.e. after av_buffer_pool_uninit() is called"]
+    #[doc = "                  by the caller and all the frames are returned to the pool"]
+    #[doc = "                  and freed. It is intended to uninitialize the user opaque"]
+    #[doc = "                  data. May be NULL."]
+    #[doc = " @return newly created buffer pool on success, NULL on error."]
     pub fn av_buffer_pool_init2(
         size: size_t,
         opaque: *mut cty::c_void,
@@ -16200,14 +11599,34 @@ extern "C" {
     ) -> *mut AVBufferPool;
 }
 extern "C" {
+    #[doc = " Mark the pool as being available for freeing. It will actually be freed only"]
+    #[doc = " once all the allocated buffers associated with the pool are released. Thus it"]
+    #[doc = " is safe to call this function while some of the allocated buffers are still"]
+    #[doc = " in use."]
+    #[doc = ""]
+    #[doc = " @param pool pointer to the pool to be freed. It will be set to NULL."]
     pub fn av_buffer_pool_uninit(pool: *mut *mut AVBufferPool);
 }
 extern "C" {
+    #[doc = " Allocate a new AVBuffer, reusing an old buffer from the pool when available."]
+    #[doc = " This function may be called simultaneously from multiple threads."]
+    #[doc = ""]
+    #[doc = " @return a reference to the new buffer on success, NULL on error."]
     pub fn av_buffer_pool_get(pool: *mut AVBufferPool) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Query the original opaque parameter of an allocated buffer in the pool."]
+    #[doc = ""]
+    #[doc = " @param ref a buffer reference to a buffer returned by av_buffer_pool_get."]
+    #[doc = " @return the opaque parameter set by the buffer allocator function of the"]
+    #[doc = "         buffer pool."]
+    #[doc = ""]
+    #[doc = " @note the opaque parameter of ref is used by the buffer pool implementation,"]
+    #[doc = " therefore you have to use this function to access the original opaque"]
+    #[doc = " parameter of an allocated buffer."]
     pub fn av_buffer_pool_buffer_get_opaque(ref_: *const AVBufferRef) -> *mut cty::c_void;
 }
+#[doc = " @}"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVDictionaryEntry {
@@ -16253,6 +11672,18 @@ pub struct AVDictionary {
     _unused: [u8; 0],
 }
 extern "C" {
+    #[doc = " Get a dictionary entry with matching key."]
+    #[doc = ""]
+    #[doc = " The returned entry key or value must not be changed, or it will"]
+    #[doc = " cause undefined behavior."]
+    #[doc = ""]
+    #[doc = " @param prev  Set to the previous matching element to find the next."]
+    #[doc = "              If set to NULL the first matching element is returned."]
+    #[doc = " @param key   Matching key"]
+    #[doc = " @param flags A collection of AV_DICT_* flags controlling how the"]
+    #[doc = "              entry is retrieved"]
+    #[doc = ""]
+    #[doc = " @return      Found entry or NULL in case no matching entry was found in the dictionary"]
     pub fn av_dict_get(
         m: *const AVDictionary,
         key: *const cty::c_char,
@@ -16261,9 +11692,56 @@ extern "C" {
     ) -> *mut AVDictionaryEntry;
 }
 extern "C" {
+    #[doc = " Iterate over a dictionary"]
+    #[doc = ""]
+    #[doc = " Iterates through all entries in the dictionary."]
+    #[doc = ""]
+    #[doc = " @warning The returned AVDictionaryEntry key/value must not be changed."]
+    #[doc = ""]
+    #[doc = " @warning As av_dict_set() invalidates all previous entries returned"]
+    #[doc = " by this function, it must not be called while iterating over the dict."]
+    #[doc = ""]
+    #[doc = " Typical usage:"]
+    #[doc = " @code"]
+    #[doc = " const AVDictionaryEntry *e = NULL;"]
+    #[doc = " while ((e = av_dict_iterate(m, e))) {"]
+    #[doc = "     // ..."]
+    #[doc = " }"]
+    #[doc = " @endcode"]
+    #[doc = ""]
+    #[doc = " @param m     The dictionary to iterate over"]
+    #[doc = " @param prev  Pointer to the previous AVDictionaryEntry, NULL initially"]
+    #[doc = ""]
+    #[doc = " @retval AVDictionaryEntry* The next element in the dictionary"]
+    #[doc = " @retval NULL               No more elements in the dictionary"]
+    pub fn av_dict_iterate(
+        m: *const AVDictionary,
+        prev: *const AVDictionaryEntry,
+    ) -> *const AVDictionaryEntry;
+}
+extern "C" {
+    #[doc = " Get number of entries in dictionary."]
+    #[doc = ""]
+    #[doc = " @param m dictionary"]
+    #[doc = " @return  number of entries in dictionary"]
     pub fn av_dict_count(m: *const AVDictionary) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Set the given entry in *pm, overwriting an existing entry."]
+    #[doc = ""]
+    #[doc = " Note: If AV_DICT_DONT_STRDUP_KEY or AV_DICT_DONT_STRDUP_VAL is set,"]
+    #[doc = " these arguments will be freed on error."]
+    #[doc = ""]
+    #[doc = " @warning Adding a new entry to a dictionary invalidates all existing entries"]
+    #[doc = " previously returned with av_dict_get() or av_dict_iterate()."]
+    #[doc = ""]
+    #[doc = " @param pm        Pointer to a pointer to a dictionary struct. If *pm is NULL"]
+    #[doc = "                  a dictionary struct is allocated and put in *pm."]
+    #[doc = " @param key       Entry key to add to *pm (will either be av_strduped or added as a new key depending on flags)"]
+    #[doc = " @param value     Entry value to add to *pm (will be av_strduped or added as a new key depending on flags)."]
+    #[doc = "                  Passing a NULL value will cause an existing entry to be deleted."]
+    #[doc = ""]
+    #[doc = " @return          >= 0 on success otherwise an error code <0"]
     pub fn av_dict_set(
         pm: *mut *mut AVDictionary,
         key: *const cty::c_char,
@@ -16272,6 +11750,10 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Convenience wrapper for av_dict_set() that converts the value to a string"]
+    #[doc = " and stores it."]
+    #[doc = ""]
+    #[doc = " Note: If ::AV_DICT_DONT_STRDUP_KEY is set, key will be freed on error."]
     pub fn av_dict_set_int(
         pm: *mut *mut AVDictionary,
         key: *const cty::c_char,
@@ -16280,6 +11762,21 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Parse the key/value pairs list and add the parsed entries to a dictionary."]
+    #[doc = ""]
+    #[doc = " In case of failure, all the successfully set entries are stored in"]
+    #[doc = " *pm. You may need to manually free the created dictionary."]
+    #[doc = ""]
+    #[doc = " @param key_val_sep  A 0-terminated list of characters used to separate"]
+    #[doc = "                     key from value"]
+    #[doc = " @param pairs_sep    A 0-terminated list of characters used to separate"]
+    #[doc = "                     two pairs from each other"]
+    #[doc = " @param flags        Flags to use when adding to the dictionary."]
+    #[doc = "                     ::AV_DICT_DONT_STRDUP_KEY and ::AV_DICT_DONT_STRDUP_VAL"]
+    #[doc = "                     are ignored since the key/value tokens will always"]
+    #[doc = "                     be duplicated."]
+    #[doc = ""]
+    #[doc = " @return             0 on success, negative AVERROR code on failure"]
     pub fn av_dict_parse_string(
         pm: *mut *mut AVDictionary,
         str: *const cty::c_char,
@@ -16289,6 +11786,17 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Copy entries from one AVDictionary struct into another."]
+    #[doc = ""]
+    #[doc = " @note Metadata is read using the ::AV_DICT_IGNORE_SUFFIX flag"]
+    #[doc = ""]
+    #[doc = " @param dst   Pointer to a pointer to a AVDictionary struct to copy into. If *dst is NULL,"]
+    #[doc = "              this function will allocate a struct for you and put it in *dst"]
+    #[doc = " @param src   Pointer to the source AVDictionary struct to copy items from."]
+    #[doc = " @param flags Flags to use when setting entries in *dst"]
+    #[doc = ""]
+    #[doc = " @return 0 on success, negative AVERROR code on failure. If dst was allocated"]
+    #[doc = "           by this function, callers should free the associated memory."]
     pub fn av_dict_copy(
         dst: *mut *mut AVDictionary,
         src: *const AVDictionary,
@@ -16296,9 +11804,26 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Free all the memory allocated for an AVDictionary struct"]
+    #[doc = " and all keys and values."]
     pub fn av_dict_free(m: *mut *mut AVDictionary);
 }
 extern "C" {
+    #[doc = " Get dictionary entries as a string."]
+    #[doc = ""]
+    #[doc = " Create a string containing dictionary's entries."]
+    #[doc = " Such string may be passed back to av_dict_parse_string()."]
+    #[doc = " @note String is escaped with backslashes ('\\')."]
+    #[doc = ""]
+    #[doc = " @warning Separators cannot be neither '\\\\' nor '\\0'. They also cannot be the same."]
+    #[doc = ""]
+    #[doc = " @param[in]  m             The dictionary"]
+    #[doc = " @param[out] buffer        Pointer to buffer that will be allocated with string containg entries."]
+    #[doc = "                           Buffer must be freed by the caller when is no longer needed."]
+    #[doc = " @param[in]  key_val_sep   Character used to separate key from value"]
+    #[doc = " @param[in]  pairs_sep     Character used to separate two pairs from each other"]
+    #[doc = ""]
+    #[doc = " @return                   >= 0 on success, negative on error"]
     pub fn av_dict_get_string(
         m: *const AVDictionary,
         buffer: *mut *mut cty::c_char,
@@ -16325,26 +11850,95 @@ pub const AVChannel_AV_CHAN_TOP_FRONT_RIGHT: AVChannel = 14;
 pub const AVChannel_AV_CHAN_TOP_BACK_LEFT: AVChannel = 15;
 pub const AVChannel_AV_CHAN_TOP_BACK_CENTER: AVChannel = 16;
 pub const AVChannel_AV_CHAN_TOP_BACK_RIGHT: AVChannel = 17;
+#[doc = " Stereo downmix."]
 pub const AVChannel_AV_CHAN_STEREO_LEFT: AVChannel = 29;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_STEREO_RIGHT: AVChannel = 30;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_WIDE_LEFT: AVChannel = 31;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_WIDE_RIGHT: AVChannel = 32;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_SURROUND_DIRECT_LEFT: AVChannel = 33;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_SURROUND_DIRECT_RIGHT: AVChannel = 34;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_LOW_FREQUENCY_2: AVChannel = 35;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_TOP_SIDE_LEFT: AVChannel = 36;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_TOP_SIDE_RIGHT: AVChannel = 37;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_BOTTOM_FRONT_CENTER: AVChannel = 38;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_BOTTOM_FRONT_LEFT: AVChannel = 39;
+#[doc = " See above."]
 pub const AVChannel_AV_CHAN_BOTTOM_FRONT_RIGHT: AVChannel = 40;
+#[doc = " Channel is empty can be safely skipped."]
 pub const AVChannel_AV_CHAN_UNUSED: AVChannel = 512;
+#[doc = " Channel contains data, but its position is unknown."]
 pub const AVChannel_AV_CHAN_UNKNOWN: AVChannel = 768;
+#[doc = " Range of channels between AV_CHAN_AMBISONIC_BASE and"]
+#[doc = " AV_CHAN_AMBISONIC_END represent Ambisonic components using the ACN system."]
+#[doc = ""]
+#[doc = " Given a channel id `<i>` between AV_CHAN_AMBISONIC_BASE and"]
+#[doc = " AV_CHAN_AMBISONIC_END (inclusive), the ACN index of the channel `<n>` is"]
+#[doc = " `<n> = <i> - AV_CHAN_AMBISONIC_BASE`."]
+#[doc = ""]
+#[doc = " @note these values are only used for AV_CHANNEL_ORDER_CUSTOM channel"]
+#[doc = " orderings, the AV_CHANNEL_ORDER_AMBISONIC ordering orders the channels"]
+#[doc = " implicitly by their position in the stream."]
 pub const AVChannel_AV_CHAN_AMBISONIC_BASE: AVChannel = 1024;
+#[doc = " Range of channels between AV_CHAN_AMBISONIC_BASE and"]
+#[doc = " AV_CHAN_AMBISONIC_END represent Ambisonic components using the ACN system."]
+#[doc = ""]
+#[doc = " Given a channel id `<i>` between AV_CHAN_AMBISONIC_BASE and"]
+#[doc = " AV_CHAN_AMBISONIC_END (inclusive), the ACN index of the channel `<n>` is"]
+#[doc = " `<n> = <i> - AV_CHAN_AMBISONIC_BASE`."]
+#[doc = ""]
+#[doc = " @note these values are only used for AV_CHANNEL_ORDER_CUSTOM channel"]
+#[doc = " orderings, the AV_CHANNEL_ORDER_AMBISONIC ordering orders the channels"]
+#[doc = " implicitly by their position in the stream."]
 pub const AVChannel_AV_CHAN_AMBISONIC_END: AVChannel = 2047;
+#[doc = " @defgroup lavu_audio_channels Audio channels"]
+#[doc = " @ingroup lavu_audio"]
+#[doc = ""]
+#[doc = " Audio channel layout utility functions"]
+#[doc = ""]
+#[doc = " @{"]
 pub type AVChannel = i32;
+#[doc = " Only the channel count is specified, without any further information"]
+#[doc = " about the channel order."]
 pub const AVChannelOrder_AV_CHANNEL_ORDER_UNSPEC: AVChannelOrder = 0;
+#[doc = " The native channel order, i.e. the channels are in the same order in"]
+#[doc = " which they are defined in the AVChannel enum. This supports up to 63"]
+#[doc = " different channels."]
 pub const AVChannelOrder_AV_CHANNEL_ORDER_NATIVE: AVChannelOrder = 1;
+#[doc = " The channel order does not correspond to any other predefined order and"]
+#[doc = " is stored as an explicit map. For example, this could be used to support"]
+#[doc = " layouts with 64 or more channels, or with empty/skipped (AV_CHAN_SILENCE)"]
+#[doc = " channels at arbitrary positions."]
 pub const AVChannelOrder_AV_CHANNEL_ORDER_CUSTOM: AVChannelOrder = 2;
+#[doc = " The audio is represented as the decomposition of the sound field into"]
+#[doc = " spherical harmonics. Each channel corresponds to a single expansion"]
+#[doc = " component. Channels are ordered according to ACN (Ambisonic Channel"]
+#[doc = " Number)."]
+#[doc = ""]
+#[doc = " The channel with the index n in the stream contains the spherical"]
+#[doc = " harmonic of degree l and order m given by"]
+#[doc = " @code{.unparsed}"]
+#[doc = "   l   = floor(sqrt(n)),"]
+#[doc = "   m   = n - l * (l + 1)."]
+#[doc = " @endcode"]
+#[doc = ""]
+#[doc = " Conversely given a spherical harmonic of degree l and order m, the"]
+#[doc = " corresponding channel index n is given by"]
+#[doc = " @code{.unparsed}"]
+#[doc = "   n = l * (l + 1) + m."]
+#[doc = " @endcode"]
+#[doc = ""]
+#[doc = " Normalization is assumed to be SN3D (Schmidt Semi-Normalization)"]
+#[doc = " as defined in AmbiX format $ 2.1."]
 pub const AVChannelOrder_AV_CHANNEL_ORDER_AMBISONIC: AVChannelOrder = 3;
 pub type AVChannelOrder = u32;
 pub const AVMatrixEncoding_AV_MATRIX_ENCODING_NONE: AVMatrixEncoding = 0;
@@ -16356,6 +11950,12 @@ pub const AVMatrixEncoding_AV_MATRIX_ENCODING_DOLBYEX: AVMatrixEncoding = 5;
 pub const AVMatrixEncoding_AV_MATRIX_ENCODING_DOLBYHEADPHONE: AVMatrixEncoding = 6;
 pub const AVMatrixEncoding_AV_MATRIX_ENCODING_NB: AVMatrixEncoding = 7;
 pub type AVMatrixEncoding = u32;
+#[doc = " An AVChannelCustom defines a single channel within a custom order layout"]
+#[doc = ""]
+#[doc = " Unlike most structures in FFmpeg, sizeof(AVChannelCustom) is a part of the"]
+#[doc = " public ABI."]
+#[doc = ""]
+#[doc = " No new fields may be added to it without a major version bump."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVChannelCustom {
@@ -16406,18 +12006,81 @@ fn bindgen_test_layout_AVChannelCustom() {
         )
     );
 }
+#[doc = " An AVChannelLayout holds information about the channel layout of audio data."]
+#[doc = ""]
+#[doc = " A channel layout here is defined as a set of channels ordered in a specific"]
+#[doc = " way (unless the channel order is AV_CHANNEL_ORDER_UNSPEC, in which case an"]
+#[doc = " AVChannelLayout carries only the channel count)."]
+#[doc = " All orders may be treated as if they were AV_CHANNEL_ORDER_UNSPEC by"]
+#[doc = " ignoring everything but the channel count, as long as av_channel_layout_check()"]
+#[doc = " considers they are valid."]
+#[doc = ""]
+#[doc = " Unlike most structures in FFmpeg, sizeof(AVChannelLayout) is a part of the"]
+#[doc = " public ABI and may be used by the caller. E.g. it may be allocated on stack"]
+#[doc = " or embedded in caller-defined structs."]
+#[doc = ""]
+#[doc = " AVChannelLayout can be initialized as follows:"]
+#[doc = " - default initialization with {0}, followed by setting all used fields"]
+#[doc = "   correctly;"]
+#[doc = " - by assigning one of the predefined AV_CHANNEL_LAYOUT_* initializers;"]
+#[doc = " - with a constructor function, such as av_channel_layout_default(),"]
+#[doc = "   av_channel_layout_from_mask() or av_channel_layout_from_string()."]
+#[doc = ""]
+#[doc = " The channel layout must be unitialized with av_channel_layout_uninit()"]
+#[doc = ""]
+#[doc = " Copying an AVChannelLayout via assigning is forbidden,"]
+#[doc = " av_channel_layout_copy() must be used instead (and its return value should"]
+#[doc = " be checked)"]
+#[doc = ""]
+#[doc = " No new fields may be added to it without a major version bump, except for"]
+#[doc = " new elements of the union fitting in sizeof(uint64_t)."]
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct AVChannelLayout {
+    #[doc = " Channel order used in this layout."]
+    #[doc = " This is a mandatory field."]
     pub order: AVChannelOrder,
+    #[doc = " Number of channels in this layout. Mandatory field."]
     pub nb_channels: cty::c_int,
     pub u: AVChannelLayout__bindgen_ty_1,
+    #[doc = " For some private data of the user."]
     pub opaque: *mut cty::c_void,
 }
+#[doc = " Details about which channels are present in this layout."]
+#[doc = " For AV_CHANNEL_ORDER_UNSPEC, this field is undefined and must not be"]
+#[doc = " used."]
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union AVChannelLayout__bindgen_ty_1 {
+    #[doc = " This member must be used for AV_CHANNEL_ORDER_NATIVE, and may be used"]
+    #[doc = " for AV_CHANNEL_ORDER_AMBISONIC to signal non-diegetic channels."]
+    #[doc = " It is a bitmask, where the position of each set bit means that the"]
+    #[doc = " AVChannel with the corresponding value is present."]
+    #[doc = ""]
+    #[doc = " I.e. when (mask & (1 << AV_CHAN_FOO)) is non-zero, then AV_CHAN_FOO"]
+    #[doc = " is present in the layout. Otherwise it is not present."]
+    #[doc = ""]
+    #[doc = " @note when a channel layout using a bitmask is constructed or"]
+    #[doc = " modified manually (i.e.  not using any of the av_channel_layout_*"]
+    #[doc = " functions), the code doing it must ensure that the number of set bits"]
+    #[doc = " is equal to nb_channels."]
     pub mask: u64,
+    #[doc = " This member must be used when the channel order is"]
+    #[doc = " AV_CHANNEL_ORDER_CUSTOM. It is a nb_channels-sized array, with each"]
+    #[doc = " element signalling the presence of the AVChannel with the"]
+    #[doc = " corresponding value in map[i].id."]
+    #[doc = ""]
+    #[doc = " I.e. when map[i].id is equal to AV_CHAN_FOO, then AV_CH_FOO is the"]
+    #[doc = " i-th channel in the audio data."]
+    #[doc = ""]
+    #[doc = " When map[i].id is in the range between AV_CHAN_AMBISONIC_BASE and"]
+    #[doc = " AV_CHAN_AMBISONIC_END (inclusive), the channel contains an ambisonic"]
+    #[doc = " component with ACN index (as defined above)"]
+    #[doc = " n = map[i].id - AV_CHAN_AMBISONIC_BASE."]
+    #[doc = ""]
+    #[doc = " map[i].name may be filled with a 0-terminated string, in which case"]
+    #[doc = " it will be used for the purpose of identifying the channel with the"]
+    #[doc = " convenience functions below. Otherise it must be zeroed."]
     pub map: *mut AVChannelCustom,
     _bindgen_union_align: u64,
 }
@@ -16511,15 +12174,44 @@ fn bindgen_test_layout_AVChannelLayout() {
         )
     );
 }
+#[doc = " @}"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVBPrint {
     _unused: [u8; 0],
 }
 extern "C" {
+    #[doc = " Return a channel layout id that matches name, or 0 if no match is found."]
+    #[doc = ""]
+    #[doc = " name can be one or several of the following notations,"]
+    #[doc = " separated by '+' or '|':"]
+    #[doc = " - the name of an usual channel layout (mono, stereo, 4.0, quad, 5.0,"]
+    #[doc = "   5.0(side), 5.1, 5.1(side), 7.1, 7.1(wide), downmix);"]
+    #[doc = " - the name of a single channel (FL, FR, FC, LFE, BL, BR, FLC, FRC, BC,"]
+    #[doc = "   SL, SR, TC, TFL, TFC, TFR, TBL, TBC, TBR, DL, DR);"]
+    #[doc = " - a number of channels, in decimal, followed by 'c', yielding"]
+    #[doc = "   the default channel layout for that number of channels (@see"]
+    #[doc = "   av_get_default_channel_layout);"]
+    #[doc = " - a channel layout mask, in hexadecimal starting with \"0x\" (see the"]
+    #[doc = "   AV_CH_* macros)."]
+    #[doc = ""]
+    #[doc = " Example: \"stereo+FC\" = \"2c+FC\" = \"2c+1c\" = \"0x7\""]
+    #[doc = ""]
+    #[doc = " @deprecated use av_channel_layout_from_string()"]
     pub fn av_get_channel_layout(name: *const cty::c_char) -> u64;
 }
 extern "C" {
+    #[doc = " Return a channel layout and the number of channels based on the specified name."]
+    #[doc = ""]
+    #[doc = " This function is similar to (@see av_get_channel_layout), but can also parse"]
+    #[doc = " unknown channel layout specifications."]
+    #[doc = ""]
+    #[doc = " @param[in]  name             channel layout specification string"]
+    #[doc = " @param[out] channel_layout   parsed channel layout (0 if unknown)"]
+    #[doc = " @param[out] nb_channels      number of channels"]
+    #[doc = ""]
+    #[doc = " @return 0 on success, AVERROR(EINVAL) if the parsing fails."]
+    #[doc = " @deprecated use av_channel_layout_from_string()"]
     pub fn av_get_extended_channel_layout(
         name: *const cty::c_char,
         channel_layout: *mut u64,
@@ -16527,6 +12219,14 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Return a description of a channel layout."]
+    #[doc = " If nb_channels is <= 0, it is guessed from the channel_layout."]
+    #[doc = ""]
+    #[doc = " @param buf put here the string containing the channel layout"]
+    #[doc = " @param buf_size size in bytes of the buffer"]
+    #[doc = " @param nb_channels number of channels"]
+    #[doc = " @param channel_layout channel layout bitset"]
+    #[doc = " @deprecated use av_channel_layout_describe()"]
     pub fn av_get_channel_layout_string(
         buf: *mut cty::c_char,
         buf_size: cty::c_int,
@@ -16535,6 +12235,8 @@ extern "C" {
     );
 }
 extern "C" {
+    #[doc = " Append a description of a channel layout to a bprint buffer."]
+    #[doc = " @deprecated use av_channel_layout_describe()"]
     pub fn av_bprint_channel_layout(
         bp: *mut AVBPrint,
         nb_channels: cty::c_int,
@@ -16542,24 +12244,59 @@ extern "C" {
     );
 }
 extern "C" {
+    #[doc = " Return the number of channels in the channel layout."]
+    #[doc = " @deprecated use AVChannelLayout.nb_channels"]
     pub fn av_get_channel_layout_nb_channels(channel_layout: u64) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Return default channel layout for a given number of channels."]
+    #[doc = ""]
+    #[doc = " @deprecated use av_channel_layout_default()"]
     pub fn av_get_default_channel_layout(nb_channels: cty::c_int) -> i64;
 }
 extern "C" {
+    #[doc = " Get the index of a channel in channel_layout."]
+    #[doc = ""]
+    #[doc = " @param channel_layout channel layout bitset"]
+    #[doc = " @param channel a channel layout describing exactly one channel which must be"]
+    #[doc = "                present in channel_layout."]
+    #[doc = ""]
+    #[doc = " @return index of channel in channel_layout on success, a negative AVERROR"]
+    #[doc = "         on error."]
+    #[doc = ""]
+    #[doc = " @deprecated use av_channel_layout_index_from_channel()"]
     pub fn av_get_channel_layout_channel_index(channel_layout: u64, channel: u64) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get the channel with the given index in channel_layout."]
+    #[doc = " @deprecated use av_channel_layout_channel_from_index()"]
     pub fn av_channel_layout_extract_channel(channel_layout: u64, index: cty::c_int) -> u64;
 }
 extern "C" {
+    #[doc = " Get the name of a given channel."]
+    #[doc = ""]
+    #[doc = " @return channel name on success, NULL on error."]
+    #[doc = ""]
+    #[doc = " @deprecated use av_channel_name()"]
     pub fn av_get_channel_name(channel: u64) -> *const cty::c_char;
 }
 extern "C" {
+    #[doc = " Get the description of a given channel."]
+    #[doc = ""]
+    #[doc = " @param channel  a channel layout with a single channel"]
+    #[doc = " @return  channel description on success, NULL on error"]
+    #[doc = " @deprecated use av_channel_description()"]
     pub fn av_get_channel_description(channel: u64) -> *const cty::c_char;
 }
 extern "C" {
+    #[doc = " Get the value and name of a standard channel layout."]
+    #[doc = ""]
+    #[doc = " @param[in]  index   index in an internal list, starting at 0"]
+    #[doc = " @param[out] layout  channel layout mask"]
+    #[doc = " @param[out] name    name of the layout"]
+    #[doc = " @return  0  if the layout exists,"]
+    #[doc = "          <0 if index is beyond the limits"]
+    #[doc = " @deprecated use av_channel_layout_standard()"]
     pub fn av_get_standard_channel_layout(
         index: cty::c_uint,
         layout: *mut u64,
@@ -16567,6 +12304,15 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get a human readable string in an abbreviated form describing a given channel."]
+    #[doc = " This is the inverse function of @ref av_channel_from_string()."]
+    #[doc = ""]
+    #[doc = " @param buf pre-allocated buffer where to put the generated string"]
+    #[doc = " @param buf_size size in bytes of the buffer."]
+    #[doc = " @param channel the AVChannel whose name to get"]
+    #[doc = " @return amount of bytes needed to hold the output string, or a negative AVERROR"]
+    #[doc = "         on failure. If the returned value is bigger than buf_size, then the"]
+    #[doc = "         string was truncated."]
     pub fn av_channel_name(
         buf: *mut cty::c_char,
         buf_size: size_t,
@@ -16574,9 +12320,20 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " bprint variant of av_channel_name()."]
+    #[doc = ""]
+    #[doc = " @note the string will be appended to the bprint buffer."]
     pub fn av_channel_name_bprint(bp: *mut AVBPrint, channel_id: AVChannel);
 }
 extern "C" {
+    #[doc = " Get a human readable string describing a given channel."]
+    #[doc = ""]
+    #[doc = " @param buf pre-allocated buffer where to put the generated string"]
+    #[doc = " @param buf_size size in bytes of the buffer."]
+    #[doc = " @param channel the AVChannel whose description to get"]
+    #[doc = " @return amount of bytes needed to hold the output string, or a negative AVERROR"]
+    #[doc = "         on failure. If the returned value is bigger than buf_size, then the"]
+    #[doc = "         string was truncated."]
     pub fn av_channel_description(
         buf: *mut cty::c_char,
         buf_size: size_t,
@@ -16584,39 +12341,103 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " bprint variant of av_channel_description()."]
+    #[doc = ""]
+    #[doc = " @note the string will be appended to the bprint buffer."]
     pub fn av_channel_description_bprint(bp: *mut AVBPrint, channel_id: AVChannel);
 }
 extern "C" {
+    #[doc = " This is the inverse function of @ref av_channel_name()."]
+    #[doc = ""]
+    #[doc = " @return the channel with the given name"]
+    #[doc = "         AV_CHAN_NONE when name does not identify a known channel"]
     pub fn av_channel_from_string(name: *const cty::c_char) -> AVChannel;
 }
 extern "C" {
+    #[doc = " Initialize a native channel layout from a bitmask indicating which channels"]
+    #[doc = " are present."]
+    #[doc = ""]
+    #[doc = " @param channel_layout the layout structure to be initialized"]
+    #[doc = " @param mask bitmask describing the channel layout"]
+    #[doc = ""]
+    #[doc = " @return 0 on success"]
+    #[doc = "         AVERROR(EINVAL) for invalid mask values"]
     pub fn av_channel_layout_from_mask(
         channel_layout: *mut AVChannelLayout,
         mask: u64,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Initialize a channel layout from a given string description."]
+    #[doc = " The input string can be represented by:"]
+    #[doc = "  - the formal channel layout name (returned by av_channel_layout_describe())"]
+    #[doc = "  - single or multiple channel names (returned by av_channel_name(), eg. \"FL\","]
+    #[doc = "    or concatenated with \"+\", each optionally containing a custom name after"]
+    #[doc = "    a \"@\", eg. \"FL@Left+FR@Right+LFE\")"]
+    #[doc = "  - a decimal or hexadecimal value of a native channel layout (eg. \"4\" or \"0x4\")"]
+    #[doc = "  - the number of channels with default layout (eg. \"4c\")"]
+    #[doc = "  - the number of unordered channels (eg. \"4C\" or \"4 channels\")"]
+    #[doc = "  - the ambisonic order followed by optional non-diegetic channels (eg."]
+    #[doc = "    \"ambisonic 2+stereo\")"]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param str string describing the channel layout"]
+    #[doc = " @return 0 channel layout was detected, AVERROR_INVALIDATATA otherwise"]
     pub fn av_channel_layout_from_string(
         channel_layout: *mut AVChannelLayout,
         str: *const cty::c_char,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get the default channel layout for a given number of channels."]
+    #[doc = ""]
+    #[doc = " @param ch_layout the layout structure to be initialized"]
+    #[doc = " @param nb_channels number of channels"]
     pub fn av_channel_layout_default(ch_layout: *mut AVChannelLayout, nb_channels: cty::c_int);
 }
 extern "C" {
+    #[doc = " Iterate over all standard channel layouts."]
+    #[doc = ""]
+    #[doc = " @param opaque a pointer where libavutil will store the iteration state. Must"]
+    #[doc = "               point to NULL to start the iteration."]
+    #[doc = ""]
+    #[doc = " @return the standard channel layout or NULL when the iteration is"]
+    #[doc = "         finished"]
     pub fn av_channel_layout_standard(opaque: *mut *mut cty::c_void) -> *const AVChannelLayout;
 }
 extern "C" {
+    #[doc = " Free any allocated data in the channel layout and reset the channel"]
+    #[doc = " count to 0."]
+    #[doc = ""]
+    #[doc = " @param channel_layout the layout structure to be uninitialized"]
     pub fn av_channel_layout_uninit(channel_layout: *mut AVChannelLayout);
 }
 extern "C" {
+    #[doc = " Make a copy of a channel layout. This differs from just assigning src to dst"]
+    #[doc = " in that it allocates and copies the map for AV_CHANNEL_ORDER_CUSTOM."]
+    #[doc = ""]
+    #[doc = " @note the destination channel_layout will be always uninitialized before copy."]
+    #[doc = ""]
+    #[doc = " @param dst destination channel layout"]
+    #[doc = " @param src source channel layout"]
+    #[doc = " @return 0 on success, a negative AVERROR on error."]
     pub fn av_channel_layout_copy(
         dst: *mut AVChannelLayout,
         src: *const AVChannelLayout,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get a human-readable string describing the channel layout properties."]
+    #[doc = " The string will be in the same format that is accepted by"]
+    #[doc = " @ref av_channel_layout_from_string(), allowing to rebuild the same"]
+    #[doc = " channel layout, except for opaque pointers."]
+    #[doc = ""]
+    #[doc = " @param channel_layout channel layout to be described"]
+    #[doc = " @param buf pre-allocated buffer where to put the generated string"]
+    #[doc = " @param buf_size size in bytes of the buffer."]
+    #[doc = " @return amount of bytes needed to hold the output string, or a negative AVERROR"]
+    #[doc = "         on failure. If the returned value is bigger than buf_size, then the"]
+    #[doc = "         string was truncated."]
     pub fn av_channel_layout_describe(
         channel_layout: *const AVChannelLayout,
         buf: *mut cty::c_char,
@@ -16624,73 +12445,212 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " bprint variant of av_channel_layout_describe()."]
+    #[doc = ""]
+    #[doc = " @note the string will be appended to the bprint buffer."]
+    #[doc = " @return 0 on success, or a negative AVERROR value on failure."]
     pub fn av_channel_layout_describe_bprint(
         channel_layout: *const AVChannelLayout,
         bp: *mut AVBPrint,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get the channel with the given index in a channel layout."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param idx index of the channel"]
+    #[doc = " @return channel with the index idx in channel_layout on success or"]
+    #[doc = "         AV_CHAN_NONE on failure (if idx is not valid or the channel order is"]
+    #[doc = "         unspecified)"]
     pub fn av_channel_layout_channel_from_index(
         channel_layout: *const AVChannelLayout,
         idx: cty::c_uint,
     ) -> AVChannel;
 }
 extern "C" {
+    #[doc = " Get the index of a given channel in a channel layout. In case multiple"]
+    #[doc = " channels are found, only the first match will be returned."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param channel the channel whose index to obtain"]
+    #[doc = " @return index of channel in channel_layout on success or a negative number if"]
+    #[doc = "         channel is not present in channel_layout."]
     pub fn av_channel_layout_index_from_channel(
         channel_layout: *const AVChannelLayout,
         channel: AVChannel,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get the index in a channel layout of a channel described by the given string."]
+    #[doc = " In case multiple channels are found, only the first match will be returned."]
+    #[doc = ""]
+    #[doc = " This function accepts channel names in the same format as"]
+    #[doc = " @ref av_channel_from_string()."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param name string describing the channel whose index to obtain"]
+    #[doc = " @return a channel index described by the given string, or a negative AVERROR"]
+    #[doc = "         value."]
     pub fn av_channel_layout_index_from_string(
         channel_layout: *const AVChannelLayout,
         name: *const cty::c_char,
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get a channel described by the given string."]
+    #[doc = ""]
+    #[doc = " This function accepts channel names in the same format as"]
+    #[doc = " @ref av_channel_from_string()."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param name string describing the channel to obtain"]
+    #[doc = " @return a channel described by the given string in channel_layout on success"]
+    #[doc = "         or AV_CHAN_NONE on failure (if the string is not valid or the channel"]
+    #[doc = "         order is unspecified)"]
     pub fn av_channel_layout_channel_from_string(
         channel_layout: *const AVChannelLayout,
         name: *const cty::c_char,
     ) -> AVChannel;
 }
 extern "C" {
+    #[doc = " Find out what channels from a given set are present in a channel layout,"]
+    #[doc = " without regard for their positions."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @param mask a combination of AV_CH_* representing a set of channels"]
+    #[doc = " @return a bitfield representing all the channels from mask that are present"]
+    #[doc = "         in channel_layout"]
     pub fn av_channel_layout_subset(channel_layout: *const AVChannelLayout, mask: u64) -> u64;
 }
 extern "C" {
+    #[doc = " Check whether a channel layout is valid, i.e. can possibly describe audio"]
+    #[doc = " data."]
+    #[doc = ""]
+    #[doc = " @param channel_layout input channel layout"]
+    #[doc = " @return 1 if channel_layout is valid, 0 otherwise."]
     pub fn av_channel_layout_check(channel_layout: *const AVChannelLayout) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Check whether two channel layouts are semantically the same, i.e. the same"]
+    #[doc = " channels are present on the same positions in both."]
+    #[doc = ""]
+    #[doc = " If one of the channel layouts is AV_CHANNEL_ORDER_UNSPEC, while the other is"]
+    #[doc = " not, they are considered to be unequal. If both are AV_CHANNEL_ORDER_UNSPEC,"]
+    #[doc = " they are considered equal iff the channel counts are the same in both."]
+    #[doc = ""]
+    #[doc = " @param chl input channel layout"]
+    #[doc = " @param chl1 input channel layout"]
+    #[doc = " @return 0 if chl and chl1 are equal, 1 if they are not equal. A negative"]
+    #[doc = "         AVERROR code if one or both are invalid."]
     pub fn av_channel_layout_compare(
         chl: *const AVChannelLayout,
         chl1: *const AVChannelLayout,
     ) -> cty::c_int;
 }
+#[doc = " The data is the AVPanScan struct defined in libavcodec."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_PANSCAN: AVFrameSideDataType = 0;
+#[doc = " ATSC A53 Part 4 Closed Captions."]
+#[doc = " A53 CC bitstream is stored as uint8_t in AVFrameSideData.data."]
+#[doc = " The number of bytes of CC data is AVFrameSideData.size."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_A53_CC: AVFrameSideDataType = 1;
+#[doc = " Stereoscopic 3d metadata."]
+#[doc = " The data is the AVStereo3D struct defined in libavutil/stereo3d.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_STEREO3D: AVFrameSideDataType = 2;
+#[doc = " The data is the AVMatrixEncoding enum defined in libavutil/channel_layout.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_MATRIXENCODING: AVFrameSideDataType = 3;
+#[doc = " Metadata relevant to a downmix procedure."]
+#[doc = " The data is the AVDownmixInfo struct defined in libavutil/downmix_info.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DOWNMIX_INFO: AVFrameSideDataType = 4;
+#[doc = " ReplayGain information in the form of the AVReplayGain struct."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_REPLAYGAIN: AVFrameSideDataType = 5;
+#[doc = " This side data contains a 3x3 transformation matrix describing an affine"]
+#[doc = " transformation that needs to be applied to the frame for correct"]
+#[doc = " presentation."]
+#[doc = ""]
+#[doc = " See libavutil/display.h for a detailed description of the data."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DISPLAYMATRIX: AVFrameSideDataType = 6;
+#[doc = " Active Format Description data consisting of a single byte as specified"]
+#[doc = " in ETSI TS 101 154 using AVActiveFormatDescription enum."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_AFD: AVFrameSideDataType = 7;
+#[doc = " Motion vectors exported by some codecs (on demand through the export_mvs"]
+#[doc = " flag set in the libavcodec AVCodecContext flags2 option)."]
+#[doc = " The data is the AVMotionVector struct defined in"]
+#[doc = " libavutil/motion_vector.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_MOTION_VECTORS: AVFrameSideDataType = 8;
+#[doc = " Recommmends skipping the specified number of samples. This is exported"]
+#[doc = " only if the \"skip_manual\" AVOption is set in libavcodec."]
+#[doc = " This has the same format as AV_PKT_DATA_SKIP_SAMPLES."]
+#[doc = " @code"]
+#[doc = " u32le number of samples to skip from start of this packet"]
+#[doc = " u32le number of samples to skip from end of this packet"]
+#[doc = " u8    reason for start skip"]
+#[doc = " u8    reason for end   skip (0=padding silence, 1=convergence)"]
+#[doc = " @endcode"]
 pub const AVFrameSideDataType_AV_FRAME_DATA_SKIP_SAMPLES: AVFrameSideDataType = 9;
+#[doc = " This side data must be associated with an audio frame and corresponds to"]
+#[doc = " enum AVAudioServiceType defined in avcodec.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_AUDIO_SERVICE_TYPE: AVFrameSideDataType = 10;
+#[doc = " Mastering display metadata associated with a video frame. The payload is"]
+#[doc = " an AVMasteringDisplayMetadata type and contains information about the"]
+#[doc = " mastering display color volume."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_MASTERING_DISPLAY_METADATA: AVFrameSideDataType = 11;
+#[doc = " The GOP timecode in 25 bit timecode format. Data format is 64-bit integer."]
+#[doc = " This is set on the first frame of a GOP that has a temporal reference of 0."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_GOP_TIMECODE: AVFrameSideDataType = 12;
+#[doc = " The data represents the AVSphericalMapping structure defined in"]
+#[doc = " libavutil/spherical.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_SPHERICAL: AVFrameSideDataType = 13;
+#[doc = " Content light level (based on CTA-861.3). This payload contains data in"]
+#[doc = " the form of the AVContentLightMetadata struct."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_CONTENT_LIGHT_LEVEL: AVFrameSideDataType = 14;
+#[doc = " The data contains an ICC profile as an opaque octet buffer following the"]
+#[doc = " format described by ISO 15076-1 with an optional name defined in the"]
+#[doc = " metadata key entry \"name\"."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_ICC_PROFILE: AVFrameSideDataType = 15;
+#[doc = " Timecode which conforms to SMPTE ST 12-1. The data is an array of 4 uint32_t"]
+#[doc = " where the first uint32_t describes how many (1-3) of the other timecodes are used."]
+#[doc = " The timecode format is described in the documentation of av_timecode_get_smpte_from_framenum()"]
+#[doc = " function in libavutil/timecode.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_S12M_TIMECODE: AVFrameSideDataType = 16;
+#[doc = " HDR dynamic metadata associated with a video frame. The payload is"]
+#[doc = " an AVDynamicHDRPlus type and contains information for color"]
+#[doc = " volume transform - application 4 of SMPTE 2094-40:2016 standard."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DYNAMIC_HDR_PLUS: AVFrameSideDataType = 17;
+#[doc = " Regions Of Interest, the data is an array of AVRegionOfInterest type, the number of"]
+#[doc = " array element is implied by AVFrameSideData.size / AVRegionOfInterest.self_size."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_REGIONS_OF_INTEREST: AVFrameSideDataType = 18;
+#[doc = " Encoding parameters for a video frame, as described by AVVideoEncParams."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_VIDEO_ENC_PARAMS: AVFrameSideDataType = 19;
+#[doc = " User data unregistered metadata associated with a video frame."]
+#[doc = " This is the H.26[45] UDU SEI message, and shouldn't be used for any other purpose"]
+#[doc = " The data is stored as uint8_t in AVFrameSideData.data which is 16 bytes of"]
+#[doc = " uuid_iso_iec_11578 followed by AVFrameSideData.size - 16 bytes of user_data_payload_byte."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_SEI_UNREGISTERED: AVFrameSideDataType = 20;
+#[doc = " Film grain parameters for a frame, described by AVFilmGrainParams."]
+#[doc = " Must be present for every frame which should have film grain applied."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_FILM_GRAIN_PARAMS: AVFrameSideDataType = 21;
+#[doc = " Bounding boxes for object detection and classification,"]
+#[doc = " as described by AVDetectionBBoxHeader."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DETECTION_BBOXES: AVFrameSideDataType = 22;
+#[doc = " Dolby Vision RPU raw data, suitable for passing to x265"]
+#[doc = " or other libraries. Array of uint8_t, with NAL emulation"]
+#[doc = " bytes intact."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DOVI_RPU_BUFFER: AVFrameSideDataType = 23;
+#[doc = " Parsed Dolby Vision metadata, suitable for passing to a software"]
+#[doc = " implementation. The payload is the AVDOVIMetadata struct defined in"]
+#[doc = " libavutil/dovi_meta.h."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DOVI_METADATA: AVFrameSideDataType = 24;
+#[doc = " HDR Vivid dynamic metadata associated with a video frame. The payload is"]
+#[doc = " an AVDynamicHDRVivid type and contains information for color"]
+#[doc = " volume transform - CUVA 005.1-2021."]
 pub const AVFrameSideDataType_AV_FRAME_DATA_DYNAMIC_HDR_VIVID: AVFrameSideDataType = 25;
+#[doc = " Ambient viewing environment metadata, as defined by H.274."]
+pub const AVFrameSideDataType_AV_FRAME_DATA_AMBIENT_VIEWING_ENVIRONMENT: AVFrameSideDataType = 26;
+#[doc = " @defgroup lavu_frame AVFrame"]
+#[doc = " @ingroup lavu_data"]
+#[doc = ""]
+#[doc = " @{"]
+#[doc = " AVFrame is an abstraction for reference-counted raw multimedia data."]
 pub type AVFrameSideDataType = u32;
 pub const AVActiveFormatDescription_AV_AFD_SAME: AVActiveFormatDescription = 8;
 pub const AVActiveFormatDescription_AV_AFD_4_3: AVActiveFormatDescription = 9;
@@ -16700,6 +12660,10 @@ pub const AVActiveFormatDescription_AV_AFD_4_3_SP_14_9: AVActiveFormatDescriptio
 pub const AVActiveFormatDescription_AV_AFD_16_9_SP_14_9: AVActiveFormatDescription = 14;
 pub const AVActiveFormatDescription_AV_AFD_SP_4_3: AVActiveFormatDescription = 15;
 pub type AVActiveFormatDescription = u32;
+#[doc = " Structure to hold side data for an AVFrame."]
+#[doc = ""]
+#[doc = " sizeof(AVFrameSideData) is not a part of the public ABI, so new fields may be added"]
+#[doc = " to the end with a minor bump."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVFrameSideData {
@@ -16772,14 +12736,53 @@ fn bindgen_test_layout_AVFrameSideData() {
         )
     );
 }
+#[doc = " Structure describing a single Region Of Interest."]
+#[doc = ""]
+#[doc = " When multiple regions are defined in a single side-data block, they"]
+#[doc = " should be ordered from most to least important - some encoders are only"]
+#[doc = " capable of supporting a limited number of distinct regions, so will have"]
+#[doc = " to truncate the list."]
+#[doc = ""]
+#[doc = " When overlapping regions are defined, the first region containing a given"]
+#[doc = " area of the frame applies."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVRegionOfInterest {
+    #[doc = " Must be set to the size of this data structure (that is,"]
+    #[doc = " sizeof(AVRegionOfInterest))."]
     pub self_size: u32,
+    #[doc = " Distance in pixels from the top edge of the frame to the top and"]
+    #[doc = " bottom edges and from the left edge of the frame to the left and"]
+    #[doc = " right edges of the rectangle defining this region of interest."]
+    #[doc = ""]
+    #[doc = " The constraints on a region are encoder dependent, so the region"]
+    #[doc = " actually affected may be slightly larger for alignment or other"]
+    #[doc = " reasons."]
     pub top: cty::c_int,
     pub bottom: cty::c_int,
     pub left: cty::c_int,
     pub right: cty::c_int,
+    #[doc = " Quantisation offset."]
+    #[doc = ""]
+    #[doc = " Must be in the range -1 to +1.  A value of zero indicates no quality"]
+    #[doc = " change.  A negative value asks for better quality (less quantisation),"]
+    #[doc = " while a positive value asks for worse quality (greater quantisation)."]
+    #[doc = ""]
+    #[doc = " The range is calibrated so that the extreme values indicate the"]
+    #[doc = " largest possible offset - if the rest of the frame is encoded with the"]
+    #[doc = " worst possible quality, an offset of -1 indicates that this region"]
+    #[doc = " should be encoded with the best possible quality anyway.  Intermediate"]
+    #[doc = " values are then interpolated in some codec-dependent way."]
+    #[doc = ""]
+    #[doc = " For example, in 10-bit H.264 the quantisation parameter varies between"]
+    #[doc = " -12 and 51.  A typical qoffset value of -1/10 therefore indicates that"]
+    #[doc = " this region should be encoded with a QP around one-tenth of the full"]
+    #[doc = " range better than the rest of the frame.  So, if most of the frame"]
+    #[doc = " were to be encoded with a QP of around 30, this region would get a QP"]
+    #[doc = " of around 24 (an offset of approximately -1/10 * (51 - -12) = -6.3)."]
+    #[doc = " An extreme value of -1 would indicate that this region should be"]
+    #[doc = " encoded with the best possible quality regardless of the treatment of"]
+    #[doc = " the rest of the frame - that is, should be encoded at a QP of -12."]
     pub qoffset: AVRational,
 }
 #[test]
@@ -16855,65 +12858,275 @@ fn bindgen_test_layout_AVRegionOfInterest() {
         )
     );
 }
+#[doc = " This structure describes decoded (raw) audio or video data."]
+#[doc = ""]
+#[doc = " AVFrame must be allocated using av_frame_alloc(). Note that this only"]
+#[doc = " allocates the AVFrame itself, the buffers for the data must be managed"]
+#[doc = " through other means (see below)."]
+#[doc = " AVFrame must be freed with av_frame_free()."]
+#[doc = ""]
+#[doc = " AVFrame is typically allocated once and then reused multiple times to hold"]
+#[doc = " different data (e.g. a single AVFrame to hold frames received from a"]
+#[doc = " decoder). In such a case, av_frame_unref() will free any references held by"]
+#[doc = " the frame and reset it to its original clean state before it"]
+#[doc = " is reused again."]
+#[doc = ""]
+#[doc = " The data described by an AVFrame is usually reference counted through the"]
+#[doc = " AVBuffer API. The underlying buffer references are stored in AVFrame.buf /"]
+#[doc = " AVFrame.extended_buf. An AVFrame is considered to be reference counted if at"]
+#[doc = " least one reference is set, i.e. if AVFrame.buf[0] != NULL. In such a case,"]
+#[doc = " every single data plane must be contained in one of the buffers in"]
+#[doc = " AVFrame.buf or AVFrame.extended_buf."]
+#[doc = " There may be a single buffer for all the data, or one separate buffer for"]
+#[doc = " each plane, or anything in between."]
+#[doc = ""]
+#[doc = " sizeof(AVFrame) is not a part of the public ABI, so new fields may be added"]
+#[doc = " to the end with a minor bump."]
+#[doc = ""]
+#[doc = " Fields can be accessed through AVOptions, the name string used, matches the"]
+#[doc = " C structure field name for fields accessible through AVOptions. The AVClass"]
+#[doc = " for AVFrame can be obtained from avcodec_get_frame_class()"]
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct AVFrame {
+    #[doc = " pointer to the picture/channel planes."]
+    #[doc = " This might be different from the first allocated byte. For video,"]
+    #[doc = " it could even point to the end of the image data."]
+    #[doc = ""]
+    #[doc = " All pointers in data and extended_data must point into one of the"]
+    #[doc = " AVBufferRef in buf or extended_buf."]
+    #[doc = ""]
+    #[doc = " Some decoders access areas outside 0,0 - width,height, please"]
+    #[doc = " see avcodec_align_dimensions2(). Some filters and swscale can read"]
+    #[doc = " up to 16 bytes beyond the planes, if these filters are to be used,"]
+    #[doc = " then 16 extra bytes must be allocated."]
+    #[doc = ""]
+    #[doc = " NOTE: Pointers not needed by the format MUST be set to NULL."]
+    #[doc = ""]
+    #[doc = " @attention In case of video, the data[] pointers can point to the"]
+    #[doc = " end of image data in order to reverse line order, when used in"]
+    #[doc = " combination with negative values in the linesize[] array."]
     pub data: [*mut u8; 8usize],
+    #[doc = " For video, a positive or negative value, which is typically indicating"]
+    #[doc = " the size in bytes of each picture line, but it can also be:"]
+    #[doc = " - the negative byte size of lines for vertical flipping"]
+    #[doc = "   (with data[n] pointing to the end of the data"]
+    #[doc = " - a positive or negative multiple of the byte size as for accessing"]
+    #[doc = "   even and odd fields of a frame (possibly flipped)"]
+    #[doc = ""]
+    #[doc = " For audio, only linesize[0] may be set. For planar audio, each channel"]
+    #[doc = " plane must be the same size."]
+    #[doc = ""]
+    #[doc = " For video the linesizes should be multiples of the CPUs alignment"]
+    #[doc = " preference, this is 16 or 32 for modern desktop CPUs."]
+    #[doc = " Some code requires such alignment other code can be slower without"]
+    #[doc = " correct alignment, for yet other it makes no difference."]
+    #[doc = ""]
+    #[doc = " @note The linesize may be larger than the size of usable data -- there"]
+    #[doc = " may be extra padding present for performance reasons."]
+    #[doc = ""]
+    #[doc = " @attention In case of video, line size values can be negative to achieve"]
+    #[doc = " a vertically inverted iteration over image lines."]
     pub linesize: [cty::c_int; 8usize],
+    #[doc = " pointers to the data planes/channels."]
+    #[doc = ""]
+    #[doc = " For video, this should simply point to data[]."]
+    #[doc = ""]
+    #[doc = " For planar audio, each channel has a separate data pointer, and"]
+    #[doc = " linesize[0] contains the size of each channel buffer."]
+    #[doc = " For packed audio, there is just one data pointer, and linesize[0]"]
+    #[doc = " contains the total size of the buffer for all channels."]
+    #[doc = ""]
+    #[doc = " Note: Both data and extended_data should always be set in a valid frame,"]
+    #[doc = " but for planar audio with more channels that can fit in data,"]
+    #[doc = " extended_data must be used in order to access all channels."]
     pub extended_data: *mut *mut u8,
+    #[doc = " @name Video dimensions"]
+    #[doc = " Video frames only. The coded dimensions (in pixels) of the video frame,"]
+    #[doc = " i.e. the size of the rectangle that contains some well-defined values."]
+    #[doc = ""]
+    #[doc = " @note The part of the frame intended for display/presentation is further"]
+    #[doc = " restricted by the @ref cropping \"Cropping rectangle\"."]
+    #[doc = " @{"]
     pub width: cty::c_int,
+    #[doc = " @name Video dimensions"]
+    #[doc = " Video frames only. The coded dimensions (in pixels) of the video frame,"]
+    #[doc = " i.e. the size of the rectangle that contains some well-defined values."]
+    #[doc = ""]
+    #[doc = " @note The part of the frame intended for display/presentation is further"]
+    #[doc = " restricted by the @ref cropping \"Cropping rectangle\"."]
+    #[doc = " @{"]
     pub height: cty::c_int,
+    #[doc = " number of audio samples (per channel) described by this frame"]
     pub nb_samples: cty::c_int,
+    #[doc = " format of the frame, -1 if unknown or unset"]
+    #[doc = " Values correspond to enum AVPixelFormat for video frames,"]
+    #[doc = " enum AVSampleFormat for audio)"]
     pub format: cty::c_int,
+    #[doc = " 1 -> keyframe, 0-> not"]
     pub key_frame: cty::c_int,
+    #[doc = " Picture type of the frame."]
     pub pict_type: AVPictureType,
+    #[doc = " Sample aspect ratio for the video frame, 0/1 if unknown/unspecified."]
     pub sample_aspect_ratio: AVRational,
+    #[doc = " Presentation timestamp in time_base units (time when frame should be shown to user)."]
     pub pts: i64,
+    #[doc = " DTS copied from the AVPacket that triggered returning this frame. (if frame threading isn't used)"]
+    #[doc = " This is also the Presentation time of this AVFrame calculated from"]
+    #[doc = " only AVPacket.dts values without pts values."]
     pub pkt_dts: i64,
+    #[doc = " Time base for the timestamps in this frame."]
+    #[doc = " In the future, this field may be set on frames output by decoders or"]
+    #[doc = " filters, but its value will be by default ignored on input to encoders"]
+    #[doc = " or filters."]
     pub time_base: AVRational,
+    #[doc = " picture number in bitstream order"]
     pub coded_picture_number: cty::c_int,
+    #[doc = " picture number in display order"]
     pub display_picture_number: cty::c_int,
+    #[doc = " quality (between 1 (good) and FF_LAMBDA_MAX (bad))"]
     pub quality: cty::c_int,
+    #[doc = " for some private data of the user"]
     pub opaque: *mut cty::c_void,
+    #[doc = " When decoding, this signals how much the picture must be delayed."]
+    #[doc = " extra_delay = repeat_pict / (2*fps)"]
     pub repeat_pict: cty::c_int,
+    #[doc = " The content of the picture is interlaced."]
     pub interlaced_frame: cty::c_int,
+    #[doc = " If the content is interlaced, is top field displayed first."]
     pub top_field_first: cty::c_int,
+    #[doc = " Tell user application that palette has changed from previous frame."]
     pub palette_has_changed: cty::c_int,
+    #[doc = " reordered opaque 64 bits (generally an integer or a double precision float"]
+    #[doc = " PTS but can be anything)."]
+    #[doc = " The user sets AVCodecContext.reordered_opaque to represent the input at"]
+    #[doc = " that time,"]
+    #[doc = " the decoder reorders values as needed and sets AVFrame.reordered_opaque"]
+    #[doc = " to exactly one of the values provided by the user through AVCodecContext.reordered_opaque"]
+    #[doc = ""]
+    #[doc = " @deprecated Use AV_CODEC_FLAG_COPY_OPAQUE instead"]
     pub reordered_opaque: i64,
+    #[doc = " Sample rate of the audio data."]
     pub sample_rate: cty::c_int,
+    #[doc = " Channel layout of the audio data."]
+    #[doc = " @deprecated use ch_layout instead"]
     pub channel_layout: u64,
+    #[doc = " AVBuffer references backing the data for this frame. All the pointers in"]
+    #[doc = " data and extended_data must point inside one of the buffers in buf or"]
+    #[doc = " extended_buf. This array must be filled contiguously -- if buf[i] is"]
+    #[doc = " non-NULL then buf[j] must also be non-NULL for all j < i."]
+    #[doc = ""]
+    #[doc = " There may be at most one AVBuffer per data plane, so for video this array"]
+    #[doc = " always contains all the references. For planar audio with more than"]
+    #[doc = " AV_NUM_DATA_POINTERS channels, there may be more buffers than can fit in"]
+    #[doc = " this array. Then the extra AVBufferRef pointers are stored in the"]
+    #[doc = " extended_buf array."]
     pub buf: [*mut AVBufferRef; 8usize],
+    #[doc = " For planar audio which requires more than AV_NUM_DATA_POINTERS"]
+    #[doc = " AVBufferRef pointers, this array will hold all the references which"]
+    #[doc = " cannot fit into AVFrame.buf."]
+    #[doc = ""]
+    #[doc = " Note that this is different from AVFrame.extended_data, which always"]
+    #[doc = " contains all the pointers. This array only contains the extra pointers,"]
+    #[doc = " which cannot fit into AVFrame.buf."]
+    #[doc = ""]
+    #[doc = " This array is always allocated using av_malloc() by whoever constructs"]
+    #[doc = " the frame. It is freed in av_frame_unref()."]
     pub extended_buf: *mut *mut AVBufferRef,
+    #[doc = " Number of elements in extended_buf."]
     pub nb_extended_buf: cty::c_int,
     pub side_data: *mut *mut AVFrameSideData,
     pub nb_side_data: cty::c_int,
+    #[doc = " Frame flags, a combination of @ref lavu_frame_flags"]
     pub flags: cty::c_int,
+    #[doc = " MPEG vs JPEG YUV range."]
+    #[doc = " - encoding: Set by user"]
+    #[doc = " - decoding: Set by libavcodec"]
     pub color_range: AVColorRange,
     pub color_primaries: AVColorPrimaries,
     pub color_trc: AVColorTransferCharacteristic,
+    #[doc = " YUV colorspace type."]
+    #[doc = " - encoding: Set by user"]
+    #[doc = " - decoding: Set by libavcodec"]
     pub colorspace: AVColorSpace,
     pub chroma_location: AVChromaLocation,
+    #[doc = " frame timestamp estimated using various heuristics, in stream time base"]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: set by libavcodec, read by user."]
     pub best_effort_timestamp: i64,
+    #[doc = " reordered pos from the last AVPacket that has been input into the decoder"]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: Read by user."]
     pub pkt_pos: i64,
+    #[doc = " duration of the corresponding packet, expressed in"]
+    #[doc = " AVStream->time_base units, 0 if unknown."]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: Read by user."]
+    #[doc = ""]
+    #[doc = " @deprecated use duration instead"]
     pub pkt_duration: i64,
+    #[doc = " metadata."]
+    #[doc = " - encoding: Set by user."]
+    #[doc = " - decoding: Set by libavcodec."]
     pub metadata: *mut AVDictionary,
+    #[doc = " decode error flags of the frame, set to a combination of"]
+    #[doc = " FF_DECODE_ERROR_xxx flags if the decoder produced a frame, but there"]
+    #[doc = " were errors during the decoding."]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: set by libavcodec, read by user."]
     pub decode_error_flags: cty::c_int,
+    #[doc = " number of audio channels, only used for audio."]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: Read by user."]
+    #[doc = " @deprecated use ch_layout instead"]
     pub channels: cty::c_int,
+    #[doc = " size of the corresponding packet containing the compressed"]
+    #[doc = " frame."]
+    #[doc = " It is set to a negative value if unknown."]
+    #[doc = " - encoding: unused"]
+    #[doc = " - decoding: set by libavcodec, read by user."]
     pub pkt_size: cty::c_int,
+    #[doc = " For hwaccel-format frames, this should be a reference to the"]
+    #[doc = " AVHWFramesContext describing the frame."]
     pub hw_frames_ctx: *mut AVBufferRef,
+    #[doc = " AVBufferRef for free use by the API user. FFmpeg will never check the"]
+    #[doc = " contents of the buffer ref. FFmpeg calls av_buffer_unref() on it when"]
+    #[doc = " the frame is unreferenced. av_frame_copy_props() calls create a new"]
+    #[doc = " reference with av_buffer_ref() for the target frame's opaque_ref field."]
+    #[doc = ""]
+    #[doc = " This is unrelated to the opaque field, although it serves a similar"]
+    #[doc = " purpose."]
     pub opaque_ref: *mut AVBufferRef,
+    #[doc = " @anchor cropping"]
+    #[doc = " @name Cropping"]
+    #[doc = " Video frames only. The number of pixels to discard from the the"]
+    #[doc = " top/bottom/left/right border of the frame to obtain the sub-rectangle of"]
+    #[doc = " the frame intended for presentation."]
+    #[doc = " @{"]
     pub crop_top: size_t,
     pub crop_bottom: size_t,
     pub crop_left: size_t,
     pub crop_right: size_t,
+    #[doc = " AVBufferRef for internal use by a single libav* library."]
+    #[doc = " Must not be used to transfer data between libraries."]
+    #[doc = " Has to be NULL when ownership of the frame leaves the respective library."]
+    #[doc = ""]
+    #[doc = " Code outside the FFmpeg libs should never check or change the contents of the buffer ref."]
+    #[doc = ""]
+    #[doc = " FFmpeg calls av_buffer_unref() on it when the frame is unreferenced."]
+    #[doc = " av_frame_copy_props() calls create a new reference with av_buffer_ref()"]
+    #[doc = " for the target frame's private_ref field."]
     pub private_ref: *mut AVBufferRef,
+    #[doc = " Channel layout of the audio data."]
     pub ch_layout: AVChannelLayout,
+    #[doc = " Duration of the frame, in the same units as pts. 0 if unknown."]
+    pub duration: i64,
 }
 #[test]
 fn bindgen_test_layout_AVFrame() {
     assert_eq!(
         ::core::mem::size_of::<AVFrame>(),
-        472usize,
+        480usize,
         concat!("Size of: ", stringify!(AVFrame))
     );
     assert_eq!(
@@ -17421,47 +13634,161 @@ fn bindgen_test_layout_AVFrame() {
             stringify!(ch_layout)
         )
     );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<AVFrame>())).duration as *const _ as usize },
+        472usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(AVFrame),
+            "::",
+            stringify!(duration)
+        )
+    );
 }
 extern "C" {
-    pub fn av_get_colorspace_name(val: AVColorSpace) -> *const cty::c_char;
-}
-extern "C" {
+    #[doc = " Allocate an AVFrame and set its fields to default values.  The resulting"]
+    #[doc = " struct must be freed using av_frame_free()."]
+    #[doc = ""]
+    #[doc = " @return An AVFrame filled with default values or NULL on failure."]
+    #[doc = ""]
+    #[doc = " @note this only allocates the AVFrame itself, not the data buffers. Those"]
+    #[doc = " must be allocated through other means, e.g. with av_frame_get_buffer() or"]
+    #[doc = " manually."]
     pub fn av_frame_alloc() -> *mut AVFrame;
 }
 extern "C" {
+    #[doc = " Free the frame and any dynamically allocated objects in it,"]
+    #[doc = " e.g. extended_data. If the frame is reference counted, it will be"]
+    #[doc = " unreferenced first."]
+    #[doc = ""]
+    #[doc = " @param frame frame to be freed. The pointer will be set to NULL."]
     pub fn av_frame_free(frame: *mut *mut AVFrame);
 }
 extern "C" {
+    #[doc = " Set up a new reference to the data described by the source frame."]
+    #[doc = ""]
+    #[doc = " Copy frame properties from src to dst and create a new reference for each"]
+    #[doc = " AVBufferRef from src."]
+    #[doc = ""]
+    #[doc = " If src is not reference counted, new buffers are allocated and the data is"]
+    #[doc = " copied."]
+    #[doc = ""]
+    #[doc = " @warning: dst MUST have been either unreferenced with av_frame_unref(dst),"]
+    #[doc = "           or newly allocated with av_frame_alloc() before calling this"]
+    #[doc = "           function, or undefined behavior will occur."]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR on error"]
     pub fn av_frame_ref(dst: *mut AVFrame, src: *const AVFrame) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Create a new frame that references the same data as src."]
+    #[doc = ""]
+    #[doc = " This is a shortcut for av_frame_alloc()+av_frame_ref()."]
+    #[doc = ""]
+    #[doc = " @return newly created AVFrame on success, NULL on error."]
     pub fn av_frame_clone(src: *const AVFrame) -> *mut AVFrame;
 }
 extern "C" {
+    #[doc = " Unreference all the buffers referenced by frame and reset the frame fields."]
     pub fn av_frame_unref(frame: *mut AVFrame);
 }
 extern "C" {
+    #[doc = " Move everything contained in src to dst and reset src."]
+    #[doc = ""]
+    #[doc = " @warning: dst is not unreferenced, but directly overwritten without reading"]
+    #[doc = "           or deallocating its contents. Call av_frame_unref(dst) manually"]
+    #[doc = "           before calling this function to ensure that no memory is leaked."]
     pub fn av_frame_move_ref(dst: *mut AVFrame, src: *mut AVFrame);
 }
 extern "C" {
+    #[doc = " Allocate new buffer(s) for audio or video data."]
+    #[doc = ""]
+    #[doc = " The following fields must be set on frame before calling this function:"]
+    #[doc = " - format (pixel format for video, sample format for audio)"]
+    #[doc = " - width and height for video"]
+    #[doc = " - nb_samples and ch_layout for audio"]
+    #[doc = ""]
+    #[doc = " This function will fill AVFrame.data and AVFrame.buf arrays and, if"]
+    #[doc = " necessary, allocate and fill AVFrame.extended_data and AVFrame.extended_buf."]
+    #[doc = " For planar formats, one buffer will be allocated for each plane."]
+    #[doc = ""]
+    #[doc = " @warning: if frame already has been allocated, calling this function will"]
+    #[doc = "           leak memory. In addition, undefined behavior can occur in certain"]
+    #[doc = "           cases."]
+    #[doc = ""]
+    #[doc = " @param frame frame in which to store the new buffers."]
+    #[doc = " @param align Required buffer size alignment. If equal to 0, alignment will be"]
+    #[doc = "              chosen automatically for the current CPU. It is highly"]
+    #[doc = "              recommended to pass 0 here unless you know what you are doing."]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR on error."]
     pub fn av_frame_get_buffer(frame: *mut AVFrame, align: cty::c_int) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Check if the frame data is writable."]
+    #[doc = ""]
+    #[doc = " @return A positive value if the frame data is writable (which is true if and"]
+    #[doc = " only if each of the underlying buffers has only one reference, namely the one"]
+    #[doc = " stored in this frame). Return 0 otherwise."]
+    #[doc = ""]
+    #[doc = " If 1 is returned the answer is valid until av_buffer_ref() is called on any"]
+    #[doc = " of the underlying AVBufferRefs (e.g. through av_frame_ref() or directly)."]
+    #[doc = ""]
+    #[doc = " @see av_frame_make_writable(), av_buffer_is_writable()"]
     pub fn av_frame_is_writable(frame: *mut AVFrame) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Ensure that the frame data is writable, avoiding data copy if possible."]
+    #[doc = ""]
+    #[doc = " Do nothing if the frame is writable, allocate new buffers and copy the data"]
+    #[doc = " if it is not. Non-refcounted frames behave as non-writable, i.e. a copy"]
+    #[doc = " is always made."]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR on error."]
+    #[doc = ""]
+    #[doc = " @see av_frame_is_writable(), av_buffer_is_writable(),"]
+    #[doc = " av_buffer_make_writable()"]
     pub fn av_frame_make_writable(frame: *mut AVFrame) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Copy the frame data from src to dst."]
+    #[doc = ""]
+    #[doc = " This function does not allocate anything, dst must be already initialized and"]
+    #[doc = " allocated with the same parameters as src."]
+    #[doc = ""]
+    #[doc = " This function only copies the frame data (i.e. the contents of the data /"]
+    #[doc = " extended data arrays), not any other properties."]
+    #[doc = ""]
+    #[doc = " @return >= 0 on success, a negative AVERROR on error."]
     pub fn av_frame_copy(dst: *mut AVFrame, src: *const AVFrame) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Copy only \"metadata\" fields from src to dst."]
+    #[doc = ""]
+    #[doc = " Metadata for the purpose of this function are those fields that do not affect"]
+    #[doc = " the data layout in the buffers.  E.g. pts, sample rate (for audio) or sample"]
+    #[doc = " aspect ratio (for video), but not width/height or channel layout."]
+    #[doc = " Side data is also copied."]
     pub fn av_frame_copy_props(dst: *mut AVFrame, src: *const AVFrame) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Get the buffer reference a given data plane is stored in."]
+    #[doc = ""]
+    #[doc = " @param frame the frame to get the plane's buffer from"]
+    #[doc = " @param plane index of the data plane of interest in frame->extended_data."]
+    #[doc = ""]
+    #[doc = " @return the buffer reference that contains the plane or NULL if the input"]
+    #[doc = " frame is not valid."]
     pub fn av_frame_get_plane_buffer(frame: *mut AVFrame, plane: cty::c_int) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Add a new side data to a frame."]
+    #[doc = ""]
+    #[doc = " @param frame a frame to which the side data should be added"]
+    #[doc = " @param type type of the added side data"]
+    #[doc = " @param size size of the side data"]
+    #[doc = ""]
+    #[doc = " @return newly added side data on success, NULL on error"]
     pub fn av_frame_new_side_data(
         frame: *mut AVFrame,
         type_: AVFrameSideDataType,
@@ -17469,6 +13796,16 @@ extern "C" {
     ) -> *mut AVFrameSideData;
 }
 extern "C" {
+    #[doc = " Add a new side data to a frame from an existing AVBufferRef"]
+    #[doc = ""]
+    #[doc = " @param frame a frame to which the side data should be added"]
+    #[doc = " @param type  the type of the added side data"]
+    #[doc = " @param buf   an AVBufferRef to add as side data. The ownership of"]
+    #[doc = "              the reference is transferred to the frame."]
+    #[doc = ""]
+    #[doc = " @return newly added side data on success, NULL on error. On failure"]
+    #[doc = "         the frame is unchanged and the AVBufferRef remains owned by"]
+    #[doc = "         the caller."]
     pub fn av_frame_new_side_data_from_buf(
         frame: *mut AVFrame,
         type_: AVFrameSideDataType,
@@ -17476,20 +13813,45 @@ extern "C" {
     ) -> *mut AVFrameSideData;
 }
 extern "C" {
+    #[doc = " @return a pointer to the side data of a given type on success, NULL if there"]
+    #[doc = " is no side data with such type in this frame."]
     pub fn av_frame_get_side_data(
         frame: *const AVFrame,
         type_: AVFrameSideDataType,
     ) -> *mut AVFrameSideData;
 }
 extern "C" {
+    #[doc = " Remove and free all side data instances of the given type."]
     pub fn av_frame_remove_side_data(frame: *mut AVFrame, type_: AVFrameSideDataType);
 }
+#[doc = " Apply the maximum possible cropping, even if it requires setting the"]
+#[doc = " AVFrame.data[] entries to unaligned pointers. Passing unaligned data"]
+#[doc = " to FFmpeg API is generally not allowed, and causes undefined behavior"]
+#[doc = " (such as crashes). You can pass unaligned data only to FFmpeg APIs that"]
+#[doc = " are explicitly documented to accept it. Use this flag only if you"]
+#[doc = " absolutely know what you are doing."]
 pub const AV_FRAME_CROP_UNALIGNED: _bindgen_ty_1 = 1;
+#[doc = " Flags for frame cropping."]
 pub type _bindgen_ty_1 = u32;
 extern "C" {
+    #[doc = " Crop the given video AVFrame according to its crop_left/crop_top/crop_right/"]
+    #[doc = " crop_bottom fields. If cropping is successful, the function will adjust the"]
+    #[doc = " data pointers and the width/height fields, and set the crop fields to 0."]
+    #[doc = ""]
+    #[doc = " In all cases, the cropping boundaries will be rounded to the inherent"]
+    #[doc = " alignment of the pixel format. In some cases, such as for opaque hwaccel"]
+    #[doc = " formats, the left/top cropping is ignored. The crop fields are set to 0 even"]
+    #[doc = " if the cropping was rounded or ignored."]
+    #[doc = ""]
+    #[doc = " @param frame the frame which should be cropped"]
+    #[doc = " @param flags Some combination of AV_FRAME_CROP_* flags, or 0."]
+    #[doc = ""]
+    #[doc = " @return >= 0 on success, a negative AVERROR on error. If the cropping fields"]
+    #[doc = " were invalid, AVERROR(ERANGE) is returned, and nothing is changed."]
     pub fn av_frame_apply_cropping(frame: *mut AVFrame, flags: cty::c_int) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " @return a string identifying the side data type"]
     pub fn av_frame_side_data_name(type_: AVFrameSideDataType) -> *const cty::c_char;
 }
 pub const AVHWDeviceType_AV_HWDEVICE_TYPE_NONE: AVHWDeviceType = 0;
@@ -17510,14 +13872,54 @@ pub type AVHWDeviceType = u32;
 pub struct AVHWDeviceInternal {
     _unused: [u8; 0],
 }
+#[doc = " This struct aggregates all the (hardware/vendor-specific) \"high-level\" state,"]
+#[doc = " i.e. state that is not tied to a concrete processing configuration."]
+#[doc = " E.g., in an API that supports hardware-accelerated encoding and decoding,"]
+#[doc = " this struct will (if possible) wrap the state that is common to both encoding"]
+#[doc = " and decoding and from which specific instances of encoders or decoders can be"]
+#[doc = " derived."]
+#[doc = ""]
+#[doc = " This struct is reference-counted with the AVBuffer mechanism. The"]
+#[doc = " av_hwdevice_ctx_alloc() constructor yields a reference, whose data field"]
+#[doc = " points to the actual AVHWDeviceContext. Further objects derived from"]
+#[doc = " AVHWDeviceContext (such as AVHWFramesContext, describing a frame pool with"]
+#[doc = " specific properties) will hold an internal reference to it. After all the"]
+#[doc = " references are released, the AVHWDeviceContext itself will be freed,"]
+#[doc = " optionally invoking a user-specified callback for uninitializing the hardware"]
+#[doc = " state."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVHWDeviceContext {
+    #[doc = " A class for logging. Set by av_hwdevice_ctx_alloc()."]
     pub av_class: *const AVClass,
+    #[doc = " Private data used internally by libavutil. Must not be accessed in any"]
+    #[doc = " way by the caller."]
     pub internal: *mut AVHWDeviceInternal,
+    #[doc = " This field identifies the underlying API used for hardware access."]
+    #[doc = ""]
+    #[doc = " This field is set when this struct is allocated and never changed"]
+    #[doc = " afterwards."]
     pub type_: AVHWDeviceType,
+    #[doc = " The format-specific data, allocated and freed by libavutil along with"]
+    #[doc = " this context."]
+    #[doc = ""]
+    #[doc = " Should be cast by the user to the format-specific context defined in the"]
+    #[doc = " corresponding header (hwcontext_*.h) and filled as described in the"]
+    #[doc = " documentation before calling av_hwdevice_ctx_init()."]
+    #[doc = ""]
+    #[doc = " After calling av_hwdevice_ctx_init() this struct should not be modified"]
+    #[doc = " by the caller."]
     pub hwctx: *mut cty::c_void,
+    #[doc = " This field may be set by the caller before calling av_hwdevice_ctx_init()."]
+    #[doc = ""]
+    #[doc = " If non-NULL, this callback will be called when the last reference to"]
+    #[doc = " this context is unreferenced, immediately before it is freed."]
+    #[doc = ""]
+    #[doc = " @note when other objects (e.g an AVHWFramesContext) are derived from this"]
+    #[doc = "       struct, this callback will be invoked after all such child objects"]
+    #[doc = "       are fully uninitialized and their respective destructors invoked."]
     pub free: ::core::option::Option<unsafe extern "C" fn(ctx: *mut AVHWDeviceContext)>,
+    #[doc = " Arbitrary user data, to be used e.g. by the free() callback."]
     pub user_opaque: *mut cty::c_void,
 }
 #[test]
@@ -17598,21 +14000,90 @@ fn bindgen_test_layout_AVHWDeviceContext() {
 pub struct AVHWFramesInternal {
     _unused: [u8; 0],
 }
+#[doc = " This struct describes a set or pool of \"hardware\" frames (i.e. those with"]
+#[doc = " data not located in normal system memory). All the frames in the pool are"]
+#[doc = " assumed to be allocated in the same way and interchangeable."]
+#[doc = ""]
+#[doc = " This struct is reference-counted with the AVBuffer mechanism and tied to a"]
+#[doc = " given AVHWDeviceContext instance. The av_hwframe_ctx_alloc() constructor"]
+#[doc = " yields a reference, whose data field points to the actual AVHWFramesContext"]
+#[doc = " struct."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVHWFramesContext {
+    #[doc = " A class for logging."]
     pub av_class: *const AVClass,
+    #[doc = " Private data used internally by libavutil. Must not be accessed in any"]
+    #[doc = " way by the caller."]
     pub internal: *mut AVHWFramesInternal,
+    #[doc = " A reference to the parent AVHWDeviceContext. This reference is owned and"]
+    #[doc = " managed by the enclosing AVHWFramesContext, but the caller may derive"]
+    #[doc = " additional references from it."]
     pub device_ref: *mut AVBufferRef,
+    #[doc = " The parent AVHWDeviceContext. This is simply a pointer to"]
+    #[doc = " device_ref->data provided for convenience."]
+    #[doc = ""]
+    #[doc = " Set by libavutil in av_hwframe_ctx_init()."]
     pub device_ctx: *mut AVHWDeviceContext,
+    #[doc = " The format-specific data, allocated and freed automatically along with"]
+    #[doc = " this context."]
+    #[doc = ""]
+    #[doc = " Should be cast by the user to the format-specific context defined in the"]
+    #[doc = " corresponding header (hwframe_*.h) and filled as described in the"]
+    #[doc = " documentation before calling av_hwframe_ctx_init()."]
+    #[doc = ""]
+    #[doc = " After any frames using this context are created, the contents of this"]
+    #[doc = " struct should not be modified by the caller."]
     pub hwctx: *mut cty::c_void,
+    #[doc = " This field may be set by the caller before calling av_hwframe_ctx_init()."]
+    #[doc = ""]
+    #[doc = " If non-NULL, this callback will be called when the last reference to"]
+    #[doc = " this context is unreferenced, immediately before it is freed."]
     pub free: ::core::option::Option<unsafe extern "C" fn(ctx: *mut AVHWFramesContext)>,
+    #[doc = " Arbitrary user data, to be used e.g. by the free() callback."]
     pub user_opaque: *mut cty::c_void,
+    #[doc = " A pool from which the frames are allocated by av_hwframe_get_buffer()."]
+    #[doc = " This field may be set by the caller before calling av_hwframe_ctx_init()."]
+    #[doc = " The buffers returned by calling av_buffer_pool_get() on this pool must"]
+    #[doc = " have the properties described in the documentation in the corresponding hw"]
+    #[doc = " type's header (hwcontext_*.h). The pool will be freed strictly before"]
+    #[doc = " this struct's free() callback is invoked."]
+    #[doc = ""]
+    #[doc = " This field may be NULL, then libavutil will attempt to allocate a pool"]
+    #[doc = " internally. Note that certain device types enforce pools allocated at"]
+    #[doc = " fixed size (frame count), which cannot be extended dynamically. In such a"]
+    #[doc = " case, initial_pool_size must be set appropriately."]
     pub pool: *mut AVBufferPool,
+    #[doc = " Initial size of the frame pool. If a device type does not support"]
+    #[doc = " dynamically resizing the pool, then this is also the maximum pool size."]
+    #[doc = ""]
+    #[doc = " May be set by the caller before calling av_hwframe_ctx_init(). Must be"]
+    #[doc = " set if pool is NULL and the device type does not support dynamic pools."]
     pub initial_pool_size: cty::c_int,
+    #[doc = " The pixel format identifying the underlying HW surface type."]
+    #[doc = ""]
+    #[doc = " Must be a hwaccel format, i.e. the corresponding descriptor must have the"]
+    #[doc = " AV_PIX_FMT_FLAG_HWACCEL flag set."]
+    #[doc = ""]
+    #[doc = " Must be set by the user before calling av_hwframe_ctx_init()."]
     pub format: AVPixelFormat,
+    #[doc = " The pixel format identifying the actual data layout of the hardware"]
+    #[doc = " frames."]
+    #[doc = ""]
+    #[doc = " Must be set by the caller before calling av_hwframe_ctx_init()."]
+    #[doc = ""]
+    #[doc = " @note when the underlying API does not provide the exact data layout, but"]
+    #[doc = " only the colorspace/bit depth, this field should be set to the fully"]
+    #[doc = " planar version of that format (e.g. for 8-bit 420 YUV it should be"]
+    #[doc = " AV_PIX_FMT_YUV420P, not AV_PIX_FMT_NV12 or anything else)."]
     pub sw_format: AVPixelFormat,
+    #[doc = " The allocated dimensions of the frames in this pool."]
+    #[doc = ""]
+    #[doc = " Must be set by the user before calling av_hwframe_ctx_init()."]
     pub width: cty::c_int,
+    #[doc = " The allocated dimensions of the frames in this pool."]
+    #[doc = ""]
+    #[doc = " Must be set by the user before calling av_hwframe_ctx_init()."]
     pub height: cty::c_int,
 }
 #[test]
@@ -17761,21 +14232,71 @@ fn bindgen_test_layout_AVHWFramesContext() {
     );
 }
 extern "C" {
+    #[doc = " Look up an AVHWDeviceType by name."]
+    #[doc = ""]
+    #[doc = " @param name String name of the device type (case-insensitive)."]
+    #[doc = " @return The type from enum AVHWDeviceType, or AV_HWDEVICE_TYPE_NONE if"]
+    #[doc = "         not found."]
     pub fn av_hwdevice_find_type_by_name(name: *const cty::c_char) -> AVHWDeviceType;
 }
 extern "C" {
+    #[doc = " Get the string name of an AVHWDeviceType."]
+    #[doc = ""]
+    #[doc = " @param type Type from enum AVHWDeviceType."]
+    #[doc = " @return Pointer to a static string containing the name, or NULL if the type"]
+    #[doc = "         is not valid."]
     pub fn av_hwdevice_get_type_name(type_: AVHWDeviceType) -> *const cty::c_char;
 }
 extern "C" {
+    #[doc = " Iterate over supported device types."]
+    #[doc = ""]
+    #[doc = " @param prev AV_HWDEVICE_TYPE_NONE initially, then the previous type"]
+    #[doc = "             returned by this function in subsequent iterations."]
+    #[doc = " @return The next usable device type from enum AVHWDeviceType, or"]
+    #[doc = "         AV_HWDEVICE_TYPE_NONE if there are no more."]
     pub fn av_hwdevice_iterate_types(prev: AVHWDeviceType) -> AVHWDeviceType;
 }
 extern "C" {
+    #[doc = " Allocate an AVHWDeviceContext for a given hardware type."]
+    #[doc = ""]
+    #[doc = " @param type the type of the hardware device to allocate."]
+    #[doc = " @return a reference to the newly created AVHWDeviceContext on success or NULL"]
+    #[doc = "         on failure."]
     pub fn av_hwdevice_ctx_alloc(type_: AVHWDeviceType) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Finalize the device context before use. This function must be called after"]
+    #[doc = " the context is filled with all the required information and before it is"]
+    #[doc = " used in any way."]
+    #[doc = ""]
+    #[doc = " @param ref a reference to the AVHWDeviceContext"]
+    #[doc = " @return 0 on success, a negative AVERROR code on failure"]
     pub fn av_hwdevice_ctx_init(ref_: *mut AVBufferRef) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Open a device of the specified type and create an AVHWDeviceContext for it."]
+    #[doc = ""]
+    #[doc = " This is a convenience function intended to cover the simple cases. Callers"]
+    #[doc = " who need to fine-tune device creation/management should open the device"]
+    #[doc = " manually and then wrap it in an AVHWDeviceContext using"]
+    #[doc = " av_hwdevice_ctx_alloc()/av_hwdevice_ctx_init()."]
+    #[doc = ""]
+    #[doc = " The returned context is already initialized and ready for use, the caller"]
+    #[doc = " should not call av_hwdevice_ctx_init() on it. The user_opaque/free fields of"]
+    #[doc = " the created AVHWDeviceContext are set by this function and should not be"]
+    #[doc = " touched by the caller."]
+    #[doc = ""]
+    #[doc = " @param device_ctx On success, a reference to the newly-created device context"]
+    #[doc = "                   will be written here. The reference is owned by the caller"]
+    #[doc = "                   and must be released with av_buffer_unref() when no longer"]
+    #[doc = "                   needed. On failure, NULL will be written to this pointer."]
+    #[doc = " @param type The type of the device to create."]
+    #[doc = " @param device A type-specific string identifying the device to open."]
+    #[doc = " @param opts A dictionary of additional (type-specific) options to use in"]
+    #[doc = "             opening the device. The dictionary remains owned by the caller."]
+    #[doc = " @param flags currently unused"]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR code on failure."]
     pub fn av_hwdevice_ctx_create(
         device_ctx: *mut *mut AVBufferRef,
         type_: AVHWDeviceType,
@@ -17785,6 +14306,25 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Create a new device of the specified type from an existing device."]
+    #[doc = ""]
+    #[doc = " If the source device is a device of the target type or was originally"]
+    #[doc = " derived from such a device (possibly through one or more intermediate"]
+    #[doc = " devices of other types), then this will return a reference to the"]
+    #[doc = " existing device of the same type as is requested."]
+    #[doc = ""]
+    #[doc = " Otherwise, it will attempt to derive a new device from the given source"]
+    #[doc = " device.  If direct derivation to the new type is not implemented, it will"]
+    #[doc = " attempt the same derivation from each ancestor of the source device in"]
+    #[doc = " turn looking for an implemented derivation method."]
+    #[doc = ""]
+    #[doc = " @param dst_ctx On success, a reference to the newly-created"]
+    #[doc = "                AVHWDeviceContext."]
+    #[doc = " @param type    The type of the new device to create."]
+    #[doc = " @param src_ctx A reference to an existing AVHWDeviceContext which will be"]
+    #[doc = "                used to create the new device."]
+    #[doc = " @param flags   Currently unused; should be set to zero."]
+    #[doc = " @return        Zero on success, a negative AVERROR code on failure."]
     pub fn av_hwdevice_ctx_create_derived(
         dst_ctx: *mut *mut AVBufferRef,
         type_: AVHWDeviceType,
@@ -17793,6 +14333,20 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Create a new device of the specified type from an existing device."]
+    #[doc = ""]
+    #[doc = " This function performs the same action as av_hwdevice_ctx_create_derived,"]
+    #[doc = " however, it is able to set options for the new device to be derived."]
+    #[doc = ""]
+    #[doc = " @param dst_ctx On success, a reference to the newly-created"]
+    #[doc = "                AVHWDeviceContext."]
+    #[doc = " @param type    The type of the new device to create."]
+    #[doc = " @param src_ctx A reference to an existing AVHWDeviceContext which will be"]
+    #[doc = "                used to create the new device."]
+    #[doc = " @param options Options for the new device to create, same format as in"]
+    #[doc = "                av_hwdevice_ctx_create."]
+    #[doc = " @param flags   Currently unused; should be set to zero."]
+    #[doc = " @return        Zero on success, a negative AVERROR code on failure."]
     pub fn av_hwdevice_ctx_create_derived_opts(
         dst_ctx: *mut *mut AVBufferRef,
         type_: AVHWDeviceType,
@@ -17802,12 +14356,32 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Allocate an AVHWFramesContext tied to a given device context."]
+    #[doc = ""]
+    #[doc = " @param device_ctx a reference to a AVHWDeviceContext. This function will make"]
+    #[doc = "                   a new reference for internal use, the one passed to the"]
+    #[doc = "                   function remains owned by the caller."]
+    #[doc = " @return a reference to the newly created AVHWFramesContext on success or NULL"]
+    #[doc = "         on failure."]
     pub fn av_hwframe_ctx_alloc(device_ctx: *mut AVBufferRef) -> *mut AVBufferRef;
 }
 extern "C" {
+    #[doc = " Finalize the context before use. This function must be called after the"]
+    #[doc = " context is filled with all the required information and before it is attached"]
+    #[doc = " to any frames."]
+    #[doc = ""]
+    #[doc = " @param ref a reference to the AVHWFramesContext"]
+    #[doc = " @return 0 on success, a negative AVERROR code on failure"]
     pub fn av_hwframe_ctx_init(ref_: *mut AVBufferRef) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Allocate a new frame attached to the given AVHWFramesContext."]
+    #[doc = ""]
+    #[doc = " @param hwframe_ctx a reference to an AVHWFramesContext"]
+    #[doc = " @param frame an empty (freshly allocated or unreffed) frame to be filled with"]
+    #[doc = "              newly allocated buffers."]
+    #[doc = " @param flags currently unused, should be set to zero"]
+    #[doc = " @return 0 on success, a negative AVERROR code on failure"]
     pub fn av_hwframe_get_buffer(
         hwframe_ctx: *mut AVBufferRef,
         frame: *mut AVFrame,
@@ -17815,18 +14389,60 @@ extern "C" {
     ) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Copy data to or from a hw surface. At least one of dst/src must have an"]
+    #[doc = " AVHWFramesContext attached."]
+    #[doc = ""]
+    #[doc = " If src has an AVHWFramesContext attached, then the format of dst (if set)"]
+    #[doc = " must use one of the formats returned by av_hwframe_transfer_get_formats(src,"]
+    #[doc = " AV_HWFRAME_TRANSFER_DIRECTION_FROM)."]
+    #[doc = " If dst has an AVHWFramesContext attached, then the format of src must use one"]
+    #[doc = " of the formats returned by av_hwframe_transfer_get_formats(dst,"]
+    #[doc = " AV_HWFRAME_TRANSFER_DIRECTION_TO)"]
+    #[doc = ""]
+    #[doc = " dst may be \"clean\" (i.e. with data/buf pointers unset), in which case the"]
+    #[doc = " data buffers will be allocated by this function using av_frame_get_buffer()."]
+    #[doc = " If dst->format is set, then this format will be used, otherwise (when"]
+    #[doc = " dst->format is AV_PIX_FMT_NONE) the first acceptable format will be chosen."]
+    #[doc = ""]
+    #[doc = " The two frames must have matching allocated dimensions (i.e. equal to"]
+    #[doc = " AVHWFramesContext.width/height), since not all device types support"]
+    #[doc = " transferring a sub-rectangle of the whole surface. The display dimensions"]
+    #[doc = " (i.e. AVFrame.width/height) may be smaller than the allocated dimensions, but"]
+    #[doc = " also have to be equal for both frames. When the display dimensions are"]
+    #[doc = " smaller than the allocated dimensions, the content of the padding in the"]
+    #[doc = " destination frame is unspecified."]
+    #[doc = ""]
+    #[doc = " @param dst the destination frame. dst is not touched on failure."]
+    #[doc = " @param src the source frame."]
+    #[doc = " @param flags currently unused, should be set to zero"]
+    #[doc = " @return 0 on success, a negative AVERROR error code on failure."]
     pub fn av_hwframe_transfer_data(
         dst: *mut AVFrame,
         src: *const AVFrame,
         flags: cty::c_int,
     ) -> cty::c_int;
 }
+#[doc = " Transfer the data from the queried hw frame."]
 pub const AVHWFrameTransferDirection_AV_HWFRAME_TRANSFER_DIRECTION_FROM:
     AVHWFrameTransferDirection = 0;
+#[doc = " Transfer the data to the queried hw frame."]
 pub const AVHWFrameTransferDirection_AV_HWFRAME_TRANSFER_DIRECTION_TO: AVHWFrameTransferDirection =
     1;
 pub type AVHWFrameTransferDirection = u32;
 extern "C" {
+    #[doc = " Get a list of possible source or target formats usable in"]
+    #[doc = " av_hwframe_transfer_data()."]
+    #[doc = ""]
+    #[doc = " @param hwframe_ctx the frame context to obtain the information for"]
+    #[doc = " @param dir the direction of the transfer"]
+    #[doc = " @param formats the pointer to the output format list will be written here."]
+    #[doc = "                The list is terminated with AV_PIX_FMT_NONE and must be freed"]
+    #[doc = "                by the caller when no longer needed using av_free()."]
+    #[doc = "                If this function returns successfully, the format list will"]
+    #[doc = "                have at least one item (not counting the terminator)."]
+    #[doc = "                On failure, the contents of this pointer are unspecified."]
+    #[doc = " @param flags currently unused, should be set to zero"]
+    #[doc = " @return 0 on success, a negative AVERROR code on failure."]
     pub fn av_hwframe_transfer_get_formats(
         hwframe_ctx: *mut AVBufferRef,
         dir: AVHWFrameTransferDirection,
@@ -17834,13 +14450,26 @@ extern "C" {
         flags: cty::c_int,
     ) -> cty::c_int;
 }
+#[doc = " This struct describes the constraints on hardware frames attached to"]
+#[doc = " a given device with a hardware-specific configuration.  This is returned"]
+#[doc = " by av_hwdevice_get_hwframe_constraints() and must be freed by"]
+#[doc = " av_hwframe_constraints_free() after use."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVHWFramesConstraints {
+    #[doc = " A list of possible values for format in the hw_frames_ctx,"]
+    #[doc = " terminated by AV_PIX_FMT_NONE.  This member will always be filled."]
     pub valid_hw_formats: *mut AVPixelFormat,
+    #[doc = " A list of possible values for sw_format in the hw_frames_ctx,"]
+    #[doc = " terminated by AV_PIX_FMT_NONE.  Can be NULL if this information is"]
+    #[doc = " not known."]
     pub valid_sw_formats: *mut AVPixelFormat,
+    #[doc = " The minimum size of frames in this hw_frames_ctx."]
+    #[doc = " (Zero if not known.)"]
     pub min_width: cty::c_int,
     pub min_height: cty::c_int,
+    #[doc = " The maximum size of frames in this hw_frames_ctx."]
+    #[doc = " (INT_MAX if not known / no limit.)"]
     pub max_width: cty::c_int,
     pub max_height: cty::c_int,
 }
@@ -17930,26 +14559,110 @@ fn bindgen_test_layout_AVHWFramesConstraints() {
     );
 }
 extern "C" {
+    #[doc = " Allocate a HW-specific configuration structure for a given HW device."]
+    #[doc = " After use, the user must free all members as required by the specific"]
+    #[doc = " hardware structure being used, then free the structure itself with"]
+    #[doc = " av_free()."]
+    #[doc = ""]
+    #[doc = " @param device_ctx a reference to the associated AVHWDeviceContext."]
+    #[doc = " @return The newly created HW-specific configuration structure on"]
+    #[doc = "         success or NULL on failure."]
     pub fn av_hwdevice_hwconfig_alloc(device_ctx: *mut AVBufferRef) -> *mut cty::c_void;
 }
 extern "C" {
+    #[doc = " Get the constraints on HW frames given a device and the HW-specific"]
+    #[doc = " configuration to be used with that device.  If no HW-specific"]
+    #[doc = " configuration is provided, returns the maximum possible capabilities"]
+    #[doc = " of the device."]
+    #[doc = ""]
+    #[doc = " @param ref a reference to the associated AVHWDeviceContext."]
+    #[doc = " @param hwconfig a filled HW-specific configuration structure, or NULL"]
+    #[doc = "        to return the maximum possible capabilities of the device."]
+    #[doc = " @return AVHWFramesConstraints structure describing the constraints"]
+    #[doc = "         on the device, or NULL if not available."]
     pub fn av_hwdevice_get_hwframe_constraints(
         ref_: *mut AVBufferRef,
         hwconfig: *const cty::c_void,
     ) -> *mut AVHWFramesConstraints;
 }
 extern "C" {
+    #[doc = " Free an AVHWFrameConstraints structure."]
+    #[doc = ""]
+    #[doc = " @param constraints The (filled or unfilled) AVHWFrameConstraints structure."]
     pub fn av_hwframe_constraints_free(constraints: *mut *mut AVHWFramesConstraints);
 }
+#[doc = " The mapping must be readable."]
 pub const AV_HWFRAME_MAP_READ: _bindgen_ty_2 = 1;
+#[doc = " The mapping must be writeable."]
 pub const AV_HWFRAME_MAP_WRITE: _bindgen_ty_2 = 2;
+#[doc = " The mapped frame will be overwritten completely in subsequent"]
+#[doc = " operations, so the current frame data need not be loaded.  Any values"]
+#[doc = " which are not overwritten are unspecified."]
 pub const AV_HWFRAME_MAP_OVERWRITE: _bindgen_ty_2 = 4;
+#[doc = " The mapping must be direct.  That is, there must not be any copying in"]
+#[doc = " the map or unmap steps.  Note that performance of direct mappings may"]
+#[doc = " be much lower than normal memory."]
 pub const AV_HWFRAME_MAP_DIRECT: _bindgen_ty_2 = 8;
+#[doc = " Flags to apply to frame mappings."]
 pub type _bindgen_ty_2 = u32;
 extern "C" {
+    #[doc = " Map a hardware frame."]
+    #[doc = ""]
+    #[doc = " This has a number of different possible effects, depending on the format"]
+    #[doc = " and origin of the src and dst frames.  On input, src should be a usable"]
+    #[doc = " frame with valid buffers and dst should be blank (typically as just created"]
+    #[doc = " by av_frame_alloc()).  src should have an associated hwframe context, and"]
+    #[doc = " dst may optionally have a format and associated hwframe context."]
+    #[doc = ""]
+    #[doc = " If src was created by mapping a frame from the hwframe context of dst,"]
+    #[doc = " then this function undoes the mapping - dst is replaced by a reference to"]
+    #[doc = " the frame that src was originally mapped from."]
+    #[doc = ""]
+    #[doc = " If both src and dst have an associated hwframe context, then this function"]
+    #[doc = " attempts to map the src frame from its hardware context to that of dst and"]
+    #[doc = " then fill dst with appropriate data to be usable there.  This will only be"]
+    #[doc = " possible if the hwframe contexts and associated devices are compatible -"]
+    #[doc = " given compatible devices, av_hwframe_ctx_create_derived() can be used to"]
+    #[doc = " create a hwframe context for dst in which mapping should be possible."]
+    #[doc = ""]
+    #[doc = " If src has a hwframe context but dst does not, then the src frame is"]
+    #[doc = " mapped to normal memory and should thereafter be usable as a normal frame."]
+    #[doc = " If the format is set on dst, then the mapping will attempt to create dst"]
+    #[doc = " with that format and fail if it is not possible.  If format is unset (is"]
+    #[doc = " AV_PIX_FMT_NONE) then dst will be mapped with whatever the most appropriate"]
+    #[doc = " format to use is (probably the sw_format of the src hwframe context)."]
+    #[doc = ""]
+    #[doc = " A return value of AVERROR(ENOSYS) indicates that the mapping is not"]
+    #[doc = " possible with the given arguments and hwframe setup, while other return"]
+    #[doc = " values indicate that it failed somehow."]
+    #[doc = ""]
+    #[doc = " On failure, the destination frame will be left blank, except for the"]
+    #[doc = " hw_frames_ctx/format fields thay may have been set by the caller - those will"]
+    #[doc = " be preserved as they were."]
+    #[doc = ""]
+    #[doc = " @param dst Destination frame, to contain the mapping."]
+    #[doc = " @param src Source frame, to be mapped."]
+    #[doc = " @param flags Some combination of AV_HWFRAME_MAP_* flags."]
+    #[doc = " @return Zero on success, negative AVERROR code on failure."]
     pub fn av_hwframe_map(dst: *mut AVFrame, src: *const AVFrame, flags: cty::c_int) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Create and initialise an AVHWFramesContext as a mapping of another existing"]
+    #[doc = " AVHWFramesContext on a different device."]
+    #[doc = ""]
+    #[doc = " av_hwframe_ctx_init() should not be called after this."]
+    #[doc = ""]
+    #[doc = " @param derived_frame_ctx  On success, a reference to the newly created"]
+    #[doc = "                           AVHWFramesContext."]
+    #[doc = " @param format             The AVPixelFormat for the derived context."]
+    #[doc = " @param derived_device_ctx A reference to the device to create the new"]
+    #[doc = "                           AVHWFramesContext on."]
+    #[doc = " @param source_frame_ctx   A reference to an existing AVHWFramesContext"]
+    #[doc = "                           which will be mapped to the derived context."]
+    #[doc = " @param flags  Some combination of AV_HWFRAME_MAP_* flags, defining the"]
+    #[doc = "               mapping parameters to apply to frames which are allocated"]
+    #[doc = "               in the derived device."]
+    #[doc = " @return       Zero on success, negative AVERROR code on failure."]
     pub fn av_hwframe_ctx_create_derived(
         derived_frame_ctx: *mut *mut AVBufferRef,
         format: AVPixelFormat,
@@ -17960,6 +14673,7 @@ extern "C" {
 }
 pub const AVCodecID_AV_CODEC_ID_NONE: AVCodecID = 0;
 pub const AVCodecID_AV_CODEC_ID_MPEG1VIDEO: AVCodecID = 1;
+#[doc = "< preferred ID for MPEG-1/2 video decoding"]
 pub const AVCodecID_AV_CODEC_ID_MPEG2VIDEO: AVCodecID = 2;
 pub const AVCodecID_AV_CODEC_ID_H261: AVCodecID = 3;
 pub const AVCodecID_AV_CODEC_ID_H263: AVCodecID = 4;
@@ -18220,6 +14934,11 @@ pub const AVCodecID_AV_CODEC_ID_VBN: AVCodecID = 258;
 pub const AVCodecID_AV_CODEC_ID_JPEGXL: AVCodecID = 259;
 pub const AVCodecID_AV_CODEC_ID_QOI: AVCodecID = 260;
 pub const AVCodecID_AV_CODEC_ID_PHM: AVCodecID = 261;
+pub const AVCodecID_AV_CODEC_ID_RADIANCE_HDR: AVCodecID = 262;
+pub const AVCodecID_AV_CODEC_ID_WBMP: AVCodecID = 263;
+pub const AVCodecID_AV_CODEC_ID_MEDIA100: AVCodecID = 264;
+pub const AVCodecID_AV_CODEC_ID_VQC: AVCodecID = 265;
+#[doc = "< A dummy id pointing at the start of audio codecs"]
 pub const AVCodecID_AV_CODEC_ID_FIRST_AUDIO: AVCodecID = 65536;
 pub const AVCodecID_AV_CODEC_ID_PCM_S16LE: AVCodecID = 65536;
 pub const AVCodecID_AV_CODEC_ID_PCM_S16BE: AVCodecID = 65537;
@@ -18309,6 +15028,7 @@ pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_MTF: AVCodecID = 69679;
 pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_CUNNING: AVCodecID = 69680;
 pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_MOFLEX: AVCodecID = 69681;
 pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_ACORN: AVCodecID = 69682;
+pub const AVCodecID_AV_CODEC_ID_ADPCM_XMD: AVCodecID = 69683;
 pub const AVCodecID_AV_CODEC_ID_AMR_NB: AVCodecID = 73728;
 pub const AVCodecID_AV_CODEC_ID_AMR_WB: AVCodecID = 73729;
 pub const AVCodecID_AV_CODEC_ID_RA_144: AVCodecID = 77824;
@@ -18320,7 +15040,10 @@ pub const AVCodecID_AV_CODEC_ID_SOL_DPCM: AVCodecID = 81923;
 pub const AVCodecID_AV_CODEC_ID_SDX2_DPCM: AVCodecID = 81924;
 pub const AVCodecID_AV_CODEC_ID_GREMLIN_DPCM: AVCodecID = 81925;
 pub const AVCodecID_AV_CODEC_ID_DERF_DPCM: AVCodecID = 81926;
+pub const AVCodecID_AV_CODEC_ID_WADY_DPCM: AVCodecID = 81927;
+pub const AVCodecID_AV_CODEC_ID_CBD2_DPCM: AVCodecID = 81928;
 pub const AVCodecID_AV_CODEC_ID_MP2: AVCodecID = 86016;
+#[doc = "< preferred ID for decoding MPEG audio layer 1, 2 or 3"]
 pub const AVCodecID_AV_CODEC_ID_MP3: AVCodecID = 86017;
 pub const AVCodecID_AV_CODEC_ID_AAC: AVCodecID = 86018;
 pub const AVCodecID_AV_CODEC_ID_AC3: AVCodecID = 86019;
@@ -18338,6 +15061,7 @@ pub const AVCodecID_AV_CODEC_ID_MP3ON4: AVCodecID = 86030;
 pub const AVCodecID_AV_CODEC_ID_SHORTEN: AVCodecID = 86031;
 pub const AVCodecID_AV_CODEC_ID_ALAC: AVCodecID = 86032;
 pub const AVCodecID_AV_CODEC_ID_WESTWOOD_SND1: AVCodecID = 86033;
+#[doc = "< as in Berlin toast format"]
 pub const AVCodecID_AV_CODEC_ID_GSM: AVCodecID = 86034;
 pub const AVCodecID_AV_CODEC_ID_QDM2: AVCodecID = 86035;
 pub const AVCodecID_AV_CODEC_ID_COOK: AVCodecID = 86036;
@@ -18417,9 +15141,17 @@ pub const AVCodecID_AV_CODEC_ID_HCA: AVCodecID = 86109;
 pub const AVCodecID_AV_CODEC_ID_FASTAUDIO: AVCodecID = 86110;
 pub const AVCodecID_AV_CODEC_ID_MSNSIREN: AVCodecID = 86111;
 pub const AVCodecID_AV_CODEC_ID_DFPWM: AVCodecID = 86112;
+pub const AVCodecID_AV_CODEC_ID_BONK: AVCodecID = 86113;
+pub const AVCodecID_AV_CODEC_ID_MISC4: AVCodecID = 86114;
+pub const AVCodecID_AV_CODEC_ID_APAC: AVCodecID = 86115;
+pub const AVCodecID_AV_CODEC_ID_FTR: AVCodecID = 86116;
+pub const AVCodecID_AV_CODEC_ID_WAVARC: AVCodecID = 86117;
+pub const AVCodecID_AV_CODEC_ID_RKA: AVCodecID = 86118;
+#[doc = "< A dummy ID pointing at the start of subtitle codecs."]
 pub const AVCodecID_AV_CODEC_ID_FIRST_SUBTITLE: AVCodecID = 94208;
 pub const AVCodecID_AV_CODEC_ID_DVD_SUBTITLE: AVCodecID = 94208;
 pub const AVCodecID_AV_CODEC_ID_DVB_SUBTITLE: AVCodecID = 94209;
+#[doc = "< raw UTF-8 text"]
 pub const AVCodecID_AV_CODEC_ID_TEXT: AVCodecID = 94210;
 pub const AVCodecID_AV_CODEC_ID_XSUB: AVCodecID = 94211;
 pub const AVCodecID_AV_CODEC_ID_SSA: AVCodecID = 94212;
@@ -18444,8 +15176,10 @@ pub const AVCodecID_AV_CODEC_ID_ASS: AVCodecID = 94230;
 pub const AVCodecID_AV_CODEC_ID_HDMV_TEXT_SUBTITLE: AVCodecID = 94231;
 pub const AVCodecID_AV_CODEC_ID_TTML: AVCodecID = 94232;
 pub const AVCodecID_AV_CODEC_ID_ARIB_CAPTION: AVCodecID = 94233;
+#[doc = "< A dummy ID pointing at the start of various fake codecs."]
 pub const AVCodecID_AV_CODEC_ID_FIRST_UNKNOWN: AVCodecID = 98304;
 pub const AVCodecID_AV_CODEC_ID_TTF: AVCodecID = 98304;
+#[doc = "< Contain timestamp estimated through PCR of program stream."]
 pub const AVCodecID_AV_CODEC_ID_SCTE_35: AVCodecID = 98305;
 pub const AVCodecID_AV_CODEC_ID_EPG: AVCodecID = 98306;
 pub const AVCodecID_AV_CODEC_ID_BINTEXT: AVCodecID = 98307;
@@ -18456,28 +15190,80 @@ pub const AVCodecID_AV_CODEC_ID_SMPTE_KLV: AVCodecID = 98311;
 pub const AVCodecID_AV_CODEC_ID_DVD_NAV: AVCodecID = 98312;
 pub const AVCodecID_AV_CODEC_ID_TIMED_ID3: AVCodecID = 98313;
 pub const AVCodecID_AV_CODEC_ID_BIN_DATA: AVCodecID = 98314;
+#[doc = "< codec_id is not known (like AV_CODEC_ID_NONE) but lavf should attempt to identify it"]
 pub const AVCodecID_AV_CODEC_ID_PROBE: AVCodecID = 102400;
+#[doc = "< _FAKE_ codec to indicate a raw MPEG-2 TS"]
+#[doc = " stream (only used by libavformat)"]
 pub const AVCodecID_AV_CODEC_ID_MPEG2TS: AVCodecID = 131072;
+#[doc = "< _FAKE_ codec to indicate a MPEG-4 Systems"]
+#[doc = " stream (only used by libavformat)"]
 pub const AVCodecID_AV_CODEC_ID_MPEG4SYSTEMS: AVCodecID = 131073;
+#[doc = "< Dummy codec for streams containing only metadata information."]
 pub const AVCodecID_AV_CODEC_ID_FFMETADATA: AVCodecID = 135168;
+#[doc = "< Passthrough codec, AVFrames wrapped in AVPacket"]
 pub const AVCodecID_AV_CODEC_ID_WRAPPED_AVFRAME: AVCodecID = 135169;
+#[doc = " Dummy null video codec, useful mainly for development and debugging."]
+#[doc = " Null encoder/decoder discard all input and never return any output."]
+pub const AVCodecID_AV_CODEC_ID_VNULL: AVCodecID = 135170;
+#[doc = " Dummy null audio codec, useful mainly for development and debugging."]
+#[doc = " Null encoder/decoder discard all input and never return any output."]
+pub const AVCodecID_AV_CODEC_ID_ANULL: AVCodecID = 135171;
+#[doc = " Identify the syntax and semantics of the bitstream."]
+#[doc = " The principle is roughly:"]
+#[doc = " Two decoders with the same ID can decode the same streams."]
+#[doc = " Two encoders with the same ID can encode compatible streams."]
+#[doc = " There may be slight deviations from the principle due to implementation"]
+#[doc = " details."]
+#[doc = ""]
+#[doc = " If you add a codec ID to this list, add it so that"]
+#[doc = " 1. no value of an existing codec ID changes (that would break ABI),"]
+#[doc = " 2. it is as close as possible to similar codecs"]
+#[doc = ""]
+#[doc = " After adding new codec IDs, do not forget to add an entry to the codec"]
+#[doc = " descriptor list and bump libavcodec minor version."]
 pub type AVCodecID = u32;
 extern "C" {
+    #[doc = " Get the type of the given codec."]
     pub fn avcodec_get_type(codec_id: AVCodecID) -> AVMediaType;
 }
 extern "C" {
+    #[doc = " Get the name of a codec."]
+    #[doc = " @return  a static string identifying the codec; never NULL"]
     pub fn avcodec_get_name(id: AVCodecID) -> *const cty::c_char;
 }
 extern "C" {
+    #[doc = " Return codec bits per sample."]
+    #[doc = ""]
+    #[doc = " @param[in] codec_id the codec"]
+    #[doc = " @return Number of bits per sample or zero if unknown for the given codec."]
     pub fn av_get_bits_per_sample(codec_id: AVCodecID) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Return codec bits per sample."]
+    #[doc = " Only return non-zero if the bits per sample is exactly correct, not an"]
+    #[doc = " approximation."]
+    #[doc = ""]
+    #[doc = " @param[in] codec_id the codec"]
+    #[doc = " @return Number of bits per sample or zero if unknown for the given codec."]
     pub fn av_get_exact_bits_per_sample(codec_id: AVCodecID) -> cty::c_int;
 }
 extern "C" {
+    #[doc = " Return a name for the specified profile, if available."]
+    #[doc = ""]
+    #[doc = " @param codec_id the ID of the codec to which the requested profile belongs"]
+    #[doc = " @param profile the profile value for which a name is requested"]
+    #[doc = " @return A name for the profile if found, NULL otherwise."]
+    #[doc = ""]
+    #[doc = " @note unlike av_get_profile_name(), which searches a list of profiles"]
+    #[doc = "       supported by a specific decoder or encoder implementation, this"]
+    #[doc = "       function searches the list of profiles from the AVCodecDescriptor"]
     pub fn avcodec_profile_name(codec_id: AVCodecID, profile: cty::c_int) -> *const cty::c_char;
 }
 extern "C" {
+    #[doc = " Return the PCM codec associated with a sample format."]
+    #[doc = " @param be  endianness, 0 for little, 1 for big,"]
+    #[doc = "            -1 (or anything else) for native"]
+    #[doc = " @return  AV_CODEC_ID_PCM_* or AV_CODEC_ID_NONE"]
     pub fn av_get_pcm_codec(fmt: AVSampleFormat, be: cty::c_int) -> AVCodecID;
 }
 #[doc = " AVProfile."]
@@ -19012,11 +15798,16 @@ extern "C" {
 }
 pub const AVFieldOrder_AV_FIELD_UNKNOWN: AVFieldOrder = 0;
 pub const AVFieldOrder_AV_FIELD_PROGRESSIVE: AVFieldOrder = 1;
+#[doc = "< Top coded_first, top displayed first"]
 pub const AVFieldOrder_AV_FIELD_TT: AVFieldOrder = 2;
+#[doc = "< Bottom coded first, bottom displayed first"]
 pub const AVFieldOrder_AV_FIELD_BB: AVFieldOrder = 3;
+#[doc = "< Top coded first, bottom displayed first"]
 pub const AVFieldOrder_AV_FIELD_TB: AVFieldOrder = 4;
+#[doc = "< Bottom coded first, top displayed first"]
 pub const AVFieldOrder_AV_FIELD_BT: AVFieldOrder = 5;
 #[doc = " @addtogroup lavc_core"]
+#[doc = " @{"]
 pub type AVFieldOrder = u32;
 #[doc = " This struct describes the properties of an encoded stream."]
 #[doc = ""]
@@ -19818,7 +16609,7 @@ pub const AVPacketSideDataType_AV_PKT_DATA_SKIP_SAMPLES: AVPacketSideDataType = 
 #[doc = " the packet may contain \"dual mono\" audio specific to Japanese DTV"]
 #[doc = " and if it is true, recommends only the selected channel to be used."]
 #[doc = " @code"]
-#[doc = " u8    selected channels (0=mail/left, 1=sub/right, 2=both)"]
+#[doc = " u8    selected channels (0=main/left, 1=sub/right, 2=both)"]
 #[doc = " @endcode"]
 pub const AVPacketSideDataType_AV_PKT_DATA_JP_DUALMONO: AVPacketSideDataType = 12;
 #[doc = " A list of zero terminated key/value strings. There is no end marker for"]
@@ -20660,8 +17451,7 @@ pub struct AVCodecContext {
     #[doc = " (fixed_vop_rate == 0 implies that it is different from the framerate)"]
     #[doc = ""]
     #[doc = " - encoding: MUST be set by user."]
-    #[doc = " - decoding: the use of this field for decoding is deprecated."]
-    #[doc = "             Use framerate instead."]
+    #[doc = " - decoding: unused."]
     pub time_base: AVRational,
     #[doc = " For some codecs, the time base is closer to the field rate than the frame rate."]
     #[doc = " Most notably, H.264 and MPEG-2 specify time_base as half of frame duration"]
@@ -21024,6 +17814,7 @@ pub struct AVCodecContext {
     #[doc = ""]
     #[doc = "   @note the counter is not incremented if encoding/decoding resulted in"]
     #[doc = "   an error."]
+    #[doc = "   @deprecated use frame_num instead"]
     pub frame_number: cty::c_int,
     #[doc = " number of bytes per packet if constant and known or 0"]
     #[doc = " Used by some WAV based audio codecs."]
@@ -21208,6 +17999,7 @@ pub struct AVCodecContext {
     #[doc = " unofficial and experimental (that is, they always try to decode things"]
     #[doc = " when they can) unless they are explicitly asked to behave stupidly"]
     #[doc = " (=strictly conform to the specs)"]
+    #[doc = " This may only be set to one of the FF_COMPLIANCE_* values in defs.h."]
     pub strict_std_compliance: cty::c_int,
     #[doc = " error concealment flags"]
     #[doc = " - encoding: unused"]
@@ -21218,6 +18010,8 @@ pub struct AVCodecContext {
     #[doc = " - decoding: Set by user."]
     pub debug: cty::c_int,
     #[doc = " Error recognition; may misdetect some more or less valid parts as errors."]
+    #[doc = " This is a bitfield of the AV_EF_* values defined in defs.h."]
+    #[doc = ""]
     #[doc = " - encoding: Set by user."]
     #[doc = " - decoding: Set by user."]
     pub err_recognition: cty::c_int,
@@ -21228,18 +18022,33 @@ pub struct AVCodecContext {
     #[doc = "             supported by encoders with the"]
     #[doc = "             AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE capability."]
     #[doc = " - decoding: Set by user."]
+    #[doc = ""]
+    #[doc = " @deprecated Use AV_CODEC_FLAG_COPY_OPAQUE instead"]
     pub reordered_opaque: i64,
     #[doc = " Hardware accelerator in use"]
     #[doc = " - encoding: unused."]
     #[doc = " - decoding: Set by libavcodec"]
     pub hwaccel: *const AVHWAccel,
-    #[doc = " Hardware accelerator context."]
-    #[doc = " For some hardware accelerators, a global context needs to be"]
-    #[doc = " provided by the user. In that case, this holds display-dependent"]
-    #[doc = " data FFmpeg cannot instantiate itself. Please refer to the"]
-    #[doc = " FFmpeg HW accelerator documentation to know how to fill this."]
-    #[doc = " - encoding: unused"]
-    #[doc = " - decoding: Set by user"]
+    #[doc = " Legacy hardware accelerator context."]
+    #[doc = ""]
+    #[doc = " For some hardware acceleration methods, the caller may use this field to"]
+    #[doc = " signal hwaccel-specific data to the codec. The struct pointed to by this"]
+    #[doc = " pointer is hwaccel-dependent and defined in the respective header. Please"]
+    #[doc = " refer to the FFmpeg HW accelerator documentation to know how to fill"]
+    #[doc = " this."]
+    #[doc = ""]
+    #[doc = " In most cases this field is optional - the necessary information may also"]
+    #[doc = " be provided to libavcodec through @ref hw_frames_ctx or @ref"]
+    #[doc = " hw_device_ctx (see avcodec_get_hw_config()). However, in some cases it"]
+    #[doc = " may be the only method of signalling some (optional) information."]
+    #[doc = ""]
+    #[doc = " The struct and its contents are owned by the caller."]
+    #[doc = ""]
+    #[doc = " - encoding: May be set by the caller before avcodec_open2(). Must remain"]
+    #[doc = "             valid until avcodec_free_context()."]
+    #[doc = " - decoding: May be set by the caller in the get_format() callback."]
+    #[doc = "             Must remain valid until the next get_format() call,"]
+    #[doc = "             or avcodec_free_context() (whichever comes first)."]
     pub hwaccel_context: *mut cty::c_void,
     #[doc = " error"]
     #[doc = " - encoding: Set by libavcodec if flags & AV_CODEC_FLAG_PSNR."]
@@ -21281,21 +18090,6 @@ pub struct AVCodecContext {
     #[doc = " - encoding: Set by libavcodec."]
     #[doc = " - decoding: Set by libavcodec."]
     pub active_thread_type: cty::c_int,
-    #[doc = " Set by the client if its custom get_buffer() callback can be called"]
-    #[doc = " synchronously from another thread, which allows faster multithreaded decoding."]
-    #[doc = " draw_horiz_band() will be called from other threads regardless of this setting."]
-    #[doc = " Ignored if the default get_buffer() is used."]
-    #[doc = " - encoding: Set by user."]
-    #[doc = " - decoding: Set by user."]
-    #[doc = ""]
-    #[doc = " @deprecated the custom get_buffer2() callback should always be"]
-    #[doc = "   thread-safe. Thread-unsafe get_buffer2() implementations will be"]
-    #[doc = "   invalid starting with LIBAVCODEC_VERSION_MAJOR=60; in other words,"]
-    #[doc = "   libavcodec will behave as if this field was always set to 1."]
-    #[doc = "   Callers that want to be forward compatible with future libavcodec"]
-    #[doc = "   versions should wrap access to this field in"]
-    #[doc = "     #if LIBAVCODEC_VERSION_MAJOR < 60"]
-    pub thread_safe_callbacks: cty::c_int,
     #[doc = " The codec may call this to execute several independent things."]
     #[doc = " It will return only after finishing all tasks."]
     #[doc = " The user may replace this with some multithreaded implementation,"]
@@ -21444,8 +18238,6 @@ pub struct AVCodecContext {
     #[doc = " - decoding: unused"]
     #[doc = " - encoding: set by libavcodec"]
     pub seek_preroll: cty::c_int,
-    #[doc = " @deprecated unused"]
-    pub debug_mv: cty::c_int,
     #[doc = " custom intra quantization matrix"]
     #[doc = " - encoding: Set by user, can be NULL."]
     #[doc = " - decoding: unused."]
@@ -21491,8 +18283,6 @@ pub struct AVCodecContext {
     #[doc = ""]
     #[doc = "             This field should be set before avcodec_open2() is called."]
     pub hw_frames_ctx: *mut AVBufferRef,
-    #[doc = " @deprecated unused"]
-    pub sub_text_format: cty::c_int,
     #[doc = " Audio only. The amount of padding (in samples) appended by the encoder to"]
     #[doc = " the end of the audio. I.e. this number of decoded samples must be"]
     #[doc = " discarded by the caller from the end of the stream to get the original"]
@@ -21623,6 +18413,14 @@ pub struct AVCodecContext {
     #[doc = " - decoding: may be set by the caller if known e.g. from the container."]
     #[doc = "             The decoder can then override during decoding as needed."]
     pub ch_layout: AVChannelLayout,
+    #[doc = " Frame counter, set by libavcodec."]
+    #[doc = ""]
+    #[doc = " - decoding: total number of frames returned from the decoder so far."]
+    #[doc = " - encoding: total number of frames passed to the encoder so far."]
+    #[doc = ""]
+    #[doc = "   @note the counter is not incremented if encoding/decoding resulted in"]
+    #[doc = "   an error."]
+    pub frame_num: i64,
 }
 #[test]
 fn bindgen_test_layout_AVCodecContext() {
@@ -22855,20 +19653,8 @@ fn bindgen_test_layout_AVCodecContext() {
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<AVCodecContext>())).thread_safe_callbacks as *const _ as usize
-        },
-        648usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVCodecContext),
-            "::",
-            stringify!(thread_safe_callbacks)
-        )
-    );
-    assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).execute as *const _ as usize },
-        656usize,
+        648usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22878,7 +19664,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).execute2 as *const _ as usize },
-        664usize,
+        656usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22888,7 +19674,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).nsse_weight as *const _ as usize },
-        672usize,
+        664usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22898,7 +19684,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).profile as *const _ as usize },
-        676usize,
+        668usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22908,7 +19694,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).level as *const _ as usize },
-        680usize,
+        672usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22920,7 +19706,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).skip_loop_filter as *const _ as usize
         },
-        684usize,
+        676usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22930,7 +19716,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).skip_idct as *const _ as usize },
-        688usize,
+        680usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22940,7 +19726,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).skip_frame as *const _ as usize },
-        692usize,
+        684usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22950,7 +19736,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).subtitle_header as *const _ as usize },
-        696usize,
+        688usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22962,7 +19748,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).subtitle_header_size as *const _ as usize
         },
-        704usize,
+        696usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22972,7 +19758,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).initial_padding as *const _ as usize },
-        708usize,
+        700usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22982,7 +19768,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).framerate as *const _ as usize },
-        712usize,
+        704usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -22992,7 +19778,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).sw_pix_fmt as *const _ as usize },
-        720usize,
+        712usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23002,7 +19788,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).pkt_timebase as *const _ as usize },
-        724usize,
+        716usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23014,7 +19800,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).codec_descriptor as *const _ as usize
         },
-        736usize,
+        728usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23027,7 +19813,7 @@ fn bindgen_test_layout_AVCodecContext() {
             &(*(::core::ptr::null::<AVCodecContext>())).pts_correction_num_faulty_pts as *const _
                 as usize
         },
-        744usize,
+        736usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23040,7 +19826,7 @@ fn bindgen_test_layout_AVCodecContext() {
             &(*(::core::ptr::null::<AVCodecContext>())).pts_correction_num_faulty_dts as *const _
                 as usize
         },
-        752usize,
+        744usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23052,7 +19838,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).pts_correction_last_pts as *const _ as usize
         },
-        760usize,
+        752usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23064,7 +19850,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).pts_correction_last_dts as *const _ as usize
         },
-        768usize,
+        760usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23074,7 +19860,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).sub_charenc as *const _ as usize },
-        776usize,
+        768usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23086,7 +19872,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).sub_charenc_mode as *const _ as usize
         },
-        784usize,
+        776usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23096,7 +19882,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).skip_alpha as *const _ as usize },
-        788usize,
+        780usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23106,7 +19892,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).seek_preroll as *const _ as usize },
-        792usize,
+        784usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23115,20 +19901,10 @@ fn bindgen_test_layout_AVCodecContext() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVCodecContext>())).debug_mv as *const _ as usize },
-        796usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVCodecContext),
-            "::",
-            stringify!(debug_mv)
-        )
-    );
-    assert_eq!(
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).chroma_intra_matrix as *const _ as usize
         },
-        800usize,
+        792usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23138,7 +19914,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).dump_separator as *const _ as usize },
-        808usize,
+        800usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23148,7 +19924,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).codec_whitelist as *const _ as usize },
-        816usize,
+        808usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23158,7 +19934,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).properties as *const _ as usize },
-        824usize,
+        816usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23168,7 +19944,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).coded_side_data as *const _ as usize },
-        832usize,
+        824usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23180,7 +19956,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).nb_coded_side_data as *const _ as usize
         },
-        840usize,
+        832usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23190,7 +19966,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).hw_frames_ctx as *const _ as usize },
-        848usize,
+        840usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23199,20 +19975,10 @@ fn bindgen_test_layout_AVCodecContext() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVCodecContext>())).sub_text_format as *const _ as usize },
-        856usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVCodecContext),
-            "::",
-            stringify!(sub_text_format)
-        )
-    );
-    assert_eq!(
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).trailing_padding as *const _ as usize
         },
-        860usize,
+        848usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23222,7 +19988,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).max_pixels as *const _ as usize },
-        864usize,
+        856usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23232,7 +19998,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).hw_device_ctx as *const _ as usize },
-        872usize,
+        864usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23242,7 +20008,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).hwaccel_flags as *const _ as usize },
-        880usize,
+        872usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23252,7 +20018,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).apply_cropping as *const _ as usize },
-        884usize,
+        876usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23262,7 +20028,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).extra_hw_frames as *const _ as usize },
-        888usize,
+        880usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23275,7 +20041,7 @@ fn bindgen_test_layout_AVCodecContext() {
             &(*(::core::ptr::null::<AVCodecContext>())).discard_damaged_percentage as *const _
                 as usize
         },
-        892usize,
+        884usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23285,7 +20051,7 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).max_samples as *const _ as usize },
-        896usize,
+        888usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23297,7 +20063,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).export_side_data as *const _ as usize
         },
-        904usize,
+        896usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23309,7 +20075,7 @@ fn bindgen_test_layout_AVCodecContext() {
         unsafe {
             &(*(::core::ptr::null::<AVCodecContext>())).get_encode_buffer as *const _ as usize
         },
-        912usize,
+        904usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
@@ -23319,12 +20085,22 @@ fn bindgen_test_layout_AVCodecContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVCodecContext>())).ch_layout as *const _ as usize },
-        920usize,
+        912usize,
         concat!(
             "Offset of field: ",
             stringify!(AVCodecContext),
             "::",
             stringify!(ch_layout)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<AVCodecContext>())).frame_num as *const _ as usize },
+        936usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(AVCodecContext),
+            "::",
+            stringify!(frame_num)
         )
     );
 }
@@ -23915,10 +20691,6 @@ extern "C" {
     pub fn avcodec_get_class() -> *const AVClass;
 }
 extern "C" {
-    #[doc = " @deprecated This function should not be used."]
-    pub fn avcodec_get_frame_class() -> *const AVClass;
-}
-extern "C" {
     #[doc = " Get the AVClass for AVSubtitleRect. It can be used in combination with"]
     #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
     #[doc = ""]
@@ -24061,6 +20833,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param xpos  horizontal chroma sample position"]
     #[doc = " @param ypos  vertical   chroma sample position"]
+    #[doc = " @deprecated Use av_chroma_location_enum_to_pos() instead."]
     pub fn avcodec_enum_to_chroma_pos(
         xpos: *mut cty::c_int,
         ypos: *mut cty::c_int,
@@ -24075,6 +20848,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param xpos  horizontal chroma sample position"]
     #[doc = " @param ypos  vertical   chroma sample position"]
+    #[doc = " @deprecated Use av_chroma_location_pos_to_enum() instead."]
     pub fn avcodec_chroma_pos_to_enum(xpos: cty::c_int, ypos: cty::c_int) -> AVChromaLocation;
 }
 extern "C" {
@@ -24107,7 +20881,7 @@ extern "C" {
         avctx: *mut AVCodecContext,
         sub: *mut AVSubtitle,
         got_sub_ptr: *mut cty::c_int,
-        avpkt: *mut AVPacket,
+        avpkt: *const AVPacket,
     ) -> cty::c_int;
 }
 extern "C" {
@@ -24144,39 +20918,40 @@ extern "C" {
     #[doc = "                  still has frames buffered, it will return them after sending"]
     #[doc = "                  a flush packet."]
     #[doc = ""]
-    #[doc = " @return 0 on success, otherwise negative error code:"]
-    #[doc = "      AVERROR(EAGAIN):   input is not accepted in the current state - user"]
-    #[doc = "                         must read output with avcodec_receive_frame() (once"]
-    #[doc = "                         all output is read, the packet should be resent, and"]
-    #[doc = "                         the call will not fail with EAGAIN)."]
-    #[doc = "      AVERROR_EOF:       the decoder has been flushed, and no new packets can"]
-    #[doc = "                         be sent to it (also returned if more than 1 flush"]
-    #[doc = "                         packet is sent)"]
-    #[doc = "      AVERROR(EINVAL):   codec not opened, it is an encoder, or requires flush"]
-    #[doc = "      AVERROR(ENOMEM):   failed to add packet to internal queue, or similar"]
-    #[doc = "      other errors: legitimate decoding errors"]
+    #[doc = " @retval 0                 success"]
+    #[doc = " @retval AVERROR(EAGAIN)   input is not accepted in the current state - user"]
+    #[doc = "                           must read output with avcodec_receive_frame() (once"]
+    #[doc = "                           all output is read, the packet should be resent,"]
+    #[doc = "                           and the call will not fail with EAGAIN)."]
+    #[doc = " @retval AVERROR_EOF       the decoder has been flushed, and no new packets can be"]
+    #[doc = "                           sent to it (also returned if more than 1 flush"]
+    #[doc = "                           packet is sent)"]
+    #[doc = " @retval AVERROR(EINVAL)   codec not opened, it is an encoder, or requires flush"]
+    #[doc = " @retval AVERROR(ENOMEM)   failed to add packet to internal queue, or similar"]
+    #[doc = " @retval \"another negative error code\" legitimate decoding errors"]
     pub fn avcodec_send_packet(avctx: *mut AVCodecContext, avpkt: *const AVPacket) -> cty::c_int;
 }
 extern "C" {
-    #[doc = " Return decoded output data from a decoder."]
+    #[doc = " Return decoded output data from a decoder or encoder (when the"]
+    #[doc = " AV_CODEC_FLAG_RECON_FRAME flag is used)."]
     #[doc = ""]
     #[doc = " @param avctx codec context"]
     #[doc = " @param frame This will be set to a reference-counted video or audio"]
     #[doc = "              frame (depending on the decoder type) allocated by the"]
-    #[doc = "              decoder. Note that the function will always call"]
+    #[doc = "              codec. Note that the function will always call"]
     #[doc = "              av_frame_unref(frame) before doing anything else."]
     #[doc = ""]
-    #[doc = " @return"]
-    #[doc = "      0:                 success, a frame was returned"]
-    #[doc = "      AVERROR(EAGAIN):   output is not available in this state - user must try"]
-    #[doc = "                         to send new input"]
-    #[doc = "      AVERROR_EOF:       the decoder has been fully flushed, and there will be"]
-    #[doc = "                         no more output frames"]
-    #[doc = "      AVERROR(EINVAL):   codec not opened, or it is an encoder"]
-    #[doc = "      AVERROR_INPUT_CHANGED:   current decoded frame has changed parameters"]
-    #[doc = "                               with respect to first decoded frame. Applicable"]
-    #[doc = "                               when flag AV_CODEC_FLAG_DROPCHANGED is set."]
-    #[doc = "      other negative values: legitimate decoding errors"]
+    #[doc = " @retval 0                success, a frame was returned"]
+    #[doc = " @retval AVERROR(EAGAIN)  output is not available in this state - user must"]
+    #[doc = "                          try to send new input"]
+    #[doc = " @retval AVERROR_EOF      the codec has been fully flushed, and there will be"]
+    #[doc = "                          no more output frames"]
+    #[doc = " @retval AVERROR(EINVAL)  codec not opened, or it is an encoder without the"]
+    #[doc = "                          AV_CODEC_FLAG_RECON_FRAME flag enabled"]
+    #[doc = " @retval AVERROR_INPUT_CHANGED current decoded frame has changed parameters with"]
+    #[doc = "                          respect to first decoded frame. Applicable when flag"]
+    #[doc = "                          AV_CODEC_FLAG_DROPCHANGED is set."]
+    #[doc = " @retval \"other negative error code\" legitimate decoding errors"]
     pub fn avcodec_receive_frame(avctx: *mut AVCodecContext, frame: *mut AVFrame) -> cty::c_int;
 }
 extern "C" {
@@ -24202,16 +20977,16 @@ extern "C" {
     #[doc = "                  If it is not set, frame->nb_samples must be equal to"]
     #[doc = "                  avctx->frame_size for all frames except the last."]
     #[doc = "                  The final frame may be smaller than avctx->frame_size."]
-    #[doc = " @return 0 on success, otherwise negative error code:"]
-    #[doc = "      AVERROR(EAGAIN):   input is not accepted in the current state - user"]
-    #[doc = "                         must read output with avcodec_receive_packet() (once"]
-    #[doc = "                         all output is read, the packet should be resent, and"]
-    #[doc = "                         the call will not fail with EAGAIN)."]
-    #[doc = "      AVERROR_EOF:       the encoder has been flushed, and no new frames can"]
-    #[doc = "                         be sent to it"]
-    #[doc = "      AVERROR(EINVAL):   codec not opened, it is a decoder, or requires flush"]
-    #[doc = "      AVERROR(ENOMEM):   failed to add packet to internal queue, or similar"]
-    #[doc = "      other errors: legitimate encoding errors"]
+    #[doc = " @retval 0                 success"]
+    #[doc = " @retval AVERROR(EAGAIN)   input is not accepted in the current state - user must"]
+    #[doc = "                           read output with avcodec_receive_packet() (once all"]
+    #[doc = "                           output is read, the packet should be resent, and the"]
+    #[doc = "                           call will not fail with EAGAIN)."]
+    #[doc = " @retval AVERROR_EOF       the encoder has been flushed, and no new frames can"]
+    #[doc = "                           be sent to it"]
+    #[doc = " @retval AVERROR(EINVAL)   codec not opened, it is a decoder, or requires flush"]
+    #[doc = " @retval AVERROR(ENOMEM)   failed to add packet to internal queue, or similar"]
+    #[doc = " @retval \"another negative error code\" legitimate encoding errors"]
     pub fn avcodec_send_frame(avctx: *mut AVCodecContext, frame: *const AVFrame) -> cty::c_int;
 }
 extern "C" {
@@ -24221,13 +20996,13 @@ extern "C" {
     #[doc = " @param avpkt This will be set to a reference-counted packet allocated by the"]
     #[doc = "              encoder. Note that the function will always call"]
     #[doc = "              av_packet_unref(avpkt) before doing anything else."]
-    #[doc = " @return 0 on success, otherwise negative error code:"]
-    #[doc = "      AVERROR(EAGAIN):   output is not available in the current state - user"]
-    #[doc = "                         must try to send input"]
-    #[doc = "      AVERROR_EOF:       the encoder has been fully flushed, and there will be"]
-    #[doc = "                         no more output packets"]
-    #[doc = "      AVERROR(EINVAL):   codec not opened, or it is a decoder"]
-    #[doc = "      other errors: legitimate encoding errors"]
+    #[doc = " @retval 0               success"]
+    #[doc = " @retval AVERROR(EAGAIN) output is not available in the current state - user must"]
+    #[doc = "                         try to send input"]
+    #[doc = " @retval AVERROR_EOF     the encoder has been fully flushed, and there will be no"]
+    #[doc = "                         more output packets"]
+    #[doc = " @retval AVERROR(EINVAL) codec not opened, or it is a decoder"]
+    #[doc = " @retval \"another negative error code\" legitimate encoding errors"]
     pub fn avcodec_receive_packet(avctx: *mut AVCodecContext, avpkt: *mut AVPacket) -> cty::c_int;
 }
 extern "C" {
@@ -24333,9 +21108,13 @@ extern "C" {
         out_frames_ref: *mut *mut AVBufferRef,
     ) -> cty::c_int;
 }
+#[doc = "< unknown"]
 pub const AVPictureStructure_AV_PICTURE_STRUCTURE_UNKNOWN: AVPictureStructure = 0;
+#[doc = "< coded as top field"]
 pub const AVPictureStructure_AV_PICTURE_STRUCTURE_TOP_FIELD: AVPictureStructure = 1;
+#[doc = "< coded as bottom field"]
 pub const AVPictureStructure_AV_PICTURE_STRUCTURE_BOTTOM_FIELD: AVPictureStructure = 2;
+#[doc = "< coded as frame"]
 pub const AVPictureStructure_AV_PICTURE_STRUCTURE_FRAME: AVPictureStructure = 3;
 #[doc = " @defgroup lavc_parsing Frame parsing"]
 #[doc = " @{"]
@@ -25833,10 +22612,6 @@ pub struct AVIOContext {
     #[doc = " but ignore them and treat them as AVIO_DATA_MARKER_UNKNOWN (to avoid needlessly"]
     #[doc = " small chunks of data returned from the callback)."]
     pub ignore_boundary_point: cty::c_int,
-    #[doc = " @deprecated field utilized privately by libavformat. For a public"]
-    #[doc = "             statistic of how many bytes were written out, see"]
-    #[doc = "             AVIOContext::bytes_written."]
-    pub written: i64,
     #[doc = " Maximum reached position before a backward seek in the write buffer,"]
     #[doc = " used keeping track of already written data for a later flush."]
     pub buf_ptr_max: *mut cty::c_uchar,
@@ -25849,7 +22624,7 @@ pub struct AVIOContext {
 fn bindgen_test_layout_AVIOContext() {
     assert_eq!(
         ::core::mem::size_of::<AVIOContext>(),
-        216usize,
+        208usize,
         concat!("Size of: ", stringify!(AVIOContext))
     );
     assert_eq!(
@@ -26120,18 +22895,8 @@ fn bindgen_test_layout_AVIOContext() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVIOContext>())).written as *const _ as usize },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVIOContext),
-            "::",
-            stringify!(written)
-        )
-    );
-    assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVIOContext>())).buf_ptr_max as *const _ as usize },
-        192usize,
+        184usize,
         concat!(
             "Offset of field: ",
             stringify!(AVIOContext),
@@ -26141,7 +22906,7 @@ fn bindgen_test_layout_AVIOContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVIOContext>())).bytes_read as *const _ as usize },
-        200usize,
+        192usize,
         concat!(
             "Offset of field: ",
             stringify!(AVIOContext),
@@ -26151,7 +22916,7 @@ fn bindgen_test_layout_AVIOContext() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVIOContext>())).bytes_written as *const _ as usize },
-        208usize,
+        200usize,
         concat!(
             "Offset of field: ",
             stringify!(AVIOContext),
@@ -26333,6 +23098,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " Zero-length ranges are omitted from the output."]
     #[doc = ""]
+    #[doc = " @param s    the AVIOContext"]
     #[doc = " @param time the stream time the current bytestream pos corresponds to"]
     #[doc = "             (in AV_TIME_BASE units), or AV_NOPTS_VALUE if unknown or not"]
     #[doc = "             applicable"]
@@ -26362,11 +23128,7 @@ extern "C" {
 extern "C" {
     #[doc = " Writes a formatted string to the context taking a va_list."]
     #[doc = " @return number of bytes written, < 0 on error."]
-    pub fn avio_vprintf(
-        s: *mut AVIOContext,
-        fmt: *const cty::c_char,
-        ap: *mut __va_list_tag,
-    ) -> cty::c_int;
+    pub fn avio_vprintf(s: *mut AVIOContext, fmt: *const cty::c_char, ap: va_list) -> cty::c_int;
 }
 extern "C" {
     #[doc = " Writes a formatted string to the context."]
@@ -26670,11 +23432,6 @@ extern "C" {
 pub struct AVDeviceInfoList {
     _unused: [u8; 0],
 }
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct AVDeviceCapabilitiesQuery {
-    _unused: [u8; 0],
-}
 extern "C" {
     #[doc = " Allocate and read the payload of a packet and initialize its"]
     #[doc = " fields with default values."]
@@ -26803,133 +23560,12 @@ pub struct AVOutputFormat {
     pub codec_tag: *const *const AVCodecTag,
     #[doc = "< AVClass for the private context"]
     pub priv_class: *const AVClass,
-    #[doc = " No fields below this line are part of the public API. They"]
-    #[doc = " may not be used outside of libavformat and can be changed and"]
-    #[doc = " removed at will."]
-    #[doc = " New public fields should be added right above."]
-    #[doc = ""]
-    #[doc = " size of private data so that it can be allocated in the wrapper"]
-    pub priv_data_size: cty::c_int,
-    #[doc = " Internal flags. See FF_FMT_FLAG_* in internal.h."]
-    pub flags_internal: cty::c_int,
-    pub write_header:
-        ::core::option::Option<unsafe extern "C" fn(arg1: *mut AVFormatContext) -> cty::c_int>,
-    #[doc = " Write a packet. If AVFMT_ALLOW_FLUSH is set in flags,"]
-    #[doc = " pkt can be NULL in order to flush data buffered in the muxer."]
-    #[doc = " When flushing, return 0 if there still is more data to flush,"]
-    #[doc = " or 1 if everything was flushed and there is no more buffered"]
-    #[doc = " data."]
-    pub write_packet: ::core::option::Option<
-        unsafe extern "C" fn(arg1: *mut AVFormatContext, pkt: *mut AVPacket) -> cty::c_int,
-    >,
-    pub write_trailer:
-        ::core::option::Option<unsafe extern "C" fn(arg1: *mut AVFormatContext) -> cty::c_int>,
-    #[doc = " A format-specific function for interleavement."]
-    #[doc = " If unset, packets will be interleaved by dts."]
-    #[doc = ""]
-    #[doc = " @param s           An AVFormatContext for output. pkt will be added to"]
-    #[doc = "                    resp. taken from its packet buffer."]
-    #[doc = " @param[in,out] pkt A packet to be interleaved if has_packet is set;"]
-    #[doc = "                    also used to return packets. If no packet is returned"]
-    #[doc = "                    (e.g. on error), pkt is blank on return."]
-    #[doc = " @param flush       1 if no further packets are available as input and"]
-    #[doc = "                    all remaining packets should be output."]
-    #[doc = " @param has_packet  If set, pkt contains a packet to be interleaved"]
-    #[doc = "                    on input; otherwise pkt is blank on input."]
-    #[doc = " @return 1 if a packet was output, 0 if no packet could be output,"]
-    #[doc = "         < 0 if an error occurred"]
-    pub interleave_packet: ::core::option::Option<
-        unsafe extern "C" fn(
-            s: *mut AVFormatContext,
-            pkt: *mut AVPacket,
-            flush: cty::c_int,
-            has_packet: cty::c_int,
-        ) -> cty::c_int,
-    >,
-    #[doc = " Test if the given codec can be stored in this container."]
-    #[doc = ""]
-    #[doc = " @return 1 if the codec is supported, 0 if it is not."]
-    #[doc = "         A negative number if unknown."]
-    #[doc = "         MKTAG('A', 'P', 'I', 'C') if the codec is only supported as AV_DISPOSITION_ATTACHED_PIC"]
-    pub query_codec: ::core::option::Option<
-        unsafe extern "C" fn(id: AVCodecID, std_compliance: cty::c_int) -> cty::c_int,
-    >,
-    pub get_output_timestamp: ::core::option::Option<
-        unsafe extern "C" fn(
-            s: *mut AVFormatContext,
-            stream: cty::c_int,
-            dts: *mut i64,
-            wall: *mut i64,
-        ),
-    >,
-    #[doc = " Allows sending messages from application to device."]
-    pub control_message: ::core::option::Option<
-        unsafe extern "C" fn(
-            s: *mut AVFormatContext,
-            type_: cty::c_int,
-            data: *mut cty::c_void,
-            data_size: size_t,
-        ) -> cty::c_int,
-    >,
-    #[doc = " Write an uncoded AVFrame."]
-    #[doc = ""]
-    #[doc = " See av_write_uncoded_frame() for details."]
-    #[doc = ""]
-    #[doc = " The library will free *frame afterwards, but the muxer can prevent it"]
-    #[doc = " by setting the pointer to NULL."]
-    pub write_uncoded_frame: ::core::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut AVFormatContext,
-            stream_index: cty::c_int,
-            frame: *mut *mut AVFrame,
-            flags: cty::c_uint,
-        ) -> cty::c_int,
-    >,
-    #[doc = " Returns device list with it properties."]
-    #[doc = " @see avdevice_list_devices() for more details."]
-    pub get_device_list: ::core::option::Option<
-        unsafe extern "C" fn(
-            s: *mut AVFormatContext,
-            device_list: *mut AVDeviceInfoList,
-        ) -> cty::c_int,
-    >,
-    #[doc = "< default data codec"]
-    pub data_codec: AVCodecID,
-    #[doc = " Initialize format. May allocate data here, and set any AVFormatContext or"]
-    #[doc = " AVStream parameters that need to be set before packets are sent."]
-    #[doc = " This method must not write output."]
-    #[doc = ""]
-    #[doc = " Return 0 if streams were fully configured, 1 if not, negative AVERROR on failure"]
-    #[doc = ""]
-    #[doc = " Any allocations made here must be freed in deinit()."]
-    pub init:
-        ::core::option::Option<unsafe extern "C" fn(arg1: *mut AVFormatContext) -> cty::c_int>,
-    #[doc = " Deinitialize format. If present, this is called whenever the muxer is being"]
-    #[doc = " destroyed, regardless of whether or not the header has been written."]
-    #[doc = ""]
-    #[doc = " If a trailer is being written, this is called after write_trailer()."]
-    #[doc = ""]
-    #[doc = " This is called if init() fails as well."]
-    pub deinit: ::core::option::Option<unsafe extern "C" fn(arg1: *mut AVFormatContext)>,
-    #[doc = " Set up any necessary bitstream filtering and extract any extra data needed"]
-    #[doc = " for the global header."]
-    #[doc = ""]
-    #[doc = " @note pkt might have been directly forwarded by a meta-muxer; therefore"]
-    #[doc = "       pkt->stream_index as well as the pkt's timebase might be invalid."]
-    #[doc = " Return 0 if more packets from this stream must be checked; 1 if not."]
-    pub check_bitstream: ::core::option::Option<
-        unsafe extern "C" fn(
-            s: *mut AVFormatContext,
-            st: *mut AVStream,
-            pkt: *const AVPacket,
-        ) -> cty::c_int,
-    >,
 }
 #[test]
 fn bindgen_test_layout_AVOutputFormat() {
     assert_eq!(
         ::core::mem::size_of::<AVOutputFormat>(),
-        176usize,
+        64usize,
         concat!("Size of: ", stringify!(AVOutputFormat))
     );
     assert_eq!(
@@ -27035,162 +23671,6 @@ fn bindgen_test_layout_AVOutputFormat() {
             stringify!(AVOutputFormat),
             "::",
             stringify!(priv_class)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).priv_data_size as *const _ as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(priv_data_size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).flags_internal as *const _ as usize },
-        68usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(flags_internal)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).write_header as *const _ as usize },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(write_header)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).write_packet as *const _ as usize },
-        80usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(write_packet)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).write_trailer as *const _ as usize },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(write_trailer)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<AVOutputFormat>())).interleave_packet as *const _ as usize
-        },
-        96usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(interleave_packet)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).query_codec as *const _ as usize },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(query_codec)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<AVOutputFormat>())).get_output_timestamp as *const _ as usize
-        },
-        112usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(get_output_timestamp)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).control_message as *const _ as usize },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(control_message)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<AVOutputFormat>())).write_uncoded_frame as *const _ as usize
-        },
-        128usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(write_uncoded_frame)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).get_device_list as *const _ as usize },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(get_device_list)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).data_codec as *const _ as usize },
-        144usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(data_codec)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).init as *const _ as usize },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(init)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).deinit as *const _ as usize },
-        160usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(deinit)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVOutputFormat>())).check_bitstream as *const _ as usize },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVOutputFormat),
-            "::",
-            stringify!(check_bitstream)
         )
     );
 }
@@ -27656,12 +24136,22 @@ extern "C" {
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVStream {
+    #[doc = " A class for @ref avoptions. Set on stream creation."]
+    pub av_class: *const AVClass,
     #[doc = "< stream index in AVFormatContext"]
     pub index: cty::c_int,
     #[doc = " Format-specific stream ID."]
     #[doc = " decoding: set by libavformat"]
     #[doc = " encoding: set by the user, replaced by libavformat if left unset"]
     pub id: cty::c_int,
+    #[doc = " Codec parameters associated with this stream. Allocated and freed by"]
+    #[doc = " libavformat in avformat_new_stream() and avformat_free_context()"]
+    #[doc = " respectively."]
+    #[doc = ""]
+    #[doc = " - demuxing: filled by libavformat on stream creation or in"]
+    #[doc = "             avformat_find_stream_info()"]
+    #[doc = " - muxing: filled by the caller before avformat_write_header()"]
+    pub codecpar: *mut AVCodecParameters,
     pub priv_data: *mut cty::c_void,
     #[doc = " This is the fundamental unit of time (in seconds) in terms"]
     #[doc = " of which frame timestamps are represented."]
@@ -27750,14 +24240,6 @@ pub struct AVStream {
     #[doc = " For example, if the time base is 1/90000 and all frames have either"]
     #[doc = " approximately 3600 or 1800 timer ticks, then r_frame_rate will be 50/1."]
     pub r_frame_rate: AVRational,
-    #[doc = " Codec parameters associated with this stream. Allocated and freed by"]
-    #[doc = " libavformat in avformat_new_stream() and avformat_free_context()"]
-    #[doc = " respectively."]
-    #[doc = ""]
-    #[doc = " - demuxing: filled by libavformat on stream creation or in"]
-    #[doc = "             avformat_find_stream_info()"]
-    #[doc = " - muxing: filled by the caller before avformat_write_header()"]
-    pub codecpar: *mut AVCodecParameters,
     #[doc = " Number of bits in timestamps. Used for wrapping control."]
     #[doc = ""]
     #[doc = " - demuxing: set by libavformat"]
@@ -27769,7 +24251,7 @@ pub struct AVStream {
 fn bindgen_test_layout_AVStream() {
     assert_eq!(
         ::core::mem::size_of::<AVStream>(),
-        224usize,
+        232usize,
         concat!("Size of: ", stringify!(AVStream))
     );
     assert_eq!(
@@ -27778,8 +24260,18 @@ fn bindgen_test_layout_AVStream() {
         concat!("Alignment of ", stringify!(AVStream))
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVStream>())).index as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<AVStream>())).av_class as *const _ as usize },
         0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(AVStream),
+            "::",
+            stringify!(av_class)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<AVStream>())).index as *const _ as usize },
+        8usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27789,7 +24281,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).id as *const _ as usize },
-        4usize,
+        12usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27798,8 +24290,18 @@ fn bindgen_test_layout_AVStream() {
         )
     );
     assert_eq!(
+        unsafe { &(*(::core::ptr::null::<AVStream>())).codecpar as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(AVStream),
+            "::",
+            stringify!(codecpar)
+        )
+    );
+    assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).priv_data as *const _ as usize },
-        8usize,
+        24usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27809,7 +24311,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).time_base as *const _ as usize },
-        16usize,
+        32usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27819,7 +24321,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).start_time as *const _ as usize },
-        24usize,
+        40usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27829,7 +24331,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).duration as *const _ as usize },
-        32usize,
+        48usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27839,7 +24341,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).nb_frames as *const _ as usize },
-        40usize,
+        56usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27849,7 +24351,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).disposition as *const _ as usize },
-        48usize,
+        64usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27859,7 +24361,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).discard as *const _ as usize },
-        52usize,
+        68usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27869,7 +24371,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).sample_aspect_ratio as *const _ as usize },
-        56usize,
+        72usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27879,7 +24381,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).metadata as *const _ as usize },
-        64usize,
+        80usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27889,7 +24391,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).avg_frame_rate as *const _ as usize },
-        72usize,
+        88usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27899,7 +24401,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).attached_pic as *const _ as usize },
-        80usize,
+        96usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27909,7 +24411,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).side_data as *const _ as usize },
-        184usize,
+        200usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27919,7 +24421,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).nb_side_data as *const _ as usize },
-        192usize,
+        208usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27929,7 +24431,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).event_flags as *const _ as usize },
-        196usize,
+        212usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27939,7 +24441,7 @@ fn bindgen_test_layout_AVStream() {
     );
     assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).r_frame_rate as *const _ as usize },
-        200usize,
+        216usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -27948,18 +24450,8 @@ fn bindgen_test_layout_AVStream() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<AVStream>())).codecpar as *const _ as usize },
-        208usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AVStream),
-            "::",
-            stringify!(codecpar)
-        )
-    );
-    assert_eq!(
         unsafe { &(*(::core::ptr::null::<AVStream>())).pts_wrap_bits as *const _ as usize },
-        216usize,
+        224usize,
         concat!(
             "Offset of field: ",
             stringify!(AVStream),
@@ -28630,6 +25122,8 @@ pub struct AVFormatContext {
         ) -> cty::c_int,
     >,
     #[doc = " A callback for closing the streams opened with AVFormatContext.io_open()."]
+    #[doc = ""]
+    #[doc = " @deprecated use io_close2"]
     pub io_close:
         ::core::option::Option<unsafe extern "C" fn(s: *mut AVFormatContext, pb: *mut AVIOContext)>,
     #[doc = " ',' separated list of disallowed protocols."]
@@ -29516,8 +26010,8 @@ extern "C" {
 extern "C" {
     #[doc = " Iterate over all registered demuxers."]
     #[doc = ""]
-    #[doc = " @param opaque a pointer where libavformat will store the iteration state. Must"]
-    #[doc = "               point to NULL to start the iteration."]
+    #[doc = " @param opaque a pointer where libavformat will store the iteration state."]
+    #[doc = "               Must point to NULL to start the iteration."]
     #[doc = ""]
     #[doc = " @return the next registered demuxer or NULL when the iteration is"]
     #[doc = "         finished"]
@@ -29569,12 +26063,13 @@ extern "C" {
 extern "C" {
     #[doc = " Wrap an existing array as stream side data."]
     #[doc = ""]
-    #[doc = " @param st stream"]
+    #[doc = " @param st   stream"]
     #[doc = " @param type side information type"]
     #[doc = " @param data the side data array. It must be allocated with the av_malloc()"]
     #[doc = "             family of functions. The ownership of the data is transferred to"]
     #[doc = "             st."]
     #[doc = " @param size side information size"]
+    #[doc = ""]
     #[doc = " @return zero on success, a negative AVERROR code on failure. On failure,"]
     #[doc = "         the stream is unchanged and the data remains owned by the caller."]
     pub fn av_stream_add_side_data(
@@ -29588,8 +26083,9 @@ extern "C" {
     #[doc = " Allocate new information from stream."]
     #[doc = ""]
     #[doc = " @param stream stream"]
-    #[doc = " @param type desired side information type"]
-    #[doc = " @param size side information size"]
+    #[doc = " @param type   desired side information type"]
+    #[doc = " @param size   side information size"]
+    #[doc = ""]
     #[doc = " @return pointer to fresh allocated data or NULL otherwise"]
     pub fn av_stream_new_side_data(
         stream: *mut AVStream,
@@ -29601,9 +26097,10 @@ extern "C" {
     #[doc = " Get side information from stream."]
     #[doc = ""]
     #[doc = " @param stream stream"]
-    #[doc = " @param type desired side information type"]
-    #[doc = " @param size If supplied, *size will be set to the size of the side data"]
-    #[doc = "             or to zero if the desired side data is not present."]
+    #[doc = " @param type   desired side information type"]
+    #[doc = " @param size   If supplied, *size will be set to the size of the side data"]
+    #[doc = "               or to zero if the desired side data is not present."]
+    #[doc = ""]
     #[doc = " @return pointer to data if present or NULL otherwise"]
     pub fn av_stream_get_side_data(
         stream: *const AVStream,
@@ -29619,16 +26116,17 @@ extern "C" {
     #[doc = " avformat_free_context() can be used to free the context and"]
     #[doc = " everything allocated by the framework within it."]
     #[doc = ""]
-    #[doc = " @param *ctx is set to the created format context, or to NULL in"]
-    #[doc = " case of failure"]
-    #[doc = " @param oformat format to use for allocating the context, if NULL"]
-    #[doc = " format_name and filename are used instead"]
-    #[doc = " @param format_name the name of output format to use for allocating the"]
-    #[doc = " context, if NULL filename is used instead"]
-    #[doc = " @param filename the name of the filename to use for allocating the"]
-    #[doc = " context, may be NULL"]
-    #[doc = " @return >= 0 in case of success, a negative AVERROR code in case of"]
-    #[doc = " failure"]
+    #[doc = " @param ctx           pointee is set to the created format context,"]
+    #[doc = "                      or to NULL in case of failure"]
+    #[doc = " @param oformat       format to use for allocating the context, if NULL"]
+    #[doc = "                      format_name and filename are used instead"]
+    #[doc = " @param format_name   the name of output format to use for allocating the"]
+    #[doc = "                      context, if NULL filename is used instead"]
+    #[doc = " @param filename      the name of the filename to use for allocating the"]
+    #[doc = "                      context, may be NULL"]
+    #[doc = ""]
+    #[doc = " @return  >= 0 in case of success, a negative AVERROR code in case of"]
+    #[doc = "          failure"]
     pub fn avformat_alloc_output_context2(
         ctx: *mut *mut AVFormatContext,
         oformat: *const AVOutputFormat,
@@ -29686,15 +26184,16 @@ extern "C" {
     #[doc = " attempt is made. When the maximum probe size is reached, the input format"]
     #[doc = " with the highest score is returned."]
     #[doc = ""]
-    #[doc = " @param pb the bytestream to probe"]
-    #[doc = " @param fmt the input format is put here"]
-    #[doc = " @param url the url of the stream"]
-    #[doc = " @param logctx the log context"]
-    #[doc = " @param offset the offset within the bytestream to probe from"]
+    #[doc = " @param pb             the bytestream to probe"]
+    #[doc = " @param fmt            the input format is put here"]
+    #[doc = " @param url            the url of the stream"]
+    #[doc = " @param logctx         the log context"]
+    #[doc = " @param offset         the offset within the bytestream to probe from"]
     #[doc = " @param max_probe_size the maximum probe buffer size (zero for default)"]
+    #[doc = ""]
     #[doc = " @return the score in case of success, a negative value corresponding to an"]
     #[doc = "         the maximal score is AVPROBE_SCORE_MAX"]
-    #[doc = " AVERROR code otherwise"]
+    #[doc = "         AVERROR code otherwise"]
     pub fn av_probe_input_buffer2(
         pb: *mut AVIOContext,
         fmt: *mut *const AVInputFormat,
@@ -29719,16 +26218,19 @@ extern "C" {
     #[doc = " Open an input stream and read the header. The codecs are not opened."]
     #[doc = " The stream must be closed with avformat_close_input()."]
     #[doc = ""]
-    #[doc = " @param ps Pointer to user-supplied AVFormatContext (allocated by avformat_alloc_context)."]
-    #[doc = "           May be a pointer to NULL, in which case an AVFormatContext is allocated by this"]
-    #[doc = "           function and written into ps."]
-    #[doc = "           Note that a user-supplied AVFormatContext will be freed on failure."]
-    #[doc = " @param url URL of the stream to open."]
-    #[doc = " @param fmt If non-NULL, this parameter forces a specific input format."]
-    #[doc = "            Otherwise the format is autodetected."]
-    #[doc = " @param options  A dictionary filled with AVFormatContext and demuxer-private options."]
-    #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
-    #[doc = "                 options that were not found. May be NULL."]
+    #[doc = " @param ps       Pointer to user-supplied AVFormatContext (allocated by"]
+    #[doc = "                 avformat_alloc_context). May be a pointer to NULL, in"]
+    #[doc = "                 which case an AVFormatContext is allocated by this"]
+    #[doc = "                 function and written into ps."]
+    #[doc = "                 Note that a user-supplied AVFormatContext will be freed"]
+    #[doc = "                 on failure."]
+    #[doc = " @param url      URL of the stream to open."]
+    #[doc = " @param fmt      If non-NULL, this parameter forces a specific input format."]
+    #[doc = "                 Otherwise the format is autodetected."]
+    #[doc = " @param options  A dictionary filled with AVFormatContext and demuxer-private"]
+    #[doc = "                 options."]
+    #[doc = "                 On return this parameter will be destroyed and replaced with"]
+    #[doc = "                 a dict containing options that were not found. May be NULL."]
     #[doc = ""]
     #[doc = " @return 0 on success, a negative AVERROR on failure."]
     #[doc = ""]
@@ -29772,6 +26274,7 @@ extern "C" {
     #[doc = " @param last  the last found program, the search will start after this"]
     #[doc = "              program, or from the beginning if it is NULL"]
     #[doc = " @param s     stream index"]
+    #[doc = ""]
     #[doc = " @return the next program which belongs to s, NULL if no program is found or"]
     #[doc = "         the last program is not among the programs of ic."]
     pub fn av_find_program_from_stream(
@@ -29804,10 +26307,12 @@ extern "C" {
     #[doc = " @param decoder_ret       if non-NULL, returns the decoder for the"]
     #[doc = "                          selected stream"]
     #[doc = " @param flags             flags; none are currently defined"]
+    #[doc = ""]
     #[doc = " @return  the non-negative stream number in case of success,"]
     #[doc = "          AVERROR_STREAM_NOT_FOUND if no stream with the requested type"]
     #[doc = "          could be found,"]
     #[doc = "          AVERROR_DECODER_NOT_FOUND if streams were found but no decoder"]
+    #[doc = ""]
     #[doc = " @note  If av_find_best_stream returns successfully and decoder_ret is not"]
     #[doc = "        NULL, then *decoder_ret is guaranteed to be set to a valid AVCodec."]
     pub fn av_find_best_stream(
@@ -29851,13 +26356,14 @@ extern "C" {
     #[doc = " Seek to the keyframe at timestamp."]
     #[doc = " 'timestamp' in 'stream_index'."]
     #[doc = ""]
-    #[doc = " @param s media file handle"]
-    #[doc = " @param stream_index If stream_index is (-1), a default"]
-    #[doc = " stream is selected, and timestamp is automatically converted"]
-    #[doc = " from AV_TIME_BASE units to the stream specific time_base."]
-    #[doc = " @param timestamp Timestamp in AVStream.time_base units"]
-    #[doc = "        or, if no stream is specified, in AV_TIME_BASE units."]
-    #[doc = " @param flags flags which select direction and seeking mode"]
+    #[doc = " @param s            media file handle"]
+    #[doc = " @param stream_index If stream_index is (-1), a default stream is selected,"]
+    #[doc = "                     and timestamp is automatically converted from"]
+    #[doc = "                     AV_TIME_BASE units to the stream specific time_base."]
+    #[doc = " @param timestamp    Timestamp in AVStream.time_base units or, if no stream"]
+    #[doc = "                     is specified, in AV_TIME_BASE units."]
+    #[doc = " @param flags        flags which select direction and seeking mode"]
+    #[doc = ""]
     #[doc = " @return >= 0 on success"]
     pub fn av_seek_frame(
         s: *mut AVFormatContext,
@@ -29882,12 +26388,12 @@ extern "C" {
     #[doc = " keyframes (this may not be supported by all demuxers)."]
     #[doc = " If flags contain AVSEEK_FLAG_BACKWARD, it is ignored."]
     #[doc = ""]
-    #[doc = " @param s media file handle"]
+    #[doc = " @param s            media file handle"]
     #[doc = " @param stream_index index of the stream which is used as time base reference"]
-    #[doc = " @param min_ts smallest acceptable timestamp"]
-    #[doc = " @param ts target timestamp"]
-    #[doc = " @param max_ts largest acceptable timestamp"]
-    #[doc = " @param flags flags"]
+    #[doc = " @param min_ts       smallest acceptable timestamp"]
+    #[doc = " @param ts           target timestamp"]
+    #[doc = " @param max_ts       largest acceptable timestamp"]
+    #[doc = " @param flags        flags"]
     #[doc = " @return >=0 on success, error code otherwise"]
     #[doc = ""]
     #[doc = " @note This is part of the new seek API which is still under construction."]
@@ -29937,16 +26443,22 @@ extern "C" {
     #[doc = " Allocate the stream private data and write the stream header to"]
     #[doc = " an output media file."]
     #[doc = ""]
-    #[doc = " @param s Media file handle, must be allocated with avformat_alloc_context()."]
-    #[doc = "          Its oformat field must be set to the desired output format;"]
-    #[doc = "          Its pb field must be set to an already opened AVIOContext."]
-    #[doc = " @param options  An AVDictionary filled with AVFormatContext and muxer-private options."]
-    #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
-    #[doc = "                 options that were not found. May be NULL."]
+    #[doc = " @param s        Media file handle, must be allocated with"]
+    #[doc = "                 avformat_alloc_context()."]
+    #[doc = "                 Its \\ref AVFormatContext.oformat \"oformat\" field must be set"]
+    #[doc = "                 to the desired output format;"]
+    #[doc = "                 Its \\ref AVFormatContext.pb \"pb\" field must be set to an"]
+    #[doc = "                 already opened ::AVIOContext."]
+    #[doc = " @param options  An ::AVDictionary filled with AVFormatContext and"]
+    #[doc = "                 muxer-private options."]
+    #[doc = "                 On return this parameter will be destroyed and replaced with"]
+    #[doc = "                 a dict containing options that were not found. May be NULL."]
     #[doc = ""]
-    #[doc = " @return AVSTREAM_INIT_IN_WRITE_HEADER on success if the codec had not already been fully initialized in avformat_init,"]
-    #[doc = "         AVSTREAM_INIT_IN_INIT_OUTPUT  on success if the codec had already been fully initialized in avformat_init,"]
-    #[doc = "         negative AVERROR on failure."]
+    #[doc = " @retval AVSTREAM_INIT_IN_WRITE_HEADER On success, if the codec had not already been"]
+    #[doc = "                                       fully initialized in avformat_init_output()."]
+    #[doc = " @retval AVSTREAM_INIT_IN_INIT_OUTPUT  On success, if the codec had already been fully"]
+    #[doc = "                                       initialized in avformat_init_output()."]
+    #[doc = " @retval AVERROR                       A negative AVERROR on failure."]
     #[doc = ""]
     #[doc = " @see av_opt_find, av_dict_set, avio_open, av_oformat_next, avformat_init_output."]
     pub fn avformat_write_header(
@@ -29956,20 +26468,26 @@ extern "C" {
 }
 extern "C" {
     #[doc = " Allocate the stream private data and initialize the codec, but do not write the header."]
-    #[doc = " May optionally be used before avformat_write_header to initialize stream parameters"]
+    #[doc = " May optionally be used before avformat_write_header() to initialize stream parameters"]
     #[doc = " before actually writing the header."]
-    #[doc = " If using this function, do not pass the same options to avformat_write_header."]
+    #[doc = " If using this function, do not pass the same options to avformat_write_header()."]
     #[doc = ""]
-    #[doc = " @param s Media file handle, must be allocated with avformat_alloc_context()."]
-    #[doc = "          Its oformat field must be set to the desired output format;"]
-    #[doc = "          Its pb field must be set to an already opened AVIOContext."]
-    #[doc = " @param options  An AVDictionary filled with AVFormatContext and muxer-private options."]
-    #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
-    #[doc = "                 options that were not found. May be NULL."]
+    #[doc = " @param s        Media file handle, must be allocated with"]
+    #[doc = "                 avformat_alloc_context()."]
+    #[doc = "                 Its \\ref AVFormatContext.oformat \"oformat\" field must be set"]
+    #[doc = "                 to the desired output format;"]
+    #[doc = "                 Its \\ref AVFormatContext.pb \"pb\" field must be set to an"]
+    #[doc = "                 already opened ::AVIOContext."]
+    #[doc = " @param options  An ::AVDictionary filled with AVFormatContext and"]
+    #[doc = "                 muxer-private options."]
+    #[doc = "                 On return this parameter will be destroyed and replaced with"]
+    #[doc = "                 a dict containing options that were not found. May be NULL."]
     #[doc = ""]
-    #[doc = " @return AVSTREAM_INIT_IN_WRITE_HEADER on success if the codec requires avformat_write_header to fully initialize,"]
-    #[doc = "         AVSTREAM_INIT_IN_INIT_OUTPUT  on success if the codec has been fully initialized,"]
-    #[doc = "         negative AVERROR on failure."]
+    #[doc = " @retval AVSTREAM_INIT_IN_WRITE_HEADER On success, if the codec requires"]
+    #[doc = "                                       avformat_write_header to fully initialize."]
+    #[doc = " @retval AVSTREAM_INIT_IN_INIT_OUTPUT  On success, if the codec has been fully"]
+    #[doc = "                                       initialized."]
+    #[doc = " @retval AVERROR                       Anegative AVERROR on failure."]
     #[doc = ""]
     #[doc = " @see av_opt_find, av_dict_set, avio_open, av_oformat_next, avformat_write_header."]
     pub fn avformat_init_output(
@@ -30118,11 +26636,11 @@ extern "C" {
     #[doc = " there is no match."]
     #[doc = ""]
     #[doc = " @param short_name if non-NULL checks if short_name matches with the"]
-    #[doc = " names of the registered formats"]
-    #[doc = " @param filename if non-NULL checks if filename terminates with the"]
-    #[doc = " extensions of the registered formats"]
-    #[doc = " @param mime_type if non-NULL checks if mime_type matches with the"]
-    #[doc = " MIME type of the registered formats"]
+    #[doc = "                   names of the registered formats"]
+    #[doc = " @param filename   if non-NULL checks if filename terminates with the"]
+    #[doc = "                   extensions of the registered formats"]
+    #[doc = " @param mime_type  if non-NULL checks if mime_type matches with the"]
+    #[doc = "                   MIME type of the registered formats"]
     pub fn av_guess_format(
         short_name: *const cty::c_char,
         filename: *const cty::c_char,
@@ -30150,9 +26668,11 @@ extern "C" {
     #[doc = "                   time_base units"]
     #[doc = " @param[out] wall  absolute time when that packet whas output,"]
     #[doc = "                   in microsecond"]
-    #[doc = " @return  0 if OK, AVERROR(ENOSYS) if the format does not support it"]
-    #[doc = " Note: some formats or devices may not allow to measure dts and wall"]
-    #[doc = " atomically."]
+    #[doc = " @retval  0               Success"]
+    #[doc = " @retval  AVERROR(ENOSYS) The format does not support it"]
+    #[doc = ""]
+    #[doc = " @note Some formats or devices may not allow to measure dts and wall"]
+    #[doc = "       atomically."]
     pub fn av_get_output_timestamp(
         s: *mut AVFormatContext,
         stream: cty::c_int,
@@ -30294,7 +26814,7 @@ extern "C" {
     #[doc = " Get the AVIndexEntry corresponding to the given timestamp."]
     #[doc = ""]
     #[doc = " @param st          Stream containing the requested AVIndexEntry."]
-    #[doc = " @param timestamp   Timestamp to retrieve the index entry for."]
+    #[doc = " @param wanted_timestamp   Timestamp to retrieve the index entry for."]
     #[doc = " @param flags       If AVSEEK_FLAG_BACKWARD then the returned entry will correspond"]
     #[doc = "                    to the timestamp which is <= the requested one, if backward"]
     #[doc = "                    is 0, then it will be >="]
@@ -30562,70 +27082,11 @@ extern "C" {
     #[doc = " @param st  input stream to extract the timebase from"]
     pub fn av_stream_get_codec_timebase(st: *const AVStream) -> AVRational;
 }
-pub type __builtin_va_list = [__va_list_tag; 1usize];
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __va_list_tag {
-    pub gp_offset: cty::c_uint,
-    pub fp_offset: cty::c_uint,
-    pub overflow_arg_area: *mut cty::c_void,
-    pub reg_save_area: *mut cty::c_void,
-}
-#[test]
-fn bindgen_test_layout___va_list_tag() {
-    assert_eq!(
-        ::core::mem::size_of::<__va_list_tag>(),
-        24usize,
-        concat!("Size of: ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<__va_list_tag>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(gp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(fp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(overflow_arg_area)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(reg_save_area)
-        )
-    );
-}
+pub type __builtin_va_list = *mut cty::c_char;
+pub type __uint128_t = u128;
+#[doc = " a pointer to the first option specified in the class if any or NULL"]
+#[doc = ""]
+#[doc = " @see av_set_default_options()"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AVOption {

@@ -1,24 +1,26 @@
 use std::path::PathBuf;
 
 fn main() {
-    let out = &PathBuf::from("/usr/local/lib");
+    let out = &PathBuf::from("/opt/homebrew/lib");
+    let include = &PathBuf::from("/opt/homebrew/include");
 
     println!("cargo:rustc-link-search={}", out.display());
-    println!("cargo:rustc-link-lib=static=avcodec");
-    println!("cargo:rustc-link-lib=static=avformat");
+    println!("cargo:include={}", include.display());
+    println!("cargo:rustc-link-lib=avcodec");
+    println!("cargo:rustc-link-lib=avformat");
+    println!("cargo:rustc-link-lib=avutil");
 
     let bindings = bindgen::Builder::default()
-        // The input header we would like to generate
-        // bindings for.
         .header("wrapper.h")
         .use_core()
         .ctypes_prefix("cty")
-        // Tell cargo to invalidate the built crate whenever any of the
-        // included header files changed.
+        .clang_arg("-I")
+        .clang_arg(include.display().to_string())
+        .clang_arg("-D__STDC_CONSTANT_MACROS")
+        .clang_arg("-D__STDC_FORMAT_MACROS")
+        .clang_arg("-D__STDC_LIMIT_MACROS")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        // Finish the builder and generate the bindings.
         .generate()
-        // Unwrap the Result and panic on failure.
         .expect("Unable to generate bindings");
 
     let out_path = PathBuf::from("./");
