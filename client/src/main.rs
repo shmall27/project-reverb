@@ -12,8 +12,10 @@ use std::error::Error;
 use std::sync::{mpsc, Arc};
 use std::thread;
 use std::ptr;
+use std::time::Duration;
 
-// use sdl2::event::Event;
+use sdl2::keyboard::Keycode;
+use sdl2::event::Event;
 use sdl2::pixels::PixelFormatEnum;
 // use sdl2::rect::Rect;
 
@@ -70,8 +72,6 @@ impl Decoder {
         })
     }
 
-
-
     unsafe fn decode_buffer_arr(&mut self, buffer: &[u8]) -> Result<Vec<FrameData>, Box<dyn Error>>{
         self.buf[..buffer.len()].copy_from_slice(buffer);
 
@@ -88,7 +88,6 @@ impl Decoder {
             return Err(format!("Failed to receive frame: {}", ret).into());
         }
 
-        let frame_width = (*self.frame).width as usize;
         let frame_height = (*self.frame).height as usize;
 
         let mut planes: Vec<FrameData> = Vec::new();
@@ -107,77 +106,121 @@ impl Decoder {
 
         return Ok(planes);
     }
+
+    unsafe fn width(&self) -> u32 {
+        (*self.codecContext).width as u32
+    }
+
+    unsafe fn height(&self) -> u32 {
+        (*self.codecContext).height as u32
+    }
 }
 
-fn main() -> std::io::Result<()> {
-    {
-        let socket = UdpSocket::bind("127.0.0.1:6000")?;
-        let thread_socket = socket.try_clone().unwrap();
-        let mut buf = [0; 600];
-        let (tx, rx) = mpsc::channel::<[u8; 600]>();
+fn main() {
+    let socket = UdpSocket::bind("127.0.0.1:6000").unwrap();
+    let thread_socket = socket.try_clone().unwrap();
+    let mut buf = [0; 600];
+    let (tx, rx) = mpsc::channel::<[u8; 600]>();
 
-        // create the thread-safe queue within the arc here
-        let shared_queue = Arc::new(utils::thread_safe_queue::ThreadSafeQueue::<Vec<FrameData>>::new(300));
-        // clone it and pass to the decoder thread
-        let decoder_queue = shared_queue.clone();
-        thread::spawn(move || {
-            let mut decoder = unsafe { Decoder::new(packetSize as usize).unwrap() };
-            for message in rx {
-                    
-                let frame_data = unsafe { decoder.decode_buffer_arr(&message) };
-                match frame_data {
-                    Ok(frame_data) => {
-                        decoder_queue.push(frame_data);
+
+    thread::spawn(move || {
+        loop {
+            socket.recv_from(&mut buf).unwrap();
+            tx.send(buf).unwrap();
+        }
+    });
+
+    let (width_height_sender, width_height_receiver) = mpsc::channel::<(u32, u32)>();
+
+    // create the thread-safe queue within the arc here
+    let shared_queue = Arc::new(utils::thread_safe_queue::ThreadSafeQueue::<Vec<FrameData>>::new(300));
+    // clone it and pass to the decoder thread
+    let decoder_queue = shared_queue.clone();
+    thread::spawn(move || {
+        let mut decoder = unsafe { Decoder::new(packetSize as usize).unwrap() };
+
+        let mut is_first = true;
+
+        for message in rx {
+            let frame_data = unsafe { decoder.decode_buffer_arr(&message) };
+            match frame_data {
+                Ok(frame_data) => {
+                    if is_first {
+                        let frame_width = unsafe { decoder.width() as u32 };
+                        let frame_height = unsafe { decoder.height() as u32 };
+                        width_height_sender.send((frame_width, frame_height)).unwrap();
+                        is_first = false;
                     }
-                    Err(e) => {
-                        println!("Error: {}", e);
-                    }
+                    decoder_queue.push(frame_data);
                 }
-
-                //send the message to a new udp connection
-                thread_socket.send_to(&message, "127.0.0.1:4242").unwrap();
+                Err(e) => {
+                    println!("Error: {}", e);
+                }
             }
-        });
 
-        // clone it and pass to the sdl thread
-        let display_queue = shared_queue.clone();
-        
-        let sdl_context = sdl2::init().unwrap();
-        let video_subsystem = sdl_context.video().unwrap();
+            //send the message to a new udp connection
+            thread_socket.send_to(&message, "127.0.0.1:4242").unwrap();
+        }
+    });
 
-        let window = video_subsystem
-            .window("rust-sdl2 demo: Video", 800, 600)
-            .position_centered()
-            .opengl()
-            .build()
-            .unwrap();
-        
+    // clone it and pass to the sdl thread
+    let display_queue = shared_queue.clone();
+    
+    let (frame_width, frame_height) = width_height_receiver.recv().unwrap();
 
-        let mut canvas = window.into_canvas().build().unwrap();
+    let sdl_context = sdl2::init().unwrap();
+    let video_subsystem = sdl_context.video().unwrap();
 
-        let texture_creator = canvas.texture_creator();
+    let window = video_subsystem
+        .window("rust-sdl2 demo: Video", frame_width, frame_height)
+        .position_centered()
+        .opengl()
+        .build()
+        .unwrap();
+    
 
-        // 800 x 600 is just a placeholder for now; need to use the frame.width and frame.height
-        let mut video_texture = texture_creator
-            .create_texture_streaming(PixelFormatEnum::YV12, 800, 600)
-            .unwrap();
+    let mut canvas = window.into_canvas().build().unwrap();
+
+    let texture_creator = canvas.texture_creator();
+
+    // 800 x 600 is just a placeholder for now; need to use the frame.width and frame.height
+    let mut video_texture = texture_creator
+        .create_texture_streaming(PixelFormatEnum::YV12, frame_width, frame_height)
+        .unwrap();
+    
+    canvas.clear();
+    canvas.present();
+    let mut event_pump = sdl_context.event_pump().unwrap();
+    'running: loop {
+        canvas.clear();
+        for event in event_pump.poll_iter() {
+            match event {
+                Event::Quit {..} |
+                Event::KeyDown { keycode: Some(Keycode::Escape), .. } => {
+                    break 'running
+                },
+                _ => {}
+            }
+        }
 
         let planes = display_queue.pop();
-        for (_, plane) in planes.iter().enumerate() {
+
+        for (i, plane) in planes.iter().enumerate() {
             let plane_slice = &plane.data[..];
             let plane_linesize = plane.linesize;
             
+            let rect = match i {
+                0 => sdl2::rect::Rect::new(0, 0, frame_width, frame_height),
+                _ => sdl2::rect::Rect::new(0, 0, frame_width / 2, frame_height / 2),
+            };
+            
             video_texture
-                .update(None, plane_slice, plane_linesize)
+                .update(rect, plane_slice, plane_linesize)
                 .unwrap();
         }
 
-        canvas.clear();
         canvas.copy(&video_texture, None, None).unwrap();
-
-        loop {
-            socket.recv_from(&mut buf)?;
-            tx.send(buf).unwrap();
-        }
+        canvas.present();
+        ::std::thread::sleep(Duration::new(0, 1_000_000_000u32 / 60));
     }
 }
