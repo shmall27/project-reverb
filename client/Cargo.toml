@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 cty = "0.2.2"
 sdl2 = "0.35.2"
+crossterm = "0.22"
+rand = "0.8"
 
 [build-dependencies]
 bindgen = "0.53.1"

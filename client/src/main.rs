@@ -7,15 +7,21 @@ extern crate sdl2;
 
 mod utils;
 
+use crossterm::{
+    event::{poll, read, Event, KeyCode},
+    terminal::{disable_raw_mode, enable_raw_mode, Clear, ClearType},
+    execute
+};
+use rand::Rng;
+use std::time::Duration;
+use std::io::stdout;
+
 use std::net::{UdpSocket};
 use std::error::Error;
 use std::sync::{mpsc, Arc};
 use std::thread;
 use std::ptr;
-use std::time::Duration;
 
-use sdl2::keyboard::Keycode;
-use sdl2::event::Event;
 use sdl2::pixels::PixelFormatEnum;
 // use sdl2::rect::Rect;
 
@@ -122,6 +128,34 @@ fn main() {
     let mut buf = [0; 600];
     let (tx, rx) = mpsc::channel::<[u8; 600]>();
 
+    // remove after testing
+    let mut network_state = utils::peer_tree::PeerTree::new(utils::peer_tree::PeerNode {connections_offset: 0, max_connections: 3});
+    enable_raw_mode().unwrap();
+
+    loop {
+        if poll(Duration::from_millis(100)).unwrap() {
+            if let Event::Key(key_event) = read().unwrap() {
+                if key_event.code == KeyCode::Char(' ') {
+                    let mut rng = rand::thread_rng();
+                    let max_connections: i32 = rng.gen_range(1..50);
+
+                    let new_peer = utils::peer_tree::PeerNode {
+                        connections_offset: 0,
+                        max_connections,
+                    };
+
+                    network_state.insert_peer(new_peer);
+
+                    // network_state.pretty_print();
+                } else if key_event.code == KeyCode::Esc {
+                    break;
+                }
+            }
+        }
+    }
+
+    disable_raw_mode().unwrap();
+    // end remove
 
     thread::spawn(move || {
         loop {
@@ -172,7 +206,7 @@ fn main() {
     let video_subsystem = sdl_context.video().unwrap();
 
     let window = video_subsystem
-        .window("rust-sdl2 demo: Video", frame_width, frame_height)
+        .window("Project Reverb", frame_width, frame_height)
         .position_centered()
         .opengl()
         .build()
@@ -183,25 +217,14 @@ fn main() {
 
     let texture_creator = canvas.texture_creator();
 
-    // 800 x 600 is just a placeholder for now; need to use the frame.width and frame.height
     let mut video_texture = texture_creator
         .create_texture_streaming(PixelFormatEnum::YV12, frame_width, frame_height)
         .unwrap();
     
     canvas.clear();
     canvas.present();
-    let mut event_pump = sdl_context.event_pump().unwrap();
-    'running: loop {
+    loop {
         canvas.clear();
-        for event in event_pump.poll_iter() {
-            match event {
-                Event::Quit {..} |
-                Event::KeyDown { keycode: Some(Keycode::Escape), .. } => {
-                    break 'running
-                },
-                _ => {}
-            }
-        }
 
         let planes = display_queue.pop();
 
