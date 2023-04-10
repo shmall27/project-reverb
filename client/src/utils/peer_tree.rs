@@ -30,6 +30,7 @@ impl PeerTree {
 
 
     fn _breadth_search(level: &mut PeerLevel, range: Range<usize>, peer: &PeerNode) -> usize {  
+        // maybe it doesn't like finding the item at the end of the array
         let mid_point = (range.start + range.end) / 2;
     
         if range.start >= range.end {
@@ -52,7 +53,7 @@ impl PeerTree {
         // we're not at the end of the tree
         *depth < tree.data.len() && 
         // the peer's max_connections are less than the worst peer at the current level
-        tree.data[*depth].data[0].max_connections > peer.max_connections && 
+        tree.data[*depth].data[0].max_connections >= peer.max_connections && 
         // the current level is full
         tree.data[*depth - 1].max_connections <= tree.data[*depth].data.len().try_into().unwrap()) {
             *depth += 1;
@@ -83,6 +84,7 @@ impl PeerTree {
             self.data[dimensions.0].max_connections -= weakest_peer.max_connections;
             
             // there's an error when reinserting the weakest peer that ends up being the stronger peer in the next level
+            println!("Trying to insert peer: {:?}", peer);
             println!("Reinserting weakest_peer: {:?}", weakest_peer);
             self.pretty_print();
 
