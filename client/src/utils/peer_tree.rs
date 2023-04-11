@@ -31,7 +31,7 @@ impl PeerTree {
 
     fn _breadth_search(level: &mut PeerLevel, range: Range<usize>, peer: &PeerNode) -> usize {  
         // maybe it doesn't like finding the item at the end of the array
-        let mid_point = (range.start + range.end) / 2;
+        let mid_point = range.start + ((range.end - range.start) / 2);
     
         if range.start >= range.end {
             return mid_point;
